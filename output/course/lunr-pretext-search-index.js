@@ -7,16 +7,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Syllabus",
-  "body": " Syllabus        Course Information  This is the syllabus for course name (MATH xxx, section xxx) for [term] 20xx. It is a [n] credit course.    Instructor  Prof. Lastname, Office Location, prof.lastname@example.edu .    Student Hours  TBD    Class meets  course times and location.    Course Description  course description from catalog    Prerequisite  list of prerequisites    Textbook and course materials   textbook name by textbook author.       Course Overview        Assessments and Grades     "
-},
-{
-  "id": "sec-course-info-2",
-  "level": "2",
-  "url": "syllabus.html#sec-course-info-2",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "course name (MATH xxx, section xxx) "
+  "body": " Syllabus   Instructor Information     Instructor  Christopher Servant    Pronouns  he\/him    Phone Number   (989) 964-4894     Email   cservant@svsu.edu     Office  SW 340    Student Hours     Monday  TBD    Tuesday  TBD    Wednesday  TBD    Thursday  TBD         Note: Please do not contact your instructor via Canvas. Only use his email or phone above.   Note: If you need a more private appoinment to discuss grades or another personal matter, additional student hours can be made to meet in my office or via ZOOM.    Course Information     Course Dates  August 31, 2026 - December 19, 2026    Meeting Times  M, W: 2:30 PM - 4:20 PM    Location  Brown Hall 107    Credits  4    Meeting Times  M, W: 2:30 PM - 4:20 PM    Prerequisites  All Math Basic Skills or equivalent must be completed prior to taking this course. This is done by passing MATH 082 or MATH 072 with a C or higher.       Course Description  A liberal arts course providing an introduction to logical inference, statistics, probability, management science, social choice, concepts of size and shape, algorithmic processes and consumer mathematics. Emphasis on understanding rather than computational expertise.   "
 },
 {
   "id": "notes-week-01",
@@ -55,22 +46,40 @@ var ptx_lunr_docs = [
   "body": "  This is the first exercise.   "
 },
 {
-  "id": "handouts",
+  "id": "handout-template",
   "level": "1",
-  "url": "handouts.html",
-  "type": "Chapter",
+  "url": "handout-template.html",
+  "type": "Worksheet",
   "number": "",
-  "title": "Handouts",
-  "body": " Handouts    "
+  "title": "Handout Title",
+  "body": " Handout Title    A first paragtretraph with some space for notes below it.    "
 },
 {
-  "id": "homework",
+  "id": "handout-template-2",
+  "level": "2",
+  "url": "handout-template.html#handout-template-2",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  A first paragtretraph with some space for notes below it.   "
+},
+{
+  "id": "homework-2",
   "level": "1",
-  "url": "homework.html",
-  "type": "Chapter",
+  "url": "homework-2.html",
+  "type": "Worksheet",
   "number": "",
-  "title": "Homework",
-  "body": " Homework    "
+  "title": "Homework 01",
+  "body": " Homework 01    Instructions: Complete all the exercises below and submit your work by the due date.      This is the first homework exercise.     "
+},
+{
+  "id": "homework-2-3-1",
+  "level": "2",
+  "url": "homework-2.html#homework-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  This is the first homework exercise.   "
 }
 ]
 

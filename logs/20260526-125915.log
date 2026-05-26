@@ -1,0 +1,36 @@
+INFO    : Since no target was supplied, we will use "course".
+
+INFO    : Building target course
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.39.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/cservant/.ptx/2.39.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : PreTeXt source passed schema validation.
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/output/course.
+INFO    : discovering source file's directory name: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source
+INFO    : verifying and expanding input directory: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/generated-assets
+INFO    : verifying and expanding input directory: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/../assets
+INFO    : input directory expanded to absolute path: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/assets
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.39.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/cservant/.ptx/2.39.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.1.1
+INFO    : Downloading Runestone Services, version 8.1.1
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-denver
+INFO    : converting /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx to HTML in /tmp/ptx-smufd6m9
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.39.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /home/cservant/.ptx/2.39.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /tmp/ptx-smufd6m9
+INFO    : Removing temporary directory /tmp/ptx-c98uduat
+INFO    : 
+Finished build for target course. Run `pretext view course` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

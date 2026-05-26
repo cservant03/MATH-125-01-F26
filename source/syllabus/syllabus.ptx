@@ -1,86 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<section xml:id="syllabus" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="syllabus">
   <title>Syllabus</title>
-
-  <introduction>
-    <p>
-    </p>
-  </introduction>
-  <!-- Include chapters -->
-  <subsection xml:id="sec-course-info">
-    <title>Course Information</title>
+  
+  <subsection xml:id="instructor-info">
+    <title>Instructor Information</title>
 
     <p>
-      This is the syllabus for <term>course name (MATH xxx, section xxx)</term> for [term] 20xx.
-      It is a [n] credit course.
-      <!-- use a description list (dl) for short items -->
       <dl>
         <li>
           <title>Instructor</title>
-
           <p>
-            Prof. Lastname, Office Location, <url href="mailto:prof.lastname@example.edu">prof.lastname@example.edu</url>.
+            Christopher Servant
           </p>
         </li>
-
+        <li>
+          <title>Pronouns</title>
+          <p>
+            he/him
+          </p>
+        </li>
+        <li>
+          <title>Phone Number</title>
+          <p>
+            <url href="tel:19899644894">(989) 964-4894</url>
+          </p>
+        </li>
+        <li>
+          <title>Email</title>
+          <p>
+            <url href="mailto:cservant@svsu.edu">cservant@svsu.edu</url>  
+          </p>
+        </li>
+        <li>
+          <title>Office</title>
+          <p>
+            SW 340
+          </p>
+        </li>
         <li>
           <title>Student Hours</title>
-
           <p>
-            TBD
-          </p>
-        </li>
-
-        <li>
-          <title>Class meets</title>
-
-          <p>
-            course times and location.
-          </p>
-        </li>
-
-        <li>
-          <title>Course Description</title>
-
-          <p>
-            course description from catalog
-          </p>
-        </li>
-
-        <li>
-          <title>Prerequisite</title>
-
-          <p>
-            list of prerequisites
-          </p>
-        </li>
-
-        <li>
-          <title>Textbook and course materials</title>
-
-          <p>
-            <pubtitle>textbook name</pubtitle>
-            by textbook author.
+            <dl>
+              <li>
+                <title>Monday</title>
+                <p>
+                  TBD
+                </p>
+              </li>
+              <li>
+                <title>Tuesday</title>
+                <p>
+                  TBD
+                </p>
+              </li>
+              <li>
+                <title>Wednesday</title>
+                <p>
+                  TBD
+                </p>
+              </li>
+              <li>
+                <title>Thursday</title>
+                <p>
+                  TBD
+                </p>
+              </li>
+            </dl>
           </p>
         </li>
       </dl>
     </p>
 
-  <!-- Use paragraphs to break apart subsections -->
-    <paragraphs>
-      <title>Course Overview</title>
-
-      <p>
-      </p>
-    </paragraphs>
-  </subsection>
-
-  <!-- Other subsections for larger dividers -->
-  <subsection xml:id="sec-assessments">
-    <title>Assessments and Grades</title>
+    <p>
+      <alert>Note:</alert> Please do not contact your instructor via Canvas. Only use his email or phone above.
+    </p>
 
     <p>
+      <alert>Note:</alert> If you need a more private appoinment to discuss grades or another personal matter, additional student hours can be made to meet in my office or via ZOOM.
+    </p>
+  </subsection>
+
+  <subsection xml:id="course-info">
+    <title>Course Information</title>
+    <p>
+      <dl>
+        <li>
+          <title>Course Dates</title>
+          <p>
+            August 31, 2026 - December 19, 2026
+          </p>
+        </li>
+        <li>
+          <title>Meeting Times</title>              
+          <p>
+            M, W: 2:30 PM - 4:20 PM
+          </p>
+        </li>
+        <li>
+          <title>Location</title>              
+          <p>
+            Brown Hall 107
+          </p>
+        </li>
+        <li>
+          <title>Credits</title>              
+          <p>
+            4
+          </p>
+        </li>
+        <li>
+          <title>Meeting Times</title>              
+          <p>
+            M, W: 2:30 PM - 4:20 PM
+          </p>
+        </li>
+        <li>
+          <title>Prerequisites</title>              
+          <p>
+            All Math Basic Skills or equivalent must be completed prior to taking this course. This is done by passing MATH 082 or MATH 072 with a C or higher.
+          </p>
+        </li>
+      </dl>
+    </p>
+  </subsection>
+
+  <subsection xml:id="course-desc">
+    <title>Course Description</title>
+    <p>
+      A liberal arts course providing an introduction to logical inference, statistics, probability, management science, social choice, concepts of size and shape, algorithmic processes and consumer mathematics. Emphasis on understanding rather than computational expertise.
     </p>
   </subsection>
 </section>

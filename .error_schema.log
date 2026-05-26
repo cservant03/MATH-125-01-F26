@@ -1,5 +1,5 @@
-<string>:56:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element idx, got nothing
-<string>:56:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element chapter failed to validate content
-<string>:11:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
-<string>:24:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element book has extra content: chapter
-<string>:4:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext
+<string>:17:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
+<string>:17:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element title failed to validate content
+<string>:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element section there
+<string>:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got section
+<string>:44:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element li, got nothing
