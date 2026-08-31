@@ -1,0 +1,19 @@
+WARNING : Using CLI version 2.45.0 but project's `requirements.txt`
+WARNING : is configured to use 2.39.0. Consider either installing
+WARNING : CLI version 2.39.0 or running `pretext update-project`
+WARNING : to update `requirements.txt` and other managed files to match 2.45.0.
+INFO    : Since no target was supplied, we will use "course".
+
+INFO    : Building target course
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/syllabus/syllabus.ptx: xmlParseEntityRef: no name, line 479, column 70 (syllabus.ptx, line 479)
+ERROR   : Error assembling source file: xmlParseEntityRef: no name, line 479, column 70 (syllabus.ptx, line 479)
+FATAL   : XML syntax for source file is invalid
+INFO    : ------------------------
+FATAL   : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

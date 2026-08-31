@@ -1,0 +1,38 @@
+WARNING : Using CLI version 2.45.0 but project's `requirements.txt`
+WARNING : is configured to use 2.39.0. Consider either installing
+WARNING : CLI version 2.39.0 or running `pretext update-project`
+WARNING : to update `requirements.txt` and other managed files to match 2.45.0.
+INFO    : Building target pdf
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+FALLBACK: * PTX:FALLBACK:   numbering level set for figures ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+FALLBACK: * PTX:FALLBACK:   numbering level set for inline exercises ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+FALLBACK: * PTX:FALLBACK:   numbering level set for open problems ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    : successful application of /home/cservant/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+WARNING : Schema validation could not be completed: no validator was available (jing is not installed and lxml could not compile the schema). Continuing with build.
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/output/pdfs.
+INFO    : discovering source file's directory name: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source
+INFO    : verifying and expanding input directory: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/generated-assets
+INFO    : verifying and expanding input directory: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/../assets
+INFO    : input directory expanded to absolute path: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/assets
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.45.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/cservant/.ptx/2.45.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx to LaTeX as /tmp/ptx-beqyxrvb/main.tex
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.45.0/core/xsl/pretext-latex.xsl
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /home/cservant/.ptx/2.45.0/core/xsl/pretext-latex.xsl
+INFO    : Rerunning LaTeX for main.tex (pass 2)
+INFO    : Removing temporary directory /tmp/ptx-beqyxrvb
+INFO    : Removing temporary directory /tmp/ptx-e7ros5ff
+INFO    : Removing temporary directory /tmp/ptx-w4b14vhq
+INFO    : 
+Finished build for target pdf. The output is in /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/output/pdfs.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

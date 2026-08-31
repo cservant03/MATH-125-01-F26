@@ -45,25 +45,19 @@
               <li>
                 <title>Monday</title>
                 <p>
-                  TBD
+                  1:00 PM - 2:00 PM
                 </p>
               </li>
               <li>
                 <title>Tuesday</title>
                 <p>
-                  TBD
+                  12:00 PM - 2:00 PM
                 </p>
               </li>
               <li>
                 <title>Wednesday</title>
                 <p>
-                  TBD
-                </p>
-              </li>
-              <li>
-                <title>Thursday</title>
-                <p>
-                  TBD
+                  1:00 PM - 2:00 PM
                 </p>
               </li>
             </dl>
@@ -110,12 +104,6 @@
           </p>
         </li>
         <li>
-          <title>Meeting Times</title>              
-          <p>
-            M, W: 2:30 PM - 4:20 PM
-          </p>
-        </li>
-        <li>
           <title>Prerequisites</title>              
           <p>
             All Math Basic Skills or equivalent must be completed prior to taking this course. This is done by passing MATH 082 or MATH 072 with a C or higher.
@@ -129,6 +117,445 @@
     <title>Course Description</title>
     <p>
       A liberal arts course providing an introduction to logical inference, statistics, probability, management science, social choice, concepts of size and shape, algorithmic processes and consumer mathematics. Emphasis on understanding rather than computational expertise.
+    </p>
+  </subsection>
+
+  <subsection xml:id="course-materials">
+    <title>Course Matrials</title>
+    <p>
+      <dl>
+        <li>
+          <title>Text</title>
+          <p>
+            <pubtitle>Math in Society</pubtitle> by David Lippman
+          </p>
+          <p>
+            You can view an online copy of this free, open source textbook at <url href="https://math.libretexts.org/Bookshelves/Applied_Mathematics/Math_in_Society_(Lippman)">Math in Society</url>.
+          </p>
+        </li>
+      </dl>
+    </p>
+  </subsection>
+
+  <subsection xml:id="online-course-comp">
+    <title>Online Course Component</title>
+    <p>
+      In this class, you will have access to course notes, lecture videos, handouts, deadlines, and announcements on
+      Canvas. If you are absent or class is canceled due to weather or other circumstances, it is your
+      responsibility to log on and obtain missed notes, work, etc. Grades will be updated periodically on
+      Canvas. It is also important to check your SVSU email regularly.
+    </p>
+  </subsection>
+
+  <subsection xml:id="course-outcomes">
+    <title>Course Outcomes</title>
+    <p>
+      This General Education course introduces fundamental algebraic terminology and skills; demonstrates how ingenuity and creativity are essential in developing mathematical models to solve real world problems; cultivates critical thinking and logical reasoning for effective problem solving and rational decision-making in a complex technological society; and develops communication skills for translating real world situations into symbolic mathematical relationships and for interpreting mathematical results within their real world contexts.
+    </p>
+
+    <p>
+      The following lists the set of outcomes covered in this course:
+      <ol>
+        <li>
+          <p>
+            Basics of Voting
+          </p>
+        </li>
+        <li>
+          <p>
+            Choice-based Voting Methods
+          </p>
+        </li>
+        <li>
+          <p>
+            Ranked-Based Voting Methods
+          </p>
+        </li>
+        <li>
+          <p>
+            Weighted Voting and Power
+          </p>
+        </li>
+        <li>
+          <p>
+            Basics of Apportionment
+          </p>
+        </li>
+        <li>
+          <p>
+            Quota-Based Methods
+          </p>
+        </li>
+        <li>
+          <p>
+            Divisor-Based Methods
+          </p>
+        </li>
+        <li>
+          <p>
+            Graphs and Shortest Paths
+          </p>
+        </li>
+        <li>
+          <p>
+            Euler and Hamiltonian Circuits
+          </p>
+        </li>
+        <li>
+          <p>
+            Spanning Trees
+          </p>
+        </li>
+        <li>
+          <p>
+            Scheduling
+          </p>
+        </li>       
+        <li>
+          <p>
+            Simple and Compound Interest
+          </p>
+        </li>
+        <li>
+          <p>
+            Annuities and Loans
+          </p>
+        </li>
+        <li>
+          <p>
+            Sets
+          </p>
+        </li>
+        <li>
+          <p>
+            Statistics, Data, and Sampling Methods
+          </p>
+        </li>
+        <li>
+          <p>
+            Presenting Data Graphically
+          </p>
+        </li>
+        <li>
+          <p>
+            Measuring Data
+          </p>
+        </li>
+        <li>
+          <p>
+            Probability
+          </p>
+        </li>        
+        <li>
+          <p>
+            Fractals
+          </p>
+        </li>
+        <li>
+          <p>
+            Logic and Statements
+          </p>
+        </li>
+        <li>
+          <p>
+            Truth Tables and De Morgan's Laws
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+
+  <subsection xml:id="eval">
+    <title>Evaluatation</title>
+    <p>
+      <dl>
+        <li>
+          <title>Homework</title>
+          <p> Each learning outcome in the course has one 10-point homework assignment in MyOpenMath. These assignments provide practice applying the concepts and skills associated with each outcome and help students prepare for quizzes and lab reports. A student's Homework score is the total number of points earned across all MyOpenMath homework assignments.</p>
+        </li>          
+        <li>
+          <title>Quizzes</title>
+          <p> Quizzes are administered approximately every fourth class meeting throughout most of the semester. Quizzes assess a student's ability to independently apply the concepts and skills developed through class activities, worksheets, and assigned course materials. </p> 
+          <p> Each quiz is scored on a 0-3 scale: </p> 
+          <dl> 
+            <li> 
+              <title>3:</title> 
+              <p>Demonstrates a strong understanding of the outcome with little to no error. Work is complete, mathematically correct, and clearly communicates the solution process.</p> 
+            </li> 
+            <li> 
+              <title>2:</title> 
+              <p>Demonstrates substantial understanding of the outcome but contains one or more minor errors. The overall solution process is appropriate and most of the work is correct.</p> 
+            </li> 
+            <li> 
+              <title>1:</title> 
+              <p>Demonstrates partial understanding of the outcome but contains significant errors or omissions. Some correct work is shown, but the student has not yet demonstrated competency.</p> 
+            </li> 
+            <li> 
+              <title>0:</title> 
+              <p>The outcome is not attempted or the work submitted does not demonstrate an understanding of the outcome.</p> 
+            </li> 
+          </dl> 
+          <p> Each quiz includes two in-class attempts. For each quiz, the highest score earned across all attempts is used when calculating the Quiz portion of the course grade. </p> 
+          <p> A third attempt is available only after attending tutoring. Students must work with a tutor to review the relevant worksheet problems and their first two attempts before a third attempt will be granted. </p> 
+          <p> Quizzes are not given as make-ups. The multiple-attempt structure is intended to accommodate absences and scheduling conflicts. Students who miss an in-class attempt may use a remaining attempt to demonstrate competency. </p> 
+          <p> For the final quizzes of the course, only one in-class attempt may be provided during the final exam period. Additional attempts must be completed outside of class time by appointment. </p>
+        </li>
+      </dl>
+    </p>
+  </subsection>
+
+  <subsection xml:id="grade">
+    <title>Grading</title>
+    <p>Your final course grade will be determined by your performance in two categories: Homework and Quizzes. A letter grade will be determined separately for each category using the requirements below. Your final course grade will be the lowest of the two category grades.</p>
+
+    <tabular
+      row-headers="yes"
+      halign="left"
+      valign="top"
+      top="medium"
+      left="medium"
+      bottom="medium"
+      right="medium">
+
+      <col width="20%"/>
+      <col width="30%"/>
+      <col width="30%"/>
+
+      <row header="yes">
+        <cell>Letter Grade</cell>
+        <cell>Homework Points</cell>
+        <cell>Quiz Points</cell>
+      </row>
+
+      <row>
+        <cell>A</cell>
+        <cell>180-200</cell>
+        <cell>51-63</cell>
+      </row>
+
+      <row>
+        <cell>B</cell>
+        <cell>160-179</cell>
+        <cell>42-50</cell>
+      </row>
+
+      <row>
+        <cell>C</cell>
+        <cell>140-159</cell>
+        <cell>33-41</cell>
+      </row>
+
+      <row>
+        <cell>D</cell>
+        <cell>120-139</cell>
+        <cell>24-32</cell>
+      </row>
+
+      <row>
+        <cell>F</cell>
+        <cell>0-119</cell>
+        <cell>0-23</cell>
+      </row>
+
+    </tabular>
+
+    <p>Here are some examples showing how final course grades are determined:</p>
+    
+    <ol>
+      <li>
+        <p>
+          A student earns <m>190</m> Homework Points and <m>56</m> Quiz Points.
+          Both totals correspond to an A, so the student earns an <em>A</em> in
+          the course.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          A student earns <m>188</m> Homework Points and <m>47</m> Quiz Points.
+          The Homework Points correspond to an A, while the Quiz Points correspond
+          to a B. Since the lower of the two grades is a B, the student earns a
+          <em>B</em> in the course.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          A student earns <m>152</m> Homework Points and <m>54</m> Quiz Points.
+          The Homework Points correspond to a C, while the Quiz Points correspond
+          to an A. Since the lower of the two grades is a C, the student earns a
+          <em>C</em> in the course.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+
+  <subsection xml:id="tips">
+    <title>Tips for Success</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Read the textbook before attending class. The instructors explanations will make more sense and when they don't you will be more likely able to ask a relevant question.
+          </p>
+        </li>
+        <li>
+          <p>
+            Attend each class session, both physically and mentally.
+          </p>
+        </li>
+        <li>
+          <p>
+            Read the syllabus and look over the schedule on the last page of the syllabus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Build community with other students in the course and create study groups.
+          </p>
+        </li>
+        <li>
+          <p>
+            Work outside of class. Math is learned by doing not seeing.
+          </p>
+        </li>
+        <li>
+          <p>
+            Ask for help. Stop in to see me, email me, call me, or ask others in class for help.
+          </p>
+        </li>
+        <li>
+          <p>
+            For free math tutoring; find information about the Math &amp; Physics Learning Center at <url href="https://www.svsu.edu/mathandphysicslearningcenter/">MPLC</url>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+
+  <subsection xml:id="academic-integrity">
+    <title>Academic Integrity Policy</title>
+
+    <p>
+      In MATH 132B, any occurrence of cheating or academic dishonesty may be
+      officially documented. The student or students involved may then receive a
+      copy of the documentation. The first occurrence may result in failure of
+      the coursework and will be reported to the Office of Student Conduct
+      Programs for the record. Any additional occurrence will be reported to the
+      Office of Student Conduct Programs for adjudication.
+    </p>
+
+    <p>
+      You may work in groups or with tutors on homework and lab reports when
+      permitted, but you must complete your own work. Quizzes must be completed
+      independently without resources. Inappropriate use of laptops, cell phones,
+      calculators, tablets, websites, outside assistance, or other resources is
+      considered cheating. If you are unsure whether something is permitted, ask
+      your instructor before using it.
+    </p>
+
+    <p>
+      See
+      <url href="https://www.svsu.edu/studentconductprograms/academicintegrity/academicintegritypolicy/">
+        SVSU's Academic Integrity Policy
+      </url>
+      for additional information.
+    </p>
+  </subsection>
+
+  <subsection xml:id="withdrawal-policy">
+    <title>Withdrawal Policy</title>
+
+    <p>
+      Please consult an academic advisor and the Student Financial Services
+      Center before withdrawing from any course. They can help you understand
+      the possible effects that withdrawing may have on your degree progress and
+      financial aid.
+    </p>
+
+    <p>
+      See
+      <url href="https://www.svsu.edu/officeoftheregistrar/policiescatalog/withdrawals/">
+        SVSU's withdrawal information
+      </url>
+      for additional details.
+    </p>
+  </subsection>
+
+  <subsection xml:id="important-dates">
+    <title>Important Dates</title>
+
+    <ul>
+      <li>
+        <p>
+          September 4, 2026, is the last day to withdraw with a 100% refund
+          and have the course deleted.
+        </p>
+      </li>
+      <li>
+        <p>
+          September 18, 2026, is the last day to withdraw with a 100% refund
+          and a <q>W</q> grade.
+        </p>
+      </li>
+      <li>
+        <p>
+          October 2, 2026, is the last day to withdraw with a 50% refund and
+          a <q>W</q> grade.
+        </p>
+      </li>
+      <li>
+        <p>
+          November 13, 2026, is the last day to withdraw with a <q>W</q>
+          grade.
+        </p>
+      </li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="disability-statement">
+    <title>Disability Statement</title>
+
+    <p>
+      Students with disabilities that may restrict their full participation in
+      course activities are encouraged to meet with the instructor or contact
+      the SVSU Office of Accessibility Resources and Accommodations, located in
+      Wickes 260, at 964-7000 for assistance.
+    </p>
+  </subsection>
+
+  <subsection xml:id="nondiscrimination-statement">
+    <title>Non-Discrimination Statement</title>
+
+    <p>
+      SVSU does not discriminate based on race, religion, color, gender, sexual
+      orientation, national origin, age, physical impairment, disability, or
+      veteran status in the provision of education, employment, and other
+      services.
+    </p>
+  </subsection>
+
+  <subsection xml:id="land-acknowledgment">
+    <title>Land Acknowledgment Statement</title>
+
+    <p>
+      At Saginaw Valley State University, we recognize that we are located on the
+      ancestral homelands of the Anishinaabe, Wyandot, and Sauk. We specifically
+      acknowledge the Saginaw Chippewa Tribe and the land ceded in the Saginaw
+      Treaty of 1819, on which we reside. We appreciate the importance of
+      preserving and honoring the traditions of Indigenous People who are an
+      integral part of our shared history. As we pledge to serve as responsible
+      stewards of the land, we endeavor for this history to inform our teaching,
+      scholarship, and commitment to community.
+    </p>
+  </subsection>
+
+  <subsection xml:id="tentative-syllabus">
+    <title>Tentative Syllabus</title>
+
+    <p>
+      This syllabus and course schedule are subject to change if class needs
+      warrant changes due to illness, inclement weather, or other circumstances.
     </p>
   </subsection>
 </section>

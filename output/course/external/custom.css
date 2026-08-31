@@ -1,0 +1,147 @@
+/* Hide the PreTeXt, Runestone, and MathJax footer logos */
+a.pretext-link,
+a.mathbook-link,
+a.runestone-link,
+a.mathjax-link {
+  display: none !important;
+}
+
+#def-graph {
+  padding-bottom: 1.25in;
+}
+
+#def-vertex {
+  padding-bottom: 1.25in;
+}
+
+#def-edge {
+  padding-bottom: 1.25in;
+}
+
+#def-loop {
+  padding-bottom: 1.25in;
+}
+
+#def-degree-vertex {
+  padding-bottom: 1.25in;
+}
+
+#def-path {
+  padding-bottom: 1.25in;
+}
+
+#def-circuit {
+  padding-bottom: 1.25in;
+}
+
+#def-connected-graph {
+  padding-bottom: 1.25in;
+}
+
+#def-weight {
+  padding-bottom: 1.25in;
+}
+
+#ex-reading-a-graph {
+  padding-bottom: 2in;
+}
+
+#ex-crossing-without-vertex {
+  padding-bottom: 1.25in;
+}
+
+#ex-equivalent-graph-drawings {
+  padding-bottom: 1.25in;
+}
+
+#ex-connected-degree-zero {
+  padding-bottom: 1.25in;
+}
+
+#def-preference-ballot {
+  padding-bottom: 1.2in;
+}
+
+#def-preference-schedule {
+  padding-bottom: 1.2in;
+}
+
+#ex-build-preference-schedule {
+  padding-bottom: 3in;
+}
+
+#ex-read-preference-schedule {
+  padding-bottom: 3in;
+}
+
+#def-majority {
+  padding-bottom: 1.2in;
+}
+
+#ex-most-votes-no-majority {
+  padding-bottom: 3in;
+}
+
+#ex-identify-majority-winner {
+  padding-bottom: 3in;
+}
+
+#def-pairwise-comparison {
+  padding-bottom: 1.2in;
+}
+
+#def-condorcet-winner {
+  padding-bottom: 1.2in;
+}
+
+#ex-find-condorcet-winner {
+  padding-bottom: 3in;
+}
+
+#ex-condorcet-cycle {
+  padding-bottom: 3in;
+}
+
+#def-fairness-criterion {
+  padding-bottom: 1.2in;
+}
+
+#def-majority-criterion {
+  padding-bottom: 1.2in;
+}
+
+#def-condorcet-criterion {
+  padding-bottom: 1.2in;
+}
+
+#def-monotonicity-criterion {
+  padding-bottom: 1.2in;
+}
+
+#def-iia-criterion {
+  padding-bottom: 1.2in;
+}
+
+#ex-match-fairness-criteria {
+  padding-bottom: 3in;
+}
+
+#ex-analyze-majority-condorcet-criteria {
+  padding-bottom: 3in;
+}
+
+#ex-monotonicity-revote {
+  padding-bottom: 3in;
+}
+
+#ex-iia-science-fair-theme {
+  padding-bottom: 3in;
+}
+
+#ex-wildlife-center-exhibit {
+  padding-bottom: 3in;
+}
+
+#ex-majority-implies-condorcet {
+  padding-bottom: 3in;
+}

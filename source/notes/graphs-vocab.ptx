@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-graphs-vocabulary-representations">
+  <title>Notes: Graphs Vocabulary and Representations</title>
+
+  <objectives>
+    <ul>
+      <li><p>Translate a real situation into a graph.</p></li>
+      <li><p>Identify vertices, edges, loops, degrees, paths, circuits, and connected graphs.</p></li>
+      <li><p>Explain why the drawing of a graph may change while its connections remain the same.</p></li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="subsec-core-graph-vocabulary">
+    <title>Core Vocabulary</title>
+
+    <definition xml:id="def-graph">
+      <title>Graph</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-vertex">
+      <title>Vertex</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-edge">
+      <title>Edge</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-loop">
+      <title>Loop</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-degree-vertex">
+      <title>Degree of a Vertex</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-path">
+      <title>Path</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-circuit">
+      <title>Circuit</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-connected-graph">
+      <title>Connected Graph</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-weight">
+      <title>Weight</title>
+      <statement>
+        <p></p>
+      </statement>
+    </definition>
+  </subsection>
+
+  <subsection xml:id="subsec-reading-a-graph">
+    <title>Reading a Graph</title>
+
+    <example xml:id="ex-reading-a-graph">
+      <title>Reading a Graph</title>
+      <statement>
+        <p>Use the graph below to answer the questions.</p>
+        
+        <image source="images/vocabulary-graph.png" width="50%">
+          <shortdescription>Graph with vertices A through E and six undirected edges.</shortdescription>
+          <description>
+            <p>
+              An undirected graph with vertices A, B, C, D, and E. The edges are AB, AC,
+              BC, CD, CE, and DE.
+            </p>
+          </description>
+        </image>
+
+        <ol>
+          <li>
+            <p>How many vertices and edges are present?</p>
+          </li>
+          <li>
+            <p>Find the degree of each vertex.</p>
+          </li>
+          <li>
+            <p>Give one path from A to E.</p>
+          </li>
+          <li>
+            <p>Give one circuit that starts and ends at C.</p>
+          </li>
+          <li>
+            <p>Is the graph connected? Explain.</p>
+          </li>
+          <li>
+            <p>Are there any loops? If not add one.</p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+  </subsection>
+
+  <exercises>
+    <title>Check Your Understanding</title>
+
+    <exercise xml:id="ex-crossing-without-vertex">
+      <statement>
+        <p>
+          Two edges cross in a drawing, but no dot appears at the crossing. Is the crossing a
+          vertex? Explain.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-equivalent-graph-drawings">
+      <statement>
+        <p>
+          Can two different-looking drawings represent the same graph? What must remain
+          unchanged?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-connected-degree-zero">
+      <statement>
+        <p>Can a connected graph contain a vertex of degree zero? Explain.</p>
+      </statement>
+    </exercise>
+  </exercises>
+</section>

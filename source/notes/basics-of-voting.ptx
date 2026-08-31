@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="basics-of-voting">
+    <title>Basics of Voting</title>
+
+    <outcomes>
+        <ol marker="1)">
+            <li>
+                <p>Interpret individual preference ballots and preference schedules.</p>
+            </li>
+            <li>
+                <p>Determine the number of voters represented by a preference schedule.</p>
+            </li>
+            <li>
+                <p>Determine whether a choice has a majority of the first-place votes.</p>
+            </li>
+            <li>
+                <p>Use pairwise comparisons to identify a Condorcet winner, when one exists.</p>
+            </li>
+            <li>
+                <p>Explain and apply the majority, Condorcet, monotonicity, and independence of irrelevant alternatives criteria.</p>
+            </li>
+        </ol>
+    </outcomes>
+
+    <subsection xml:id="preference-ballots-schedules">
+        <title>Preference Ballots and Preference Schedules</title>
+
+        <p>
+            Many group decisions involve more than two possible choices. A ballot that records
+            only a voter's favorite choice does not show how that voter feels about the remaining
+            choices. Preference ballots preserve this additional information.
+        </p>
+
+        <definition xml:id="def-preference-ballot">
+            <title>Preference Ballot</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-preference-schedule">
+            <title>Preference Schedule</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-build-preference-schedule">
+            <title>Redesigning a Campus Courtyard</title>
+
+            <p>
+                Eight students rank three possible additions to a campus courtyard: a reading
+                garden (R), a game area (G), and a bicycle station (B). Their individual
+                preference ballots are shown below.
+            </p>
+
+            <table xml:id="table-courtyard-individual-ballots">
+                <title>Individual Ballots for the Courtyard Redesign</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Voter</cell>
+                        <cell>1</cell>
+                        <cell>2</cell>
+                        <cell>3</cell>
+                        <cell>4</cell>
+                        <cell>5</cell>
+                        <cell>6</cell>
+                        <cell>7</cell>
+                        <cell>8</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>R</cell>
+                        <cell>R</cell>
+                        <cell>G</cell>
+                        <cell>G</cell>
+                        <cell>B</cell>
+                        <cell>R</cell>
+                        <cell>B</cell>
+                        <cell>G</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>G</cell>
+                        <cell>G</cell>
+                        <cell>R</cell>
+                        <cell>B</cell>
+                        <cell>G</cell>
+                        <cell>B</cell>
+                        <cell>G</cell>
+                        <cell>R</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>B</cell>
+                        <cell>B</cell>
+                        <cell>B</cell>
+                        <cell>R</cell>
+                        <cell>R</cell>
+                        <cell>G</cell>
+                        <cell>R</cell>
+                        <cell>B</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>How many different preference orders appear among the eight ballots?</p>
+                </li>
+                <li>
+                    <p>Group identical ballots together and construct a preference schedule.</p>
+                </li>
+                <li>
+                    <p>How many students prefer the game area to the bicycle station?</p>
+                </li>
+                <li>
+                    <p>How many students rank the reading garden last?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-read-preference-schedule">
+            <title>Nature Center Weekend Program</title>
+
+            <p>
+                Volunteers at a nature center rank three possible weekend programs: bird
+                banding (B), a pond survey (P), and tree identification (T).
+            </p>
+
+            <table xml:id="table-nature-center-program">
+                <title>Preference Schedule for the Weekend Program</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>7</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                        <cell>3</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>B</cell>
+                        <cell>P</cell>
+                        <cell>T</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>P</cell>
+                        <cell>T</cell>
+                        <cell>P</cell>
+                        <cell>T</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>T</cell>
+                        <cell>B</cell>
+                        <cell>B</cell>
+                        <cell>P</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>How many volunteers voted?</p>
+                </li>
+                <li>
+                    <p>How many volunteers selected bird banding as their first choice?</p>
+                </li>
+                <li>
+                    <p>How many volunteers prefer the pond survey to tree identification?</p>
+                </li>
+                <li>
+                    <p>How many volunteers prefer tree identification to bird banding?</p>
+                </li>
+                <li>
+                    <p>Describe the complete preference order of the four voters represented by the third column.</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="majority-voting-basics">
+        <title>Majority</title>
+
+        <definition xml:id="def-majority">
+            <title>Majority</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            A choice can receive more first-place votes than every other choice without
+            receiving a majority. To have a majority, the choice must receive more than half
+            of all first-place votes.
+        </p>
+
+        <example xml:id="ex-most-votes-no-majority">
+            <title>Choosing a Community Garden Plan</title>
+
+            <p>
+                A neighborhood association is choosing among three plans for a community
+                garden: a vegetable garden (V), a native-flower garden (N), and a mixed-use
+                garden (M). The first-place vote totals are shown below.
+            </p>
+
+            <table xml:id="table-community-garden-first-place">
+                <title>First-Place Votes for the Community Garden</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Plan</cell>
+                        <cell>V</cell>
+                        <cell>N</cell>
+                        <cell>M</cell>
+                    </row>
+                    <row>
+                        <cell>First-place votes</cell>
+                        <cell>9</cell>
+                        <cell>6</cell>
+                        <cell>4</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>How many people voted?</p>
+                </li>
+                <li>
+                    <p>What is the smallest number of votes needed for a majority?</p>
+                </li>
+                <li>
+                    <p>Does any plan have a majority? Explain.</p>
+                </li>
+                <li>
+                    <p>How many additional first-place votes would Plan V need to have a majority if the total number of voters remained unchanged?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-identify-majority-winner">
+            <title>Selecting an Animal Shelter Logo</title>
+
+            <p>
+                Twenty-four volunteers vote on three possible animal shelter logos: a dog
+                silhouette (D), a cat silhouette (C), and a paw print (P). Thirteen volunteers
+                rank D first, seven rank C first, and four rank P first.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>What is the smallest number of first-place votes needed for a majority?</p>
+                </li>
+                <li>
+                    <p>Is there a majority winner? If so, identify it.</p>
+                </li>
+                <li>
+                    <p>What percentage of the volunteers ranked the majority winner first? Round to one decimal place.</p>
+                </li>
+                <li>
+                    <p>If one voter changed from D to C, would there still be a majority winner? Explain.</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="pairwise-comparisons-condorcet">
+        <title>Pairwise Comparisons and Condorcet Winners</title>
+
+        <definition xml:id="def-pairwise-comparison">
+            <title>Pairwise Comparison</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-condorcet-winner">
+            <title>Condorcet Winner</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            In a pairwise comparison, imagine that only two choices remain. Each voter supports
+            whichever of those two choices appears higher on that voter's preference ballot.
+            A choice does not need to be ranked first on a ballot to receive that voter's support
+            in a particular pairwise comparison.
+        </p>
+
+        <example xml:id="ex-find-condorcet-winner">
+            <title>Naming a Nature Preserve Trail</title>
+
+            <p>
+                A committee ranks three possible names for a new nature preserve trail: Blue
+                Heron (H), Maple Ridge (M), and River Bend (R).
+            </p>
+
+            <table xml:id="table-trail-name-preferences">
+                <title>Preference Schedule for the Trail Name</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                        <cell>2</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>H</cell>
+                        <cell>M</cell>
+                        <cell>R</cell>
+                        <cell>M</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>M</cell>
+                        <cell>R</cell>
+                        <cell>M</cell>
+                        <cell>H</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>R</cell>
+                        <cell>H</cell>
+                        <cell>H</cell>
+                        <cell>R</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>In a pairwise comparison between H and M, how many voters prefer each choice?</p>
+                </li>
+                <li>
+                    <p>In a pairwise comparison between H and R, how many voters prefer each choice?</p>
+                </li>
+                <li>
+                    <p>In a pairwise comparison between M and R, how many voters prefer each choice?</p>
+                </li>
+                <li>
+                    <p>Is there a Condorcet winner? If so, identify it and explain why it qualifies.</p>
+                </li>
+                <li>
+                    <p>Does the Condorcet winner also have a majority of the first-place votes?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-condorcet-cycle">
+            <title>Selecting a Field-Research Project</title>
+
+            <p>
+                Students rank three possible field-research projects: a wetland survey (W), a
+                forest survey (F), and a river survey (R).
+            </p>
+
+            <table xml:id="table-field-research-preferences">
+                <title>Preference Schedule for the Field-Research Project</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>7</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                        <cell>3</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>W</cell>
+                        <cell>F</cell>
+                        <cell>R</cell>
+                        <cell>R</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>F</cell>
+                        <cell>R</cell>
+                        <cell>F</cell>
+                        <cell>W</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>R</cell>
+                        <cell>W</cell>
+                        <cell>W</cell>
+                        <cell>F</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Which project is preferred in the pairwise comparison between W and F?</p>
+                </li>
+                <li>
+                    <p>Which project is preferred in the pairwise comparison between F and R?</p>
+                </li>
+                <li>
+                    <p>Which project is preferred in the pairwise comparison between R and W?</p>
+                </li>
+                <li>
+                    <p>Does this election have a Condorcet winner? Explain.</p>
+                </li>
+                <li>
+                    <p>Describe the cycle formed by the three pairwise results.</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="fairness-criteria">
+        <title>Fairness Criteria</title>
+
+        <p>
+            A fairness criterion is a property that we might reasonably want a voting method
+            to satisfy. Later, these criteria can be used to evaluate the strengths and
+            limitations of different voting methods.
+        </p>
+
+        <definition xml:id="def-fairness-criterion">
+            <title>Fairness Criterion</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-majority-criterion">
+            <title>Majority Criterion</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-condorcet-criterion">
+            <title>Condorcet Criterion</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-monotonicity-criterion">
+            <title>Monotonicity Criterion</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-iia-criterion">
+            <title>Independence of Irrelevant Alternatives Criterion</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-match-fairness-criteria">
+            <title>Matching Situations to Fairness Criteria</title>
+
+            <p>
+                For each situation, identify the fairness criterion that has been violated and
+                explain your reasoning.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>
+                        Of 31 voters, 18 rank choice A first. The voting method declares choice
+                        B the winner.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Choice C defeats each of choices A, B, and D in separate head-to-head
+                        comparisons, but the voting method declares A the winner.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Choice E initially wins. On a second ballot, several voters move E
+                        higher in their rankings and make no other changes. Under the same
+                        method, E now loses.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Choice G wins an election. A non-winning choice is removed, and the
+                        relative rankings of every remaining pair of choices stay unchanged.
+                        When the votes are recounted, choice H wins.
+                    </p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-analyze-majority-condorcet-criteria">
+            <title>Two Criteria Violated at Once</title>
+
+            <p>
+                In an election with 27 voters, choice K receives 15 first-place votes. In
+                addition, K defeats each of the other choices in a pairwise comparison. The
+                voting method declares choice M the winner.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>Does K have a majority of the first-place votes? Show how you know.</p>
+                </li>
+                <li>
+                    <p>Is K a Condorcet winner? Explain.</p>
+                </li>
+                <li>
+                    <p>Which fairness criteria are violated by this result?</p>
+                </li>
+                <li>
+                    <p>
+                        Can you determine from the information given whether monotonicity or
+                        independence of irrelevant alternatives was violated? Explain.
+                    </p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-monotonicity-revote">
+            <title>Reconsidering a Campus Mural</title>
+
+            <p>
+                A committee uses its established voting method to select a design for a campus
+                mural. Design L wins. Before the result is finalized, eight committee members
+                submit corrected ballots. Each of these voters moves L from second place to
+                first place while keeping the relative order of all other designs unchanged.
+                When the same voting method is applied to the corrected ballots, design N wins.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>How did the corrected ballots change the support for L?</p>
+                </li>
+                <li>
+                    <p>Which fairness criterion is violated?</p>
+                </li>
+                <li>
+                    <p>Explain why the change in winner conflicts with that criterion.</p>
+                </li>
+                <li>
+                    <p>Would the criterion necessarily be violated if L had remained the winner? Explain.</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-iia-science-fair-theme">
+            <title>Selecting a Science-Fair Theme</title>
+
+            <p>
+                A school uses a voting method to choose among four science-fair themes:
+                ecosystems (E), oceans (O), space (S), and technology (T). Ecosystems wins the
+                original election, and technology finishes last. The school later discovers
+                that the technology theme is unavailable and removes it. No voter changes the
+                relative order of ecosystems, oceans, and space. When the same voting method is
+                applied to the remaining choices, oceans wins.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>Why is technology an irrelevant alternative when comparing the original and revised results?</p>
+                </li>
+                <li>
+                    <p>Which fairness criterion is violated?</p>
+                </li>
+                <li>
+                    <p>What would have needed to happen for the voting method to satisfy this criterion?</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="basics-voting-mixed-examples">
+        <title>Additional Examples</title>
+
+        <example xml:id="ex-wildlife-center-exhibit">
+            <title>Choosing a Wildlife-Center Exhibit</title>
+
+            <p>
+                A wildlife center asks its advisory group to rank three possible new exhibits:
+                animal tracking (A), wetland ecology (W), and pollinator conservation (P).
+            </p>
+
+            <table xml:id="table-wildlife-exhibit-preferences">
+                <title>Preference Schedule for the Wildlife-Center Exhibit</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>8</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>A</cell>
+                        <cell>W</cell>
+                        <cell>P</cell>
+                        <cell>W</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>W</cell>
+                        <cell>P</cell>
+                        <cell>W</cell>
+                        <cell>A</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>P</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                        <cell>P</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>How many advisory-group members voted?</p>
+                </li>
+                <li>
+                    <p>How many first-place votes are required for a majority?</p>
+                </li>
+                <li>
+                    <p>Does any exhibit have a majority of the first-place votes?</p>
+                </li>
+                <li>
+                    <p>Determine the winner of each pairwise comparison.</p>
+                </li>
+                <li>
+                    <p>Is there a Condorcet winner? Explain.</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-majority-implies-condorcet">
+            <title>Connecting Majority and Pairwise Comparisons</title>
+
+            <p>
+                Suppose choice Q is ranked first by 26 of 49 voters in an election. The other
+                23 voters may rank Q anywhere on their ballots.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>Does Q have a majority of the first-place votes?</p>
+                </li>
+                <li>
+                    <p>
+                        In a pairwise comparison between Q and any other choice, how many voters
+                        are guaranteed to prefer Q?
+                    </p>
+                </li>
+                <li>
+                    <p>What is the greatest possible number of voters who could prefer the other choice to Q?</p>
+                </li>
+                <li>
+                    <p>Explain why every majority winner must also be a Condorcet winner.</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+</section>

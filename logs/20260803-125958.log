@@ -1,0 +1,15 @@
+INFO    : Since no target was supplied, we will use "course".
+
+INFO    : Building target course
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.39.0/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/syllabus/syllabus.ptx: Opening and ending tag mismatch: subsection line 275 and section, line 374, column 11 (syllabus.ptx, line 374)
+ERROR   : Error assembling source file: Opening and ending tag mismatch: subsection line 275 and section, line 374, column 11 (syllabus.ptx, line 374)
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------
