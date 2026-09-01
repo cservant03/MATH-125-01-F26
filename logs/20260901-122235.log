@@ -1,0 +1,39 @@
+WARNING : Using CLI version 2.51.0 but project's `requirements.txt`
+WARNING : is configured to use 2.39.0. Consider either installing
+WARNING : CLI version 2.39.0 or running `pretext update-project`
+WARNING : to update `requirements.txt` and other managed files to match 2.51.0.
+INFO    : Since no target was supplied, we will use "course".
+
+INFO    : Building target course
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.51.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /home/cservant/.ptx/2.51.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : discovering source file's directory name: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source
+WARNING : (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo". The publisher file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : verifying and expanding input directory: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/../assets
+INFO    : input directory expanded to absolute path: /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/assets
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/output/course.
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.51.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/cservant/.ptx/2.51.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.2.10
+INFO    : Downloading Runestone Services, version 8.2.10
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-salem
+INFO    : converting /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx to HTML in /tmp/ptx-la474sic
+INFO    : XSL conversion of /home/cservant/Dropbox/SVSU/Semester Materials/MATH-125-01-F26/source/main.ptx by /home/cservant/.ptx/2.51.0/core/xsl/pretext-html.xsl
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /home/cservant/.ptx/2.51.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /tmp/ptx-la474sic
+INFO    : Removing temporary directory /tmp/ptx-eie9wdpt
+INFO    : 
+Finished build for target course. Run `pretext view course` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

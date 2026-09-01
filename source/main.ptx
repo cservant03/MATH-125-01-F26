@@ -25,7 +25,7 @@
       <title>Notes</title>
 
       <xi:include href="./notes/basics-of-voting.ptx"/>
-
+      <xi:include href="./notes/choice-based-voting-methods.ptx"/>
     </chapter>
 
     </book>

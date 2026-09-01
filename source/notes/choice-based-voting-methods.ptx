@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="choice-based-voting-methods">
+    <title>Choice-based Voting Methods</title>
+
+    <outcomes>
+        <ol marker="1)">
+            <li>
+                <p>Determine the winner of an election using the plurality method.</p>
+            </li>
+            <li>
+                <p>Apply instant runoff voting by eliminating choices and redistributing votes.</p>
+            </li>
+            <li>
+                <p>Determine the winner of an election using approval voting.</p>
+            </li>
+            <li>
+                <p>Compare the results produced by plurality, instant runoff, and approval voting.</p>
+            </li>
+            <li>
+                <p>Use fairness criteria to analyze the outcomes of choice-based voting methods.</p>
+            </li>
+        </ol>
+    </outcomes>
+
+    <subsection xml:id="plurality-voting-method">
+        <title>Plurality Voting</title>
+
+        <definition xml:id="def-plurality-method">
+            <title>Plurality Method</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-plurality-library-space">
+            <title>Choosing a New Library Space</title>
+
+            <p>
+                A library advisory board ranks four possible uses for an unused room: a quiet
+                study room (S), a technology lab (T), a community craft room (C), and a
+                makerspace (M).
+            </p>
+
+            <table xml:id="table-library-space-preferences">
+                <title>Preference Schedule for the Library Space</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>S</cell>
+                        <cell>T</cell>
+                        <cell>C</cell>
+                        <cell>M</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>T</cell>
+                        <cell>M</cell>
+                        <cell>M</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>M</cell>
+                        <cell>C</cell>
+                        <cell>T</cell>
+                        <cell>S</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>C</cell>
+                        <cell>S</cell>
+                        <cell>S</cell>
+                        <cell>T</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find the first-choice total for each option.</p>
+                </li>
+                <li>
+                    <p>Which option wins using the plurality method?</p>
+                </li>
+                <li>
+                    <p>Does the plurality winner have a majority?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-plurality-condorcet-disagreement">
+            <title>Selecting a Nature Center Exhibit</title>
+
+            <p>
+                Visitors rank four possible exhibits: an observatory exhibit (O), a wetland
+                exhibit (W), a forest exhibit (F), and a river-habitat exhibit (R).
+            </p>
+
+            <table xml:id="table-nature-center-exhibit-preferences">
+                <title>Preference Schedule for the Nature Center Exhibit</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>9</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>O</cell>
+                        <cell>W</cell>
+                        <cell>F</cell>
+                        <cell>R</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>W</cell>
+                        <cell>F</cell>
+                        <cell>W</cell>
+                        <cell>W</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>F</cell>
+                        <cell>R</cell>
+                        <cell>R</cell>
+                        <cell>F</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>R</cell>
+                        <cell>O</cell>
+                        <cell>O</cell>
+                        <cell>O</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find the plurality winner.</p>
+                </li>
+                <li>
+                    <p>Compare O and W head-to-head. Which exhibit is preferred?</p>
+                </li>
+                <li>
+                    <p>Compare W and F head-to-head. Which exhibit is preferred?</p>
+                </li>
+                <li>
+                    <p>Compare W and R head-to-head. Which exhibit is preferred?</p>
+                </li>
+                <li>
+                    <p>Is there a Condorcet winner? If so, identify it.</p>
+                </li>
+                <li>
+                    <p>Does the plurality result satisfy the Condorcet criterion?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-plurality-removing-choice">
+            <title>Removing an Unavailable Workshop</title>
+
+            <p>
+                A student organization ranks three possible workshops: data visualization
+                (D), public speaking (P), and resume design (R).
+            </p>
+
+            <table xml:id="table-workshop-removal-preferences">
+                <title>Preference Schedule for the Workshops</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>8</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>D</cell>
+                        <cell>P</cell>
+                        <cell>R</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>P</cell>
+                        <cell>D</cell>
+                        <cell>P</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>R</cell>
+                        <cell>R</cell>
+                        <cell>D</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Which workshop wins the original plurality vote?</p>
+                </li>
+                <li>
+                    <p>
+                        Resume design is unavailable and is removed. If each affected voter
+                        now supports the remaining workshop ranked higher on that ballot, what
+                        are the new first-choice totals?
+                    </p>
+                </li>
+                <li>
+                    <p>Which workshop wins after R is removed?</p>
+                </li>
+                <li>
+                    <p>Which fairness criterion is violated by the change in winner?</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="instant-runoff-voting-method">
+        <title>Instant Runoff Voting</title>
+
+        <definition xml:id="def-instant-runoff-voting">
+            <title>Instant Runoff Voting (Plurality with Elimination)</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-irv-museum-exhibit">
+            <title>Choosing a Traveling Museum Exhibit</title>
+
+            <p>
+                A museum committee ranks four traveling exhibits: ancient engineering (A),
+                biodiversity (B), climate science (C), and deep-sea exploration (D).
+            </p>
+
+            <table xml:id="table-museum-exhibit-irv">
+                <title>Preference Schedule for the Traveling Exhibit</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>9</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>B</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>D</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>How many votes are required for a majority?</p>
+                </li>
+                <li>
+                    <p>What are the initial first-choice totals?</p>
+                </li>
+                <li>
+                    <p>Which exhibit is eliminated first, and where do its votes transfer?</p>
+                </li>
+                <li>
+                    <p>Record the first-choice totals after each elimination.</p>
+                </li>
+                <li>
+                    <p>Which exhibit wins using IRV?</p>
+                </li>
+                <li>
+                    <p>Would the same exhibit win using plurality?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-irv-five-science-festival-themes">
+            <title>Choosing from Five Science-Festival Themes</title>
+
+            <p>
+                A planning committee ranks five themes for a city science festival:
+                astronomy (A), biology (B), climate (C), design (D), and engineering (E).
+            </p>
+
+            <table xml:id="table-five-science-festival-themes">
+                <title>Preference Schedule for the Science-Festival Theme</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>10</cell>
+                        <cell>8</cell>
+                        <cell>7</cell>
+                        <cell>5</cell>
+                        <cell>3</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>E</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>B</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>D</cell>
+                        <cell>E</cell>
+                        <cell>E</cell>
+                        <cell>E</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Fifth choice</cell>
+                        <cell>E</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Which theme wins using IRV?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-irv-garden-feature">
+            <title>Selecting a Botanical Garden Feature</title>
+
+            <p>
+                Members of a botanical garden rank three proposed features: a rain garden (R),
+                a seed library (S), and a teaching greenhouse (T).
+            </p>
+
+            <table xml:id="table-botanical-garden-irv">
+                <title>Preference Schedule for the Garden Feature</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>8</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>R</cell>
+                        <cell>S</cell>
+                        <cell>T</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>S</cell>
+                        <cell>T</cell>
+                        <cell>S</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>T</cell>
+                        <cell>R</cell>
+                        <cell>R</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Which feature would win using plurality?</p>
+                </li>
+                <li>
+                    <p>Which feature is eliminated in the first IRV round?</p>
+                </li>
+                <li>
+                    <p>After transferring the eliminated ballots, which feature wins using IRV?</p>
+                </li>
+                <li>
+                    <p>Determine the Condorcet winner, if one exists.</p>
+                </li>
+                <li>
+                    <p>Which of the two methods, plurality or IRV, selects the Condorcet winner in this election?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-irv-monotonicity-scenario">
+            <title>Recounting a Nature-Trail Election</title>
+
+            <p>
+                A parks committee uses IRV to select one of three proposed nature trails: Lake
+                Loop (L), Meadow Path (M), and Oak Ridge (O). The original preference schedule
+                is shown below.
+            </p>
+
+            <table xml:id="table-nature-trail-original-irv">
+                <title>Original Preference Schedule for the Nature Trail</title>
+                <tabular row-headers="yes"
+                        top="minor"
+                        bottom="minor"
+                        left="minor"
+                        right="minor"
+                        halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>16</cell>
+                        <cell>10</cell>
+                        <cell>6</cell>
+                        <cell>13</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>L</cell>
+                        <cell>M</cell>
+                        <cell>M</cell>
+                        <cell>O</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>M</cell>
+                        <cell>O</cell>
+                        <cell>L</cell>
+                        <cell>L</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>O</cell>
+                        <cell>L</cell>
+                        <cell>O</cell>
+                        <cell>M</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <p>
+                Before the result is finalized, four of the six voters represented by the
+                third column discover that they marked their ballots incorrectly. Their actual
+                preference is L, then M, then O. The correction moves L from second place to
+                first place while leaving M above O. The corrected preference schedule is
+                shown below.
+            </p>
+
+            <table xml:id="table-nature-trail-corrected-irv">
+                <title>Corrected Preference Schedule for the Nature Trail</title>
+                <tabular row-headers="yes"
+                        top="minor"
+                        bottom="minor"
+                        left="minor"
+                        right="minor"
+                        halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>20</cell>
+                        <cell>10</cell>
+                        <cell>2</cell>
+                        <cell>13</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>L</cell>
+                        <cell>M</cell>
+                        <cell>M</cell>
+                        <cell>O</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>M</cell>
+                        <cell>O</cell>
+                        <cell>L</cell>
+                        <cell>L</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>O</cell>
+                        <cell>L</cell>
+                        <cell>O</cell>
+                        <cell>M</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>
+                        Apply IRV to the original schedule. Record the initial totals, the
+                        eliminated choice, the transferred votes, and the winner.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Apply IRV to the corrected schedule. Record the initial totals, the
+                        eliminated choice, the transferred votes, and the winner.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Did receiving more first-choice support help or hurt L in this election?
+                    </p>
+                </li>
+                <li>
+                    <p>Which fairness criterion is violated? Explain.</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="approval-voting-method">
+        <title>Approval Voting</title>
+
+        <definition xml:id="def-approval-voting">
+            <title>Approval Voting</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-approval-science-program">
+            <title>Choosing a Weekend Science Program</title>
+
+            <p>
+                A science center asks members which weekend programs they would be willing to
+                attend: astronomy (A), botany (B), chemistry (C), and robotics (R). An X
+                indicates approval. Every voter in a column submitted the same approval ballot.
+            </p>
+
+            <table xml:id="table-science-program-approval">
+                <title>Approval Ballots for the Weekend Program</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>Astronomy (A)</cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>Botany (B)</cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>Chemistry (C)</cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                    </row>
+                    <row>
+                        <cell>Robotics (R)</cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find the total number of approvals received by each program.</p>
+                </li>
+                <li>
+                    <p>Which program wins using approval voting?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-approval-six-park-features">
+            <title>Choosing from Six Neighborhood-Park Features</title>
+
+            <p>
+                Residents vote on six possible additions to a neighborhood park: an
+                amphitheater (A), a bicycle-repair station (B), a covered pavilion (C), a dog
+                area (D), exercise stations (E), and a fountain (F). An X indicates approval,
+                and every resident in a column submitted the same approval ballot.
+            </p>
+
+            <table xml:id="table-six-neighborhood-park-features">
+                <title>Approval Ballots for the Neighborhood-Park Features</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                        <cell>3</cell>
+                        <cell>2</cell>
+                    </row>
+                    <row>
+                        <cell>Amphitheater (A)</cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>Bicycle-repair station (B)</cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>Covered pavilion (C)</cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                    </row>
+                    <row>
+                        <cell>Dog area (D)</cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                    </row>
+                    <row>
+                        <cell>Exercise stations (E)</cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>Fountain (F)</cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell>X</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find the approval total for each of the six features.</p>
+                </li>
+                <li>
+                    <p>Which feature wins using approval voting?</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-approval-majority-criterion">
+            <title>A Majority Winner Under Approval Voting</title>
+
+            <p>
+                Fifty-one voters rank four proposed names for a community learning center.
+                The preference schedule is shown below.
+            </p>
+
+            <table xml:id="table-learning-center-approval">
+                <title>Preference Schedule for the Learning Center Name</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>27</cell>
+                        <cell>14</cell>
+                        <cell>10</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>D</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>D</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <p>
+                Suppose each voter approves the two choices ranked highest on that voter's
+                ballot.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>Which choice has a majority of the first-place votes?</p>
+                </li>
+                <li>
+                    <p>Which choice wins using approval voting?</p>
+                </li>
+                <li>
+                    <p>Which criterion does approval voting violate?</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="choice-methods-comparison">
+        <title>Comparing Choice-Based Methods</title>
+
+        <example xml:id="ex-compare-choice-based-methods">
+            <title>Selecting a Public Art Installation</title>
+
+            <p>
+                A public-art committee ranks four installations: a kinetic sculpture (K), a
+                light garden (L), a tile mosaic (T), and an interactive mural (M).
+            </p>
+
+            <table xml:id="table-public-art-method-comparison">
+                <title>Preference Schedule for the Public Art Installation</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>9</cell>
+                        <cell>8</cell>
+                        <cell>7</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>K</cell>
+                        <cell>L</cell>
+                        <cell>T</cell>
+                        <cell>M</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>L</cell>
+                        <cell>T</cell>
+                        <cell>L</cell>
+                        <cell>L</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>T</cell>
+                        <cell>M</cell>
+                        <cell>M</cell>
+                        <cell>T</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>M</cell>
+                        <cell>K</cell>
+                        <cell>K</cell>
+                        <cell>K</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <p>
+                For the approval-voting part of this example, suppose every voter approves the
+                two choices ranked highest on that voter's ballot.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>Determine the plurality winner.</p>
+                </li>
+                <li>
+                    <p>Determine the IRV winner. Show the elimination and transfer.</p>
+                </li>
+                <li>
+                    <p>Determine the approval-voting winner.</p>
+                </li>
+                <li>
+                    <p>Which methods produce the same winner, and which method produces a different winner?</p>
+                </li>
+                <li>
+                    <p>Determine the Condorcet winner, if one exists.</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+</section>

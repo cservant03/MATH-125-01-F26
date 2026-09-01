@@ -224,6 +224,150 @@ var ptx_lunr_docs = [
   "number": "28",
   "title": "Connecting Majority and Pairwise Comparisons.",
   "body": " Connecting Majority and Pairwise Comparisons  Suppose choice Q is ranked first by 26 of 49 voters in an election. The other 23 voters may rank Q anywhere on their ballots.    Does Q have a majority of the first-place votes?    In a pairwise comparison between Q and any other choice, how many voters are guaranteed to prefer Q?    What is the greatest possible number of voters who could prefer the other choice to Q?    Explain why every majority winner must also be a Condorcet winner.    "
+},
+{
+  "id": "choice-based-voting-methods",
+  "level": "1",
+  "url": "choice-based-voting-methods.html",
+  "type": "Section",
+  "number": "",
+  "title": "Choice-based Voting Methods",
+  "body": " Choice-based Voting Methods     Determine the winner of an election using the plurality method.    Apply instant runoff voting by eliminating choices and redistributing votes.    Determine the winner of an election using approval voting.    Compare the results produced by plurality, instant runoff, and approval voting.    Use fairness criteria to analyze the outcomes of choice-based voting methods.      Plurality Voting   Plurality Method        Choosing a New Library Space  A library advisory board ranks four possible uses for an unused room: a quiet study room (S), a technology lab (T), a community craft room (C), and a makerspace (M).   Preference Schedule for the Library Space    Number of voters  7  6  5  4    First choice  S  T  C  M    Second choice  T  M  M  C    Third choice  M  C  T  S    Fourth choice  C  S  S  T       Find the first-choice total for each option.    Which option wins using the plurality method?    Does the plurality winner have a majority?      Selecting a Nature Center Exhibit  Visitors rank four possible exhibits: an observatory exhibit (O), a wetland exhibit (W), a forest exhibit (F), and a river-habitat exhibit (R).   Preference Schedule for the Nature Center Exhibit    Number of voters  9  6  5  4    First choice  O  W  F  R    Second choice  W  F  W  W    Third choice  F  R  R  F    Fourth choice  R  O  O  O       Find the plurality winner.    Compare O and W head-to-head. Which exhibit is preferred?    Compare W and F head-to-head. Which exhibit is preferred?    Compare W and R head-to-head. Which exhibit is preferred?    Is there a Condorcet winner? If so, identify it.    Does the plurality result satisfy the Condorcet criterion?      Removing an Unavailable Workshop  A student organization ranks three possible workshops: data visualization (D), public speaking (P), and resume design (R).   Preference Schedule for the Workshops    Number of voters  8  7  6    First choice  D  P  R    Second choice  P  D  P    Third choice  R  R  D       Which workshop wins the original plurality vote?    Resume design is unavailable and is removed. If each affected voter now supports the remaining workshop ranked higher on that ballot, what are the new first-choice totals?    Which workshop wins after R is removed?    Which fairness criterion is violated by the change in winner?       Instant Runoff Voting   Instant Runoff Voting (Plurality with Elimination)        Choosing a Traveling Museum Exhibit  A museum committee ranks four traveling exhibits: ancient engineering (A), biodiversity (B), climate science (C), and deep-sea exploration (D).   Preference Schedule for the Traveling Exhibit    Number of voters  9  7  6  5    First choice  A  B  C  D    Second choice  B  C  D  C    Third choice  C  D  B  B    Fourth choice  D  A  A  A       How many votes are required for a majority?    What are the initial first-choice totals?    Which exhibit is eliminated first, and where do its votes transfer?    Record the first-choice totals after each elimination.    Which exhibit wins using IRV?    Would the same exhibit win using plurality?      Choosing from Five Science-Festival Themes  A planning committee ranks five themes for a city science festival: astronomy (A), biology (B), climate (C), design (D), and engineering (E).   Preference Schedule for the Science-Festival Theme    Number of voters  10  8  7  5  3    First choice  A  B  C  D  E    Second choice  B  C  D  C  D    Third choice  C  D  B  B  C    Fourth choice  D  E  E  E  B    Fifth choice  E  A  A  A  A       Which theme wins using IRV?      Selecting a Botanical Garden Feature  Members of a botanical garden rank three proposed features: a rain garden (R), a seed library (S), and a teaching greenhouse (T).   Preference Schedule for the Garden Feature    Number of voters  8  7  6    First choice  R  S  T    Second choice  S  T  S    Third choice  T  R  R       Which feature would win using plurality?    Which feature is eliminated in the first IRV round?    After transferring the eliminated ballots, which feature wins using IRV?    Determine the Condorcet winner, if one exists.    Which of the two methods, plurality or IRV, selects the Condorcet winner in this election?      Recounting a Nature-Trail Election  A parks committee uses IRV to select one of three proposed nature trails: Lake Loop (L), Meadow Path (M), and Oak Ridge (O). The original preference schedule is shown below.   Original Preference Schedule for the Nature Trail    Number of voters  16  10  6  13    First choice  L  M  M  O    Second choice  M  O  L  L    Third choice  O  L  O  M     Before the result is finalized, four of the six voters represented by the third column discover that they marked their ballots incorrectly. Their actual preference is L, then M, then O. The correction moves L from second place to first place while leaving M above O. The corrected preference schedule is shown below.   Corrected Preference Schedule for the Nature Trail    Number of voters  20  10  2  13    First choice  L  M  M  O    Second choice  M  O  L  L    Third choice  O  L  O  M       Apply IRV to the original schedule. Record the initial totals, the eliminated choice, the transferred votes, and the winner.    Apply IRV to the corrected schedule. Record the initial totals, the eliminated choice, the transferred votes, and the winner.    Did receiving more first-choice support help or hurt L in this election?    Which fairness criterion is violated? Explain.       Approval Voting   Approval Voting        Choosing a Weekend Science Program  A science center asks members which weekend programs they would be willing to attend: astronomy (A), botany (B), chemistry (C), and robotics (R). An X indicates approval. Every voter in a column submitted the same approval ballot.   Approval Ballots for the Weekend Program    Number of voters  7  6  5  4    Astronomy (A)  X   X     Botany (B)  X  X      Chemistry (C)   X  X  X    Robotics (R)   X   X       Find the total number of approvals received by each program.    Which program wins using approval voting?      Choosing from Six Neighborhood-Park Features  Residents vote on six possible additions to a neighborhood park: an amphitheater (A), a bicycle-repair station (B), a covered pavilion (C), a dog area (D), exercise stations (E), and a fountain (F). An X indicates approval, and every resident in a column submitted the same approval ballot.   Approval Ballots for the Neighborhood-Park Features    Number of voters  6  5  4  3  2    Amphitheater (A)  X   X      Bicycle-repair station (B)  X  X       Covered pavilion (C)   X  X  X  X    Dog area (D)  X    X  X    Exercise stations (E)    X  X     Fountain (F)   X    X       Find the approval total for each of the six features.    Which feature wins using approval voting?      A Majority Winner Under Approval Voting  Fifty-one voters rank four proposed names for a community learning center. The preference schedule is shown below.   Preference Schedule for the Learning Center Name    Number of voters  27  14  10    First choice  A  B  D    Second choice  B  C  B    Third choice  C  D  C    Fourth choice  D  A  A     Suppose each voter approves the two choices ranked highest on that voter's ballot.    Which choice has a majority of the first-place votes?    Which choice wins using approval voting?    Which criterion does approval voting violate?       Comparing Choice-Based Methods   Selecting a Public Art Installation  A public-art committee ranks four installations: a kinetic sculpture (K), a light garden (L), a tile mosaic (T), and an interactive mural (M).   Preference Schedule for the Public Art Installation    Number of voters  9  8  7  4    First choice  K  L  T  M    Second choice  L  T  L  L    Third choice  T  M  M  T    Fourth choice  M  K  K  K     For the approval-voting part of this example, suppose every voter approves the two choices ranked highest on that voter's ballot.    Determine the plurality winner.    Determine the IRV winner. Show the elimination and transfer.    Determine the approval-voting winner.    Which methods produce the same winner, and which method produces a different winner?    Determine the Condorcet winner, if one exists.      "
+},
+{
+  "id": "choice-based-voting-methods-2",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#choice-based-voting-methods-2",
+  "type": "Outcomes",
+  "number": "",
+  "title": "",
+  "body": "   Determine the winner of an election using the plurality method.    Apply instant runoff voting by eliminating choices and redistributing votes.    Determine the winner of an election using approval voting.    Compare the results produced by plurality, instant runoff, and approval voting.    Use fairness criteria to analyze the outcomes of choice-based voting methods.    "
+},
+{
+  "id": "def-plurality-method",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#def-plurality-method",
+  "type": "Definition",
+  "number": "29",
+  "title": "Plurality Method.",
+  "body": " Plurality Method      "
+},
+{
+  "id": "ex-plurality-library-space",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-plurality-library-space",
+  "type": "Example",
+  "number": "30",
+  "title": "Choosing a New Library Space.",
+  "body": " Choosing a New Library Space  A library advisory board ranks four possible uses for an unused room: a quiet study room (S), a technology lab (T), a community craft room (C), and a makerspace (M).   Preference Schedule for the Library Space    Number of voters  7  6  5  4    First choice  S  T  C  M    Second choice  T  M  M  C    Third choice  M  C  T  S    Fourth choice  C  S  S  T       Find the first-choice total for each option.    Which option wins using the plurality method?    Does the plurality winner have a majority?    "
+},
+{
+  "id": "ex-plurality-condorcet-disagreement",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-plurality-condorcet-disagreement",
+  "type": "Example",
+  "number": "32",
+  "title": "Selecting a Nature Center Exhibit.",
+  "body": " Selecting a Nature Center Exhibit  Visitors rank four possible exhibits: an observatory exhibit (O), a wetland exhibit (W), a forest exhibit (F), and a river-habitat exhibit (R).   Preference Schedule for the Nature Center Exhibit    Number of voters  9  6  5  4    First choice  O  W  F  R    Second choice  W  F  W  W    Third choice  F  R  R  F    Fourth choice  R  O  O  O       Find the plurality winner.    Compare O and W head-to-head. Which exhibit is preferred?    Compare W and F head-to-head. Which exhibit is preferred?    Compare W and R head-to-head. Which exhibit is preferred?    Is there a Condorcet winner? If so, identify it.    Does the plurality result satisfy the Condorcet criterion?    "
+},
+{
+  "id": "ex-plurality-removing-choice",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-plurality-removing-choice",
+  "type": "Example",
+  "number": "34",
+  "title": "Removing an Unavailable Workshop.",
+  "body": " Removing an Unavailable Workshop  A student organization ranks three possible workshops: data visualization (D), public speaking (P), and resume design (R).   Preference Schedule for the Workshops    Number of voters  8  7  6    First choice  D  P  R    Second choice  P  D  P    Third choice  R  R  D       Which workshop wins the original plurality vote?    Resume design is unavailable and is removed. If each affected voter now supports the remaining workshop ranked higher on that ballot, what are the new first-choice totals?    Which workshop wins after R is removed?    Which fairness criterion is violated by the change in winner?    "
+},
+{
+  "id": "def-instant-runoff-voting",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#def-instant-runoff-voting",
+  "type": "Definition",
+  "number": "36",
+  "title": "Instant Runoff Voting (Plurality with Elimination).",
+  "body": " Instant Runoff Voting (Plurality with Elimination)      "
+},
+{
+  "id": "ex-irv-museum-exhibit",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-irv-museum-exhibit",
+  "type": "Example",
+  "number": "37",
+  "title": "Choosing a Traveling Museum Exhibit.",
+  "body": " Choosing a Traveling Museum Exhibit  A museum committee ranks four traveling exhibits: ancient engineering (A), biodiversity (B), climate science (C), and deep-sea exploration (D).   Preference Schedule for the Traveling Exhibit    Number of voters  9  7  6  5    First choice  A  B  C  D    Second choice  B  C  D  C    Third choice  C  D  B  B    Fourth choice  D  A  A  A       How many votes are required for a majority?    What are the initial first-choice totals?    Which exhibit is eliminated first, and where do its votes transfer?    Record the first-choice totals after each elimination.    Which exhibit wins using IRV?    Would the same exhibit win using plurality?    "
+},
+{
+  "id": "ex-irv-five-science-festival-themes",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-irv-five-science-festival-themes",
+  "type": "Example",
+  "number": "39",
+  "title": "Choosing from Five Science-Festival Themes.",
+  "body": " Choosing from Five Science-Festival Themes  A planning committee ranks five themes for a city science festival: astronomy (A), biology (B), climate (C), design (D), and engineering (E).   Preference Schedule for the Science-Festival Theme    Number of voters  10  8  7  5  3    First choice  A  B  C  D  E    Second choice  B  C  D  C  D    Third choice  C  D  B  B  C    Fourth choice  D  E  E  E  B    Fifth choice  E  A  A  A  A       Which theme wins using IRV?    "
+},
+{
+  "id": "ex-irv-garden-feature",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-irv-garden-feature",
+  "type": "Example",
+  "number": "41",
+  "title": "Selecting a Botanical Garden Feature.",
+  "body": " Selecting a Botanical Garden Feature  Members of a botanical garden rank three proposed features: a rain garden (R), a seed library (S), and a teaching greenhouse (T).   Preference Schedule for the Garden Feature    Number of voters  8  7  6    First choice  R  S  T    Second choice  S  T  S    Third choice  T  R  R       Which feature would win using plurality?    Which feature is eliminated in the first IRV round?    After transferring the eliminated ballots, which feature wins using IRV?    Determine the Condorcet winner, if one exists.    Which of the two methods, plurality or IRV, selects the Condorcet winner in this election?    "
+},
+{
+  "id": "ex-irv-monotonicity-scenario",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-irv-monotonicity-scenario",
+  "type": "Example",
+  "number": "43",
+  "title": "Recounting a Nature-Trail Election.",
+  "body": " Recounting a Nature-Trail Election  A parks committee uses IRV to select one of three proposed nature trails: Lake Loop (L), Meadow Path (M), and Oak Ridge (O). The original preference schedule is shown below.   Original Preference Schedule for the Nature Trail    Number of voters  16  10  6  13    First choice  L  M  M  O    Second choice  M  O  L  L    Third choice  O  L  O  M     Before the result is finalized, four of the six voters represented by the third column discover that they marked their ballots incorrectly. Their actual preference is L, then M, then O. The correction moves L from second place to first place while leaving M above O. The corrected preference schedule is shown below.   Corrected Preference Schedule for the Nature Trail    Number of voters  20  10  2  13    First choice  L  M  M  O    Second choice  M  O  L  L    Third choice  O  L  O  M       Apply IRV to the original schedule. Record the initial totals, the eliminated choice, the transferred votes, and the winner.    Apply IRV to the corrected schedule. Record the initial totals, the eliminated choice, the transferred votes, and the winner.    Did receiving more first-choice support help or hurt L in this election?    Which fairness criterion is violated? Explain.    "
+},
+{
+  "id": "def-approval-voting",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#def-approval-voting",
+  "type": "Definition",
+  "number": "46",
+  "title": "Approval Voting.",
+  "body": " Approval Voting      "
+},
+{
+  "id": "ex-approval-science-program",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-approval-science-program",
+  "type": "Example",
+  "number": "47",
+  "title": "Choosing a Weekend Science Program.",
+  "body": " Choosing a Weekend Science Program  A science center asks members which weekend programs they would be willing to attend: astronomy (A), botany (B), chemistry (C), and robotics (R). An X indicates approval. Every voter in a column submitted the same approval ballot.   Approval Ballots for the Weekend Program    Number of voters  7  6  5  4    Astronomy (A)  X   X     Botany (B)  X  X      Chemistry (C)   X  X  X    Robotics (R)   X   X       Find the total number of approvals received by each program.    Which program wins using approval voting?    "
+},
+{
+  "id": "ex-approval-six-park-features",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-approval-six-park-features",
+  "type": "Example",
+  "number": "49",
+  "title": "Choosing from Six Neighborhood-Park Features.",
+  "body": " Choosing from Six Neighborhood-Park Features  Residents vote on six possible additions to a neighborhood park: an amphitheater (A), a bicycle-repair station (B), a covered pavilion (C), a dog area (D), exercise stations (E), and a fountain (F). An X indicates approval, and every resident in a column submitted the same approval ballot.   Approval Ballots for the Neighborhood-Park Features    Number of voters  6  5  4  3  2    Amphitheater (A)  X   X      Bicycle-repair station (B)  X  X       Covered pavilion (C)   X  X  X  X    Dog area (D)  X    X  X    Exercise stations (E)    X  X     Fountain (F)   X    X       Find the approval total for each of the six features.    Which feature wins using approval voting?    "
+},
+{
+  "id": "ex-approval-majority-criterion",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-approval-majority-criterion",
+  "type": "Example",
+  "number": "51",
+  "title": "A Majority Winner Under Approval Voting.",
+  "body": " A Majority Winner Under Approval Voting  Fifty-one voters rank four proposed names for a community learning center. The preference schedule is shown below.   Preference Schedule for the Learning Center Name    Number of voters  27  14  10    First choice  A  B  D    Second choice  B  C  B    Third choice  C  D  C    Fourth choice  D  A  A     Suppose each voter approves the two choices ranked highest on that voter's ballot.    Which choice has a majority of the first-place votes?    Which choice wins using approval voting?    Which criterion does approval voting violate?    "
+},
+{
+  "id": "ex-compare-choice-based-methods",
+  "level": "2",
+  "url": "choice-based-voting-methods.html#ex-compare-choice-based-methods",
+  "type": "Example",
+  "number": "53",
+  "title": "Selecting a Public Art Installation.",
+  "body": " Selecting a Public Art Installation  A public-art committee ranks four installations: a kinetic sculpture (K), a light garden (L), a tile mosaic (T), and an interactive mural (M).   Preference Schedule for the Public Art Installation    Number of voters  9  8  7  4    First choice  K  L  T  M    Second choice  L  T  L  L    Third choice  T  M  M  T    Fourth choice  M  K  K  K     For the approval-voting part of this example, suppose every voter approves the two choices ranked highest on that voter's ballot.    Determine the plurality winner.    Determine the IRV winner. Show the elimination and transfer.    Determine the approval-voting winner.    Which methods produce the same winner, and which method produces a different winner?    Determine the Condorcet winner, if one exists.    "
 }
 ]
 

@@ -145,3 +145,44 @@ a.mathjax-link {
 #ex-majority-implies-condorcet {
   padding-bottom: 3in;
 }
+
+#def-plurality-method {
+  padding-bottom: 1.5in;
+}
+
+#def-instant-runoff-voting {
+  padding-bottom: 1.5in;
+}
+
+#ex-irv-five-science-festival-themes {
+  padding-bottom: 2in;
+}
+
+#def-approval-voting {
+  padding-bottom: 1.5in;
+}
+
+#ex-irv-museum-exhibit {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-irv-monotonicity-scenario {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-approval-six-park-features {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-approval-majority-criterion {
+  break-before: page;
+  page-break-before: always;
+}
+
+#choice-methods-comparison {
+  break-before: page;
+  page-break-before: always;
+}
