@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ranked-Based Voting Methods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends decimal; prefix: ''; suffix: ') '; }
+</style>
+<link rel="stylesheet" type="text/css" href="external/custom.css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Contemporary Mathematics">
+<meta property="og:title" content="Contemporary Mathematics">
+<meta property="book:title" content="Contemporary Mathematics">
+<meta name="twitter:description" content="MATH 125 01 Fall 2026">
+<meta property="og:description" content="MATH 125 01 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.51"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.51"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.2.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Contemporary Mathematics</span> <span class="subtitle">MATH 125 01 Fall 2026</span></a></div>
+<p class="byline">Christopher</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="choice-based-voting-methods.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="weighted-voting-and-power.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#instructor-info" class="internal"><span class="title">Instructor Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-desc" class="internal"><span class="title">Course Description</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-materials" class="internal"><span class="title">Course Matrials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#online-course-comp" class="internal"><span class="title">Online Course Component</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-outcomes" class="internal"><span class="title">Course Outcomes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#eval" class="internal"><span class="title">Evaluatation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#grade" class="internal"><span class="title">Grading</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#tips" class="internal"><span class="title">Tips for Success</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#academic-integrity" class="internal"><span class="title">Academic Integrity Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#withdrawal-policy" class="internal"><span class="title">Withdrawal Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#important-dates" class="internal"><span class="title">Important Dates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#disability-statement" class="internal"><span class="title">Disability Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#nondiscrimination-statement" class="internal"><span class="title">Non-Discrimination Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#land-acknowledgment" class="internal"><span class="title">Land Acknowledgment Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#tentative-syllabus" class="internal"><span class="title">Tentative Syllabus</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Notes</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-course-notes">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics-of-voting.html" class="internal"><span class="title">Basics of Voting</span></a></div>
+<ul id="ptx-toc-group-basics-of-voting" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#preference-ballots-schedules" class="internal"><span class="title">Preference Ballots and Preference Schedules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#majority-voting-basics" class="internal"><span class="title">Majority</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#pairwise-comparisons-condorcet" class="internal"><span class="title">Pairwise Comparisons and Condorcet Winners</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#fairness-criteria" class="internal"><span class="title">Fairness Criteria</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#basics-voting-mixed-examples" class="internal"><span class="title">Additional Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="choice-based-voting-methods.html" class="internal"><span class="title">Choice-based Voting Methods</span></a></div>
+<ul id="ptx-toc-group-choice-based-voting-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#plurality-voting-method" class="internal"><span class="title">Plurality Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#instant-runoff-voting-method" class="internal"><span class="title">Instant Runoff Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#approval-voting-method" class="internal"><span class="title">Approval Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#choice-methods-comparison" class="internal"><span class="title">Comparing Choice-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="ranked-based-voting-methods.html" class="internal"><span class="title">Ranked-Based Voting Methods</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-ranked-based-voting-methods">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#borda-count-method" class="internal"><span class="title">Borda Count</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#copeland-pairwise-comparison-method" class="internal"><span class="title">Copeland’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#ranked-methods-comparison" class="internal"><span class="title">Comparing Ranked-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="weighted-voting-and-power.html" class="internal"><span class="title">Weighted Voting and Power</span></a></div>
+<ul id="ptx-toc-group-weighted-voting-and-power" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="weighted-voting-and-power.html#weighted-voting-systems" class="internal"><span class="title">Weighted Voting Systems</span></a></div>
+<ul id="ptx-toc-group-weighted-voting-systems" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#weighted-voting-quota-limits" class="internal"><span class="title">Limits on the Quota</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#special-players-weighted-voting" class="internal"><span class="title">Dictators, Veto Power, and Dummies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#coalitions-critical-players" class="internal"><span class="title">Coalitions and Critical Players</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#banzhaf-power-index" class="internal"><span class="title">The Banzhaf Power Index</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="ranked-based-voting-methods">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ranked-Based Voting Methods</span>
+</h1>
+<article class="outcomes goal-like" id="ranked-based-voting-methods-2"><h2 class="heading"><span class="type">Outcomes</span></h2>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ranked-based-voting-methods-2-1">
+<li id="ranked-based-voting-methods-2-1-1">
+<div class="para" id="ranked-based-voting-methods-2-1-1-1">Assign points and determine the winner of an election using Borda count.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ranked-based-voting-methods-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 1"><a tabindex="-1" href="#ranked-based-voting-methods-2-1-1" title="Copy heading and permalink for Outcome 1" aria-label="Copy heading and permalink for Outcome 1">🔗</a></div>
+</li>
+<li id="ranked-based-voting-methods-2-1-2">
+<div class="para" id="ranked-based-voting-methods-2-1-2-1">Determine the winner of an election using Copeland’s method.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ranked-based-voting-methods-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 2"><a tabindex="-1" href="#ranked-based-voting-methods-2-1-2" title="Copy heading and permalink for Outcome 2" aria-label="Copy heading and permalink for Outcome 2">🔗</a></div>
+</li>
+<li id="ranked-based-voting-methods-2-1-3">
+<div class="para" id="ranked-based-voting-methods-2-1-3-1">Compare the results produced by Borda count and Copeland’s method.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ranked-based-voting-methods-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 3"><a tabindex="-1" href="#ranked-based-voting-methods-2-1-3" title="Copy heading and permalink for Outcome 3" aria-label="Copy heading and permalink for Outcome 3">🔗</a></div>
+</li>
+<li id="ranked-based-voting-methods-2-1-4">
+<div class="para" id="ranked-based-voting-methods-2-1-4-1">Use fairness criteria to analyze ranked-based voting methods.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ranked-based-voting-methods-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 4"><a tabindex="-1" href="#ranked-based-voting-methods-2-1-4" title="Copy heading and permalink for Outcome 4" aria-label="Copy heading and permalink for Outcome 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Outcomes"><a tabindex="-1" href="#ranked-based-voting-methods-2" title="Copy heading and permalink for Outcomes" aria-label="Copy heading and permalink for Outcomes">🔗</a></div>
+</article>
+<section class="subsection" id="borda-count-method">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Borda Count</span>
+</h2>
+<article class="definition definition-like" id="def-borda-count"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">55</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Borda Count.</span>
+</h3>
+<div class="para" id="def-borda-count-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-borda-count-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 55: Borda Count"><a tabindex="-1" href="#def-borda-count" title="Copy heading and permalink for Definition 55: Borda Count" aria-label="Copy heading and permalink for Definition 55: Borda Count">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-borda-community-workspace"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">56</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choosing a Community Workspace.</span>
+</h3>
+<div class="para" id="ex-borda-community-workspace-2">A neighborhood association ranks four possible uses for a shared building: a pottery studio (P), a language classroom (L), a woodworking room (W), and a game room (G).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-community-workspace-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-community-workspace-borda"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">57<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Preference Schedule for the Community Workspace<div class="autopermalink" aria-hidden="true" data-description="Table 57: Preference Schedule for the Community Workspace"><a tabindex="-1" href="#table-community-workspace-borda" title="Copy heading and permalink for Table 57: Preference Schedule for the Community Workspace" aria-label="Copy heading and permalink for Table 57: Preference Schedule for the Community Workspace">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Number of voters</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">8</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">6</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">5</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">3</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">First choice</th>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Second choice</th>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Third choice</th>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Fourth choice</th>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+</tr>
+</table></div>
+</figure>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-borda-community-workspace-4">
+<li id="ex-borda-community-workspace-4-1">
+<div class="para" id="ex-borda-community-workspace-4-1-1">Find the total Borda score for each option.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-community-workspace-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-borda-community-workspace-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-borda-community-workspace-4-2">
+<div class="para" id="ex-borda-community-workspace-4-2-1">Which option wins using Borda count?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-community-workspace-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-borda-community-workspace-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-borda-community-workspace-4-3">
+<div class="para" id="ex-borda-community-workspace-4-3-1">Which option would win using plurality? Compare the two results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-community-workspace-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-borda-community-workspace-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 56: Choosing a Community Workspace"><a tabindex="-1" href="#ex-borda-community-workspace" title="Copy heading and permalink for Example 56: Choosing a Community Workspace" aria-label="Copy heading and permalink for Example 56: Choosing a Community Workspace">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-borda-five-festival-locations"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">58</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choosing from Five Festival Locations.</span>
+</h3>
+<div class="para" id="ex-borda-five-festival-locations-2">A city committee ranks five locations for a weekend arts festival: the arboretum (A), the boardwalk (B), the civic plaza (C), the downtown market (D), and the exhibition hall (E).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-five-festival-locations-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-five-festival-locations-borda"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">59<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Preference Schedule for the Festival Location<div class="autopermalink" aria-hidden="true" data-description="Table 59: Preference Schedule for the Festival Location"><a tabindex="-1" href="#table-five-festival-locations-borda" title="Copy heading and permalink for Table 59: Preference Schedule for the Festival Location" aria-label="Copy heading and permalink for Table 59: Preference Schedule for the Festival Location">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Number of voters</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">9</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">7</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">6</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">4</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">3</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">First choice</th>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">E</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Second choice</th>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">E</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Third choice</th>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">E</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Fourth choice</th>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">E</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Fifth choice</th>
+<td class="c m b1 r1 l0 t0 lines">E</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+</tr>
+</table></div>
+</figure>
+<div class="para" id="ex-borda-five-festival-locations-4">Which location wins using Borda count?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-five-festival-locations-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 58: Choosing from Five Festival Locations"><a tabindex="-1" href="#ex-borda-five-festival-locations" title="Copy heading and permalink for Example 58: Choosing from Five Festival Locations" aria-label="Copy heading and permalink for Example 58: Choosing from Five Festival Locations">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-borda-majority-criterion"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">60</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Learning Center Name.</span>
+</h3>
+<div class="para" id="ex-borda-majority-criterion-2">Twenty-one members of a learning center rank four possible names for a new tutoring program: Aspire (A), Bridge (B), Connect (C), and Discover (D).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-majority-criterion-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-learning-program-borda-majority"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">61<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Preference Schedule for the Tutoring Program Name<div class="autopermalink" aria-hidden="true" data-description="Table 61: Preference Schedule for the Tutoring Program Name"><a tabindex="-1" href="#table-learning-program-borda-majority" title="Copy heading and permalink for Table 61: Preference Schedule for the Tutoring Program Name" aria-label="Copy heading and permalink for Table 61: Preference Schedule for the Tutoring Program Name">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Number of voters</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">11</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">6</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">4</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">First choice</th>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Second choice</th>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Third choice</th>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Fourth choice</th>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+</tr>
+</table></div>
+</figure>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-borda-majority-criterion-4">
+<li id="ex-borda-majority-criterion-4-1">
+<div class="para" id="ex-borda-majority-criterion-4-1-1">Which choice is the majority winner?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-majority-criterion-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-borda-majority-criterion-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-borda-majority-criterion-4-2">
+<div class="para" id="ex-borda-majority-criterion-4-2-1">Find the Borda score for each choice and identify the Borda winner.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-majority-criterion-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-borda-majority-criterion-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-borda-majority-criterion-4-3">
+<div class="para" id="ex-borda-majority-criterion-4-3-1">Does Borda count satisfy the majority criterion in this election? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-majority-criterion-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-borda-majority-criterion-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-borda-majority-criterion-4-4">
+<div class="para" id="ex-borda-majority-criterion-4-4-1">Does Borda count satisfy the Condorcet criterion in this election?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-borda-majority-criterion-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-borda-majority-criterion-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 60: Learning Center Name"><a tabindex="-1" href="#ex-borda-majority-criterion" title="Copy heading and permalink for Example 60: Learning Center Name" aria-label="Copy heading and permalink for Example 60: Learning Center Name">🔗</a></div>
+</article>
+<div class="para" id="borda-count-method-6">Borda count is often described as a consensus method because every position on every ballot contributes to the result. A choice that is consistently ranked near the top can defeat a more polarizing choice with more first-place support. That feature can be useful, but it also means that Borda count can violate the majority and Condorcet criteria.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#borda-count-method-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection: Borda Count"><a tabindex="-1" href="#borda-count-method" title="Copy heading and permalink for Subsection: Borda Count" aria-label="Copy heading and permalink for Subsection: Borda Count">🔗</a></div>
+</section>
+<section class="subsection" id="copeland-pairwise-comparison-method">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Copeland’s Method</span>
+</h2>
+<article class="definition definition-like" id="def-copeland-method"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">62</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Copeland’s Method.</span>
+</h3>
+<div class="para" id="def-copeland-method-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-copeland-method-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 62: Copeland’s Method"><a tabindex="-1" href="#def-copeland-method" title="Copy heading and permalink for Definition 62: Copeland’s Method" aria-label="Copy heading and permalink for Definition 62: Copeland’s Method">🔗</a></div>
+</article>
+<div class="para logical" id="copeland-pairwise-comparison-method-3">
+<div class="para">With <span class="process-math">\(n\)</span> choices, the number of different pairwise comparisons is</div>
+<div class="displaymath process-math" id="copeland-pairwise-comparison-method-3-2">
+\begin{equation*}
+\binom{n}{2}=\frac{n(n-1)}{2}.
+\end{equation*}
+</div>
+<div class="para">Each unordered pair is counted once: comparing A with B is the same comparison as comparing B with A.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#copeland-pairwise-comparison-method-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex-copeland-community-series"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">63</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Selecting a Community Lecture Series.</span>
+</h3>
+<div class="para" id="ex-copeland-community-series-2">A library board ranks four themes for a community lecture series: arts (A), business (B), conservation (C), and digital life (D).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-community-series-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-community-series-copeland"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">64<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Preference Schedule for the Lecture Series<div class="autopermalink" aria-hidden="true" data-description="Table 64: Preference Schedule for the Lecture Series"><a tabindex="-1" href="#table-community-series-copeland" title="Copy heading and permalink for Table 64: Preference Schedule for the Lecture Series" aria-label="Copy heading and permalink for Table 64: Preference Schedule for the Lecture Series">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Number of voters</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">7</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">6</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">5</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">4</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">First choice</th>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Second choice</th>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Third choice</th>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Fourth choice</th>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+</tr>
+</table></div>
+</figure>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-copeland-community-series-4">
+<li id="ex-copeland-community-series-4-1">
+<div class="para" id="ex-copeland-community-series-4-1-1">How many pairwise comparisons are required?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-community-series-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-copeland-community-series-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-copeland-community-series-4-2">
+<div class="para" id="ex-copeland-community-series-4-2-1">List all of the pairs that must be compared.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-community-series-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-copeland-community-series-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-copeland-community-series-4-3">
+<div class="para" id="ex-copeland-community-series-4-3-1">Find the total Copeland score for each theme.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-community-series-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-copeland-community-series-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-copeland-community-series-4-4">
+<div class="para" id="ex-copeland-community-series-4-4-1">Which theme wins using Copeland’s method?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-community-series-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-copeland-community-series-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-copeland-community-series-4-5">
+<div class="para" id="ex-copeland-community-series-4-5-1">Is the Copeland winner also the Condorcet winner? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-community-series-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#ex-copeland-community-series-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 63: Selecting a Community Lecture Series"><a tabindex="-1" href="#ex-copeland-community-series" title="Copy heading and permalink for Example 63: Selecting a Community Lecture Series" aria-label="Copy heading and permalink for Example 63: Selecting a Community Lecture Series">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-copeland-six-transit-projects"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">65</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing Six Transit Projects.</span>
+</h3>
+<div class="para" id="ex-copeland-six-transit-projects-2">A transportation committee considers six projects, labeled A through F. The committee has already completed the head-to-head counts from its ranked ballots. The winner of each comparison is shown below; one comparison ended in a tie.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-six-transit-projects-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-six-transit-copeland-results"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">66<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Results of the Pairwise Comparisons<div class="autopermalink" aria-hidden="true" data-description="Table 66: Results of the Pairwise Comparisons"><a tabindex="-1" href="#table-six-transit-copeland-results" title="Copy heading and permalink for Table 66: Results of the Pairwise Comparisons" aria-label="Copy heading and permalink for Table 66: Results of the Pairwise Comparisons">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Comparison</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Result</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Comparison</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Result</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Comparison</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Result</th>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">A vs. B</td>
+<td class="c m b1 r1 l0 t0 lines">A wins</td>
+<td class="c m b1 r1 l0 t0 lines">B vs. C</td>
+<td class="c m b1 r1 l0 t0 lines">B wins</td>
+<td class="c m b1 r1 l0 t0 lines">C vs. E</td>
+<td class="c m b1 r1 l0 t0 lines">C wins</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">A vs. C</td>
+<td class="c m b1 r1 l0 t0 lines">A wins</td>
+<td class="c m b1 r1 l0 t0 lines">B vs. D</td>
+<td class="c m b1 r1 l0 t0 lines">D wins</td>
+<td class="c m b1 r1 l0 t0 lines">C vs. F</td>
+<td class="c m b1 r1 l0 t0 lines">C wins</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">A vs. D</td>
+<td class="c m b1 r1 l0 t0 lines">D wins</td>
+<td class="c m b1 r1 l0 t0 lines">B vs. E</td>
+<td class="c m b1 r1 l0 t0 lines">E wins</td>
+<td class="c m b1 r1 l0 t0 lines">D vs. E</td>
+<td class="c m b1 r1 l0 t0 lines">D wins</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">A vs. E</td>
+<td class="c m b1 r1 l0 t0 lines">E wins</td>
+<td class="c m b1 r1 l0 t0 lines">B vs. F</td>
+<td class="c m b1 r1 l0 t0 lines">Tie</td>
+<td class="c m b1 r1 l0 t0 lines">D vs. F</td>
+<td class="c m b1 r1 l0 t0 lines">F wins</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">A vs. F</td>
+<td class="c m b1 r1 l0 t0 lines">F wins</td>
+<td class="c m b1 r1 l0 t0 lines">C vs. D</td>
+<td class="c m b1 r1 l0 t0 lines">D wins</td>
+<td class="c m b1 r1 l0 t0 lines">E vs. F</td>
+<td class="c m b1 r1 l0 t0 lines">E wins</td>
+</tr>
+</table></div>
+</figure>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-copeland-six-transit-projects-4">
+<li id="ex-copeland-six-transit-projects-4-1">
+<div class="para" id="ex-copeland-six-transit-projects-4-1-1">Use the formula to verify the number of comparisons in the table.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-six-transit-projects-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-copeland-six-transit-projects-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-copeland-six-transit-projects-4-2">
+<div class="para" id="ex-copeland-six-transit-projects-4-2-1">Find the Copeland score for each project.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-six-transit-projects-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-copeland-six-transit-projects-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-copeland-six-transit-projects-4-3">
+<div class="para" id="ex-copeland-six-transit-projects-4-3-1">Which project wins using Copeland’s method?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-six-transit-projects-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-copeland-six-transit-projects-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-copeland-six-transit-projects-4-4">
+<div class="para" id="ex-copeland-six-transit-projects-4-4-1">Does this election have a Condorcet winner? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-six-transit-projects-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-copeland-six-transit-projects-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 65: Comparing Six Transit Projects"><a tabindex="-1" href="#ex-copeland-six-transit-projects" title="Copy heading and permalink for Example 65: Comparing Six Transit Projects" aria-label="Copy heading and permalink for Example 65: Comparing Six Transit Projects">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-copeland-cycle-tie"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">67</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Preference Cycle and a Copeland Tie.</span>
+</h3>
+<div class="para" id="ex-copeland-cycle-tie-2">Fifteen members of a campus committee rank four proposals: a bike shelter (B), a charging station (C), a repair kiosk (R), and a water station (W).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-cycle-tie-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-campus-proposals-copeland-cycle"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">68<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Preference Schedule for the Campus Proposals<div class="autopermalink" aria-hidden="true" data-description="Table 68: Preference Schedule for the Campus Proposals"><a tabindex="-1" href="#table-campus-proposals-copeland-cycle" title="Copy heading and permalink for Table 68: Preference Schedule for the Campus Proposals" aria-label="Copy heading and permalink for Table 68: Preference Schedule for the Campus Proposals">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Number of voters</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">5</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">5</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">5</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">First choice</th>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">R</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Second choice</th>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">R</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Third choice</th>
+<td class="c m b1 r1 l0 t0 lines">R</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Fourth choice</th>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+</tr>
+</table></div>
+</figure>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-copeland-cycle-tie-4">
+<li id="ex-copeland-cycle-tie-4-1">
+<div class="para" id="ex-copeland-cycle-tie-4-1-1">Compare B with C, C with R, and R with B.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-copeland-cycle-tie-4-2">
+<div class="para" id="ex-copeland-cycle-tie-4-2-1">Describe the preference cycle formed by those three results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-copeland-cycle-tie-4-3">
+<div class="para" id="ex-copeland-cycle-tie-4-3-1">What happens when B, C, and R are each compared with W?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-copeland-cycle-tie-4-4">
+<div class="para" id="ex-copeland-cycle-tie-4-4-1">Find the Copeland score for every proposal.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-copeland-cycle-tie-4-5">
+<div class="para" id="ex-copeland-cycle-tie-4-5-1">Does the election have a Condorcet winner?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ex-copeland-cycle-tie-4-6">
+<div class="para" id="ex-copeland-cycle-tie-4-6-1">Does Copeland’s method produce a unique winner? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6"><a tabindex="-1" href="#ex-copeland-cycle-tie-4-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 67: A Preference Cycle and a Copeland Tie"><a tabindex="-1" href="#ex-copeland-cycle-tie" title="Copy heading and permalink for Example 67: A Preference Cycle and a Copeland Tie" aria-label="Copy heading and permalink for Example 67: A Preference Cycle and a Copeland Tie">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-copeland-iia-community-grant"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">69</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Removing a Grant Proposal.</span>
+</h3>
+<div class="para" id="ex-copeland-iia-community-grant-2">Twenty-six reviewers rank four proposals for a community grant: an arts incubator (A), a business kitchen (B), a childcare cooperative (C), and a digital-access lab (D).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-iia-community-grant-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-community-grant-copeland-original"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">70<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Original Preference Schedule for the Community Grant<div class="autopermalink" aria-hidden="true" data-description="Table 70: Original Preference Schedule for the Community Grant"><a tabindex="-1" href="#table-community-grant-copeland-original" title="Copy heading and permalink for Table 70: Original Preference Schedule for the Community Grant" aria-label="Copy heading and permalink for Table 70: Original Preference Schedule for the Community Grant">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Number of voters</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">5</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">8</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">8</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">5</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">First choice</th>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Second choice</th>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Third choice</th>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Fourth choice</th>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+</tr>
+</table></div>
+</figure>
+<div class="para" id="ex-copeland-iia-community-grant-4">After the original result is calculated, proposal A is withdrawn because its organizers cannot meet the grant deadline. The rankings of B, C, and D stay in the same relative order on every ballot.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-iia-community-grant-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-copeland-iia-community-grant-5">
+<li id="ex-copeland-iia-community-grant-5-1">
+<div class="para" id="ex-copeland-iia-community-grant-5-1-1">Find all six original pairwise results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-copeland-iia-community-grant-5-2">
+<div class="para" id="ex-copeland-iia-community-grant-5-2-1">Find the original Copeland score for each proposal and identify the winner.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-copeland-iia-community-grant-5-3">
+<div class="para" id="ex-copeland-iia-community-grant-5-3-1">Was proposal A the original winner?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-copeland-iia-community-grant-5-4">
+<div class="para" id="ex-copeland-iia-community-grant-5-4-1">Remove A and find the three remaining pairwise results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-copeland-iia-community-grant-5-5">
+<div class="para" id="ex-copeland-iia-community-grant-5-5-1">Find the new Copeland scores and identify the new winner.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ex-copeland-iia-community-grant-5-6">
+<div class="para" id="ex-copeland-iia-community-grant-5-6-1">Which fairness criterion is violated by the change in winner? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6"><a tabindex="-1" href="#ex-copeland-iia-community-grant-5-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 69: Removing a Grant Proposal"><a tabindex="-1" href="#ex-copeland-iia-community-grant" title="Copy heading and permalink for Example 69: Removing a Grant Proposal" aria-label="Copy heading and permalink for Example 69: Removing a Grant Proposal">🔗</a></div>
+</article>
+<div class="para" id="copeland-pairwise-comparison-method-8">If a Condorcet winner exists, that choice defeats every other choice and earns one point in every comparison. Copeland’s method therefore satisfies the Condorcet criterion and, because every majority winner is a Condorcet winner, the majority criterion. It also satisfies the monotonicity criterion. However, the grant example shows that Copeland’s method can violate independence of irrelevant alternatives, and the preference-cycle example shows that a Copeland election can end in a tie.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#copeland-pairwise-comparison-method-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection: Copeland’s Method"><a tabindex="-1" href="#copeland-pairwise-comparison-method" title="Copy heading and permalink for Subsection: Copeland’s Method" aria-label="Copy heading and permalink for Subsection: Copeland’s Method">🔗</a></div>
+</section>
+<section class="subsection" id="ranked-methods-comparison">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing Ranked-Based Methods</span>
+</h2>
+<article class="example example-like" id="ex-compare-borda-copeland"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">71</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Selecting a Public Workshop.</span>
+</h3>
+<div class="para" id="ex-compare-borda-copeland-2">Residents rank four possible Saturday workshops: photography (P), local history (L), weather observation (W), and gardening (G).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-borda-copeland-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-public-workshop-ranked-methods"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">72<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Preference Schedule for the Public Workshop<div class="autopermalink" aria-hidden="true" data-description="Table 72: Preference Schedule for the Public Workshop"><a tabindex="-1" href="#table-public-workshop-ranked-methods" title="Copy heading and permalink for Table 72: Preference Schedule for the Public Workshop" aria-label="Copy heading and permalink for Table 72: Preference Schedule for the Public Workshop">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Number of voters</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">5</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">4</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">9</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">4</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">First choice</th>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Second choice</th>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Third choice</th>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Fourth choice</th>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+</tr>
+</table></div>
+</figure>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-compare-borda-copeland-4">
+<li id="ex-compare-borda-copeland-4-1">
+<div class="para" id="ex-compare-borda-copeland-4-1-1">Find the Borda score for each workshop and identify the Borda winner.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-borda-copeland-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-compare-borda-copeland-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-compare-borda-copeland-4-2">
+<div class="para" id="ex-compare-borda-copeland-4-2-1">Find the Copeland score for each workshop and identify the Copeland winner.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-borda-copeland-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-compare-borda-copeland-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-compare-borda-copeland-4-3">
+<div class="para" id="ex-compare-borda-copeland-4-3-1">Explain how Borda count’s use of every ranking and Copeland’s use of head-to-head contests lead to the different results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-borda-copeland-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-compare-borda-copeland-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 71: Selecting a Public Workshop"><a tabindex="-1" href="#ex-compare-borda-copeland" title="Copy heading and permalink for Example 71: Selecting a Public Workshop" aria-label="Copy heading and permalink for Example 71: Selecting a Public Workshop">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Comparing Ranked-Based Methods"><a tabindex="-1" href="#ranked-methods-comparison" title="Copy heading and permalink for Subsection: Comparing Ranked-Based Methods" aria-label="Copy heading and permalink for Subsection: Comparing Ranked-Based Methods">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section: Ranked-Based Voting Methods"><a tabindex="-1" href="#ranked-based-voting-methods" title="Copy heading and permalink for Section: Ranked-Based Voting Methods" aria-label="Copy heading and permalink for Section: Ranked-Based Voting Methods">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="choice-based-voting-methods.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="weighted-voting-and-power.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
