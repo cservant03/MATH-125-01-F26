@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="basics-of-apportionment">
+    <title>Basics of Apportionment</title>
+
+    <outcomes>
+        <ol marker="1)">
+            <li><p>Explain the apportionment problem and its basic requirements.</p></li>
+            <li><p>Calculate the standard divisor and standard quotas.</p></li>
+            <li><p>Identify the lower and upper quota for each group.</p></li>
+            <li><p>Determine whether an allocation satisfies the quota rule.</p></li>
+            <li><p>Interpret an apportionment in its original context.</p></li>
+            <li><p>Explain how district boundaries can affect representation.</p></li>
+        </ol>
+    </outcomes>
+
+    <p>
+        Apportionment is the problem of dividing a fixed number of indivisible items among
+        groups of different sizes. The items might be legislative seats, tutors, employees,
+        vehicles, or pieces of equipment. The goal is to make each group's share of the items
+        approximately proportional to its share of the population or need.
+    </p>
+
+    <subsection xml:id="apportionment-problem-rules">
+        <title>The Apportionment Problem</title>
+
+        <definition xml:id="def-apportionment">
+            <title>Apportionment</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>An apportionment must satisfy several practical requirements:</p>
+
+        <ol marker="1)">
+            <li><p>Each item must be assigned as a whole item.</p></li>
+            <li><p>Every available item must be assigned, and no extra items may be created.</p></li>
+            <li><p>Each group must receive at least one item.</p></li>
+            <li><p>The allocation should be approximately proportional to the group sizes.</p></li>
+        </ol>
+
+        <p>
+            Exact proportionality is often impossible because the ideal shares are usually
+            decimals while the items must be assigned in whole numbers. Apportionment methods
+            provide systematic ways to decide where those unavoidable rounding differences
+            should occur.
+        </p>
+
+        <example xml:id="ex-recognize-apportionment-situations">
+            <title>Recognizing Apportionment Problems</title>
+            <p>
+                For each situation, identify the items being divided, the groups receiving
+                them, and the quantity used to measure each group's size or need.
+            </p>
+            <ol marker="1)">
+                <li><p>A college assigns 18 peer tutors among four introductory courses according to enrollment.</p></li>
+                <li><p>A delivery company assigns 25 vans among five service regions according to average daily orders.</p></li>
+                <li><p>A state assigns 40 legislative seats among counties according to population.</p></li>
+                <li><p>A clinic assigns 12 portable monitors among units according to average patient counts.</p></li>
+                <li><p>Explain why assigning 4.6 tutors or 7.3 legislative seats would not solve any of these problems.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="standard-divisor-and-quotas">
+        <title>Standard Divisor and Standard Quotas</title>
+
+        <definition xml:id="def-standard-divisor">
+            <title>Standard Divisor</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            The standard divisor describes the ideal population represented by one item:
+            <me>\text{standard divisor}=\frac{\text{total population}}{\text{number of items to allocate}}.</me>
+        </p>
+
+        <definition xml:id="def-standard-quota">
+            <title>Standard Quota</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            Divide each group's population by the standard divisor to find its standard quota:
+            <me>\text{group's standard quota}=\frac{\text{group's population}}{\text{standard divisor}}.</me>
+            The standard quota is the group's ideal fractional share of the available items.
+            The standard quotas add to the total number of items being apportioned, apart
+            from small differences caused by rounding displayed decimals.
+        </p>
+
+        <definition xml:id="def-lower-quota">
+            <title>Lower Quota</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <definition xml:id="def-upper-quota">
+            <title>Upper Quota</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            The lower quota is the whole-number part of a standard quota. The upper quota is
+            the next whole number above a non-integer standard quota. For example, a standard
+            quota of 6.37 has lower quota 6 and upper quota 7. When a quota is exactly 6, both
+            its lower and upper quota are 6.
+        </p>
+
+        <example xml:id="ex-mentor-standard-quotas">
+            <title>Allocating Peer Mentors</title>
+            <p>A college will assign 20 peer mentors among four programs according to enrollment.</p>
+            <table xml:id="table-peer-mentor-populations">
+                <title>Enrollment by Program</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Program</cell><cell>Health Sciences</cell><cell>Business</cell><cell>Education</cell><cell>Arts</cell><cell>Total</cell>
+                    </row>
+                    <row>
+                        <cell>Enrollment</cell><cell>420</cell><cell>315</cell><cell>180</cell><cell>135</cell><cell>1,050</cell>
+                    </row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the standard divisor and interpret it in context.</p></li>
+                <li><p>Find each program's standard quota.</p></li>
+                <li><p>Verify that the standard quotas add to 20.</p></li>
+                <li><p>Find the lower and upper quota for each program.</p></li>
+                <li><p>Why can the standard quotas not be used directly as the final allocation?</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-exact-proportional-allocation">
+            <title>When Exact Proportionality Is Possible</title>
+            <p>A school district divides 20 tablet carts among buildings with 240, 180, 120, and 60 students.</p>
+            <ol marker="1)">
+                <li><p>Find the total number of students and the standard divisor.</p></li>
+                <li><p>Find each building's standard quota.</p></li>
+                <li><p>What is unusual about the four standard quotas?</p></li>
+                <li><p>Determine the apportionment without using a rounding rule.</p></li>
+                <li><p>Verify that every cart is assigned and every building receives at least one.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="quota-rule-apportionment">
+        <title>The Quota Rule</title>
+
+        <definition xml:id="def-apportionment-quota-rule">
+            <title>Quota Rule</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            An apportionment satisfies the quota rule when every group receives either its
+            lower quota or its upper quota. The rule does not determine a unique answer; more
+            than one allocation may satisfy the quota rule while using the correct total.
+        </p>
+
+        <example xml:id="ex-check-quota-rule">
+            <title>Checking Proposed Allocations</title>
+            <p>Four wildlife centers share 24 mobile-care units according to the annual numbers of animals treated.</p>
+            <table xml:id="table-wildlife-center-quotas">
+                <title>Populations and Proposed Allocations</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Center</cell><cell>North</cell><cell>River</cell><cell>Prairie</cell><cell>Coastal</cell><cell>Total</cell>
+                    </row>
+                    <row><cell>Animals treated</cell><cell>860</cell><cell>640</cell><cell>375</cell><cell>225</cell><cell>2,100</cell></row>
+                    <row><cell>Proposal A</cell><cell>10</cell><cell>7</cell><cell>4</cell><cell>3</cell><cell>24</cell></row>
+                    <row><cell>Proposal B</cell><cell>9</cell><cell>8</cell><cell>4</cell><cell>3</cell><cell>24</cell></row>
+                    <row><cell>Proposal C</cell><cell>11</cell><cell>7</cell><cell>4</cell><cell>2</cell><cell>24</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the standard divisor.</p></li>
+                <li><p>Find the standard, lower, and upper quota for each center.</p></li>
+                <li><p>Which proposed allocations satisfy the quota rule?</p></li>
+                <li><p>For each violation, identify the center receiving less than its lower quota or more than its upper quota.</p></li>
+                <li><p>Why does the quota rule allow more than one of the proposals?</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-interpret-quota-rounding">
+            <title>Interpreting Fractional Quotas</title>
+            <p>
+                A town assigns 14 snowplows among three service zones. Their standard quotas
+                are 6.825, 4.725, and 2.450.
+            </p>
+            <ol marker="1)">
+                <li><p>Verify that the quotas add to the number of available snowplows.</p></li>
+                <li><p>Find the lower and upper quota for each zone.</p></li>
+                <li><p>List every allocation that uses 14 snowplows and satisfies the quota rule.</p></li>
+                <li><p>Explain why the quota rule alone does not select one allocation.</p></li>
+                <li><p>What additional rule would an apportionment method need to provide?</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="representation-and-districts">
+        <title>Representation and District Boundaries</title>
+
+        <definition xml:id="def-legislative-district">
+            <title>Legislative District</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            A legislature may give each geographic district one representative rather than
+            assign several representatives to each county or region. Fair apportionment then
+            requires districts with approximately equal populations. Population changes
+            eventually require the district boundaries to be redrawn.
+        </p>
+
+        <example xml:id="ex-compare-district-populations">
+            <title>Comparing Representation Across Districts</title>
+            <p>Four districts each elect one representative. Their populations are 48,000, 51,000, 72,000, and 49,000.</p>
+            <ol marker="1)">
+                <li><p>Find the total population.</p></li>
+                <li><p>Find the ideal population per representative.</p></li>
+                <li><p>Which district is most overrepresented?</p></li>
+                <li><p>Which district is most underrepresented?</p></li>
+                <li><p>Explain why equal numbers of representatives do not guarantee equal representation.</p></li>
+            </ol>
+        </example>
+
+        <definition xml:id="def-gerrymandering">
+            <title>Gerrymandering</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            Gerrymandering occurs when district boundaries are drawn to create a political
+            advantage. Two maps can use the same voters and give every district the same
+            population but produce different election results.
+        </p>
+
+        <example xml:id="ex-district-boundaries-outcomes">
+            <title>Same Voters, Different District Boundaries</title>
+            <p>
+                A county has twelve equally populated precincts. Precincts 1 through 7 each
+                contain 60 Blue voters and 40 Gold voters. Precincts 8 through 12 each contain
+                30 Blue voters and 70 Gold voters. The county will form three districts of four
+                precincts each.
+            </p>
+            <table xml:id="table-two-districting-plans">
+                <title>Two Possible Districting Plans</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Plan</cell><cell>District 1</cell><cell>District 2</cell><cell>District 3</cell></row>
+                    <row><cell>Plan A</cell><cell>1, 2, 3, 4</cell><cell>5, 6, 7, 8</cell><cell>9, 10, 11, 12</cell></row>
+                    <row><cell>Plan B</cell><cell>1, 2, 8, 9</cell><cell>3, 4, 10, 11</cell><cell>5, 6, 7, 12</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the countywide total for each group of voters.</p></li>
+                <li><p>Which group has the countywide majority?</p></li>
+                <li><p>Under Plan A, find the Blue and Gold totals in each district.</p></li>
+                <li><p>Under Plan A, which group wins a majority of the districts?</p></li>
+                <li><p>Repeat the calculations for Plan B.</p></li>
+                <li><p>Explain how the boundaries changed the outcome even though no voters moved or changed groups.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <conclusion>
+        <p>
+            The mathematical ideas in this section are based on the apportionment chapter of
+            Mike Kenyon and David Lippman's <em>Math in Society</em>, licensed under Creative
+            Commons BY-SA. The contexts, data tables, and questions in these notes are new.
+        </p>
+    </conclusion>
+</section>

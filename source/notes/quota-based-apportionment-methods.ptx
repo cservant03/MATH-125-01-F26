@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="quota-based-apportionment-methods">
+    <title>Quota-Based Apportionment Methods</title>
+
+    <outcomes>
+        <ol marker="1)">
+            <li><p>Determine an apportionment using Hamilton's method.</p></li>
+            <li><p>Explain why Hamilton's method satisfies the quota rule.</p></li>
+            <li><p>Recognize the Alabama, population, and new states paradoxes.</p></li>
+            <li><p>Determine an apportionment using Lowndes' method.</p></li>
+            <li><p>Compare the allocations produced by Hamilton's and Lowndes' methods.</p></li>
+            <li><p>Explain how the two methods treat large and small groups differently.</p></li>
+        </ol>
+    </outcomes>
+
+    <p>
+        Hamilton's and Lowndes' methods begin with the same standard divisor, standard
+        quotas, and lower quotas. Both assign the remaining items by ranking information from
+        the fractional parts of the quotas. Hamilton compares the fractional parts directly,
+        while Lowndes compares each fractional part with the size of its lower quota.
+    </p>
+
+    <subsection xml:id="hamilton-apportionment-method">
+        <title>Hamilton's Method</title>
+
+        <definition xml:id="def-hamilton-method">
+            <title>Hamilton's Method</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>To apply Hamilton's method:</p>
+        <ol marker="1)">
+            <li><p>Divide the total population by the number of items to find the standard divisor.</p></li>
+            <li><p>Divide each group population by the standard divisor to find its standard quota.</p></li>
+            <li><p>Assign each group its lower quota and find the number of items left to assign.</p></li>
+            <li><p>Rank the fractional parts of the quotas from largest to smallest.</p></li>
+            <li><p>Give one remaining item to each group with the largest fractional part until every item is assigned.</p></li>
+        </ol>
+
+        <p>
+            Hamilton's method uses lower quotas for the initial allocation and adds at most
+            one item to any group. Therefore, every final allocation is either a lower quota or
+            an upper quota, so Hamilton's method always satisfies the quota rule.
+        </p>
+
+        <example xml:id="ex-hamilton-peer-advisors">
+            <title>Assigning Peer Advisors</title>
+            <p>
+                A college apportions 25 peer advisors among five academic divisions according
+                to enrollment.
+            </p>
+            <table xml:id="table-peer-advisor-hamilton">
+                <title>Enrollment by Academic Division</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Division</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell><cell>Total</cell></row>
+                    <row><cell>Enrollment</cell><cell>520</cell><cell>410</cell><cell>300</cell><cell>195</cell><cell>75</cell><cell>1,500</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the standard divisor.</p></li>
+                <li><p>Find each division's standard quota to at least four decimal places.</p></li>
+                <li><p>Assign the lower quotas and determine how many advisors remain.</p></li>
+                <li><p>Rank the fractional parts from largest to smallest.</p></li>
+                <li><p>Determine the final Hamilton apportionment.</p></li>
+                <li><p>Verify that the final allocations add to 25 and satisfy the quota rule.</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-hamilton-snowplows">
+            <title>Apportioning Snowplows</title>
+            <p>
+                A county apportions 14 snowplows among three service zones with 390, 270,
+                and 140 miles of road.
+            </p>
+            <ol marker="1)">
+                <li><p>Find the standard divisor and interpret it in context.</p></li>
+                <li><p>Find the three standard quotas.</p></li>
+                <li><p>Determine the initial allocation using lower quotas.</p></li>
+                <li><p>Which zones receive the remaining snowplows?</p></li>
+                <li><p>State the final Hamilton apportionment.</p></li>
+                <li><p>How many miles of road does each zone have per apportioned snowplow?</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="hamilton-apportionment-paradoxes">
+        <title>Paradoxes of Hamilton's Method</title>
+
+        <p>
+            Although Hamilton's method follows the quota rule, its use of ranked fractional
+            parts can produce surprising changes when the number of items, the populations,
+            or the number of groups changes.
+        </p>
+
+        <definition xml:id="def-alabama-paradox">
+            <title>Alabama Paradox</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <example xml:id="ex-alabama-paradox-park-rangers">
+            <title>Adding a Position Causes a Loss</title>
+            <p>
+                A park system apportions ranger positions among Pine, River, and Summit
+                regions according to 187, 632, and 917 annual service requests.
+            </p>
+            <ol marker="1)">
+                <li><p>Use Hamilton's method to apportion 23 ranger positions.</p></li>
+                <li><p>Use Hamilton's method to apportion 24 ranger positions with the same service counts.</p></li>
+                <li><p>Which region loses a ranger when the total number of positions increases?</p></li>
+                <li><p>Explain why this is an example of the Alabama paradox.</p></li>
+                <li><p>Which part of Hamilton's calculation changes the ranking of the regions?</p></li>
+            </ol>
+        </example>
+
+        <definition xml:id="def-population-paradox">
+            <title>Population Paradox</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <example xml:id="ex-population-paradox-advising-hours">
+            <title>Faster Growth but Fewer Advising Hours</title>
+            <p>
+                A college apportions 38 weekly advising-hour blocks among four divisions.
+                Enrollment is measured in two different years.
+            </p>
+            <table xml:id="table-population-paradox-enrollment">
+                <title>Division Enrollment in Two Years</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Division</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>Total</cell></row>
+                    <row><cell>Year 1</cell><cell>1,355</cell><cell>378</cell><cell>222</cell><cell>1,117</cell><cell>3,072</cell></row>
+                    <row><cell>Year 2</cell><cell>1,436</cell><cell>395</cell><cell>236</cell><cell>1,238</cell><cell>3,305</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the percentage growth of divisions A and B.</p></li>
+                <li><p>Which of those two divisions is larger and grows at the faster rate?</p></li>
+                <li><p>Use Hamilton's method to apportion the 38 blocks using Year 1 enrollment.</p></li>
+                <li><p>Repeat the apportionment using Year 2 enrollment.</p></li>
+                <li><p>Describe the transfer of one advising block between divisions A and B.</p></li>
+                <li><p>Explain why the outcome illustrates the population paradox.</p></li>
+            </ol>
+        </example>
+
+        <definition xml:id="def-new-states-paradox">
+            <title>New States Paradox</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <example xml:id="ex-new-states-paradox-mobile-clinics">
+            <title>Adding a New Service Region</title>
+            <p>
+                A health network initially apportions 25 mobile-clinic days among three
+                regions with populations 963, 505, and 320.
+            </p>
+            <ol marker="1)">
+                <li><p>Use Hamilton's method to apportion the 25 clinic days.</p></li>
+                <li><p>A new region with population 266 joins the network, and 4 clinic days are added for it.</p></li>
+                <li><p>Use Hamilton's method to apportion 29 clinic days among all four regions.</p></li>
+                <li><p>Verify that the new region receives 4 clinic days.</p></li>
+                <li><p>What change occurs between two of the original regions?</p></li>
+                <li><p>Explain why that change is an example of the new states paradox.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="lowndes-apportionment-method">
+        <title>Lowndes' Method</title>
+
+        <definition xml:id="def-lowndes-method">
+            <title>Lowndes' Method</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            Lowndes' method begins with the standard divisor, standard quotas, and lower
+            quotas. For each group, calculate
+            <me>\text{Lowndes ratio}=\frac{\text{fractional part of the quota}}{\text{lower quota}}.</me>
+            Assign the remaining items to the groups with the largest Lowndes ratios. The
+            method measures the fractional remainder relative to the number of items already
+            assigned, so it tends to favor smaller groups.
+        </p>
+
+        <p>
+            Like Hamilton's method, Lowndes' method begins at the lower quotas and adds at
+            most one item to a group. It therefore satisfies the quota rule.
+        </p>
+
+        <example xml:id="ex-lowndes-animal-shelters">
+            <title>Allocating Animal-Care Specialists</title>
+            <p>
+                Four animal shelters report 605, 485, 400, and 230 annual cases. A regional
+                agency will apportion 30 specialists among the shelters.
+            </p>
+            <table xml:id="table-lowndes-animal-shelters">
+                <title>Animal Shelter Caseloads</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Shelter</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>Total</cell></row>
+                    <row><cell>Annual cases</cell><cell>605</cell><cell>485</cell><cell>400</cell><cell>230</cell><cell>1,720</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the standard divisor and standard quotas.</p></li>
+                <li><p>Assign the lower quotas and determine how many specialists remain.</p></li>
+                <li><p>Find the fractional part of each quota.</p></li>
+                <li><p>Calculate the Lowndes ratio for each shelter.</p></li>
+                <li><p>Determine the Lowndes apportionment.</p></li>
+                <li><p>Determine the Hamilton apportionment using the same data.</p></li>
+                <li><p>Which shelter gains a specialist under Lowndes, and which shelter loses one?</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-lowndes-water-testing-equipment">
+            <title>Apportioning Water-Testing Kits</title>
+            <p>
+                Four field offices monitor 640, 370, 290, and 200 sampling sites. The agency
+                apportions 25 testing kits according to the number of sites.
+            </p>
+            <ol marker="1)">
+                <li><p>Find the standard divisor, standard quotas, and lower quotas.</p></li>
+                <li><p>How many testing kits remain after the lower quotas are assigned?</p></li>
+                <li><p>Calculate and rank the Lowndes ratios.</p></li>
+                <li><p>Determine the Lowndes apportionment.</p></li>
+                <li><p>Determine the Hamilton apportionment.</p></li>
+                <li><p>Which method gives the smallest office a larger allocation?</p></li>
+                <li><p>Verify that both allocations satisfy the quota rule.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="compare-quota-apportionment-methods">
+        <title>Comparing Hamilton and Lowndes</title>
+
+        <example xml:id="ex-identify-quota-method">
+            <title>Identifying the Quota-Based Method</title>
+            <p>Identify the method described in each statement and explain your choice.</p>
+            <ol marker="1)">
+                <li><p>Remaining items go to the groups with the largest fractional parts.</p></li>
+                <li><p>Each fractional part is divided by the group's lower quota before the remainders are ranked.</p></li>
+                <li><p>The method tends to favor smaller groups because an extra item is large relative to their initial allocations.</p></li>
+                <li><p>The method can produce the Alabama paradox.</p></li>
+                <li><p>The final allocation always gives each group either its lower or upper quota.</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-quota-methods-reflection">
+            <title>Evaluating the Two Methods</title>
+            <ol marker="1)">
+                <li><p>What calculations are identical in Hamilton's and Lowndes' methods?</p></li>
+                <li><p>At what step do the two methods begin to differ?</p></li>
+                <li><p>Why can the methods produce different allocations while both obeying the quota rule?</p></li>
+                <li><p>Which method places greater emphasis on the absolute size of a fractional remainder?</p></li>
+                <li><p>Which method places greater emphasis on the relative importance of one additional item?</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <conclusion>
+        <p>
+            The mathematical ideas in this section are based on the apportionment chapter of
+            Mike Kenyon and David Lippman's <em>Math in Society</em>, licensed under Creative
+            Commons BY-SA. The contexts, numerical examples, and questions in these notes
+            are new.
+        </p>
+    </conclusion>
+</section>

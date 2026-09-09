@@ -1,0 +1,47 @@
+/* Hide the PreTeXt, Runestone, and MathJax footer logos */
+a.pretext-link,
+a.mathbook-link,
+a.runestone-link,
+a.mathjax-link {
+  display: none !important;
+}
+
+#def-graph {
+  padding-bottom: 1.25in;
+}
+
+#def-vertex {
+  padding-bottom: 1.25in;
+}
+
+#def-edge {
+  padding-bottom: 1.25in;
+}
+
+#def-loop {
+  padding-bottom: 1.25in;
+}
+
+#def-degree-vertex {
+  padding-bottom: 1.25in;
+}
+
+#def-path {
+  padding-bottom: 1.25in;
+}
+
+#def-circuit {
+  padding-bottom: 1.25in;
+}
+
+#def-connected-graph {
+  padding-bottom: 1.25in;
+}
+
+#def-weight {
+  padding-bottom: 1.25in;
+}
+
+#ex-reading-a-graph {
+  padding-bottom: 2in;
+}

@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="weighted-voting-and-power">
+    <title>Weighted Voting and Power</title>
+
+    <outcomes>
+        <ol marker="1)">
+            <li>
+                <p>Interpret and write weighted voting systems using standard notation.</p>
+            </li>
+            <li>
+                <p>Determine valid quotas for a weighted voting system.</p>
+            </li>
+            <li>
+                <p>Identify dictators, players with veto power, and dummy players.</p>
+            </li>
+            <li>
+                <p>Determine whether a coalition is winning and identify its critical players.</p>
+            </li>
+            <li>
+                <p>List the winning coalitions in a weighted voting system.</p>
+            </li>
+            <li>
+                <p>Calculate and interpret the Banzhaf power distribution.</p>
+            </li>
+        </ol>
+    </outcomes>
+
+    <subsection xml:id="weighted-voting-systems">
+        <title>Weighted Voting Systems</title>
+
+        <definition xml:id="def-weighted-voting-system">
+            <title>Weighted Voting System</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-weighted-voting-player">
+            <title>Player</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-voting-weight">
+            <title>Weight</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-weighted-voting-quota">
+            <title>Quota</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            A weighted voting system with quota <m>q</m> and player weights
+            <m>w_1,w_2,\ldots,w_n</m> is written
+            <me>[q:w_1,w_2,\ldots,w_n].</me>
+            The quota is the minimum total weight needed for a motion to pass. The notation
+            assigns weight <m>w_1</m> to player <m>P_1</m>, weight <m>w_2</m> to player
+            <m>P_2</m>, and so on.
+        </p>
+
+        <example xml:id="ex-interpret-weighted-system">
+            <title>Interpreting Weighted Voting Notation</title>
+
+            <p>
+                A regional planning board uses the weighted voting system
+                <m>[27:12,9,7,4,2]</m>.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>How many players are in the system?</p>
+                </li>
+                <li>
+                    <p>What is the quota?</p>
+                </li>
+                <li>
+                    <p>What is the weight of each player?</p>
+                </li>
+                <li>
+                    <p>What is the total weight of all players?</p>
+                </li>
+                <li>
+                    <p>What fraction of the total weight is required for a motion to pass?</p>
+                </li>
+                <li>
+                    <p>Do <m>P_1</m>, <m>P_2</m>, and <m>P_3</m> have enough combined weight to pass a motion?</p>
+                </li>
+                <li>
+                    <p>Do <m>P_1</m>, <m>P_2</m>, and <m>P_4</m> have enough combined weight to pass a motion?</p>
+                </li>
+            </ol>
+        </example>
+
+        <subsubsection xml:id="weighted-voting-quota-limits">
+            <title>Limits on the Quota</title>
+
+            <p>
+                Let <m>W</m> be the total weight of all players. In a meaningful weighted
+                voting system, the quota must satisfy
+                <me>\frac{W}{2} &lt; q \leq W.</me>
+                The quota must be more than half of the total weight so that a proposal and
+                its opposition cannot both reach the quota. The quota cannot exceed the total
+                weight because otherwise no coalition could ever pass a motion.
+            </p>
+
+            <p>
+                When weights and quotas are whole numbers, the smallest majority quota is
+                <m>\left\lfloor W/2\right\rfloor+1</m>, and the largest possible quota is
+                <m>W</m>. A quota equal to <m>W</m> requires unanimous support.
+            </p>
+
+            <example xml:id="ex-find-valid-quotas">
+                <title>Finding Valid Quotas</title>
+
+                <p>
+                    Consider a weighted voting system with weights
+                    <m>[q:11,8,5,3]</m>.
+                </p>
+
+                <ol marker="1)">
+                    <li>
+                        <p>Find the total weight.</p>
+                    </li>
+                    <li>
+                        <p>What is the smallest whole-number quota that can be used?</p>
+                    </li>
+                    <li>
+                        <p>What is the largest quota that can be used?</p>
+                    </li>
+                    <li>
+                        <p>What quota should be used if at least two-thirds of the total weight is required?</p>
+                    </li>
+                    <li>
+                        <p>Why would a quota of 12 be inappropriate?</p>
+                    </li>
+                    <li>
+                        <p>What would happen if the quota were 28?</p>
+                    </li>
+                </ol>
+            </example>
+        </subsubsection>
+
+        <example xml:id="ex-model-executive-board">
+            <title>Writing a Weighted Voting System</title>
+
+            <p>
+                An executive board consists of one director and four board members. A motion
+                passes only when the director and at least two board members support it.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>
+                        Assign a weight to the director and a common weight to each board
+                        member. Then choose a quota that represents the rule.
+                    </p>
+                </li>
+                <li>
+                    <p>Write the resulting weighted voting system.</p>
+                </li>
+                <li>
+                    <p>Verify that the director and one board member cannot pass a motion.</p>
+                </li>
+                <li>
+                    <p>Verify that the four board members cannot pass a motion without the director.</p>
+                </li>
+                <li>
+                    <p>Verify that the director and any two board members can pass a motion.</p>
+                </li>
+                <li>
+                    <p>
+                        Multiply every weight and the quota by 2. Does the new system give
+                        the players different power? Explain.
+                    </p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="special-players-weighted-voting">
+        <title>Dictators, Veto Power, and Dummies</title>
+
+        <definition xml:id="def-weighted-voting-dictator">
+            <title>Dictator</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-weighted-voting-veto-power">
+            <title>Veto Power</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-weighted-voting-dummy">
+            <title>Dummy</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-classify-special-players">
+            <title>Classifying Players</title>
+
+            <p>
+                For each system, identify every dictator, every player with veto power, and
+                every dummy. If a category is empty, state that there are none.
+            </p>
+
+            <table xml:id="table-classify-weighted-players">
+                <title>Weighted Voting Systems to Classify</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>System</cell>
+                        <cell>Dictator(s)</cell>
+                        <cell>Veto power</cell>
+                        <cell>Dummy player(s)</cell>
+                    </row>
+                    <row>
+                        <cell><m>[11:12,4,3,2]</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>[14:10,6,3,2]</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>[9:5,4,2,1]</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                </tabular>
+            </table>
+        </example>
+
+        <example xml:id="ex-changing-quota-special-players">
+            <title>How the Quota Changes Player Roles</title>
+
+            <p>
+                Consider the family of weighted voting systems <m>[q:9,5,2]</m>.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>When <m>q=9</m>, identify the dictators, players with veto power, and dummies.</p>
+                </li>
+                <li>
+                    <p>Repeat the classification when <m>q=12</m>.</p>
+                </li>
+                <li>
+                    <p>Repeat the classification when <m>q=16</m>.</p>
+                </li>
+                <li>
+                    <p>Explain why increasing the quota can give additional players veto power.</p>
+                </li>
+                <li>
+                    <p>Can changing only the quota change a player from a dummy into a non-dummy?</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="coalitions-critical-players">
+        <title>Coalitions and Critical Players</title>
+
+        <definition xml:id="def-weighted-voting-coalition">
+            <title>Coalition</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-winning-losing-coalitions">
+            <title>Winning and Losing Coalitions</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-critical-player">
+            <title>Critical Player</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-coalition-weight-critical-players">
+            <title>Analyzing Individual Coalitions</title>
+
+            <p>
+                Consider the weighted voting system <m>[15:9,7,4,3,1]</m>.
+            </p>
+
+            <table xml:id="table-coalition-critical-analysis">
+                <title>Coalitions to Analyze</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Coalition</cell>
+                        <cell>Total weight</cell>
+                        <cell>Winning or losing?</cell>
+                        <cell>Critical player(s)</cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_3,P_5\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_2,P_5\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_3,P_4\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_2,P_3,P_4,P_5\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_2,P_3,P_4,P_5\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <p>
+                Give an example of a winning coalition in which <m>P_5</m> is critical,
+                or explain why no such coalition exists.
+            </p>
+        </example>
+
+        <p>
+            A system with <m>n</m> players has <m>2^n</m> possible coalitions if the empty
+            coalition is included, or <m>2^n-1</m> nonempty coalitions. When listing coalitions
+            by hand, organize them by size: first single-player coalitions, then two-player
+            coalitions, and so on.
+        </p>
+
+        <example xml:id="ex-list-winning-coalitions">
+            <title>Listing All Winning Coalitions</title>
+
+            <p>
+                Consider the weighted voting system <m>[10:6,5,3,2]</m>. No single player
+                can meet the quota, so begin with the two-player coalitions.
+            </p>
+
+            <table xml:id="table-list-winning-coalitions">
+                <title>Coalition Checklist</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Coalition</cell>
+                        <cell>Total weight</cell>
+                        <cell>Winning?</cell>
+                        <cell>Critical player(s), if winning</cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_2\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_3\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_4\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_2,P_3\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_2,P_4\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_3,P_4\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_2,P_3\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_2,P_4\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_3,P_4\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_2,P_3,P_4\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>\{P_1,P_2,P_3,P_4\}</m></cell>
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Is any player critical in every winning coalition?</p>
+                </li>
+                <li>
+                    <p>Is any player never critical?</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="banzhaf-power-index">
+        <title>The Banzhaf Power Index</title>
+
+        <definition xml:id="def-banzhaf-power-index">
+            <title>Banzhaf Power Index</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-banzhaf-community-board">
+            <title>Calculating a Four-Player Banzhaf Distribution</title>
+
+            <p>
+                Return to the system <m>[10:6,5,3,2]</m> and the coalition checklist in the
+                previous example.
+            </p>
+
+            <table xml:id="table-banzhaf-community-board">
+                <title>Banzhaf Count and Power</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Player</cell>
+                        <cell>Weight</cell>
+                        <cell>Number of times critical</cell>
+                        <cell>Banzhaf power index</cell>
+                    </row>
+                    <row>
+                        <cell><m>P_1</m></cell>
+                        <cell>6</cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>P_2</m></cell>
+                        <cell>5</cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>P_3</m></cell>
+                        <cell>3</cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell><m>P_4</m></cell>
+                        <cell>2</cell>
+                        <cell></cell>
+                        <cell></cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <p>Are the players' power indices proportional to their voting weights?</p>
+        </example>
+
+        <example xml:id="ex-banzhaf-equal-power-different-weights">
+            <title>Different Weights but Equal Power</title>
+
+            <p>
+                A four-member finance council uses the system <m>[12:8,6,4,2]</m>.
+            </p>
+
+            <ol marker="1)">
+                
+                <li>
+                    <p>Find each player's raw Banzhaf power.</p>
+                </li>
+                <li>
+                    <p>Which two players have equal power even though their weights differ?</p>
+                </li>
+                <li>
+                    <p>
+                        Explain why the smaller of those two weights is just as useful for
+                        changing losing coalitions into winning coalitions.
+                    </p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-banzhaf-changing-quota">
+            <title>Changing the Quota Changes Power</title>
+
+            <p>
+                Four partners have weights 5, 4, 2, and 1. Compare the systems
+                <m>[7:5,4,2,1]</m> and <m>[9:5,4,2,1]</m>.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find the Banzhaf power distribution when the quota is 7.</p>
+                </li>
+                <li>
+                    <p>Find the Banzhaf power distribution when the quota is 9.</p>
+                </li>
+                <li>
+                    <p>Which players become dummies when the quota changes?</p>
+                </li>
+                <li>
+                    <p>
+                        Explain why a player's power can change even though none of the
+                        individual voting weights changed.
+                    </p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-banzhaf-executive-board">
+            <title>Power on the Executive Board</title>
+
+            <p>
+                Use the weighted system you developed for the executive board in
+                <xref ref="ex-model-executive-board"/>. Label the director <m>P_1</m> and the
+                four board members <m>P_2,P_3,P_4,P_5</m>.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find the number of times each board member is critical.</p>
+                </li>
+                <li>
+                    <p>Calculate the Banzhaf power distribution.</p>
+                </li>
+                <li>
+                    <p>Does the director have veto power? Use the coalitions to explain.</p>
+                </li>
+                <li>
+                    <p>
+                        Is the director's Banzhaf power four times the power of an individual
+                        board member? Compare the power indices rather than the weights.
+                    </p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-banzhaf-mini-federation">
+            <title>Voting Power in a Four-Region Federation</title>
+
+            <p>
+                A small federation has four regions. Their populations and voting weights on
+                the national council are shown below. A motion requires a simple majority of
+                the 22 council votes, so the weighted voting system is <m>[12:9,6,4,3]</m>.
+            </p>
+
+            <table xml:id="table-mini-federation-weights">
+                <title>Population and Council Weight by Region</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Region</cell>
+                        <cell>North</cell>
+                        <cell>East</cell>
+                        <cell>South</cell>
+                        <cell>West</cell>
+                    </row>
+                    <row>
+                        <cell>Population</cell>
+                        <cell>450,000</cell>
+                        <cell>300,000</cell>
+                        <cell>200,000</cell>
+                        <cell>150,000</cell>
+                    </row>
+                    <row>
+                        <cell>Council weight</cell>
+                        <cell>9</cell>
+                        <cell>6</cell>
+                        <cell>4</cell>
+                        <cell>3</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find each region's percentage of the total population.</p>
+                </li>
+                <li>
+                    <p>Find each region's percentage of the total voting weight.</p>
+                </li>
+                <li>
+                    <p>Calculate the Banzhaf power distribution.</p>
+                </li>
+                <li>
+                    <p>Which regions have equal Banzhaf power despite having different weights?</p>
+                </li>
+                <li>
+                    <p>Which region has a greater share of power than its share of voting weight?</p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+</section>

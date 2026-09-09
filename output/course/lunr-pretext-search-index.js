@@ -368,6 +368,339 @@ var ptx_lunr_docs = [
   "number": "53",
   "title": "Selecting a Public Art Installation.",
   "body": " Selecting a Public Art Installation  A public-art committee ranks four installations: a kinetic sculpture (K), a light garden (L), a tile mosaic (T), and an interactive mural (M).   Preference Schedule for the Public Art Installation    Number of voters  9  8  7  4    First choice  K  L  T  M    Second choice  L  T  L  L    Third choice  T  M  M  T    Fourth choice  M  K  K  K     For the approval-voting part of this example, suppose every voter approves the two choices ranked highest on that voter's ballot.    Determine the plurality winner.    Determine the IRV winner. Show the elimination and transfer.    Determine the approval-voting winner.    Which methods produce the same winner, and which method produces a different winner?    Determine the Condorcet winner, if one exists.    "
+},
+{
+  "id": "ranked-based-voting-methods",
+  "level": "1",
+  "url": "ranked-based-voting-methods.html",
+  "type": "Section",
+  "number": "",
+  "title": "Ranked-Based Voting Methods",
+  "body": " Ranked-Based Voting Methods     Assign points and determine the winner of an election using Borda count.    Determine the winner of an election using Copeland's method.    Compare the results produced by Borda count and Copeland's method.    Use fairness criteria to analyze ranked-based voting methods.      Borda Count   Borda Count        Choosing a Community Workspace  A neighborhood association ranks four possible uses for a shared building: a pottery studio (P), a language classroom (L), a woodworking room (W), and a game room (G).   Preference Schedule for the Community Workspace    Number of voters  8  6  5  3    First choice  P  L  W  G    Second choice  L  W  G  W    Third choice  W  G  L  P    Fourth choice  G  P  P  L       Find the total Borda score for each option.    Which option wins using Borda count?    Which option would win using plurality? Compare the two results.      Choosing from Five Festival Locations  A city committee ranks five locations for a weekend arts festival: the arboretum (A), the boardwalk (B), the civic plaza (C), the downtown market (D), and the exhibition hall (E).   Preference Schedule for the Festival Location    Number of voters  9  7  6  4  3    First choice  A  B  C  D  E    Second choice  B  C  D  E  A    Third choice  C  D  E  A  B    Fourth choice  D  E  A  B  C    Fifth choice  E  A  B  C  D     Which location wins using Borda count?    Learning Center Name  Twenty-one members of a learning center rank four possible names for a new tutoring program: Aspire (A), Bridge (B), Connect (C), and Discover (D).   Preference Schedule for the Tutoring Program Name    Number of voters  11  6  4    First choice  A  B  C    Second choice  B  C  B    Third choice  C  D  D    Fourth choice  D  A  A       Which choice is the majority winner?    Find the Borda score for each choice and identify the Borda winner.    Does Borda count satisfy the majority criterion in this election? Explain.    Does Borda count satisfy the Condorcet criterion in this election?     Borda count is often described as a consensus method because every position on every ballot contributes to the result. A choice that is consistently ranked near the top can defeat a more polarizing choice with more first-place support. That feature can be useful, but it also means that Borda count can violate the majority and Condorcet criteria.    Copeland's Method   Copeland's Method       With choices, the number of different pairwise comparisons is Each unordered pair is counted once: comparing A with B is the same comparison as comparing B with A.   Selecting a Community Lecture Series  A library board ranks four themes for a community lecture series: arts (A), business (B), conservation (C), and digital life (D).   Preference Schedule for the Lecture Series    Number of voters  7  6  5  4    First choice  A  B  C  D    Second choice  B  C  D  B    Third choice  C  D  B  C    Fourth choice  D  A  A  A       How many pairwise comparisons are required?    List all of the pairs that must be compared.    Find the total Copeland score for each theme.    Which theme wins using Copeland's method?    Is the Copeland winner also the Condorcet winner? Explain.      Comparing Six Transit Projects  A transportation committee considers six projects, labeled A through F. The committee has already completed the head-to-head counts from its ranked ballots. The winner of each comparison is shown below; one comparison ended in a tie.   Results of the Pairwise Comparisons    Comparison  Result  Comparison  Result  Comparison  Result    A vs. B  A wins  B vs. C  B wins  C vs. E  C wins    A vs. C  A wins  B vs. D  D wins  C vs. F  C wins    A vs. D  D wins  B vs. E  E wins  D vs. E  D wins    A vs. E  E wins  B vs. F  Tie  D vs. F  F wins    A vs. F  F wins  C vs. D  D wins  E vs. F  E wins       Use the formula to verify the number of comparisons in the table.    Find the Copeland score for each project.    Which project wins using Copeland's method?    Does this election have a Condorcet winner? Explain.      A Preference Cycle and a Copeland Tie  Fifteen members of a campus committee rank four proposals: a bike shelter (B), a charging station (C), a repair kiosk (R), and a water station (W).   Preference Schedule for the Campus Proposals    Number of voters  5  5  5    First choice  B  C  R    Second choice  C  R  B    Third choice  R  B  C    Fourth choice  W  W  W       Compare B with C, C with R, and R with B.    Describe the preference cycle formed by those three results.    What happens when B, C, and R are each compared with W?    Find the Copeland score for every proposal.    Does the election have a Condorcet winner?    Does Copeland's method produce a unique winner? Explain.      Removing a Grant Proposal  Twenty-six reviewers rank four proposals for a community grant: an arts incubator (A), a business kitchen (B), a childcare cooperative (C), and a digital-access lab (D).   Original Preference Schedule for the Community Grant    Number of voters  5  8  8  5    First choice  A  B  D  A    Second choice  B  D  C  C    Third choice  D  C  A  B    Fourth choice  C  A  B  D     After the original result is calculated, proposal A is withdrawn because its organizers cannot meet the grant deadline. The rankings of B, C, and D stay in the same relative order on every ballot.    Find all six original pairwise results.    Find the original Copeland score for each proposal and identify the winner.    Was proposal A the original winner?    Remove A and find the three remaining pairwise results.    Find the new Copeland scores and identify the new winner.    Which fairness criterion is violated by the change in winner? Explain.     If a Condorcet winner exists, that choice defeats every other choice and earns one point in every comparison. Copeland's method therefore satisfies the Condorcet criterion and, because every majority winner is a Condorcet winner, the majority criterion. It also satisfies the monotonicity criterion. However, the grant example shows that Copeland's method can violate independence of irrelevant alternatives, and the preference-cycle example shows that a Copeland election can end in a tie.    Comparing Ranked-Based Methods   Selecting a Public Workshop  Residents rank four possible Saturday workshops: photography (P), local history (L), weather observation (W), and gardening (G).   Preference Schedule for the Public Workshop    Number of voters  5  4  9  4    First choice  L  W  G  L    Second choice  G  L  P  G    Third choice  P  P  L  W    Fourth choice  W  G  W  P       Find the Borda score for each workshop and identify the Borda winner.    Find the Copeland score for each workshop and identify the Copeland winner.    Explain how Borda count's use of every ranking and Copeland's use of head-to-head contests lead to the different results.      "
+},
+{
+  "id": "ranked-based-voting-methods-2",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ranked-based-voting-methods-2",
+  "type": "Outcomes",
+  "number": "",
+  "title": "",
+  "body": "   Assign points and determine the winner of an election using Borda count.    Determine the winner of an election using Copeland's method.    Compare the results produced by Borda count and Copeland's method.    Use fairness criteria to analyze ranked-based voting methods.    "
+},
+{
+  "id": "def-borda-count",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#def-borda-count",
+  "type": "Definition",
+  "number": "55",
+  "title": "Borda Count.",
+  "body": " Borda Count      "
+},
+{
+  "id": "ex-borda-community-workspace",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ex-borda-community-workspace",
+  "type": "Example",
+  "number": "56",
+  "title": "Choosing a Community Workspace.",
+  "body": " Choosing a Community Workspace  A neighborhood association ranks four possible uses for a shared building: a pottery studio (P), a language classroom (L), a woodworking room (W), and a game room (G).   Preference Schedule for the Community Workspace    Number of voters  8  6  5  3    First choice  P  L  W  G    Second choice  L  W  G  W    Third choice  W  G  L  P    Fourth choice  G  P  P  L       Find the total Borda score for each option.    Which option wins using Borda count?    Which option would win using plurality? Compare the two results.    "
+},
+{
+  "id": "ex-borda-five-festival-locations",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ex-borda-five-festival-locations",
+  "type": "Example",
+  "number": "58",
+  "title": "Choosing from Five Festival Locations.",
+  "body": " Choosing from Five Festival Locations  A city committee ranks five locations for a weekend arts festival: the arboretum (A), the boardwalk (B), the civic plaza (C), the downtown market (D), and the exhibition hall (E).   Preference Schedule for the Festival Location    Number of voters  9  7  6  4  3    First choice  A  B  C  D  E    Second choice  B  C  D  E  A    Third choice  C  D  E  A  B    Fourth choice  D  E  A  B  C    Fifth choice  E  A  B  C  D     Which location wins using Borda count?  "
+},
+{
+  "id": "ex-borda-majority-criterion",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ex-borda-majority-criterion",
+  "type": "Example",
+  "number": "60",
+  "title": "Learning Center Name.",
+  "body": " Learning Center Name  Twenty-one members of a learning center rank four possible names for a new tutoring program: Aspire (A), Bridge (B), Connect (C), and Discover (D).   Preference Schedule for the Tutoring Program Name    Number of voters  11  6  4    First choice  A  B  C    Second choice  B  C  B    Third choice  C  D  D    Fourth choice  D  A  A       Which choice is the majority winner?    Find the Borda score for each choice and identify the Borda winner.    Does Borda count satisfy the majority criterion in this election? Explain.    Does Borda count satisfy the Condorcet criterion in this election?    "
+},
+{
+  "id": "def-copeland-method",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#def-copeland-method",
+  "type": "Definition",
+  "number": "62",
+  "title": "Copeland’s Method.",
+  "body": " Copeland's Method      "
+},
+{
+  "id": "ex-copeland-community-series",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ex-copeland-community-series",
+  "type": "Example",
+  "number": "63",
+  "title": "Selecting a Community Lecture Series.",
+  "body": " Selecting a Community Lecture Series  A library board ranks four themes for a community lecture series: arts (A), business (B), conservation (C), and digital life (D).   Preference Schedule for the Lecture Series    Number of voters  7  6  5  4    First choice  A  B  C  D    Second choice  B  C  D  B    Third choice  C  D  B  C    Fourth choice  D  A  A  A       How many pairwise comparisons are required?    List all of the pairs that must be compared.    Find the total Copeland score for each theme.    Which theme wins using Copeland's method?    Is the Copeland winner also the Condorcet winner? Explain.    "
+},
+{
+  "id": "ex-copeland-six-transit-projects",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ex-copeland-six-transit-projects",
+  "type": "Example",
+  "number": "65",
+  "title": "Comparing Six Transit Projects.",
+  "body": " Comparing Six Transit Projects  A transportation committee considers six projects, labeled A through F. The committee has already completed the head-to-head counts from its ranked ballots. The winner of each comparison is shown below; one comparison ended in a tie.   Results of the Pairwise Comparisons    Comparison  Result  Comparison  Result  Comparison  Result    A vs. B  A wins  B vs. C  B wins  C vs. E  C wins    A vs. C  A wins  B vs. D  D wins  C vs. F  C wins    A vs. D  D wins  B vs. E  E wins  D vs. E  D wins    A vs. E  E wins  B vs. F  Tie  D vs. F  F wins    A vs. F  F wins  C vs. D  D wins  E vs. F  E wins       Use the formula to verify the number of comparisons in the table.    Find the Copeland score for each project.    Which project wins using Copeland's method?    Does this election have a Condorcet winner? Explain.    "
+},
+{
+  "id": "ex-copeland-cycle-tie",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ex-copeland-cycle-tie",
+  "type": "Example",
+  "number": "67",
+  "title": "A Preference Cycle and a Copeland Tie.",
+  "body": " A Preference Cycle and a Copeland Tie  Fifteen members of a campus committee rank four proposals: a bike shelter (B), a charging station (C), a repair kiosk (R), and a water station (W).   Preference Schedule for the Campus Proposals    Number of voters  5  5  5    First choice  B  C  R    Second choice  C  R  B    Third choice  R  B  C    Fourth choice  W  W  W       Compare B with C, C with R, and R with B.    Describe the preference cycle formed by those three results.    What happens when B, C, and R are each compared with W?    Find the Copeland score for every proposal.    Does the election have a Condorcet winner?    Does Copeland's method produce a unique winner? Explain.    "
+},
+{
+  "id": "ex-copeland-iia-community-grant",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ex-copeland-iia-community-grant",
+  "type": "Example",
+  "number": "69",
+  "title": "Removing a Grant Proposal.",
+  "body": " Removing a Grant Proposal  Twenty-six reviewers rank four proposals for a community grant: an arts incubator (A), a business kitchen (B), a childcare cooperative (C), and a digital-access lab (D).   Original Preference Schedule for the Community Grant    Number of voters  5  8  8  5    First choice  A  B  D  A    Second choice  B  D  C  C    Third choice  D  C  A  B    Fourth choice  C  A  B  D     After the original result is calculated, proposal A is withdrawn because its organizers cannot meet the grant deadline. The rankings of B, C, and D stay in the same relative order on every ballot.    Find all six original pairwise results.    Find the original Copeland score for each proposal and identify the winner.    Was proposal A the original winner?    Remove A and find the three remaining pairwise results.    Find the new Copeland scores and identify the new winner.    Which fairness criterion is violated by the change in winner? Explain.    "
+},
+{
+  "id": "ex-compare-borda-copeland",
+  "level": "2",
+  "url": "ranked-based-voting-methods.html#ex-compare-borda-copeland",
+  "type": "Example",
+  "number": "71",
+  "title": "Selecting a Public Workshop.",
+  "body": " Selecting a Public Workshop  Residents rank four possible Saturday workshops: photography (P), local history (L), weather observation (W), and gardening (G).   Preference Schedule for the Public Workshop    Number of voters  5  4  9  4    First choice  L  W  G  L    Second choice  G  L  P  G    Third choice  P  P  L  W    Fourth choice  W  G  W  P       Find the Borda score for each workshop and identify the Borda winner.    Find the Copeland score for each workshop and identify the Copeland winner.    Explain how Borda count's use of every ranking and Copeland's use of head-to-head contests lead to the different results.    "
+},
+{
+  "id": "weighted-voting-and-power",
+  "level": "1",
+  "url": "weighted-voting-and-power.html",
+  "type": "Section",
+  "number": "",
+  "title": "Weighted Voting and Power",
+  "body": " Weighted Voting and Power     Interpret and write weighted voting systems using standard notation.    Determine valid quotas for a weighted voting system.    Identify dictators, players with veto power, and dummy players.    Determine whether a coalition is winning and identify its critical players.    List the winning coalitions in a weighted voting system.    Calculate and interpret the Banzhaf power distribution.      Weighted Voting Systems   Weighted Voting System        Player        Weight        Quota       A weighted voting system with quota and player weights is written The quota is the minimum total weight needed for a motion to pass. The notation assigns weight to player , weight to player , and so on.   Interpreting Weighted Voting Notation  A regional planning board uses the weighted voting system .    How many players are in the system?    What is the quota?    What is the weight of each player?    What is the total weight of all players?    What fraction of the total weight is required for a motion to pass?    Do , , and have enough combined weight to pass a motion?    Do , , and have enough combined weight to pass a motion?      Limits on the Quota  Let be the total weight of all players. In a meaningful weighted voting system, the quota must satisfy The quota must be more than half of the total weight so that a proposal and its opposition cannot both reach the quota. The quota cannot exceed the total weight because otherwise no coalition could ever pass a motion.  When weights and quotas are whole numbers, the smallest majority quota is , and the largest possible quota is . A quota equal to requires unanimous support.   Finding Valid Quotas  Consider a weighted voting system with weights .    Find the total weight.    What is the smallest whole-number quota that can be used?    What is the largest quota that can be used?    What quota should be used if at least two-thirds of the total weight is required?    Why would a quota of 12 be inappropriate?    What would happen if the quota were 28?       Writing a Weighted Voting System  An executive board consists of one director and four board members. A motion passes only when the director and at least two board members support it.    Assign a weight to the director and a common weight to each board member. Then choose a quota that represents the rule.    Write the resulting weighted voting system.    Verify that the director and one board member cannot pass a motion.    Verify that the four board members cannot pass a motion without the director.    Verify that the director and any two board members can pass a motion.    Multiply every weight and the quota by 2. Does the new system give the players different power? Explain.       Dictators, Veto Power, and Dummies   Dictator        Veto Power        Dummy        Classifying Players  For each system, identify every dictator, every player with veto power, and every dummy. If a category is empty, state that there are none.   Weighted Voting Systems to Classify    System  Dictator(s)  Veto power  Dummy player(s)                         How the Quota Changes Player Roles  Consider the family of weighted voting systems .    When , identify the dictators, players with veto power, and dummies.    Repeat the classification when .    Repeat the classification when .    Explain why increasing the quota can give additional players veto power.    Can changing only the quota change a player from a dummy into a non-dummy?       Coalitions and Critical Players   Coalition        Winning and Losing Coalitions        Critical Player        Analyzing Individual Coalitions  Consider the weighted voting system .   Coalitions to Analyze    Coalition  Total weight  Winning or losing?  Critical player(s)                                   Give an example of a winning coalition in which is critical, or explain why no such coalition exists.   A system with players has possible coalitions if the empty coalition is included, or nonempty coalitions. When listing coalitions by hand, organize them by size: first single-player coalitions, then two-player coalitions, and so on.   Listing All Winning Coalitions  Consider the weighted voting system . No single player can meet the quota, so begin with the two-player coalitions.   Coalition Checklist    Coalition  Total weight  Winning?  Critical player(s), if winning                                                                         Is any player critical in every winning coalition?    Is any player never critical?       The Banzhaf Power Index   Banzhaf Power Index        Calculating a Four-Player Banzhaf Distribution  Return to the system and the coalition checklist in the previous example.   Banzhaf Count and Power    Player  Weight  Number of times critical  Banzhaf power index     6       5       3       2       Are the players' power indices proportional to their voting weights?    Different Weights but Equal Power  A four-member finance council uses the system .    Find each player's raw Banzhaf power.    Which two players have equal power even though their weights differ?    Explain why the smaller of those two weights is just as useful for changing losing coalitions into winning coalitions.      Changing the Quota Changes Power  Four partners have weights 5, 4, 2, and 1. Compare the systems and .    Find the Banzhaf power distribution when the quota is 7.    Find the Banzhaf power distribution when the quota is 9.    Which players become dummies when the quota changes?    Explain why a player's power can change even though none of the individual voting weights changed.      Power on the Executive Board  Use the weighted system you developed for the executive board in . Label the director and the four board members .    Find the number of times each board member is critical.    Calculate the Banzhaf power distribution.    Does the director have veto power? Use the coalitions to explain.    Is the director's Banzhaf power four times the power of an individual board member? Compare the power indices rather than the weights.      Voting Power in a Four-Region Federation  A small federation has four regions. Their populations and voting weights on the national council are shown below. A motion requires a simple majority of the 22 council votes, so the weighted voting system is .   Population and Council Weight by Region    Region  North  East  South  West    Population  450,000  300,000  200,000  150,000    Council weight  9  6  4  3       Find each region's percentage of the total population.    Find each region's percentage of the total voting weight.    Calculate the Banzhaf power distribution.    Which regions have equal Banzhaf power despite having different weights?    Which region has a greater share of power than its share of voting weight?      "
+},
+{
+  "id": "weighted-voting-and-power-2",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#weighted-voting-and-power-2",
+  "type": "Outcomes",
+  "number": "",
+  "title": "",
+  "body": "   Interpret and write weighted voting systems using standard notation.    Determine valid quotas for a weighted voting system.    Identify dictators, players with veto power, and dummy players.    Determine whether a coalition is winning and identify its critical players.    List the winning coalitions in a weighted voting system.    Calculate and interpret the Banzhaf power distribution.    "
+},
+{
+  "id": "def-weighted-voting-system",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-weighted-voting-system",
+  "type": "Definition",
+  "number": "73",
+  "title": "Weighted Voting System.",
+  "body": " Weighted Voting System      "
+},
+{
+  "id": "def-weighted-voting-player",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-weighted-voting-player",
+  "type": "Definition",
+  "number": "74",
+  "title": "Player.",
+  "body": " Player      "
+},
+{
+  "id": "def-voting-weight",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-voting-weight",
+  "type": "Definition",
+  "number": "75",
+  "title": "Weight.",
+  "body": " Weight      "
+},
+{
+  "id": "def-weighted-voting-quota",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-weighted-voting-quota",
+  "type": "Definition",
+  "number": "76",
+  "title": "Quota.",
+  "body": " Quota      "
+},
+{
+  "id": "ex-interpret-weighted-system",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-interpret-weighted-system",
+  "type": "Example",
+  "number": "77",
+  "title": "Interpreting Weighted Voting Notation.",
+  "body": " Interpreting Weighted Voting Notation  A regional planning board uses the weighted voting system .    How many players are in the system?    What is the quota?    What is the weight of each player?    What is the total weight of all players?    What fraction of the total weight is required for a motion to pass?    Do , , and have enough combined weight to pass a motion?    Do , , and have enough combined weight to pass a motion?    "
+},
+{
+  "id": "ex-find-valid-quotas",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-find-valid-quotas",
+  "type": "Example",
+  "number": "78",
+  "title": "Finding Valid Quotas.",
+  "body": " Finding Valid Quotas  Consider a weighted voting system with weights .    Find the total weight.    What is the smallest whole-number quota that can be used?    What is the largest quota that can be used?    What quota should be used if at least two-thirds of the total weight is required?    Why would a quota of 12 be inappropriate?    What would happen if the quota were 28?    "
+},
+{
+  "id": "ex-model-executive-board",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-model-executive-board",
+  "type": "Example",
+  "number": "79",
+  "title": "Writing a Weighted Voting System.",
+  "body": " Writing a Weighted Voting System  An executive board consists of one director and four board members. A motion passes only when the director and at least two board members support it.    Assign a weight to the director and a common weight to each board member. Then choose a quota that represents the rule.    Write the resulting weighted voting system.    Verify that the director and one board member cannot pass a motion.    Verify that the four board members cannot pass a motion without the director.    Verify that the director and any two board members can pass a motion.    Multiply every weight and the quota by 2. Does the new system give the players different power? Explain.    "
+},
+{
+  "id": "def-weighted-voting-dictator",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-weighted-voting-dictator",
+  "type": "Definition",
+  "number": "80",
+  "title": "Dictator.",
+  "body": " Dictator      "
+},
+{
+  "id": "def-weighted-voting-veto-power",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-weighted-voting-veto-power",
+  "type": "Definition",
+  "number": "81",
+  "title": "Veto Power.",
+  "body": " Veto Power      "
+},
+{
+  "id": "def-weighted-voting-dummy",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-weighted-voting-dummy",
+  "type": "Definition",
+  "number": "82",
+  "title": "Dummy.",
+  "body": " Dummy      "
+},
+{
+  "id": "ex-classify-special-players",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-classify-special-players",
+  "type": "Example",
+  "number": "83",
+  "title": "Classifying Players.",
+  "body": " Classifying Players  For each system, identify every dictator, every player with veto power, and every dummy. If a category is empty, state that there are none.   Weighted Voting Systems to Classify    System  Dictator(s)  Veto power  Dummy player(s)                       "
+},
+{
+  "id": "ex-changing-quota-special-players",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-changing-quota-special-players",
+  "type": "Example",
+  "number": "85",
+  "title": "How the Quota Changes Player Roles.",
+  "body": " How the Quota Changes Player Roles  Consider the family of weighted voting systems .    When , identify the dictators, players with veto power, and dummies.    Repeat the classification when .    Repeat the classification when .    Explain why increasing the quota can give additional players veto power.    Can changing only the quota change a player from a dummy into a non-dummy?    "
+},
+{
+  "id": "def-weighted-voting-coalition",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-weighted-voting-coalition",
+  "type": "Definition",
+  "number": "86",
+  "title": "Coalition.",
+  "body": " Coalition      "
+},
+{
+  "id": "def-winning-losing-coalitions",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-winning-losing-coalitions",
+  "type": "Definition",
+  "number": "87",
+  "title": "Winning and Losing Coalitions.",
+  "body": " Winning and Losing Coalitions      "
+},
+{
+  "id": "def-critical-player",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-critical-player",
+  "type": "Definition",
+  "number": "88",
+  "title": "Critical Player.",
+  "body": " Critical Player      "
+},
+{
+  "id": "ex-coalition-weight-critical-players",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-coalition-weight-critical-players",
+  "type": "Example",
+  "number": "89",
+  "title": "Analyzing Individual Coalitions.",
+  "body": " Analyzing Individual Coalitions  Consider the weighted voting system .   Coalitions to Analyze    Coalition  Total weight  Winning or losing?  Critical player(s)                                   Give an example of a winning coalition in which is critical, or explain why no such coalition exists.  "
+},
+{
+  "id": "ex-list-winning-coalitions",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-list-winning-coalitions",
+  "type": "Example",
+  "number": "91",
+  "title": "Listing All Winning Coalitions.",
+  "body": " Listing All Winning Coalitions  Consider the weighted voting system . No single player can meet the quota, so begin with the two-player coalitions.   Coalition Checklist    Coalition  Total weight  Winning?  Critical player(s), if winning                                                                         Is any player critical in every winning coalition?    Is any player never critical?    "
+},
+{
+  "id": "def-banzhaf-power-index",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#def-banzhaf-power-index",
+  "type": "Definition",
+  "number": "93",
+  "title": "Banzhaf Power Index.",
+  "body": " Banzhaf Power Index      "
+},
+{
+  "id": "ex-banzhaf-community-board",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-banzhaf-community-board",
+  "type": "Example",
+  "number": "94",
+  "title": "Calculating a Four-Player Banzhaf Distribution.",
+  "body": " Calculating a Four-Player Banzhaf Distribution  Return to the system and the coalition checklist in the previous example.   Banzhaf Count and Power    Player  Weight  Number of times critical  Banzhaf power index     6       5       3       2       Are the players' power indices proportional to their voting weights?  "
+},
+{
+  "id": "ex-banzhaf-equal-power-different-weights",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-banzhaf-equal-power-different-weights",
+  "type": "Example",
+  "number": "96",
+  "title": "Different Weights but Equal Power.",
+  "body": " Different Weights but Equal Power  A four-member finance council uses the system .    Find each player's raw Banzhaf power.    Which two players have equal power even though their weights differ?    Explain why the smaller of those two weights is just as useful for changing losing coalitions into winning coalitions.    "
+},
+{
+  "id": "ex-banzhaf-changing-quota",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-banzhaf-changing-quota",
+  "type": "Example",
+  "number": "97",
+  "title": "Changing the Quota Changes Power.",
+  "body": " Changing the Quota Changes Power  Four partners have weights 5, 4, 2, and 1. Compare the systems and .    Find the Banzhaf power distribution when the quota is 7.    Find the Banzhaf power distribution when the quota is 9.    Which players become dummies when the quota changes?    Explain why a player's power can change even though none of the individual voting weights changed.    "
+},
+{
+  "id": "ex-banzhaf-executive-board",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-banzhaf-executive-board",
+  "type": "Example",
+  "number": "98",
+  "title": "Power on the Executive Board.",
+  "body": " Power on the Executive Board  Use the weighted system you developed for the executive board in . Label the director and the four board members .    Find the number of times each board member is critical.    Calculate the Banzhaf power distribution.    Does the director have veto power? Use the coalitions to explain.    Is the director's Banzhaf power four times the power of an individual board member? Compare the power indices rather than the weights.    "
+},
+{
+  "id": "ex-banzhaf-mini-federation",
+  "level": "2",
+  "url": "weighted-voting-and-power.html#ex-banzhaf-mini-federation",
+  "type": "Example",
+  "number": "99",
+  "title": "Voting Power in a Four-Region Federation.",
+  "body": " Voting Power in a Four-Region Federation  A small federation has four regions. Their populations and voting weights on the national council are shown below. A motion requires a simple majority of the 22 council votes, so the weighted voting system is .   Population and Council Weight by Region    Region  North  East  South  West    Population  450,000  300,000  200,000  150,000    Council weight  9  6  4  3       Find each region's percentage of the total population.    Find each region's percentage of the total voting weight.    Calculate the Banzhaf power distribution.    Which regions have equal Banzhaf power despite having different weights?    Which region has a greater share of power than its share of voting weight?    "
 }
 ]
 

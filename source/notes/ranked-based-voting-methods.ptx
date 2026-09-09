@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="ranked-based-voting-methods">
+    <title>Ranked-Based Voting Methods</title>
+
+    <outcomes>
+        <ol marker="1)">
+            <li>
+                <p>Assign points and determine the winner of an election using Borda count.</p>
+            </li>
+            <li>
+                <p>Determine the winner of an election using Copeland's method.</p>
+            </li>
+            <li>
+                <p>Compare the results produced by Borda count and Copeland's method.</p>
+            </li>
+            <li>
+                <p>Use fairness criteria to analyze ranked-based voting methods.</p>
+            </li>
+        </ol>
+    </outcomes>
+
+    <subsection xml:id="borda-count-method">
+        <title>Borda Count</title>
+
+        <definition xml:id="def-borda-count">
+            <title>Borda Count</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-borda-community-workspace">
+            <title>Choosing a Community Workspace</title>
+
+            <p>
+                A neighborhood association ranks four possible uses for a shared building:
+                a pottery studio (P), a language classroom (L), a woodworking room (W), and
+                a game room (G).
+            </p>
+
+            <table xml:id="table-community-workspace-borda">
+                <title>Preference Schedule for the Community Workspace</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>8</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                        <cell>3</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>P</cell>
+                        <cell>L</cell>
+                        <cell>W</cell>
+                        <cell>G</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>L</cell>
+                        <cell>W</cell>
+                        <cell>G</cell>
+                        <cell>W</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>W</cell>
+                        <cell>G</cell>
+                        <cell>L</cell>
+                        <cell>P</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>G</cell>
+                        <cell>P</cell>
+                        <cell>P</cell>
+                        <cell>L</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find the total Borda score for each option.</p>
+                </li>
+                <li>
+                    <p>Which option wins using Borda count?</p>
+                </li>
+                <li>
+                    <p>Which option would win using plurality? Compare the two results.</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-borda-five-festival-locations">
+            <title>Choosing from Five Festival Locations</title>
+
+            <p>
+                A city committee ranks five locations for a weekend arts festival: the
+                arboretum (A), the boardwalk (B), the civic plaza (C), the downtown market
+                (D), and the exhibition hall (E).
+            </p>
+
+            <table xml:id="table-five-festival-locations-borda">
+                <title>Preference Schedule for the Festival Location</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>9</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                        <cell>4</cell>
+                        <cell>3</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>E</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>E</cell>
+                        <cell>A</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>E</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>D</cell>
+                        <cell>E</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Fifth choice</cell>
+                        <cell>E</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <p>Which location wins using Borda count?</p>
+        </example>
+
+        <example xml:id="ex-borda-majority-criterion">
+            <title>Learning Center Name</title>
+
+            <p>
+                Twenty-one members of a learning center rank four possible names for a new
+                tutoring program: Aspire (A), Bridge (B), Connect (C), and Discover (D).
+            </p>
+
+            <table xml:id="table-learning-program-borda-majority">
+                <title>Preference Schedule for the Tutoring Program Name</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>11</cell>
+                        <cell>6</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>D</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>D</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Which choice is the majority winner?</p>
+                </li>
+                <li>
+                    <p>Find the Borda score for each choice and identify the Borda winner.</p>
+                </li>
+                <li>
+                    <p>Does Borda count satisfy the majority criterion in this election? Explain.</p>
+                </li>
+                <li>
+                    <p>Does Borda count satisfy the Condorcet criterion in this election?</p>
+                </li>
+            </ol>
+        </example>
+
+        <p>
+            Borda count is often described as a consensus method because every position on
+            every ballot contributes to the result. A choice that is consistently ranked near
+            the top can defeat a more polarizing choice with more first-place support. That
+            feature can be useful, but it also means that Borda count can violate the majority
+            and Condorcet criteria.
+        </p>
+    </subsection>
+
+    <subsection xml:id="copeland-pairwise-comparison-method">
+        <title>Copeland's Method</title>
+
+        <definition xml:id="def-copeland-method">
+            <title>Copeland's Method</title>
+            <statement>
+                <p>
+
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            With <m>n</m> choices, the number of different pairwise comparisons is
+            <me>\binom{n}{2}=\frac{n(n-1)}{2}.</me>
+            Each unordered pair is counted once: comparing A with B is the same comparison
+            as comparing B with A.
+        </p>
+
+        <example xml:id="ex-copeland-community-series">
+            <title>Selecting a Community Lecture Series</title>
+
+            <p>
+                A library board ranks four themes for a community lecture series: arts (A),
+                business (B), conservation (C), and digital life (D).
+            </p>
+
+            <table xml:id="table-community-series-copeland">
+                <title>Preference Schedule for the Lecture Series</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>D</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                        <cell>A</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>How many pairwise comparisons are required?</p>
+                </li>
+                <li>
+                    <p>List all of the pairs that must be compared.</p>
+                </li>
+                <li>
+                    <p>Find the total Copeland score for each theme.</p>
+                </li>
+                <li>
+                    <p>Which theme wins using Copeland's method?</p>
+                </li>
+                <li>
+                    <p>Is the Copeland winner also the Condorcet winner? Explain.</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-copeland-six-transit-projects">
+            <title>Comparing Six Transit Projects</title>
+
+            <p>
+                A transportation committee considers six projects, labeled A through F. The
+                committee has already completed the head-to-head counts from its ranked
+                ballots. The winner of each comparison is shown below; one comparison ended
+                in a tie.
+            </p>
+
+            <table xml:id="table-six-transit-copeland-results">
+                <title>Results of the Pairwise Comparisons</title>
+                <tabular top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Comparison</cell>
+                        <cell>Result</cell>
+                        <cell>Comparison</cell>
+                        <cell>Result</cell>
+                        <cell>Comparison</cell>
+                        <cell>Result</cell>
+                    </row>
+                    <row>
+                        <cell>A vs. B</cell>
+                        <cell>A wins</cell>
+                        <cell>B vs. C</cell>
+                        <cell>B wins</cell>
+                        <cell>C vs. E</cell>
+                        <cell>C wins</cell>
+                    </row>
+                    <row>
+                        <cell>A vs. C</cell>
+                        <cell>A wins</cell>
+                        <cell>B vs. D</cell>
+                        <cell>D wins</cell>
+                        <cell>C vs. F</cell>
+                        <cell>C wins</cell>
+                    </row>
+                    <row>
+                        <cell>A vs. D</cell>
+                        <cell>D wins</cell>
+                        <cell>B vs. E</cell>
+                        <cell>E wins</cell>
+                        <cell>D vs. E</cell>
+                        <cell>D wins</cell>
+                    </row>
+                    <row>
+                        <cell>A vs. E</cell>
+                        <cell>E wins</cell>
+                        <cell>B vs. F</cell>
+                        <cell>Tie</cell>
+                        <cell>D vs. F</cell>
+                        <cell>F wins</cell>
+                    </row>
+                    <row>
+                        <cell>A vs. F</cell>
+                        <cell>F wins</cell>
+                        <cell>C vs. D</cell>
+                        <cell>D wins</cell>
+                        <cell>E vs. F</cell>
+                        <cell>E wins</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Use the formula to verify the number of comparisons in the table.</p>
+                </li>
+                <li>
+                    <p>Find the Copeland score for each project.</p>
+                </li>
+                <li>
+                    <p>Which project wins using Copeland's method?</p>
+                </li>
+                <li>
+                    <p>Does this election have a Condorcet winner? Explain.</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-copeland-cycle-tie">
+            <title>A Preference Cycle and a Copeland Tie</title>
+
+            <p>
+                Fifteen members of a campus committee rank four proposals: a bike shelter
+                (B), a charging station (C), a repair kiosk (R), and a water station (W).
+            </p>
+
+            <table xml:id="table-campus-proposals-copeland-cycle">
+                <title>Preference Schedule for the Campus Proposals</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>5</cell>
+                        <cell>5</cell>
+                        <cell>5</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>R</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>C</cell>
+                        <cell>R</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>R</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>W</cell>
+                        <cell>W</cell>
+                        <cell>W</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Compare B with C, C with R, and R with B.</p>
+                </li>
+                <li>
+                    <p>Describe the preference cycle formed by those three results.</p>
+                </li>
+                <li>
+                    <p>What happens when B, C, and R are each compared with W?</p>
+                </li>
+                <li>
+                    <p>Find the Copeland score for every proposal.</p>
+                </li>
+                <li>
+                    <p>Does the election have a Condorcet winner?</p>
+                </li>
+                <li>
+                    <p>Does Copeland's method produce a unique winner? Explain.</p>
+                </li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-copeland-iia-community-grant">
+            <title>Removing a Grant Proposal</title>
+
+            <p>
+                Twenty-six reviewers rank four proposals for a community grant: an arts
+                incubator (A), a business kitchen (B), a childcare cooperative (C), and a
+                digital-access lab (D).
+            </p>
+
+            <table xml:id="table-community-grant-copeland-original">
+                <title>Original Preference Schedule for the Community Grant</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>5</cell>
+                        <cell>8</cell>
+                        <cell>8</cell>
+                        <cell>5</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>D</cell>
+                        <cell>A</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>B</cell>
+                        <cell>D</cell>
+                        <cell>C</cell>
+                        <cell>C</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>D</cell>
+                        <cell>C</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>C</cell>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>D</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <p>
+                After the original result is calculated, proposal A is withdrawn because its
+                organizers cannot meet the grant deadline. The rankings of B, C, and D stay
+                in the same relative order on every ballot.
+            </p>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find all six original pairwise results.</p>
+                </li>
+                <li>
+                    <p>Find the original Copeland score for each proposal and identify the winner.</p>
+                </li>
+                <li>
+                    <p>Was proposal A the original winner?</p>
+                </li>
+                <li>
+                    <p>Remove A and find the three remaining pairwise results.</p>
+                </li>
+                <li>
+                    <p>Find the new Copeland scores and identify the new winner.</p>
+                </li>
+                <li>
+                    <p>Which fairness criterion is violated by the change in winner? Explain.</p>
+                </li>
+            </ol>
+        </example>
+
+        <p>
+            If a Condorcet winner exists, that choice defeats every other choice and earns one
+            point in every comparison. Copeland's method therefore satisfies the Condorcet
+            criterion and, because every majority winner is a Condorcet winner, the majority
+            criterion. It also satisfies the monotonicity criterion. However, the grant
+            example shows that Copeland's method can violate independence of irrelevant
+            alternatives, and the preference-cycle example shows that a Copeland election can
+            end in a tie.
+        </p>
+    </subsection>
+
+    <subsection xml:id="ranked-methods-comparison">
+        <title>Comparing Ranked-Based Methods</title>
+
+        <example xml:id="ex-compare-borda-copeland">
+            <title>Selecting a Public Workshop</title>
+
+            <p>
+                Residents rank four possible Saturday workshops: photography (P), local
+                history (L), weather observation (W), and gardening (G).
+            </p>
+
+            <table xml:id="table-public-workshop-ranked-methods">
+                <title>Preference Schedule for the Public Workshop</title>
+                <tabular row-headers="yes"
+                         top="minor"
+                         bottom="minor"
+                         left="minor"
+                         right="minor"
+                         halign="center">
+                    <row header="yes" bottom="medium">
+                        <cell>Number of voters</cell>
+                        <cell>5</cell>
+                        <cell>4</cell>
+                        <cell>9</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>First choice</cell>
+                        <cell>L</cell>
+                        <cell>W</cell>
+                        <cell>G</cell>
+                        <cell>L</cell>
+                    </row>
+                    <row>
+                        <cell>Second choice</cell>
+                        <cell>G</cell>
+                        <cell>L</cell>
+                        <cell>P</cell>
+                        <cell>G</cell>
+                    </row>
+                    <row>
+                        <cell>Third choice</cell>
+                        <cell>P</cell>
+                        <cell>P</cell>
+                        <cell>L</cell>
+                        <cell>W</cell>
+                    </row>
+                    <row>
+                        <cell>Fourth choice</cell>
+                        <cell>W</cell>
+                        <cell>G</cell>
+                        <cell>W</cell>
+                        <cell>P</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <ol marker="1)">
+                <li>
+                    <p>Find the Borda score for each workshop and identify the Borda winner.</p>
+                </li>
+                <li>
+                    <p>Find the Copeland score for each workshop and identify the Copeland winner.</p>
+                </li>
+                <li>
+                    <p>
+                        Explain how Borda count's use of every ranking and Copeland's use of
+                        head-to-head contests lead to the different results.
+                    </p>
+                </li>
+            </ol>
+        </example>
+    </subsection>
+</section>

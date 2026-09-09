@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="divisor-based-apportionment-methods">
+    <title>Divisor-Based Apportionment Methods</title>
+
+    <outcomes>
+        <ol marker="1)">
+            <li><p>Explain why and how a standard divisor is adjusted.</p></li>
+            <li><p>Determine an apportionment using Jefferson's method.</p></li>
+            <li><p>Determine an apportionment using Webster's method.</p></li>
+            <li><p>Use geometric means to apply the Huntington-Hill rounding rule.</p></li>
+            <li><p>Determine an apportionment using the Huntington-Hill method.</p></li>
+            <li><p>Compare the allocations and biases of the three divisor-based methods.</p></li>
+            <li><p>Explain the tradeoff described by the Balinski-Young Impossibility Theorem.</p></li>
+        </ol>
+    </outcomes>
+
+    <p>
+        Jefferson's, Webster's, and Huntington-Hill methods are divisor-based methods. Each
+        begins with the standard divisor and standard quotas. The quotas are rounded using a
+        rule specific to the method. If the rounded allocations do not use the required number
+        of items, the divisor is adjusted and the quotas are recalculated.
+    </p>
+
+    <subsection xml:id="modified-divisors">
+        <title>Modified Divisors</title>
+
+        <definition xml:id="def-modified-divisor">
+            <title>Modified Divisor</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            A modified divisor, also called an adjusted divisor, replaces the standard divisor
+            when the initial rounded allocations do not have the required total. Dividing by a
+            smaller divisor produces larger quotas; dividing by a larger divisor produces
+            smaller quotas.
+        </p>
+
+        <p>
+            Therefore, if the rounded allocations total too few items, decrease the divisor.
+            If they total too many items, increase the divisor. There is usually an interval of
+            modified divisors that produces the desired allocation, so the modified divisor is
+            not normally unique.
+        </p>
+
+        <example xml:id="ex-adjust-divisor-direction">
+            <title>Choosing the Direction of an Adjustment</title>
+            <ol marker="1)">
+                <li><p>A rounded allocation assigns 28 of 30 available seats. Should the divisor be increased or decreased?</p></li>
+                <li><p>A rounded allocation assigns 42 of 40 available positions. Should the divisor be increased or decreased?</p></li>
+                <li><p>Explain why decreasing a divisor increases every recalculated quota.</p></li>
+                <li><p>Why might several different modified divisors produce the same whole-number allocation?</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="jefferson-apportionment-method">
+        <title>Jefferson's Method</title>
+
+        <definition xml:id="def-jefferson-method">
+            <title>Jefferson's Method</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>To apply Jefferson's method:</p>
+        <ol marker="1)">
+            <li><p>Find the standard divisor and standard quotas.</p></li>
+            <li><p>Round every quota down to obtain an initial allocation.</p></li>
+            <li><p>If the total is too small, decrease the divisor and recalculate the quotas.</p></li>
+            <li><p>Continue rounding down and adjusting until the allocations have the required total.</p></li>
+        </ol>
+
+        <p>
+            Jefferson's method always rounds down after the quotas are calculated. Lowering
+            the divisor increases the large quotas by greater absolute amounts, so Jefferson's
+            method tends to favor larger groups. It is not guaranteed to satisfy the quota rule.
+        </p>
+
+        <example xml:id="ex-jefferson-library-staff">
+            <title>Apportioning Library Staff</title>
+            <p>
+                A library system apportions 25 staff positions among four branches serving
+                populations of 825, 610, 405, and 160 patrons.
+            </p>
+            <table xml:id="table-jefferson-library-staff">
+                <title>Branch Populations</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Branch</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>Total</cell></row>
+                    <row><cell>Population</cell><cell>825</cell><cell>610</cell><cell>405</cell><cell>160</cell><cell>2,000</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the standard divisor and standard quotas.</p></li>
+                <li><p>Round every standard quota down. How many positions are assigned?</p></li>
+                <li><p>Explain why the divisor must be decreased.</p></li>
+                <li><p>Use 76 as a modified divisor and calculate the modified quotas.</p></li>
+                <li><p>Round the modified quotas down and state the Jefferson apportionment.</p></li>
+                <li><p>Verify that all 25 positions have been assigned.</p></li>
+                <li><p>Does this apportionment satisfy the quota rule?</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-jefferson-test-divisors">
+            <title>Testing Possible Modified Divisors</title>
+            <p>
+                A four-region system has populations 720, 510, 330, and 240 and must
+                apportion 24 seats.
+            </p>
+            <ol marker="1)">
+                <li><p>Find the standard divisor and initial Jefferson allocation.</p></li>
+                <li><p>Test divisors 74, 72, and 65.</p></li>
+                <li><p>Which tested divisor produces the required total?</p></li>
+                <li><p>If a tested divisor assigns too many seats, in which direction should the next trial move?</p></li>
+                <li><p>Explain why finding a modified divisor is a controlled search rather than an arbitrary guess.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="webster-apportionment-method">
+        <title>Webster's Method</title>
+
+        <definition xml:id="def-webster-method">
+            <title>Webster's Method</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>To apply Webster's method:</p>
+        <ol marker="1)">
+            <li><p>Find the standard divisor and standard quotas.</p></li>
+            <li><p>Round every quota to the nearest whole number.</p></li>
+            <li><p>If the rounded total is too small, decrease the divisor; if it is too large, increase the divisor.</p></li>
+            <li><p>Recalculate and round until the allocations have the required total.</p></li>
+        </ol>
+
+        <p>
+            Webster's method can require an adjustment in either direction. Ordinary rounding
+            reduces the large-group advantage associated with Jefferson's method, although
+            Webster's method is still not guaranteed to satisfy the quota rule.
+        </p>
+
+        <example xml:id="ex-webster-outreach-coordinators">
+            <title>Apportioning Outreach Coordinators</title>
+            <p>
+                Four service areas report 170, 215, 205, and 560 monthly requests. An agency
+                apportions 23 outreach coordinators among them.
+            </p>
+            <table xml:id="table-webster-outreach-coordinators">
+                <title>Monthly Requests by Service Area</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Area</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>Total</cell></row>
+                    <row><cell>Monthly requests</cell><cell>170</cell><cell>215</cell><cell>205</cell><cell>560</cell><cell>1,150</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the standard divisor and standard quotas.</p></li>
+                <li><p>Round the standard quotas to the nearest whole number. How many coordinators are assigned?</p></li>
+                <li><p>Should the divisor be increased or decreased?</p></li>
+                <li><p>Use 48.6 as a modified divisor and calculate the modified quotas.</p></li>
+                <li><p>Round the modified quotas and state the Webster apportionment.</p></li>
+                <li><p>Verify that the allocation uses all 23 coordinators.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="huntington-hill-apportionment-method">
+        <title>Huntington-Hill Method</title>
+
+        <definition xml:id="def-geometric-mean-apportionment">
+            <title>Geometric Mean</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            Let <m>n</m> be a quota's lower quota. The Huntington-Hill cutoff between
+            <m>n</m> and <m>n+1</m> is their geometric mean:
+            <me>\sqrt{n(n+1)}.</me>
+            If the quota is greater than the geometric mean, round up. If it is less than the
+            geometric mean, round down. These notes avoid the rare case in which a quota is
+            exactly equal to the geometric mean.
+        </p>
+
+        <definition xml:id="def-huntington-hill-method">
+            <title>Huntington-Hill Method</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>To apply the Huntington-Hill method:</p>
+        <ol marker="1)">
+            <li><p>Find the standard divisor and standard quotas.</p></li>
+            <li><p>For each quota, find its lower quota <m>n</m> and calculate <m>\sqrt{n(n+1)}</m>.</p></li>
+            <li><p>Compare each quota with its geometric-mean cutoff and round accordingly.</p></li>
+            <li><p>If the total is too small, decrease the divisor; if it is too large, increase the divisor.</p></li>
+            <li><p>Continue until the rounded allocations have the required total.</p></li>
+        </ol>
+
+        <p>
+            Huntington-Hill rounding is based on relative, or percentage, differences rather
+            than the fixed 0.5 cutoff used by Webster.
+        </p>
+
+        <example xml:id="ex-huntington-hill-rounding">
+            <title>Comparing Quotas with Geometric Means</title>
+            <p>Apply the Huntington-Hill rounding rule to each quota.</p>
+            <table xml:id="table-huntington-hill-rounding-practice">
+                <title>Huntington-Hill Rounding Practice</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Quota</cell><cell>Lower quota</cell><cell>Geometric mean</cell><cell>Rounded value</cell></row>
+                    <row><cell>2.460</cell><cell></cell><cell></cell><cell></cell></row>
+                    <row><cell>4.410</cell><cell></cell><cell></cell><cell></cell></row>
+                    <row><cell>6.490</cell><cell></cell><cell></cell><cell></cell></row>
+                    <row><cell>9.520</cell><cell></cell><cell></cell><cell></cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Complete the table.</p></li>
+                <li><p>Which quotas are rounded differently by Huntington-Hill and ordinary rounding?</p></li>
+                <li><p>Explain why the Huntington-Hill cutoff is not always 0.5 above the lower quota.</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-huntington-hill-field-technicians">
+            <title>Apportioning Field Technicians</title>
+            <p>
+                Four environmental regions report 650, 915, 600, and 750 monitoring visits.
+                An agency apportions 29 field technicians among them.
+            </p>
+            <table xml:id="table-huntington-hill-field-technicians">
+                <title>Monitoring Visits by Region</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Region</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>Total</cell></row>
+                    <row><cell>Monitoring visits</cell><cell>650</cell><cell>915</cell><cell>600</cell><cell>750</cell><cell>2,915</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the standard divisor and standard quotas.</p></li>
+                <li><p>Find the lower quota and geometric mean for each region.</p></li>
+                <li><p>Apply Huntington-Hill rounding. How many technicians are initially assigned?</p></li>
+                <li><p>Explain why the divisor must be decreased.</p></li>
+                <li><p>Use 100.25 as a modified divisor and recalculate the quotas.</p></li>
+                <li><p>Apply the geometric-mean rule and state the final apportionment.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="compare-divisor-apportionment-methods">
+        <title>Comparing the Divisor-Based Methods</title>
+
+        <example xml:id="ex-compare-three-divisor-methods">
+            <title>Three Methods, Three Allocations</title>
+            <p>
+                A country apportions 32 legislative seats among five regions with the
+                populations shown below.
+            </p>
+            <table xml:id="table-three-divisor-methods-comparison">
+                <title>Regional Populations</title>
+                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row header="yes" bottom="medium"><cell>Region</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell><cell>Total</cell></row>
+                    <row><cell>Population</cell><cell>870</cell><cell>495</cell><cell>310</cell><cell>165</cell><cell>160</cell><cell>2,000</cell></row>
+                </tabular>
+            </table>
+            <ol marker="1)">
+                <li><p>Find the standard divisor and standard quotas.</p></li>
+                <li><p>Use Jefferson's method with modified divisor 58.</p></li>
+                <li><p>Use Webster's method with modified divisor 64.1.</p></li>
+                <li><p>Use the Huntington-Hill method with modified divisor 64.5.</p></li>
+                <li><p>Verify that each method assigns exactly 32 seats.</p></li>
+                <li><p>Which method gives the largest region the most seats?</p></li>
+                <li><p>Which method gives the smallest region the most seats?</p></li>
+                <li><p>Explain how the three rounding rules produce the differences.</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-divisor-methods-quota-rule">
+            <title>Checking the Quota Rule</title>
+            <p>Use the standard quotas and allocations from the preceding example.</p>
+            <ol marker="1)">
+                <li><p>Find the lower and upper quota for each region.</p></li>
+                <li><p>Does the Jefferson allocation satisfy the quota rule?</p></li>
+                <li><p>Does the Webster allocation satisfy the quota rule?</p></li>
+                <li><p>Does the Huntington-Hill allocation satisfy the quota rule?</p></li>
+                <li><p>Identify any region receiving less than its lower quota or more than its upper quota.</p></li>
+                <li><p>Why does one successful example not prove that a method always follows the quota rule?</p></li>
+            </ol>
+        </example>
+
+        <example xml:id="ex-identify-divisor-method">
+            <title>Identifying the Divisor Method</title>
+            <p>Identify the method described in each statement.</p>
+            <ol marker="1)">
+                <li><p>Every recalculated quota is rounded down.</p></li>
+                <li><p>Every recalculated quota is rounded to the nearest whole number.</p></li>
+                <li><p>A quota is compared with <m>\sqrt{n(n+1)}</m>.</p></li>
+                <li><p>The method tends to favor larger groups most strongly.</p></li>
+                <li><p>The rounding decision is based on relative differences between neighboring whole numbers.</p></li>
+                <li><p>The divisor may need to be increased or decreased depending on the initial total.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <subsection xml:id="balinski-young-theorem">
+        <title>A Limitation of Apportionment Methods</title>
+
+        <definition xml:id="def-balinski-young-impossibility-theorem">
+            <title>Balinski-Young Impossibility Theorem</title>
+            <statement><p>
+
+            </p></statement>
+        </definition>
+
+        <p>
+            The Balinski-Young Impossibility Theorem states that an apportionment method that
+            is guaranteed to satisfy the quota rule must be vulnerable to apportionment
+            paradoxes such as the Alabama, population, or new states paradox. Avoiding those
+            paradoxes requires giving up the guarantee that every allocation will satisfy the
+            quota rule.
+        </p>
+
+        <example xml:id="ex-apportionment-tradeoff">
+            <title>Explaining the Tradeoff</title>
+            <ol marker="1)">
+                <li><p>Which two methods from the previous section always satisfy the quota rule?</p></li>
+                <li><p>What kinds of paradoxes can affect those methods?</p></li>
+                <li><p>Are Jefferson, Webster, and Huntington-Hill guaranteed to satisfy the quota rule?</p></li>
+                <li><p>Why does the theorem prevent us from selecting a perfect method using only these properties?</p></li>
+                <li><p>Explain why the choice of an apportionment method involves a fairness judgment.</p></li>
+            </ol>
+        </example>
+    </subsection>
+
+    <conclusion>
+        <p>
+            The mathematical ideas in this section are based on the apportionment chapter of
+            Mike Kenyon and David Lippman's <em>Math in Society</em>, licensed under Creative
+            Commons BY-SA. The contexts, numerical examples, and questions in these notes
+            are new.
+        </p>
+    </conclusion>
+</section>
