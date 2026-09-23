@@ -701,6 +701,249 @@ var ptx_lunr_docs = [
   "number": "99",
   "title": "Voting Power in a Four-Region Federation.",
   "body": " Voting Power in a Four-Region Federation  A small federation has four regions. Their populations and voting weights on the national council are shown below. A motion requires a simple majority of the 22 council votes, so the weighted voting system is .   Population and Council Weight by Region    Region  North  East  South  West    Population  450,000  300,000  200,000  150,000    Council weight  9  6  4  3       Find each region's percentage of the total population.    Find each region's percentage of the total voting weight.    Calculate the Banzhaf power distribution.    Which regions have equal Banzhaf power despite having different weights?    Which region has a greater share of power than its share of voting weight?    "
+},
+{
+  "id": "basics-of-apportionment",
+  "level": "1",
+  "url": "basics-of-apportionment.html",
+  "type": "Section",
+  "number": "",
+  "title": "Basics of Apportionment",
+  "body": " Basics of Apportionment    Explain the apportionment problem and its basic requirements.  Calculate the standard divisor and standard quotas.  Identify the lower and upper quota for each group.  Determine whether an allocation satisfies the quota rule.    Apportionment is the problem of dividing a fixed number of indivisible items among groups of different sizes. The items might be legislative seats, tutors, employees, vehicles, or pieces of equipment. The goal is to make each group's share of the items approximately proportional to its share of the population or need.   The Apportionment Problem   Apportionment     Exact proportionality is often impossible because the ideal shares are usually decimals while the items must be assigned in whole numbers. Apportionment methods provide systematic ways to decide where those unavoidable rounding differences should occur.   Recognizing Apportionment Problems  For each situation, identify the items being divided, the groups receiving them, and the quantity used to measure each group's size or need.   A college assigns 18 peer tutors among four introductory courses according to enrollment.  A delivery company assigns 25 vans among five service regions according to average daily orders.  A state assigns 40 legislative seats among counties according to population.  A clinic assigns 12 portable monitors among units according to average patient counts.  Explain why assigning 4.6 tutors or 7.3 legislative seats would not solve any of these problems.      Standard Divisor and Standard Quotas   Standard Divisor      Standard Quota     The standard quota is the group's ideal fractional share of the available items. The standard quotas add to the total number of items being apportioned, apart from small differences caused by rounding displayed decimals.   Lower Quota      Upper Quota      Allocating Peer Mentors  A college will assign 20 peer mentors among four programs according to enrollment.   Enrollment by Program    Program Health Sciences Business Education Arts Total    Enrollment 420 315 180 135 1,050      Find the standard divisor and interpret it in context.  Find each program's standard quota.  Verify that the standard quotas add to 20.  Find the lower and upper quota for each program.  Why can the standard quotas not be used directly as the final allocation?     When Exact Proportionality Is Possible  A school district divides 20 tablet carts among buildings with 240, 180, 120, and 60 students.   Find the total number of students and the standard divisor.  Find each building's standard quota.  What is unusual about the four standard quotas?  Determine the apportionment without using a rounding rule.  Verify that every cart is assigned and every building receives at least one.      The Quota Rule   Quota Rule      Checking Proposed Allocations  Four wildlife centers share 24 mobile-care units according to the annual numbers of animals treated.   Populations and Proposed Allocations    Center North River Prairie Coastal Total   Animals treated 860 640 375 225 2,100  Proposal A 10 7 4 3 24  Proposal B 9 8 4 3 24  Proposal C 11 7 4 2 24     Find the standard divisor.  Find the standard, lower, and upper quota for each center.  Which proposed allocations satisfy the quota rule?  For each violation, identify the center receiving less than its lower quota or more than its upper quota.  Why does the quota rule allow more than one of the proposals?     Interpreting Fractional Quotas  A town assigns 14 snowplows among three service zones. Their standard quotas are 6.825, 4.725, and 2.450.   Verify that the quotas add to the number of available snowplows.  Find the lower and upper quota for each zone.  List every allocation that uses 14 snowplows and satisfies the quota rule.  Explain why the quota rule alone does not select one allocation.  What additional rule would an apportionment method need to provide?     "
+},
+{
+  "id": "basics-of-apportionment-2",
+  "level": "2",
+  "url": "basics-of-apportionment.html#basics-of-apportionment-2",
+  "type": "Outcomes",
+  "number": "",
+  "title": "",
+  "body": "  Explain the apportionment problem and its basic requirements.  Calculate the standard divisor and standard quotas.  Identify the lower and upper quota for each group.  Determine whether an allocation satisfies the quota rule.   "
+},
+{
+  "id": "def-apportionment",
+  "level": "2",
+  "url": "basics-of-apportionment.html#def-apportionment",
+  "type": "Definition",
+  "number": "101",
+  "title": "Apportionment.",
+  "body": " Apportionment    "
+},
+{
+  "id": "ex-recognize-apportionment-situations",
+  "level": "2",
+  "url": "basics-of-apportionment.html#ex-recognize-apportionment-situations",
+  "type": "Example",
+  "number": "102",
+  "title": "Recognizing Apportionment Problems.",
+  "body": " Recognizing Apportionment Problems  For each situation, identify the items being divided, the groups receiving them, and the quantity used to measure each group's size or need.   A college assigns 18 peer tutors among four introductory courses according to enrollment.  A delivery company assigns 25 vans among five service regions according to average daily orders.  A state assigns 40 legislative seats among counties according to population.  A clinic assigns 12 portable monitors among units according to average patient counts.  Explain why assigning 4.6 tutors or 7.3 legislative seats would not solve any of these problems.   "
+},
+{
+  "id": "def-standard-divisor",
+  "level": "2",
+  "url": "basics-of-apportionment.html#def-standard-divisor",
+  "type": "Definition",
+  "number": "103",
+  "title": "Standard Divisor.",
+  "body": " Standard Divisor    "
+},
+{
+  "id": "def-standard-quota",
+  "level": "2",
+  "url": "basics-of-apportionment.html#def-standard-quota",
+  "type": "Definition",
+  "number": "104",
+  "title": "Standard Quota.",
+  "body": " Standard Quota    "
+},
+{
+  "id": "def-lower-quota",
+  "level": "2",
+  "url": "basics-of-apportionment.html#def-lower-quota",
+  "type": "Definition",
+  "number": "105",
+  "title": "Lower Quota.",
+  "body": " Lower Quota    "
+},
+{
+  "id": "def-upper-quota",
+  "level": "2",
+  "url": "basics-of-apportionment.html#def-upper-quota",
+  "type": "Definition",
+  "number": "106",
+  "title": "Upper Quota.",
+  "body": " Upper Quota    "
+},
+{
+  "id": "ex-mentor-standard-quotas",
+  "level": "2",
+  "url": "basics-of-apportionment.html#ex-mentor-standard-quotas",
+  "type": "Example",
+  "number": "107",
+  "title": "Allocating Peer Mentors.",
+  "body": " Allocating Peer Mentors  A college will assign 20 peer mentors among four programs according to enrollment.   Enrollment by Program    Program Health Sciences Business Education Arts Total    Enrollment 420 315 180 135 1,050      Find the standard divisor and interpret it in context.  Find each program's standard quota.  Verify that the standard quotas add to 20.  Find the lower and upper quota for each program.  Why can the standard quotas not be used directly as the final allocation?   "
+},
+{
+  "id": "ex-exact-proportional-allocation",
+  "level": "2",
+  "url": "basics-of-apportionment.html#ex-exact-proportional-allocation",
+  "type": "Example",
+  "number": "109",
+  "title": "When Exact Proportionality Is Possible.",
+  "body": " When Exact Proportionality Is Possible  A school district divides 20 tablet carts among buildings with 240, 180, 120, and 60 students.   Find the total number of students and the standard divisor.  Find each building's standard quota.  What is unusual about the four standard quotas?  Determine the apportionment without using a rounding rule.  Verify that every cart is assigned and every building receives at least one.   "
+},
+{
+  "id": "def-apportionment-quota-rule",
+  "level": "2",
+  "url": "basics-of-apportionment.html#def-apportionment-quota-rule",
+  "type": "Definition",
+  "number": "110",
+  "title": "Quota Rule.",
+  "body": " Quota Rule    "
+},
+{
+  "id": "ex-check-quota-rule",
+  "level": "2",
+  "url": "basics-of-apportionment.html#ex-check-quota-rule",
+  "type": "Example",
+  "number": "111",
+  "title": "Checking Proposed Allocations.",
+  "body": " Checking Proposed Allocations  Four wildlife centers share 24 mobile-care units according to the annual numbers of animals treated.   Populations and Proposed Allocations    Center North River Prairie Coastal Total   Animals treated 860 640 375 225 2,100  Proposal A 10 7 4 3 24  Proposal B 9 8 4 3 24  Proposal C 11 7 4 2 24     Find the standard divisor.  Find the standard, lower, and upper quota for each center.  Which proposed allocations satisfy the quota rule?  For each violation, identify the center receiving less than its lower quota or more than its upper quota.  Why does the quota rule allow more than one of the proposals?   "
+},
+{
+  "id": "ex-interpret-quota-rounding",
+  "level": "2",
+  "url": "basics-of-apportionment.html#ex-interpret-quota-rounding",
+  "type": "Example",
+  "number": "113",
+  "title": "Interpreting Fractional Quotas.",
+  "body": " Interpreting Fractional Quotas  A town assigns 14 snowplows among three service zones. Their standard quotas are 6.825, 4.725, and 2.450.   Verify that the quotas add to the number of available snowplows.  Find the lower and upper quota for each zone.  List every allocation that uses 14 snowplows and satisfies the quota rule.  Explain why the quota rule alone does not select one allocation.  What additional rule would an apportionment method need to provide?   "
+},
+{
+  "id": "quota-based-apportionment-methods",
+  "level": "1",
+  "url": "quota-based-apportionment-methods.html",
+  "type": "Section",
+  "number": "",
+  "title": "Quota-Based Apportionment Methods",
+  "body": " Quota-Based Apportionment Methods    Determine an apportionment using Hamilton's method.  Explain why Hamilton's method satisfies the quota rule.  Recognize the Alabama, population, and new states paradoxes.  Determine an apportionment using Lowndes' method.    Hamilton's and Lowndes' methods begin with the same standard divisor, standard quotas, and lower quotas. Both assign the remaining items by ranking information from the fractional parts of the quotas. Hamilton compares the fractional parts directly, while Lowndes compares each fractional part with the size of its lower quota.   Hamilton's Method   Hamilton's Method     Hamilton's method uses lower quotas for the initial allocation and adds at most one item to any group. Therefore, every final allocation is either a lower quota or an upper quota, so Hamilton's method always satisfies the quota rule.   Assigning Peer Advisors  A college apportions 25 peer advisors among five academic divisions according to enrollment.   Enrollment by Academic Division   Division A B C D E Total  Enrollment 520 410 300 195 75 1,500     Find the standard divisor.  Find each division's standard quota to at least four decimal places.  Assign the lower quotas and determine how many advisors remain.  Rank the fractional parts from largest to smallest.  Determine the final Hamilton apportionment.  Verify that the final allocations add to 25 and satisfy the quota rule.     Apportioning Snowplows  A county apportions 14 snowplows among three service zones with 390, 270, and 140 miles of road.   Find the standard divisor and interpret it in context.  Find the three standard quotas.  Determine the initial allocation using lower quotas.  Which zones receive the remaining snowplows?  State the final Hamilton apportionment.  How many miles of road does each zone have per apportioned snowplow?      Paradoxes of Hamilton's Method  Although Hamilton's method follows the quota rule, its use of ranked fractional parts can produce surprising changes when the number of items, the populations, or the number of groups changes.   Alabama Paradox      Adding a Position Causes a Loss  A park system apportions ranger positions among Pine, River, and Summit regions according to 187, 632, and 917 annual service requests.   Use Hamilton's method to apportion 23 ranger positions.  Use Hamilton's method to apportion 24 ranger positions with the same service counts.  Which region loses a ranger when the total number of positions increases?  Explain why this is an example of the Alabama paradox.  Which part of Hamilton's calculation changes the ranking of the regions?     Population Paradox      Faster Growth but Fewer Advising Hours  A college apportions 38 weekly advising-hour blocks among four divisions. Enrollment is measured in two different years.   Division Enrollment in Two Years   Division A B C D Total  Year 1 1,355 378 222 1,117 3,072  Year 2 1,436 395 236 1,238 3,305     Find the percentage growth of divisions A and B.  Which of those two divisions is larger and grows at the faster rate?  Use Hamilton's method to apportion the 38 blocks using Year 1 enrollment.  Repeat the apportionment using Year 2 enrollment.  Describe the transfer of one advising block between divisions A and B.  Explain why the outcome illustrates the population paradox.     New States Paradox      Adding a New Service Region  A health network initially apportions 25 mobile-clinic days among three regions with populations 963, 505, and 320.   Use Hamilton's method to apportion the 25 clinic days.  A new region with population 266 joins the network, and 4 clinic days are added for it.  Use Hamilton's method to apportion 29 clinic days among all four regions.  Verify that the new region receives 4 clinic days.  What change occurs between two of the original regions?  Explain why that change is an example of the new states paradox.      Lowndes' Method   Lowndes' Method     Like Hamilton's method, Lowndes' method begins at the lower quotas and adds at most one item to a group. It therefore satisfies the quota rule.   Allocating Animal-Care Specialists  Four animal shelters report 605, 485, 400, and 230 annual cases. A regional agency will apportion 30 specialists among the shelters.   Animal Shelter Caseloads   Shelter A B C D Total  Annual cases 605 485 400 230 1,720     Find the standard divisor and standard quotas.  Assign the lower quotas and determine how many specialists remain.  Find the fractional part of each quota.  Calculate the Lowndes ratio for each shelter.  Determine the Lowndes apportionment.  Determine the Hamilton apportionment using the same data.  Which shelter gains a specialist under Lowndes, and which shelter loses one?     Apportioning Water-Testing Kits  Four field offices monitor 640, 370, 290, and 200 sampling sites. The agency apportions 25 testing kits according to the number of sites.   Find the standard divisor, standard quotas, and lower quotas.  How many testing kits remain after the lower quotas are assigned?  Calculate and rank the Lowndes ratios.  Determine the Lowndes apportionment.  Determine the Hamilton apportionment.  Which method gives the smallest office a larger allocation?  Verify that both allocations satisfy the quota rule.     "
+},
+{
+  "id": "quota-based-apportionment-methods-2",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#quota-based-apportionment-methods-2",
+  "type": "Outcomes",
+  "number": "",
+  "title": "",
+  "body": "  Determine an apportionment using Hamilton's method.  Explain why Hamilton's method satisfies the quota rule.  Recognize the Alabama, population, and new states paradoxes.  Determine an apportionment using Lowndes' method.   "
+},
+{
+  "id": "def-hamilton-method",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#def-hamilton-method",
+  "type": "Definition",
+  "number": "114",
+  "title": "Hamilton’s Method.",
+  "body": " Hamilton's Method    "
+},
+{
+  "id": "ex-hamilton-peer-advisors",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#ex-hamilton-peer-advisors",
+  "type": "Example",
+  "number": "115",
+  "title": "Assigning Peer Advisors.",
+  "body": " Assigning Peer Advisors  A college apportions 25 peer advisors among five academic divisions according to enrollment.   Enrollment by Academic Division   Division A B C D E Total  Enrollment 520 410 300 195 75 1,500     Find the standard divisor.  Find each division's standard quota to at least four decimal places.  Assign the lower quotas and determine how many advisors remain.  Rank the fractional parts from largest to smallest.  Determine the final Hamilton apportionment.  Verify that the final allocations add to 25 and satisfy the quota rule.   "
+},
+{
+  "id": "ex-hamilton-snowplows",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#ex-hamilton-snowplows",
+  "type": "Example",
+  "number": "117",
+  "title": "Apportioning Snowplows.",
+  "body": " Apportioning Snowplows  A county apportions 14 snowplows among three service zones with 390, 270, and 140 miles of road.   Find the standard divisor and interpret it in context.  Find the three standard quotas.  Determine the initial allocation using lower quotas.  Which zones receive the remaining snowplows?  State the final Hamilton apportionment.  How many miles of road does each zone have per apportioned snowplow?   "
+},
+{
+  "id": "def-alabama-paradox",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#def-alabama-paradox",
+  "type": "Definition",
+  "number": "118",
+  "title": "Alabama Paradox.",
+  "body": " Alabama Paradox    "
+},
+{
+  "id": "ex-alabama-paradox-park-rangers",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#ex-alabama-paradox-park-rangers",
+  "type": "Example",
+  "number": "119",
+  "title": "Adding a Position Causes a Loss.",
+  "body": " Adding a Position Causes a Loss  A park system apportions ranger positions among Pine, River, and Summit regions according to 187, 632, and 917 annual service requests.   Use Hamilton's method to apportion 23 ranger positions.  Use Hamilton's method to apportion 24 ranger positions with the same service counts.  Which region loses a ranger when the total number of positions increases?  Explain why this is an example of the Alabama paradox.  Which part of Hamilton's calculation changes the ranking of the regions?   "
+},
+{
+  "id": "def-population-paradox",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#def-population-paradox",
+  "type": "Definition",
+  "number": "120",
+  "title": "Population Paradox.",
+  "body": " Population Paradox    "
+},
+{
+  "id": "ex-population-paradox-advising-hours",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#ex-population-paradox-advising-hours",
+  "type": "Example",
+  "number": "121",
+  "title": "Faster Growth but Fewer Advising Hours.",
+  "body": " Faster Growth but Fewer Advising Hours  A college apportions 38 weekly advising-hour blocks among four divisions. Enrollment is measured in two different years.   Division Enrollment in Two Years   Division A B C D Total  Year 1 1,355 378 222 1,117 3,072  Year 2 1,436 395 236 1,238 3,305     Find the percentage growth of divisions A and B.  Which of those two divisions is larger and grows at the faster rate?  Use Hamilton's method to apportion the 38 blocks using Year 1 enrollment.  Repeat the apportionment using Year 2 enrollment.  Describe the transfer of one advising block between divisions A and B.  Explain why the outcome illustrates the population paradox.   "
+},
+{
+  "id": "def-new-states-paradox",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#def-new-states-paradox",
+  "type": "Definition",
+  "number": "123",
+  "title": "New States Paradox.",
+  "body": " New States Paradox    "
+},
+{
+  "id": "ex-new-states-paradox-mobile-clinics",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#ex-new-states-paradox-mobile-clinics",
+  "type": "Example",
+  "number": "124",
+  "title": "Adding a New Service Region.",
+  "body": " Adding a New Service Region  A health network initially apportions 25 mobile-clinic days among three regions with populations 963, 505, and 320.   Use Hamilton's method to apportion the 25 clinic days.  A new region with population 266 joins the network, and 4 clinic days are added for it.  Use Hamilton's method to apportion 29 clinic days among all four regions.  Verify that the new region receives 4 clinic days.  What change occurs between two of the original regions?  Explain why that change is an example of the new states paradox.   "
+},
+{
+  "id": "def-lowndes-method",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#def-lowndes-method",
+  "type": "Definition",
+  "number": "125",
+  "title": "Lowndes’ Method.",
+  "body": " Lowndes' Method    "
+},
+{
+  "id": "ex-lowndes-animal-shelters",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#ex-lowndes-animal-shelters",
+  "type": "Example",
+  "number": "126",
+  "title": "Allocating Animal-Care Specialists.",
+  "body": " Allocating Animal-Care Specialists  Four animal shelters report 605, 485, 400, and 230 annual cases. A regional agency will apportion 30 specialists among the shelters.   Animal Shelter Caseloads   Shelter A B C D Total  Annual cases 605 485 400 230 1,720     Find the standard divisor and standard quotas.  Assign the lower quotas and determine how many specialists remain.  Find the fractional part of each quota.  Calculate the Lowndes ratio for each shelter.  Determine the Lowndes apportionment.  Determine the Hamilton apportionment using the same data.  Which shelter gains a specialist under Lowndes, and which shelter loses one?   "
+},
+{
+  "id": "ex-lowndes-water-testing-equipment",
+  "level": "2",
+  "url": "quota-based-apportionment-methods.html#ex-lowndes-water-testing-equipment",
+  "type": "Example",
+  "number": "128",
+  "title": "Apportioning Water-Testing Kits.",
+  "body": " Apportioning Water-Testing Kits  Four field offices monitor 640, 370, 290, and 200 sampling sites. The agency apportions 25 testing kits according to the number of sites.   Find the standard divisor, standard quotas, and lower quotas.  How many testing kits remain after the lower quotas are assigned?  Calculate and rank the Lowndes ratios.  Determine the Lowndes apportionment.  Determine the Hamilton apportionment.  Which method gives the smallest office a larger allocation?  Verify that both allocations satisfy the quota rule.   "
 }
 ]
 
