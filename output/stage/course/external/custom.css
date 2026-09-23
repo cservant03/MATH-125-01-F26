@@ -186,3 +186,127 @@ a.mathjax-link {
   break-before: page;
   page-break-before: always;
 }
+
+#def-borda-count {
+  padding-bottom: 1.5in;
+}
+
+#ex-borda-community-workspace {
+  padding-bottom: 1in;
+}
+
+#ex-borda-five-festival-locations {
+  padding-bottom: 1in;
+}
+
+#ex-borda-majority-criterion {
+  padding-bottom: 1in;
+  break-before: page;
+  page-break-before: always;
+}
+
+#def-copeland-method {
+  padding-bottom: 1.5in;
+}
+
+#ex-copeland-cycle-tie {
+  padding-bottom: 1in;
+}
+
+#ex-copeland-cycle-tie {
+  padding-bottom: 1in;
+}
+
+#ex-copeland-iia-community-grant {
+  padding-bottom: 1in;
+}
+
+#ex-compare-borda-copeland {
+  padding-bottom: 1in;
+}
+
+#copeland-pairwise-comparison-method {
+  break-before: page;
+  page-break-before: always;
+}
+
+#def-weighted-voting-system {
+  padding-bottom: 1in;
+}
+
+#def-weighted-voting-player {
+  padding-bottom: 1in;
+}
+
+#def-voting-weight {
+  padding-bottom: 1in;
+}
+
+#def-weighted-voting-quota {
+  padding-bottom: 1in;
+}
+
+#ex-model-executive-board {
+  padding-bottom: 1in;
+}
+
+#def-weighted-voting-dictator {
+  padding-bottom: 1in;
+}
+
+#def-weighted-voting-veto-power {
+  padding-bottom: 1in;
+}
+
+#def-weighted-voting-dummy {
+  padding-bottom: 1in;
+}
+
+#ex-changing-quota-special-players {
+  padding-bottom: 1in;
+  break-before: page;
+  page-break-before: always;
+}
+
+#def-weighted-voting-coalition {
+  padding-bottom: 1.5in;
+}
+
+#def-winning-losing-coalitions {
+  padding-bottom: 1.5in;
+}
+
+#def-critical-player {
+  padding-bottom: 1.5in;
+}
+
+#ex-coalition-weight-critical-players {
+  padding-bottom: 1in;
+}
+
+#ex-list-winning-coalitions {
+  break-before: page;
+  page-break-before: always;
+}
+
+#def-banzhaf-power-index {
+  padding-bottom: 1.5in;
+}
+
+#ex-banzhaf-community-board {
+  padding-bottom: 2in;
+}
+
+#ex-banzhaf-changing-quota {
+  padding-bottom: 2in;
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-banzhaf-executive-board {
+  padding-bottom: 2in;
+}
+
+#ex-banzhaf-mini-federation {
+  padding-bottom: 2in;
+}

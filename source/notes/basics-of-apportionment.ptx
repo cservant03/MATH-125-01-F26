@@ -9,8 +9,6 @@
             <li><p>Calculate the standard divisor and standard quotas.</p></li>
             <li><p>Identify the lower and upper quota for each group.</p></li>
             <li><p>Determine whether an allocation satisfies the quota rule.</p></li>
-            <li><p>Interpret an apportionment in its original context.</p></li>
-            <li><p>Explain how district boundaries can affect representation.</p></li>
         </ol>
     </outcomes>
 
@@ -31,20 +29,8 @@
             </p></statement>
         </definition>
 
-        <p>An apportionment must satisfy several practical requirements:</p>
-
-        <ol marker="1)">
-            <li><p>Each item must be assigned as a whole item.</p></li>
-            <li><p>Every available item must be assigned, and no extra items may be created.</p></li>
-            <li><p>Each group must receive at least one item.</p></li>
-            <li><p>The allocation should be approximately proportional to the group sizes.</p></li>
-        </ol>
-
         <p>
-            Exact proportionality is often impossible because the ideal shares are usually
-            decimals while the items must be assigned in whole numbers. Apportionment methods
-            provide systematic ways to decide where those unavoidable rounding differences
-            should occur.
+            Exact proportionality is often impossible because the ideal shares are usually decimals while the items must be assigned in whole numbers. Apportionment methods provide systematic ways to decide where those unavoidable rounding differences should occur.
         </p>
 
         <example xml:id="ex-recognize-apportionment-situations">
@@ -73,11 +59,6 @@
             </p></statement>
         </definition>
 
-        <p>
-            The standard divisor describes the ideal population represented by one item:
-            <me>\text{standard divisor}=\frac{\text{total population}}{\text{number of items to allocate}}.</me>
-        </p>
-
         <definition xml:id="def-standard-quota">
             <title>Standard Quota</title>
             <statement><p>
@@ -86,11 +67,7 @@
         </definition>
 
         <p>
-            Divide each group's population by the standard divisor to find its standard quota:
-            <me>\text{group's standard quota}=\frac{\text{group's population}}{\text{standard divisor}}.</me>
-            The standard quota is the group's ideal fractional share of the available items.
-            The standard quotas add to the total number of items being apportioned, apart
-            from small differences caused by rounding displayed decimals.
+            The standard quota is the group's ideal fractional share of the available items. The standard quotas add to the total number of items being apportioned, apart from small differences caused by rounding displayed decimals.
         </p>
 
         <definition xml:id="def-lower-quota">
@@ -106,13 +83,6 @@
 
             </p></statement>
         </definition>
-
-        <p>
-            The lower quota is the whole-number part of a standard quota. The upper quota is
-            the next whole number above a non-integer standard quota. For example, a standard
-            quota of 6.37 has lower quota 6 and upper quota 7. When a quota is exactly 6, both
-            its lower and upper quota are 6.
-        </p>
 
         <example xml:id="ex-mentor-standard-quotas">
             <title>Allocating Peer Mentors</title>
@@ -160,12 +130,6 @@
             </p></statement>
         </definition>
 
-        <p>
-            An apportionment satisfies the quota rule when every group receives either its
-            lower quota or its upper quota. The rule does not determine a unique answer; more
-            than one allocation may satisfy the quota rule while using the correct total.
-        </p>
-
         <example xml:id="ex-check-quota-rule">
             <title>Checking Proposed Allocations</title>
             <p>Four wildlife centers share 24 mobile-care units according to the annual numbers of animals treated.</p>
@@ -205,81 +169,4 @@
             </ol>
         </example>
     </subsection>
-
-    <subsection xml:id="representation-and-districts">
-        <title>Representation and District Boundaries</title>
-
-        <definition xml:id="def-legislative-district">
-            <title>Legislative District</title>
-            <statement><p>
-
-            </p></statement>
-        </definition>
-
-        <p>
-            A legislature may give each geographic district one representative rather than
-            assign several representatives to each county or region. Fair apportionment then
-            requires districts with approximately equal populations. Population changes
-            eventually require the district boundaries to be redrawn.
-        </p>
-
-        <example xml:id="ex-compare-district-populations">
-            <title>Comparing Representation Across Districts</title>
-            <p>Four districts each elect one representative. Their populations are 48,000, 51,000, 72,000, and 49,000.</p>
-            <ol marker="1)">
-                <li><p>Find the total population.</p></li>
-                <li><p>Find the ideal population per representative.</p></li>
-                <li><p>Which district is most overrepresented?</p></li>
-                <li><p>Which district is most underrepresented?</p></li>
-                <li><p>Explain why equal numbers of representatives do not guarantee equal representation.</p></li>
-            </ol>
-        </example>
-
-        <definition xml:id="def-gerrymandering">
-            <title>Gerrymandering</title>
-            <statement><p>
-
-            </p></statement>
-        </definition>
-
-        <p>
-            Gerrymandering occurs when district boundaries are drawn to create a political
-            advantage. Two maps can use the same voters and give every district the same
-            population but produce different election results.
-        </p>
-
-        <example xml:id="ex-district-boundaries-outcomes">
-            <title>Same Voters, Different District Boundaries</title>
-            <p>
-                A county has twelve equally populated precincts. Precincts 1 through 7 each
-                contain 60 Blue voters and 40 Gold voters. Precincts 8 through 12 each contain
-                30 Blue voters and 70 Gold voters. The county will form three districts of four
-                precincts each.
-            </p>
-            <table xml:id="table-two-districting-plans">
-                <title>Two Possible Districting Plans</title>
-                <tabular row-headers="yes" top="minor" bottom="minor" left="minor" right="minor" halign="center">
-                    <row header="yes" bottom="medium"><cell>Plan</cell><cell>District 1</cell><cell>District 2</cell><cell>District 3</cell></row>
-                    <row><cell>Plan A</cell><cell>1, 2, 3, 4</cell><cell>5, 6, 7, 8</cell><cell>9, 10, 11, 12</cell></row>
-                    <row><cell>Plan B</cell><cell>1, 2, 8, 9</cell><cell>3, 4, 10, 11</cell><cell>5, 6, 7, 12</cell></row>
-                </tabular>
-            </table>
-            <ol marker="1)">
-                <li><p>Find the countywide total for each group of voters.</p></li>
-                <li><p>Which group has the countywide majority?</p></li>
-                <li><p>Under Plan A, find the Blue and Gold totals in each district.</p></li>
-                <li><p>Under Plan A, which group wins a majority of the districts?</p></li>
-                <li><p>Repeat the calculations for Plan B.</p></li>
-                <li><p>Explain how the boundaries changed the outcome even though no voters moved or changed groups.</p></li>
-            </ol>
-        </example>
-    </subsection>
-
-    <conclusion>
-        <p>
-            The mathematical ideas in this section are based on the apportionment chapter of
-            Mike Kenyon and David Lippman's <em>Math in Society</em>, licensed under Creative
-            Commons BY-SA. The contexts, data tables, and questions in these notes are new.
-        </p>
-    </conclusion>
 </section>

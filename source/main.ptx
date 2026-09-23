@@ -28,6 +28,8 @@
       <xi:include href="./notes/choice-based-voting-methods.ptx"/>
       <xi:include href="./notes/ranked-based-voting-methods.ptx"/>
       <xi:include href="./notes/weighted-voting-and-power.ptx"/>
+      <xi:include href="./notes/basics-of-apportionment.ptx"/>
+      <xi:include href="./notes/quota-based-apportionment-methods.ptx"/>
     </chapter>
 
     </book>

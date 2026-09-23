@@ -9,8 +9,6 @@
             <li><p>Explain why Hamilton's method satisfies the quota rule.</p></li>
             <li><p>Recognize the Alabama, population, and new states paradoxes.</p></li>
             <li><p>Determine an apportionment using Lowndes' method.</p></li>
-            <li><p>Compare the allocations produced by Hamilton's and Lowndes' methods.</p></li>
-            <li><p>Explain how the two methods treat large and small groups differently.</p></li>
         </ol>
     </outcomes>
 
@@ -30,15 +28,6 @@
 
             </p></statement>
         </definition>
-
-        <p>To apply Hamilton's method:</p>
-        <ol marker="1)">
-            <li><p>Divide the total population by the number of items to find the standard divisor.</p></li>
-            <li><p>Divide each group population by the standard divisor to find its standard quota.</p></li>
-            <li><p>Assign each group its lower quota and find the number of items left to assign.</p></li>
-            <li><p>Rank the fractional parts of the quotas from largest to smallest.</p></li>
-            <li><p>Give one remaining item to each group with the largest fractional part until every item is assigned.</p></li>
-        </ol>
 
         <p>
             Hamilton's method uses lower quotas for the initial allocation and adds at most
@@ -183,15 +172,6 @@
         </definition>
 
         <p>
-            Lowndes' method begins with the standard divisor, standard quotas, and lower
-            quotas. For each group, calculate
-            <me>\text{Lowndes ratio}=\frac{\text{fractional part of the quota}}{\text{lower quota}}.</me>
-            Assign the remaining items to the groups with the largest Lowndes ratios. The
-            method measures the fractional remainder relative to the number of items already
-            assigned, so it tends to favor smaller groups.
-        </p>
-
-        <p>
             Like Hamilton's method, Lowndes' method begins at the lower quotas and adds at
             most one item to a group. It therefore satisfies the quota rule.
         </p>
@@ -237,40 +217,4 @@
             </ol>
         </example>
     </subsection>
-
-    <subsection xml:id="compare-quota-apportionment-methods">
-        <title>Comparing Hamilton and Lowndes</title>
-
-        <example xml:id="ex-identify-quota-method">
-            <title>Identifying the Quota-Based Method</title>
-            <p>Identify the method described in each statement and explain your choice.</p>
-            <ol marker="1)">
-                <li><p>Remaining items go to the groups with the largest fractional parts.</p></li>
-                <li><p>Each fractional part is divided by the group's lower quota before the remainders are ranked.</p></li>
-                <li><p>The method tends to favor smaller groups because an extra item is large relative to their initial allocations.</p></li>
-                <li><p>The method can produce the Alabama paradox.</p></li>
-                <li><p>The final allocation always gives each group either its lower or upper quota.</p></li>
-            </ol>
-        </example>
-
-        <example xml:id="ex-quota-methods-reflection">
-            <title>Evaluating the Two Methods</title>
-            <ol marker="1)">
-                <li><p>What calculations are identical in Hamilton's and Lowndes' methods?</p></li>
-                <li><p>At what step do the two methods begin to differ?</p></li>
-                <li><p>Why can the methods produce different allocations while both obeying the quota rule?</p></li>
-                <li><p>Which method places greater emphasis on the absolute size of a fractional remainder?</p></li>
-                <li><p>Which method places greater emphasis on the relative importance of one additional item?</p></li>
-            </ol>
-        </example>
-    </subsection>
-
-    <conclusion>
-        <p>
-            The mathematical ideas in this section are based on the apportionment chapter of
-            Mike Kenyon and David Lippman's <em>Math in Society</em>, licensed under Creative
-            Commons BY-SA. The contexts, numerical examples, and questions in these notes
-            are new.
-        </p>
-    </conclusion>
 </section>
