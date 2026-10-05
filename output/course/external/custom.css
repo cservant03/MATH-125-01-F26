@@ -422,3 +422,66 @@ a.mathjax-link {
   break-before: page;
   page-break-before: always;
 }
+
+#def-modified-divisor {
+  padding-bottom: 1in;
+}
+
+#def-jefferson-method {
+  padding-bottom: 2in;
+}
+
+#ex-jefferson-library-staff ol > li {
+  padding-bottom: 0.3in;
+}
+
+#ex-jefferson-test-divisors ol > li {
+  padding-bottom: 0.5in;
+}
+
+#def-webster-method {
+  padding-bottom: 2in;
+}
+
+#ex-webster-outreach-coordinators {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-webster-outreach-coordinators ol > li {
+  padding-bottom: 0.7in;
+}
+
+#def-geometric-mean {
+  padding-bottom: 1in;
+}
+
+#def-huntington-hill-method {
+  padding-bottom: 2in;
+}
+
+#ex-huntington-hill-rounding {
+  padding-bottom: 0.5in;
+}
+
+#huntington-hill-apportionment-method {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-huntington-hill-field-technicians ol > li {
+  padding-bottom: 0.7in;
+}
+
+#compare-divisor-apportionment-methods {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-compare-three-divisor-methods ol > li {
+  padding-bottom: 0.3in;
+}
+
+#def-balinski-young-impossibility-theorem {
+  padding-bottom: 0.7in;
+}

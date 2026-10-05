@@ -944,6 +944,132 @@ var ptx_lunr_docs = [
   "number": "128",
   "title": "Apportioning Water-Testing Kits.",
   "body": " Apportioning Water-Testing Kits  Four field offices monitor 640, 370, 290, and 200 sampling sites. The agency apportions 25 testing kits according to the number of sites.   Find the standard divisor, standard quotas, and lower quotas.  How many testing kits remain after the lower quotas are assigned?  Calculate and rank the Lowndes ratios.  Determine the Lowndes apportionment.  Determine the Hamilton apportionment.  Which method gives the smallest office a larger allocation?  Verify that both allocations satisfy the quota rule.   "
+},
+{
+  "id": "divisor-based-apportionment-methods",
+  "level": "1",
+  "url": "divisor-based-apportionment-methods.html",
+  "type": "Section",
+  "number": "",
+  "title": "Divisor-Based Apportionment Methods",
+  "body": " Divisor-Based Apportionment Methods    Explain why and how a standard divisor is modified.  Determine an apportionment using Jefferson's method.  Determine an apportionment using Webster's method.  Use geometric means to apply the Huntington-Hill rounding rule.  Determine an apportionment using the Huntington-Hill method.  Compare the allocations and biases of the three divisor-based methods.  Explain the tradeoff described by the Balinski-Young Impossibility Theorem.    Jefferson's, Webster's, and Huntington-Hill methods are divisor-based methods. Each begins with the standard divisor and standard quotas. The quotas are rounded using a rule specific to the method. If the rounded allocations do not use the required number of items, the divisor is adjusted and the quotas are recalculated.   Jefferson's Method   Modified Divisor      Jefferson's Method      Apportioning Library Staff  A library system apportions 25 staff positions among four branches serving populations of 825, 610, 405, and 160 patrons.   Branch A B C D Total  Population 825 610 405 160 2,000    Find the standard divisor and standard quotas.  Round every standard quota down. How many positions are assigned?  Use 76 as a modified divisor and calculate the modified quotas.  Round the modified quotas down and state the Jefferson apportionment.  Verify that all 25 positions have been assigned.  Does this apportionment satisfy the quota rule?     Testing Possible Modified Divisors  A four-region system has populations 720, 510, 330, and 240 and must apportion 24 seats.   Find the standard divisor.  Test divisors 74, 72, and 65.  Which tested divisor produces the required total?      Webster's Method   Webster's Method      Apportioning Outreach Coordinators  Four service areas report 170, 215, 205, and 560 monthly requests. An agency apportions 23 outreach coordinators among them.   Area A B C D Total  Monthly requests 170 215 205 560 1,150    Find the standard divisor and standard quotas.  Round the standard quotas to the nearest whole number. How many coordinators are assigned?  Use 48.6 as a modified divisor and calculate the modified quotas.  Round the modified quotas and state the Webster apportionment.  Verify that the allocation uses all 23 coordinators.      Huntington-Hill Method   Geometric Mean      Huntington-Hill Method      Comparing Quotas with Geometric Means  Apply the Huntington-Hill rounding rule to each quota.   Quota Lower quota Geometric mean Rounded value  2.460  4.410  6.490  9.520    Complete the table.  Which quotas are rounded differently by Huntington-Hill and ordinary rounding?     Apportioning Field Technicians  Four environmental regions report 650, 915, 600, and 750 monitoring visits. An agency apportions 29 field technicians among them.   Region A B C D Total  Monitoring visits 650 915 600 750 2,915    Find the standard divisor and standard quotas.  Find the lower quota and geometric mean for each region.  Apply Huntington-Hill rounding. How many technicians are initially assigned?  Use 100.25 as a modified divisor and recalculate the quotas.  Apply the geometric-mean rule and state the final apportionment.      Comparing the Divisor-Based Methods   Three Methods, Three Allocations  A country apportions 32 legislative seats among five regions with the populations shown below.   Region A B C D E Total  Population 870 495 310 165 160 2,000    Find the standard divisor and standard quotas.  Use Jefferson's method with modified divisor 58.  Use Webster's method with modified divisor 64.1.  Use the Huntington-Hill method with modified divisor 64.5.  Verify that each method assigns exactly 32 seats.  Which method gives the largest region the most seats?  Which method gives the smallest region the most seats?  Explain how the three rounding rules produce the differences.      Balinski-Young Impossibility Theorem     "
+},
+{
+  "id": "divisor-based-apportionment-methods-2",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#divisor-based-apportionment-methods-2",
+  "type": "Outcomes",
+  "number": "",
+  "title": "",
+  "body": "  Explain why and how a standard divisor is modified.  Determine an apportionment using Jefferson's method.  Determine an apportionment using Webster's method.  Use geometric means to apply the Huntington-Hill rounding rule.  Determine an apportionment using the Huntington-Hill method.  Compare the allocations and biases of the three divisor-based methods.  Explain the tradeoff described by the Balinski-Young Impossibility Theorem.   "
+},
+{
+  "id": "def-modified-divisor",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#def-modified-divisor",
+  "type": "Definition",
+  "number": "129",
+  "title": "Modified Divisor.",
+  "body": " Modified Divisor    "
+},
+{
+  "id": "def-jefferson-method",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#def-jefferson-method",
+  "type": "Definition",
+  "number": "130",
+  "title": "Jefferson’s Method.",
+  "body": " Jefferson's Method    "
+},
+{
+  "id": "ex-jefferson-library-staff",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#ex-jefferson-library-staff",
+  "type": "Example",
+  "number": "131",
+  "title": "Apportioning Library Staff.",
+  "body": " Apportioning Library Staff  A library system apportions 25 staff positions among four branches serving populations of 825, 610, 405, and 160 patrons.   Branch A B C D Total  Population 825 610 405 160 2,000    Find the standard divisor and standard quotas.  Round every standard quota down. How many positions are assigned?  Use 76 as a modified divisor and calculate the modified quotas.  Round the modified quotas down and state the Jefferson apportionment.  Verify that all 25 positions have been assigned.  Does this apportionment satisfy the quota rule?   "
+},
+{
+  "id": "ex-jefferson-test-divisors",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#ex-jefferson-test-divisors",
+  "type": "Example",
+  "number": "132",
+  "title": "Testing Possible Modified Divisors.",
+  "body": " Testing Possible Modified Divisors  A four-region system has populations 720, 510, 330, and 240 and must apportion 24 seats.   Find the standard divisor.  Test divisors 74, 72, and 65.  Which tested divisor produces the required total?   "
+},
+{
+  "id": "def-webster-method",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#def-webster-method",
+  "type": "Definition",
+  "number": "133",
+  "title": "Webster’s Method.",
+  "body": " Webster's Method    "
+},
+{
+  "id": "ex-webster-outreach-coordinators",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#ex-webster-outreach-coordinators",
+  "type": "Example",
+  "number": "134",
+  "title": "Apportioning Outreach Coordinators.",
+  "body": " Apportioning Outreach Coordinators  Four service areas report 170, 215, 205, and 560 monthly requests. An agency apportions 23 outreach coordinators among them.   Area A B C D Total  Monthly requests 170 215 205 560 1,150    Find the standard divisor and standard quotas.  Round the standard quotas to the nearest whole number. How many coordinators are assigned?  Use 48.6 as a modified divisor and calculate the modified quotas.  Round the modified quotas and state the Webster apportionment.  Verify that the allocation uses all 23 coordinators.   "
+},
+{
+  "id": "def-geometric-mean",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#def-geometric-mean",
+  "type": "Definition",
+  "number": "135",
+  "title": "Geometric Mean.",
+  "body": " Geometric Mean    "
+},
+{
+  "id": "def-huntington-hill-method",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#def-huntington-hill-method",
+  "type": "Definition",
+  "number": "136",
+  "title": "Huntington-Hill Method.",
+  "body": " Huntington-Hill Method    "
+},
+{
+  "id": "ex-huntington-hill-rounding",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#ex-huntington-hill-rounding",
+  "type": "Example",
+  "number": "137",
+  "title": "Comparing Quotas with Geometric Means.",
+  "body": " Comparing Quotas with Geometric Means  Apply the Huntington-Hill rounding rule to each quota.   Quota Lower quota Geometric mean Rounded value  2.460  4.410  6.490  9.520    Complete the table.  Which quotas are rounded differently by Huntington-Hill and ordinary rounding?   "
+},
+{
+  "id": "ex-huntington-hill-field-technicians",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#ex-huntington-hill-field-technicians",
+  "type": "Example",
+  "number": "138",
+  "title": "Apportioning Field Technicians.",
+  "body": " Apportioning Field Technicians  Four environmental regions report 650, 915, 600, and 750 monitoring visits. An agency apportions 29 field technicians among them.   Region A B C D Total  Monitoring visits 650 915 600 750 2,915    Find the standard divisor and standard quotas.  Find the lower quota and geometric mean for each region.  Apply Huntington-Hill rounding. How many technicians are initially assigned?  Use 100.25 as a modified divisor and recalculate the quotas.  Apply the geometric-mean rule and state the final apportionment.   "
+},
+{
+  "id": "ex-compare-three-divisor-methods",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#ex-compare-three-divisor-methods",
+  "type": "Example",
+  "number": "139",
+  "title": "Three Methods, Three Allocations.",
+  "body": " Three Methods, Three Allocations  A country apportions 32 legislative seats among five regions with the populations shown below.   Region A B C D E Total  Population 870 495 310 165 160 2,000    Find the standard divisor and standard quotas.  Use Jefferson's method with modified divisor 58.  Use Webster's method with modified divisor 64.1.  Use the Huntington-Hill method with modified divisor 64.5.  Verify that each method assigns exactly 32 seats.  Which method gives the largest region the most seats?  Which method gives the smallest region the most seats?  Explain how the three rounding rules produce the differences.   "
+},
+{
+  "id": "def-balinski-young-impossibility-theorem",
+  "level": "2",
+  "url": "divisor-based-apportionment-methods.html#def-balinski-young-impossibility-theorem",
+  "type": "Definition",
+  "number": "140",
+  "title": "Balinski-Young Impossibility Theorem.",
+  "body": " Balinski-Young Impossibility Theorem    "
 }
 ]
 

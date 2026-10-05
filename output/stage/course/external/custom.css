@@ -310,3 +310,115 @@ a.mathjax-link {
 #ex-banzhaf-mini-federation {
   padding-bottom: 2in;
 }
+
+#def-apportionment {
+  padding-bottom: 2in;
+}
+
+#ex-recognize-apportionment-situations {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-recognize-apportionment-situations ol > li {
+  padding-bottom: 0.5in;
+}
+
+#def-standard-divisor {
+  padding-bottom: 1in;
+}
+
+#def-standard-quota {
+  padding-bottom: 1in;
+}
+
+#def-lower-quota {
+  padding-bottom: 1in;
+}
+
+#def-upper-quota {
+  padding-bottom: 1in;
+}
+
+#ex-mentor-standard-quotas ol > li {
+  padding-bottom: 0.5in;
+}
+
+#ex-exact-proportional-allocation ol > li {
+  padding-bottom: 0.5in;
+}
+
+#def-apportionment-quota-rule {
+  padding-bottom: 1in;
+}
+
+#ex-check-quota-rule ol > li {
+  padding-bottom: 0.45in;
+}
+
+#ex-interpret-quota-rounding ol > li {
+  padding-bottom: 0.5in;
+}
+
+#def-hamilton-method {
+  padding-bottom: 2.5in;
+}
+
+#ex-hamilton-peer-advisors ol > li {
+  padding-bottom: 0.5in;
+}
+
+#ex-hamilton-snowplows {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-hamilton-snowplows ol > li {
+  padding-bottom: 0.5in;
+}
+
+#def-alabama-paradox {
+  padding-bottom: 1in;
+}
+
+#ex-alabama-paradox-park-rangers ol > li {
+  padding-bottom: 0.5in;
+}
+
+#def-population-paradox {
+  padding-bottom: 1in;
+}
+
+#ex-population-paradox-advising-hours ol > li {
+  padding-bottom: 0.5in;
+}
+
+#def-new-states-paradox {
+  padding-bottom: 1in;
+}
+
+#ex-new-states-paradox-mobile-clinics ol > li {
+  padding-bottom: 0.5in;
+}
+
+#def-lowndes-method {
+  padding-bottom: 2in;
+}
+
+#ex-lowndes-animal-shelters ol > li {
+  padding-bottom: 0.4in;
+}
+
+#ex-lowndes-water-testing-equipment ol > li {
+  padding-bottom: 0.4in;
+}
+
+#hamilton-apportionment-paradoxes {
+  break-before: page;
+  page-break-before: always;
+}
+
+#lowndes-apportionment-method {
+  break-before: page;
+  page-break-before: always;
+}
