@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Divisor-Based Apportionment Methods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends decimal; prefix: ''; suffix: ') '; }
+</style>
+<link rel="stylesheet" type="text/css" href="external/custom.css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Contemporary Mathematics">
+<meta property="og:title" content="Contemporary Mathematics">
+<meta property="book:title" content="Contemporary Mathematics">
+<meta name="twitter:description" content="MATH 125 01 Fall 2026">
+<meta property="og:description" content="MATH 125 01 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Contemporary Mathematics</span> <span class="subtitle">MATH 125 01 Fall 2026</span></a></div>
+<p class="byline">Christopher</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="quota-based-apportionment-methods.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#instructor-info" class="internal"><span class="title">Instructor Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-desc" class="internal"><span class="title">Course Description</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-materials" class="internal"><span class="title">Course Matrials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#online-course-comp" class="internal"><span class="title">Online Course Component</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-outcomes" class="internal"><span class="title">Course Outcomes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#eval" class="internal"><span class="title">Evaluatation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#grade" class="internal"><span class="title">Grading</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#tips" class="internal"><span class="title">Tips for Success</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#academic-integrity" class="internal"><span class="title">Academic Integrity Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#withdrawal-policy" class="internal"><span class="title">Withdrawal Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#important-dates" class="internal"><span class="title">Important Dates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#disability-statement" class="internal"><span class="title">Disability Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#nondiscrimination-statement" class="internal"><span class="title">Non-Discrimination Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#land-acknowledgment" class="internal"><span class="title">Land Acknowledgment Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#tentative-syllabus" class="internal"><span class="title">Tentative Syllabus</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Notes</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-course-notes">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics-of-voting.html" class="internal"><span class="title">Basics of Voting</span></a></div>
+<ul id="ptx-toc-group-basics-of-voting" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#preference-ballots-schedules" class="internal"><span class="title">Preference Ballots and Preference Schedules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#majority-voting-basics" class="internal"><span class="title">Majority</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#pairwise-comparisons-condorcet" class="internal"><span class="title">Pairwise Comparisons and Condorcet Winners</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#fairness-criteria" class="internal"><span class="title">Fairness Criteria</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#basics-voting-mixed-examples" class="internal"><span class="title">Additional Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="choice-based-voting-methods.html" class="internal"><span class="title">Choice-based Voting Methods</span></a></div>
+<ul id="ptx-toc-group-choice-based-voting-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#plurality-voting-method" class="internal"><span class="title">Plurality Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#instant-runoff-voting-method" class="internal"><span class="title">Instant Runoff Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#approval-voting-method" class="internal"><span class="title">Approval Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#choice-methods-comparison" class="internal"><span class="title">Comparing Choice-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ranked-based-voting-methods.html" class="internal"><span class="title">Ranked-Based Voting Methods</span></a></div>
+<ul id="ptx-toc-group-ranked-based-voting-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#borda-count-method" class="internal"><span class="title">Borda Count</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#copeland-pairwise-comparison-method" class="internal"><span class="title">Copeland’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#ranked-methods-comparison" class="internal"><span class="title">Comparing Ranked-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="weighted-voting-and-power.html" class="internal"><span class="title">Weighted Voting and Power</span></a></div>
+<ul id="ptx-toc-group-weighted-voting-and-power" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="weighted-voting-and-power.html#weighted-voting-systems" class="internal"><span class="title">Weighted Voting Systems</span></a></div>
+<ul id="ptx-toc-group-weighted-voting-systems" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#weighted-voting-quota-limits" class="internal"><span class="title">Limits on the Quota</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#special-players-weighted-voting" class="internal"><span class="title">Dictators, Veto Power, and Dummies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#coalitions-critical-players" class="internal"><span class="title">Coalitions and Critical Players</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#banzhaf-power-index" class="internal"><span class="title">The Banzhaf Power Index</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics-of-apportionment.html" class="internal"><span class="title">Basics of Apportionment</span></a></div>
+<ul id="ptx-toc-group-basics-of-apportionment" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#apportionment-problem-rules" class="internal"><span class="title">The Apportionment Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#standard-divisor-and-quotas" class="internal"><span class="title">Standard Divisor and Standard Quotas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#quota-rule-apportionment" class="internal"><span class="title">The Quota Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="quota-based-apportionment-methods.html" class="internal"><span class="title">Quota-Based Apportionment Methods</span></a></div>
+<ul id="ptx-toc-group-quota-based-apportionment-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#hamilton-apportionment-method" class="internal"><span class="title">Hamilton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#hamilton-apportionment-paradoxes" class="internal"><span class="title">Paradoxes of Hamilton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#lowndes-apportionment-method" class="internal"><span class="title">Lowndes’ Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="divisor-based-apportionment-methods.html" class="internal"><span class="title">Divisor-Based Apportionment Methods</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-divisor-based-apportionment-methods">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#jefferson-apportionment-method" class="internal"><span class="title">Jefferson’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#webster-apportionment-method" class="internal"><span class="title">Webster’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#huntington-hill-apportionment-method" class="internal"><span class="title">Huntington-Hill Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#compare-divisor-apportionment-methods" class="internal"><span class="title">Comparing the Divisor-Based Methods</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="divisor-based-apportionment-methods">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divisor-Based Apportionment Methods</span>
+</h1>
+<article class="outcomes goal-like" id="divisor-based-apportionment-methods-2"><h2 class="heading"><span class="type">Outcomes</span></h2>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="divisor-based-apportionment-methods-2-1">
+<li id="divisor-based-apportionment-methods-2-1-1">
+<div class="para" id="divisor-based-apportionment-methods-2-1-1-1">Explain why and how a standard divisor is modified.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 1"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-1" title="Copy heading and permalink for Outcome 1" aria-label="Copy heading and permalink for Outcome 1">🔗</a></div>
+</li>
+<li id="divisor-based-apportionment-methods-2-1-2">
+<div class="para" id="divisor-based-apportionment-methods-2-1-2-1">Determine an apportionment using Jefferson’s method.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 2"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-2" title="Copy heading and permalink for Outcome 2" aria-label="Copy heading and permalink for Outcome 2">🔗</a></div>
+</li>
+<li id="divisor-based-apportionment-methods-2-1-3">
+<div class="para" id="divisor-based-apportionment-methods-2-1-3-1">Determine an apportionment using Webster’s method.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 3"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-3" title="Copy heading and permalink for Outcome 3" aria-label="Copy heading and permalink for Outcome 3">🔗</a></div>
+</li>
+<li id="divisor-based-apportionment-methods-2-1-4">
+<div class="para" id="divisor-based-apportionment-methods-2-1-4-1">Use geometric means to apply the Huntington-Hill rounding rule.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 4"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-4" title="Copy heading and permalink for Outcome 4" aria-label="Copy heading and permalink for Outcome 4">🔗</a></div>
+</li>
+<li id="divisor-based-apportionment-methods-2-1-5">
+<div class="para" id="divisor-based-apportionment-methods-2-1-5-1">Determine an apportionment using the Huntington-Hill method.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 5"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-5" title="Copy heading and permalink for Outcome 5" aria-label="Copy heading and permalink for Outcome 5">🔗</a></div>
+</li>
+<li id="divisor-based-apportionment-methods-2-1-6">
+<div class="para" id="divisor-based-apportionment-methods-2-1-6-1">Compare the allocations and biases of the three divisor-based methods.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 6"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-6" title="Copy heading and permalink for Outcome 6" aria-label="Copy heading and permalink for Outcome 6">🔗</a></div>
+</li>
+<li id="divisor-based-apportionment-methods-2-1-7">
+<div class="para" id="divisor-based-apportionment-methods-2-1-7-1">Explain the tradeoff described by the Balinski-Young Impossibility Theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Outcome 7"><a tabindex="-1" href="#divisor-based-apportionment-methods-2-1-7" title="Copy heading and permalink for Outcome 7" aria-label="Copy heading and permalink for Outcome 7">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Outcomes"><a tabindex="-1" href="#divisor-based-apportionment-methods-2" title="Copy heading and permalink for Outcomes" aria-label="Copy heading and permalink for Outcomes">🔗</a></div>
+</article>
+<div class="para" id="divisor-based-apportionment-methods-3">Jefferson’s, Webster’s, and Huntington-Hill methods are divisor-based methods. Each begins with the standard divisor and standard quotas. The quotas are rounded using a rule specific to the method. If the rounded allocations do not use the required number of items, the divisor is adjusted and the quotas are recalculated.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#divisor-based-apportionment-methods-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="jefferson-apportionment-method">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Jefferson’s Method</span>
+</h2>
+<article class="definition definition-like" id="def-modified-divisor"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">129</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modified Divisor.</span>
+</h3>
+<div class="para" id="def-modified-divisor-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-modified-divisor-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 129: Modified Divisor"><a tabindex="-1" href="#def-modified-divisor" title="Copy heading and permalink for Definition 129: Modified Divisor" aria-label="Copy heading and permalink for Definition 129: Modified Divisor">🔗</a></div>
+</article>
+<article class="definition definition-like" id="def-jefferson-method"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">130</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Jefferson’s Method.</span>
+</h3>
+<div class="para" id="def-jefferson-method-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-jefferson-method-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 130: Jefferson’s Method"><a tabindex="-1" href="#def-jefferson-method" title="Copy heading and permalink for Definition 130: Jefferson’s Method" aria-label="Copy heading and permalink for Definition 130: Jefferson’s Method">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-jefferson-library-staff"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">131</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Apportioning Library Staff.</span>
+</h3>
+<div class="para" id="ex-jefferson-library-staff-2">A library system apportions 25 staff positions among four branches serving populations of 825, 610, 405, and 160 patrons.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-library-staff-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Branch</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">A</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">B</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">C</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">D</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Total</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Population</th>
+<td class="c m b1 r1 l0 t0 lines">825</td>
+<td class="c m b1 r1 l0 t0 lines">610</td>
+<td class="c m b1 r1 l0 t0 lines">405</td>
+<td class="c m b1 r1 l0 t0 lines">160</td>
+<td class="c m b1 r1 l0 t0 lines">2,000</td>
+</tr>
+</table></div>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-jefferson-library-staff-4">
+<li id="ex-jefferson-library-staff-4-1">
+<div class="para" id="ex-jefferson-library-staff-4-1-1">Find the standard divisor and standard quotas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-library-staff-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-jefferson-library-staff-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-jefferson-library-staff-4-2">
+<div class="para" id="ex-jefferson-library-staff-4-2-1">Round every standard quota down. How many positions are assigned?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-library-staff-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-jefferson-library-staff-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-jefferson-library-staff-4-3">
+<div class="para" id="ex-jefferson-library-staff-4-3-1">Use 76 as a modified divisor and calculate the modified quotas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-library-staff-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-jefferson-library-staff-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-jefferson-library-staff-4-4">
+<div class="para" id="ex-jefferson-library-staff-4-4-1">Round the modified quotas down and state the Jefferson apportionment.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-library-staff-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-jefferson-library-staff-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-jefferson-library-staff-4-5">
+<div class="para" id="ex-jefferson-library-staff-4-5-1">Verify that all 25 positions have been assigned.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-library-staff-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#ex-jefferson-library-staff-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ex-jefferson-library-staff-4-6">
+<div class="para" id="ex-jefferson-library-staff-4-6-1">Does this apportionment satisfy the quota rule?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-library-staff-4-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6"><a tabindex="-1" href="#ex-jefferson-library-staff-4-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 131: Apportioning Library Staff"><a tabindex="-1" href="#ex-jefferson-library-staff" title="Copy heading and permalink for Example 131: Apportioning Library Staff" aria-label="Copy heading and permalink for Example 131: Apportioning Library Staff">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-jefferson-test-divisors"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">132</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Testing Possible Modified Divisors.</span>
+</h3>
+<div class="para" id="ex-jefferson-test-divisors-2">A four-region system has populations 720, 510, 330, and 240 and must apportion 24 seats.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-test-divisors-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-jefferson-test-divisors-3">
+<li id="ex-jefferson-test-divisors-3-1">
+<div class="para" id="ex-jefferson-test-divisors-3-1-1">Find the standard divisor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-test-divisors-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-jefferson-test-divisors-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-jefferson-test-divisors-3-2">
+<div class="para" id="ex-jefferson-test-divisors-3-2-1">Test divisors 74, 72, and 65.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-test-divisors-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-jefferson-test-divisors-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-jefferson-test-divisors-3-3">
+<div class="para" id="ex-jefferson-test-divisors-3-3-1">Which tested divisor produces the required total?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-jefferson-test-divisors-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-jefferson-test-divisors-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 132: Testing Possible Modified Divisors"><a tabindex="-1" href="#ex-jefferson-test-divisors" title="Copy heading and permalink for Example 132: Testing Possible Modified Divisors" aria-label="Copy heading and permalink for Example 132: Testing Possible Modified Divisors">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Jefferson’s Method"><a tabindex="-1" href="#jefferson-apportionment-method" title="Copy heading and permalink for Subsection: Jefferson’s Method" aria-label="Copy heading and permalink for Subsection: Jefferson’s Method">🔗</a></div>
+</section>
+<section class="subsection" id="webster-apportionment-method">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Webster’s Method</span>
+</h2>
+<article class="definition definition-like" id="def-webster-method"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">133</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Webster’s Method.</span>
+</h3>
+<div class="para" id="def-webster-method-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-webster-method-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 133: Webster’s Method"><a tabindex="-1" href="#def-webster-method" title="Copy heading and permalink for Definition 133: Webster’s Method" aria-label="Copy heading and permalink for Definition 133: Webster’s Method">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-webster-outreach-coordinators"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">134</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Apportioning Outreach Coordinators.</span>
+</h3>
+<div class="para" id="ex-webster-outreach-coordinators-2">Four service areas report 170, 215, 205, and 560 monthly requests. An agency apportions 23 outreach coordinators among them.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-webster-outreach-coordinators-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Area</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">A</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">B</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">C</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">D</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Total</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Monthly requests</th>
+<td class="c m b1 r1 l0 t0 lines">170</td>
+<td class="c m b1 r1 l0 t0 lines">215</td>
+<td class="c m b1 r1 l0 t0 lines">205</td>
+<td class="c m b1 r1 l0 t0 lines">560</td>
+<td class="c m b1 r1 l0 t0 lines">1,150</td>
+</tr>
+</table></div>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-webster-outreach-coordinators-4">
+<li id="ex-webster-outreach-coordinators-4-1">
+<div class="para" id="ex-webster-outreach-coordinators-4-1-1">Find the standard divisor and standard quotas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-webster-outreach-coordinators-4-2">
+<div class="para" id="ex-webster-outreach-coordinators-4-2-1">Round the standard quotas to the nearest whole number. How many coordinators are assigned?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-webster-outreach-coordinators-4-3">
+<div class="para" id="ex-webster-outreach-coordinators-4-3-1">Use 48.6 as a modified divisor and calculate the modified quotas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-webster-outreach-coordinators-4-4">
+<div class="para" id="ex-webster-outreach-coordinators-4-4-1">Round the modified quotas and state the Webster apportionment.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-webster-outreach-coordinators-4-5">
+<div class="para" id="ex-webster-outreach-coordinators-4-5-1">Verify that the allocation uses all 23 coordinators.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#ex-webster-outreach-coordinators-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 134: Apportioning Outreach Coordinators"><a tabindex="-1" href="#ex-webster-outreach-coordinators" title="Copy heading and permalink for Example 134: Apportioning Outreach Coordinators" aria-label="Copy heading and permalink for Example 134: Apportioning Outreach Coordinators">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Webster’s Method"><a tabindex="-1" href="#webster-apportionment-method" title="Copy heading and permalink for Subsection: Webster’s Method" aria-label="Copy heading and permalink for Subsection: Webster’s Method">🔗</a></div>
+</section>
+<section class="subsection" id="huntington-hill-apportionment-method">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Huntington-Hill Method</span>
+</h2>
+<article class="definition definition-like" id="def-geometric-mean"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">135</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Geometric Mean.</span>
+</h3>
+<div class="para" id="def-geometric-mean-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-geometric-mean-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 135: Geometric Mean"><a tabindex="-1" href="#def-geometric-mean" title="Copy heading and permalink for Definition 135: Geometric Mean" aria-label="Copy heading and permalink for Definition 135: Geometric Mean">🔗</a></div>
+</article>
+<article class="definition definition-like" id="def-huntington-hill-method"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">136</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Huntington-Hill Method.</span>
+</h3>
+<div class="para" id="def-huntington-hill-method-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-huntington-hill-method-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 136: Huntington-Hill Method"><a tabindex="-1" href="#def-huntington-hill-method" title="Copy heading and permalink for Definition 136: Huntington-Hill Method" aria-label="Copy heading and permalink for Definition 136: Huntington-Hill Method">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-huntington-hill-rounding"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">137</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing Quotas with Geometric Means.</span>
+</h3>
+<div class="para" id="ex-huntington-hill-rounding-2">Apply the Huntington-Hill rounding rule to each quota.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-rounding-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Quota</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Lower quota</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Geometric mean</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Rounded value</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">2.460</th>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">4.410</th>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">6.490</th>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">9.520</th>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+</tr>
+</table></div>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-huntington-hill-rounding-4">
+<li id="ex-huntington-hill-rounding-4-1">
+<div class="para" id="ex-huntington-hill-rounding-4-1-1">Complete the table.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-rounding-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-huntington-hill-rounding-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-huntington-hill-rounding-4-2">
+<div class="para" id="ex-huntington-hill-rounding-4-2-1">Which quotas are rounded differently by Huntington-Hill and ordinary rounding?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-rounding-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-huntington-hill-rounding-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 137: Comparing Quotas with Geometric Means"><a tabindex="-1" href="#ex-huntington-hill-rounding" title="Copy heading and permalink for Example 137: Comparing Quotas with Geometric Means" aria-label="Copy heading and permalink for Example 137: Comparing Quotas with Geometric Means">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-huntington-hill-field-technicians"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">138</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Apportioning Field Technicians.</span>
+</h3>
+<div class="para" id="ex-huntington-hill-field-technicians-2">Four environmental regions report 650, 915, 600, and 750 monitoring visits. An agency apportions 29 field technicians among them.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Region</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">A</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">B</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">C</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">D</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Total</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Monitoring visits</th>
+<td class="c m b1 r1 l0 t0 lines">650</td>
+<td class="c m b1 r1 l0 t0 lines">915</td>
+<td class="c m b1 r1 l0 t0 lines">600</td>
+<td class="c m b1 r1 l0 t0 lines">750</td>
+<td class="c m b1 r1 l0 t0 lines">2,915</td>
+</tr>
+</table></div>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-huntington-hill-field-technicians-4">
+<li id="ex-huntington-hill-field-technicians-4-1">
+<div class="para" id="ex-huntington-hill-field-technicians-4-1-1">Find the standard divisor and standard quotas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-huntington-hill-field-technicians-4-2">
+<div class="para" id="ex-huntington-hill-field-technicians-4-2-1">Find the lower quota and geometric mean for each region.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-huntington-hill-field-technicians-4-3">
+<div class="para" id="ex-huntington-hill-field-technicians-4-3-1">Apply Huntington-Hill rounding. How many technicians are initially assigned?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-huntington-hill-field-technicians-4-4">
+<div class="para" id="ex-huntington-hill-field-technicians-4-4-1">Use 100.25 as a modified divisor and recalculate the quotas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-huntington-hill-field-technicians-4-5">
+<div class="para" id="ex-huntington-hill-field-technicians-4-5-1">Apply the geometric-mean rule and state the final apportionment.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#ex-huntington-hill-field-technicians-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 138: Apportioning Field Technicians"><a tabindex="-1" href="#ex-huntington-hill-field-technicians" title="Copy heading and permalink for Example 138: Apportioning Field Technicians" aria-label="Copy heading and permalink for Example 138: Apportioning Field Technicians">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Huntington-Hill Method"><a tabindex="-1" href="#huntington-hill-apportionment-method" title="Copy heading and permalink for Subsection: Huntington-Hill Method" aria-label="Copy heading and permalink for Subsection: Huntington-Hill Method">🔗</a></div>
+</section>
+<section class="subsection" id="compare-divisor-apportionment-methods">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing the Divisor-Based Methods</span>
+</h2>
+<article class="example example-like" id="ex-compare-three-divisor-methods"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">139</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Three Methods, Three Allocations.</span>
+</h3>
+<div class="para" id="ex-compare-three-divisor-methods-2">A country apportions 32 legislative seats among five regions with the populations shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r1 l1 t1 lines">Region</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">A</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">B</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">C</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">D</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">E</th>
+<th scope="col" class="c m b2 r1 l0 t1 lines">Total</th>
+</tr>
+<tr>
+<th scope="row" class="c m b1 r1 l1 t0 lines">Population</th>
+<td class="c m b1 r1 l0 t0 lines">870</td>
+<td class="c m b1 r1 l0 t0 lines">495</td>
+<td class="c m b1 r1 l0 t0 lines">310</td>
+<td class="c m b1 r1 l0 t0 lines">165</td>
+<td class="c m b1 r1 l0 t0 lines">160</td>
+<td class="c m b1 r1 l0 t0 lines">2,000</td>
+</tr>
+</table></div>
+<ol class="decimal" style="list-style: ptx-marker-1;" id="ex-compare-three-divisor-methods-4">
+<li id="ex-compare-three-divisor-methods-4-1">
+<div class="para" id="ex-compare-three-divisor-methods-4-1-1">Find the standard divisor and standard quotas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-compare-three-divisor-methods-4-2">
+<div class="para" id="ex-compare-three-divisor-methods-4-2-1">Use Jefferson’s method with modified divisor 58.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-compare-three-divisor-methods-4-3">
+<div class="para" id="ex-compare-three-divisor-methods-4-3-1">Use Webster’s method with modified divisor 64.1.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-compare-three-divisor-methods-4-4">
+<div class="para" id="ex-compare-three-divisor-methods-4-4-1">Use the Huntington-Hill method with modified divisor 64.5.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-compare-three-divisor-methods-4-5">
+<div class="para" id="ex-compare-three-divisor-methods-4-5-1">Verify that each method assigns exactly 32 seats.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ex-compare-three-divisor-methods-4-6">
+<div class="para" id="ex-compare-three-divisor-methods-4-6-1">Which method gives the largest region the most seats?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="ex-compare-three-divisor-methods-4-7">
+<div class="para" id="ex-compare-three-divisor-methods-4-7-1">Which method gives the smallest region the most seats?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="ex-compare-three-divisor-methods-4-8">
+<div class="para" id="ex-compare-three-divisor-methods-4-8-1">Explain how the three rounding rules produce the differences.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8"><a tabindex="-1" href="#ex-compare-three-divisor-methods-4-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Example 139: Three Methods, Three Allocations"><a tabindex="-1" href="#ex-compare-three-divisor-methods" title="Copy heading and permalink for Example 139: Three Methods, Three Allocations" aria-label="Copy heading and permalink for Example 139: Three Methods, Three Allocations">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Comparing the Divisor-Based Methods"><a tabindex="-1" href="#compare-divisor-apportionment-methods" title="Copy heading and permalink for Subsection: Comparing the Divisor-Based Methods" aria-label="Copy heading and permalink for Subsection: Comparing the Divisor-Based Methods">🔗</a></div>
+</section>
+<article class="definition definition-like" id="def-balinski-young-impossibility-theorem"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">140</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Balinski-Young Impossibility Theorem.</span>
+</h2>
+<div class="para" id="def-balinski-young-impossibility-theorem-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-balinski-young-impossibility-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 140: Balinski-Young Impossibility Theorem"><a tabindex="-1" href="#def-balinski-young-impossibility-theorem" title="Copy heading and permalink for Definition 140: Balinski-Young Impossibility Theorem" aria-label="Copy heading and permalink for Definition 140: Balinski-Young Impossibility Theorem">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Section: Divisor-Based Apportionment Methods"><a tabindex="-1" href="#divisor-based-apportionment-methods" title="Copy heading and permalink for Section: Divisor-Based Apportionment Methods" aria-label="Copy heading and permalink for Section: Divisor-Based Apportionment Methods">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="quota-based-apportionment-methods.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
