@@ -25,240 +25,209 @@
       </li>
     </ol>
   </objectives>
-  <subsection xml:id="subsec-real-situation-to-graph">
-    <title>From a Real Situation to a Graph</title>
-    <p>
-      A complicated map can be simplified by representing important locations with
-       and connections with .
-    </p>
-    <example xml:id="ex-modeling-street-network">
-      <title>Modeling a Street Network</title>
-      <statement>
-        <p>
-          Suppose an inspector must walk along every street in a neighborhood. Describe what
-          the vertices and edges should represent. What information from the street map can be
-          ignored?
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
-      </statement>
-    </example>
-  </subsection>
+
   <subsection xml:id="subsec-core-graph-vocabulary">
     <title>Core Vocabulary</title>
+
     <definition xml:id="def-graph">
       <title>Graph</title>
       <statement>
-        <p>What two sets make up a graph?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-vertex">
       <title>Vertex</title>
       <statement>
-        <p>What can a vertex represent, and when does a crossing count as a vertex?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-edge">
       <title>Edge</title>
       <statement>
-        <p>What does an edge connect or represent?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-loop">
       <title>Loop</title>
       <statement>
-        <p>How is a loop different from an ordinary edge?</p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-degree-vertex">
       <title>Degree of a Vertex</title>
       <statement>
-        <p>How is the degree of a vertex counted? How does a loop contribute to the degree?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-path">
       <title>Path</title>
       <statement>
-        <p>Describe the required sequence.</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-circuit">
       <title>Circuit</title>
       <statement>
-        <p>What must be true about the beginning and ending of a circuit?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-connected-graph">
       <title>Connected Graph</title>
       <statement>
-        <p>State the path condition that makes a graph connected.</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-weight">
       <title>Weights and Weighted Graphs</title>
       <statement>
-        <p>What makes a graph weighted? Explain what an edge weight represents and list three possible meanings.</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
   </subsection>
+
+  <subsection xml:id="subsec-real-situation-to-graph">
+    <title>From a Real Situation to a Graph</title>
+    <p>
+      A complicated map can be simplified by representing important locations with and connections with .
+    </p>
+    
+    <example xml:id="ex-campus-graph">
+      <title>Campus Walking Routes</title>
+
+      <p>
+        A college has six important locations:
+        Student Center, Library, Science Building, Math Building,
+        Recreation Center, Parking Lot.
+      </p>
+
+      <p>
+        Direct walking paths connect the following locations:
+      </p>
+
+      <sidebyside widths="48% 48%">
+        <ul>
+          <li>
+            <p>Student Center ↔ Library</p>
+          </li>
+          <li>
+            <p>Student Center ↔ Math Building</p>
+          </li>
+          <li>
+            <p>Student Center ↔ Recreation Center</p>
+          </li>
+          <li>
+            <p>Science Building ↔ Parking Lot</p>
+          </li>
+          <li>
+            <p>Recreation Center ↔ Parking Lot</p>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <p>Library ↔ Science Building</p>
+          </li>
+          <li>
+            <p>Library ↔ Math Building</p>
+          </li>
+          <li>
+            <p>Science Building ↔ Math Building</p>
+          </li>
+          <li>
+            <p>Math Building ↔ Recreation Center</p>
+          </li>
+        </ul>
+      </sidebyside>
+
+      <p>
+        Create a graph that represents the campus. Let each location be a
+        vertex and each direct walking path be an edge.
+      </p>
+    </example>
+  </subsection>
+
   <subsection xml:id="subsec-reading-a-graph">
     <title>Reading a Graph</title>
+
     <example xml:id="ex-reading-a-graph">
       <title>Reading a Graph</title>
+
       <statement>
         <p>Use the graph below to answer the questions.</p>
-        <figure xml:id="fig-vocabulary-graph">
-          <caption>A graph with five labeled vertices.</caption>
-          <image source="images/vocabulary-graph.png" width="70%">
-            <shortdescription>Graph with vertices A through E and six undirected edges.</shortdescription>
-            <description>
-              <p>
-                An undirected graph with vertices A, B, C, D, and E. The edges are AB, AC,
-                BC, CD, CE, and DE.
-              </p>
-            </description>
-          </image>
-        </figure>
+        
+        <image source="images/vocabulary-graph.png" width="35%">
+          <shortdescription>Graph with vertices A through E and six undirected edges.</shortdescription>
+          <description>
+            <p>
+              An undirected graph with vertices A, B, C, D, and E. The edges are AB, AC,
+              BC, CD, CE, and DE.
+            </p>
+          </description>
+        </image>
+
         <p>
           <ol>
             <li>
               <p>How many vertices and edges are present?</p>
-              <p>
-                
-              </p>
-            </li>
-            <li>
-              <p>Find the degree of each vertex.</p>
-              <p>
-                
-              </p>
             </li>
             <li>
               <p>Give one path from A to E.</p>
-              <p>
-                
-              </p>
             </li>
             <li>
               <p>Give one circuit that starts and ends at C.</p>
-              <p>
-                
-              </p>
             </li>
             <li>
               <p>Is the graph connected? Explain.</p>
-              <p>
-                
-              </p>
             </li>
           </ol>
         </p>
       </statement>
     </example>
   </subsection>
+
   <subsection xml:id="subsec-weighted-graphs-shortest-paths">
     <title>Weighted Graphs and Shortest Paths</title>
-    <p>In a route-finding problem, the weights may measure distance, travel time, or cost.
-  Read the weights rather than measuring the lengths of the drawn edges.</p>
+
+    <p>In a route-finding problem, the weights may measure distance, travel time, or cost Read the weights rather than measuring the lengths of the drawn edges.</p>
+
     <definition xml:id="def-total-path-weight">
       <title>Total Weight of a Path</title>
       <statement>
-        <p>How do you combine the weights of the edges along a path? What units should the result have?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <definition xml:id="def-shortest-path">
       <title>Shortest Path</title>
       <statement>
-        <p>What quantity is minimized? Does a shortest path always use the fewest edges?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        <p> </p>
       </statement>
     </definition>
+
     <example xml:id="ex-comparing-campus-routes">
       <title>Comparing Campus Routes</title>
+
       <statement>
-        <p>A student walks from location <m>A</m> to location <m>G</m>. Each edge weight is a walking time in minutes.
-    Each walkway can be used in either direction.</p>
-        <figure xml:id="fig-campus-route-comparison">
-          <caption>Walking times, in minutes, between campus locations.</caption>
-          <image source="images/shortest-path-campus.png" width="95%">
-            <shortdescription>Weighted campus graph with vertices A through G. The long description lists all connections and times.</shortdescription>
-            <description>
-              <p>This undirected graph has vertices A, B, C, D, E, F, and G.
-          Its edge weights, in minutes, are AB: 5; AC: 2; BC: 1; BD: 4; CD: 7;
-          CE: 9; DE: 2; DF: 6; EF: 3; FG: 2; and EG: 7. There are no other edges.
-          The drawing is not to scale.</p>
-            </description>
-          </image>
-        </figure>
+        <p>A student walks from location <m>A</m> to location <m>G</m>. Each edge weight is a walking time in minutes. Each walkway can be used in either direction.</p>
+                
+        <image source="images/shortest-path-campus.png" width="75%">
+          <shortdescription>Weighted campus graph with vertices A through G. The long description lists all connections and times.</shortdescription>
+          <description>
+            <p>This undirected graph has vertices A, B, C, D, E, F, and G.
+        Its edge weights, in minutes, are AB: 5; AC: 2; BC: 1; BD: 4; CD: 7;
+        CE: 9; DE: 2; DF: 6; EF: 3; FG: 2; and EG: 7. There are no other edges.
+        The drawing is not to scale.</p>
+          </description>
+        </image>
+        
         <p>Calculate the number of edges and total walking time for each listed route.</p>
         <tabular halign="center" valign="middle" top="minor" left="minor" right="minor" bottom="minor">
           <col width="40.000%" right="minor"/>
@@ -307,42 +276,21 @@
           <ol>
             <li>
               <p>Which listed route has the smallest total time? Which uses the fewest edges?</p>
-              <p>
-                
-              </p>
             </li>
             <li>
               <p>Does checking only these three routes establish the shortest possible route from <m>A</m> to <m>G</m>? Explain.</p>
-              <p>
-                
-              </p>
-              <p>
-                
-              </p>
             </li>
           </ol>
         </p>
       </statement>
     </example>
   </subsection>
+
   <subsection xml:id="subsec-dijkstra-algorithm">
     <title>Dijkstra’s Algorithm</title>
-    <definition xml:id="def-graph-algorithm">
-      <title>Algorithm</title>
-      <statement>
-        <p>What makes a procedure an algorithm?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
-      </statement>
-    </definition>
-    <p>Guess-and-check becomes difficult when a graph has many possible routes. Dijkstra's algorithm
-  keeps track of the best distances found so far. Following the textbook, we begin at the
-  <em>destination</em> and work backward. Here, distance means the sum of the weights, even when
-  the weights measure time or cost.</p>
+    
+    <p>Guess-and-check becomes difficult when a graph has many possible routes. Dijkstra's algorithm keeps track of the best distances found so far. Following the textbook, we begin at the <em>destination</em> and work backward. Here, distance means the sum of the weights, even when the weights measure time or cost.</p>
+
     <algorithm xml:id="alg-dijkstra-destination-first">
       <title>Dijkstra's Algorithm: Complete the Key Ideas</title>
       <statement>
@@ -350,70 +298,63 @@
         <p>
           <ol>
             <li>
-              <p>Give the  vertex a distance of <m>0</m> and designate it as current.
-      Give every other vertex a tentative distance of <m>\infty</m>, meaning that no route has yet been found.</p>
+              <p>Give the ending vertex a distance of <m>0</m> and designate it as current.</p>
             </li>
             <li>
-              <p>For each unvisited vertex adjacent to the current vertex, add the connecting edge’s weight
-      to the current vertex’s distance. Replace the vertex’s recorded distance only if the new distance
-      is . When replacing a distance, also record the current vertex as the
-      next vertex on the route toward the destination.</p>
+              <p>For each unvisited vertex adjacent to the current vertex, add the connecting edge's weight to the current vertex's distance. Replace the vertex's recorded distance only if the new distance is smaller.</p>
             </li>
             <li>
-              <p>Mark the current vertex as . Its distance is now final;
-      do not change its label or use it as an unvisited vertex again.</p>
+              <p>Mark the current vertex as visited. Its distance is now final; do not change its label or use it as an unvisited vertex again.</p>
             </li>
             <li>
-              <p>Choose the unvisited vertex with the  finite recorded distance
-      as the new current vertex. Repeat Steps 2–4 until the starting vertex has been visited.</p>
+              <p>Choose the unvisited vertex with the smallest recorded distance as the new current vertex. Repeat Steps 2-4 until the all vertices have been visited or you visit the starting vertex.</p>
             </li>
           </ol>
         </p>
-        <p>If two unvisited vertices have the same smallest distance, either may be chosen.
-    If a new route has the same distance as an existing label, keep the existing label.
-    If no unvisited vertex has a finite distance and the starting vertex is still unvisited,
-    there is no route from the start to the destination.</p>
+        <p>If two unvisited vertices have the same smallest distance, either may be chosen. If a new route has the same distance as an existing label, keep the existing label. </p>
       </statement>
     </algorithm>
-    <remark xml:id="rem-recovering-shortest-route">
-      <title>Recording and Recovering the Route</title>
-      <p>A label such as <m>9(C)</m> means that the best route found so far has total weight <m>9</m>
-    and goes next to vertex <m>C</m> toward the destination. Once the starting vertex has been visited,
-    follow the recorded next vertices until you reach the destination. List the entire route and add
-    its edge weights to check the total.</p>
-      <p>To find distances to the same destination from every reachable vertex, continue until
-    all reachable vertices have been visited.</p>
-    </remark>
+
     <example xml:id="ex-dijkstra-campus">
       <title>Finding the Shortest Campus Route</title>
+
       <statement>
-        <p>Use Dijkstra’s algorithm to find the shortest route from <m>A</m> to <m>G</m>.</p>
-        <figure xml:id="fig-campus-dijkstra">
-          <caption>Walking times, in minutes, between campus locations.</caption>
-          <image source="images/shortest-path-campus.png" width="95%">
-            <shortdescription>Weighted campus graph with vertices A through G. The long description lists all connections and times.</shortdescription>
-            <description>
-              <p>This undirected graph has vertices A, B, C, D, E, F, and G.
-          Its edge weights, in minutes, are AB: 5; AC: 2; BC: 1; BD: 4; CD: 7;
-          CE: 9; DE: 2; DF: 6; EF: 3; FG: 2; and EG: 7. There are no other edges.
-          The drawing is not to scale.</p>
-            </description>
-          </image>
-        </figure>
-        <p>Begin at <m>G</m>. After processing each current vertex, record all distance labels in that row.
-    Write labels as distance(next vertex), and circle or mark labels that are final.
-    The initial distances are provided.</p>
+        <p>Use Dijkstra's algorithm to find the shortest route from <m>A</m> to <m>G</m>.</p>
+        
+        <image source="images/shortest-path-campus.png" width="75%">
+          <shortdescription>Weighted campus graph with vertices A through G. The long description lists all connections and times.</shortdescription>
+          <description>
+            <p>This undirected graph has vertices A, B, C, D, E, F, and G.
+        Its edge weights, in minutes, are AB: 5; AC: 2; BC: 1; BD: 4; CD: 7;
+        CE: 9; DE: 2; DF: 6; EF: 3; FG: 2; and EG: 7. There are no other edges.
+        The drawing is not to scale.</p>
+          </description>
+        </image>
+      </statement>
+    </example>
+
+    <p>Dijkstra's algorithm is both optimal and efficient for graphs with nonnegative edge weights. Explain how its repeated label updates avoid the need to list every possible route.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-shortest-paths-table">
+    <title>Shortest Paths from a Table</title>
+    <p>A table can show the same connections and weights as a graph. A number gives the weight of a direct connection; a dash means there is no direct connection. A missing direct connection does not rule out a route through other vertices.</p>
+
+    <example xml:id="ex-delivery-travel-table">
+      <title>Routing a Delivery</title>
+      <statement>
+        <p>A delivery service has six processing centers, labeled <m>A</m> through <m>F</m>. Direct travel times, in hours, are shown below. Travel time is the same in either direction, and no additional time is added at the centers.</p>
+        
         <tabular halign="center" valign="middle" top="minor" left="minor" right="minor" bottom="minor">
           <col width="16.000%" right="minor"/>
-          <col width="12.000%" right="minor"/>
-          <col width="12.000%" right="minor"/>
-          <col width="12.000%" right="minor"/>
-          <col width="12.000%" right="minor"/>
-          <col width="12.000%" right="minor"/>
-          <col width="12.000%" right="minor"/>
-          <col width="12.000%" right="minor"/>
+          <col width="14.000%" right="minor"/>
+          <col width="14.000%" right="minor"/>
+          <col width="14.000%" right="minor"/>
+          <col width="14.000%" right="minor"/>
+          <col width="14.000%" right="minor"/>
+          <col width="14.000%" right="minor"/>
           <row header="yes" bottom="medium">
-            <cell>Current</cell>
+            <cell>Center</cell>
             <cell>
               <m>A</m>
             </cell>
@@ -432,846 +373,130 @@
             <cell>
               <m>F</m>
             </cell>
-            <cell>
-              <m>G</m>
-            </cell>
           </row>
           <row bottom="minor">
-            <cell>Initial</cell>
             <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>
-              <m>\infty</m>
+              <m>A</m>
             </cell>
             <cell>0</cell>
+            <cell>6</cell>
+            <cell>3</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>—</cell>
           </row>
           <row bottom="minor">
             <cell>
-              <m>G</m>
+              <m>B</m>
             </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
+            <cell>6</cell>
+            <cell>0</cell>
+            <cell>2</cell>
+            <cell>5</cell>
+            <cell>—</cell>
+            <cell>—</cell>
           </row>
           <row bottom="minor">
             <cell>
-              
+              <m>C</m>
             </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
+            <cell>3</cell>
+            <cell>2</cell>
+            <cell>0</cell>
+            <cell>8</cell>
+            <cell>7</cell>
+            <cell>—</cell>
           </row>
           <row bottom="minor">
             <cell>
-              
+              <m>D</m>
             </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
+            <cell>—</cell>
+            <cell>5</cell>
+            <cell>8</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>8</cell>
           </row>
           <row bottom="minor">
             <cell>
-              
+              <m>E</m>
             </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>7</cell>
+            <cell>1</cell>
+            <cell>0</cell>
+            <cell>4</cell>
           </row>
           <row bottom="minor">
             <cell>
-              
+              <m>F</m>
             </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-          </row>
-          <row bottom="minor">
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-          </row>
-          <row bottom="minor">
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>8</cell>
+            <cell>4</cell>
+            <cell>0</cell>
           </row>
         </tabular>
-        <p>Order in which vertices are visited: 
-        </p>
-        <p>Shortest route from <m>A</m> to <m>G</m>: 
-        </p>
-        <p>Total walking time, including units: 
-        </p>
-        <p>Check the total by adding the edge weights:</p>
-        <p>
-          
-        </p>
-        <p>Identify a vertex whose tentative distance improved during the algorithm. Explain why its first label was not final.</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
-      </statement>
-    </example>
-    <definition xml:id="def-optimal-efficient-algorithms">
-      <title>Optimal and Efficient Algorithms</title>
-      <statement>
+
         <p>
           <ol>
             <li>
-              <p>What does it mean for an algorithm to be <em>optimal</em>?</p>
-              <p>
-                
-              </p>
+              <p>Draw the graph represented by the table.</p>
             </li>
             <li>
-              <p>What does it mean for an algorithm to be <em>efficient</em>?</p>
-              <p>
-                
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </definition>
-    <p>Dijkstra’s algorithm is both optimal and efficient for graphs with nonnegative edge weights.
-  Explain how its repeated label updates avoid the need to list every possible route.</p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-  </subsection>
-  <subsection xml:id="subsec-shortest-paths-table">
-    <title>Shortest Paths from a Table</title>
-    <p>A table can show the same connections and weights as a graph. A number gives the weight
-  of a direct connection; a dash means there is no direct connection. A missing direct connection
-  does not rule out a route through other vertices.</p>
-    <example xml:id="ex-delivery-travel-table">
-      <title>Routing a Delivery</title>
-      <statement>
-        <p>A delivery service has six processing centers, labeled <m>A</m> through <m>F</m>.
-    Direct travel times, in hours, are shown below. Travel time is the same in either direction,
-    and no additional time is added at the centers.</p>
-        <table xml:id="tbl-delivery-travel-times">
-          <title>Direct travel times between processing centers, in hours.</title>
-          <tabular halign="center" valign="middle" top="minor" left="minor" right="minor" bottom="minor">
-            <col width="16.000%" right="minor"/>
-            <col width="14.000%" right="minor"/>
-            <col width="14.000%" right="minor"/>
-            <col width="14.000%" right="minor"/>
-            <col width="14.000%" right="minor"/>
-            <col width="14.000%" right="minor"/>
-            <col width="14.000%" right="minor"/>
-            <row header="yes" bottom="medium">
-              <cell>Center</cell>
-              <cell>
-                <m>A</m>
-              </cell>
-              <cell>
-                <m>B</m>
-              </cell>
-              <cell>
-                <m>C</m>
-              </cell>
-              <cell>
-                <m>D</m>
-              </cell>
-              <cell>
-                <m>E</m>
-              </cell>
-              <cell>
-                <m>F</m>
-              </cell>
-            </row>
-            <row bottom="minor">
-              <cell>
-                <m>A</m>
-              </cell>
-              <cell>0</cell>
-              <cell>6</cell>
-              <cell>3</cell>
-              <cell>—</cell>
-              <cell>—</cell>
-              <cell>—</cell>
-            </row>
-            <row bottom="minor">
-              <cell>
-                <m>B</m>
-              </cell>
-              <cell>6</cell>
-              <cell>0</cell>
-              <cell>2</cell>
-              <cell>5</cell>
-              <cell>—</cell>
-              <cell>—</cell>
-            </row>
-            <row bottom="minor">
-              <cell>
-                <m>C</m>
-              </cell>
-              <cell>3</cell>
-              <cell>2</cell>
-              <cell>0</cell>
-              <cell>8</cell>
-              <cell>7</cell>
-              <cell>—</cell>
-            </row>
-            <row bottom="minor">
-              <cell>
-                <m>D</m>
-              </cell>
-              <cell>—</cell>
-              <cell>5</cell>
-              <cell>8</cell>
-              <cell>0</cell>
-              <cell>1</cell>
-              <cell>8</cell>
-            </row>
-            <row bottom="minor">
-              <cell>
-                <m>E</m>
-              </cell>
-              <cell>—</cell>
-              <cell>—</cell>
-              <cell>7</cell>
-              <cell>1</cell>
-              <cell>0</cell>
-              <cell>4</cell>
-            </row>
-            <row bottom="minor">
-              <cell>
-                <m>F</m>
-              </cell>
-              <cell>—</cell>
-              <cell>—</cell>
-              <cell>—</cell>
-              <cell>8</cell>
-              <cell>4</cell>
-              <cell>0</cell>
-            </row>
-          </tabular>
-        </table>
-        <p>
-          <ol>
-            <li>
-              <p>Which centers are directly connected to <m>F</m>? What do the dashes in row <m>A</m> mean?</p>
-              <p>
-                
-              </p>
-            </li>
-            <li>
-              <p>Apply Dijkstra’s algorithm to find the shortest route from <m>A</m> to <m>F</m>.
-      Begin with <m>F</m> as current, and record distance(next vertex) after each step.</p>
-              <tabular halign="center" valign="middle" top="minor" left="minor" right="minor" bottom="minor">
-                <col width="16.000%" right="minor"/>
-                <col width="14.000%" right="minor"/>
-                <col width="14.000%" right="minor"/>
-                <col width="14.000%" right="minor"/>
-                <col width="14.000%" right="minor"/>
-                <col width="14.000%" right="minor"/>
-                <col width="14.000%" right="minor"/>
-                <row header="yes" bottom="medium">
-                  <cell>Current</cell>
-                  <cell>
-                    <m>A</m>
-                  </cell>
-                  <cell>
-                    <m>B</m>
-                  </cell>
-                  <cell>
-                    <m>C</m>
-                  </cell>
-                  <cell>
-                    <m>D</m>
-                  </cell>
-                  <cell>
-                    <m>E</m>
-                  </cell>
-                  <cell>
-                    <m>F</m>
-                  </cell>
-                </row>
-                <row bottom="minor">
-                  <cell>Initial</cell>
-                  <cell>
-                    <m>\infty</m>
-                  </cell>
-                  <cell>
-                    <m>\infty</m>
-                  </cell>
-                  <cell>
-                    <m>\infty</m>
-                  </cell>
-                  <cell>
-                    <m>\infty</m>
-                  </cell>
-                  <cell>
-                    <m>\infty</m>
-                  </cell>
-                  <cell>0</cell>
-                </row>
-                <row bottom="minor">
-                  <cell>
-                    <m>F</m>
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                </row>
-                <row bottom="minor">
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                </row>
-                <row bottom="minor">
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                </row>
-                <row bottom="minor">
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                </row>
-                <row bottom="minor">
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                </row>
-                <row bottom="minor">
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                  <cell>
-                    
-                  </cell>
-                </row>
-              </tabular>
-              <p>Shortest route: 
-              </p>
-              <p>Total travel time, including units: 
-              </p>
-              <p>Check the total by adding the travel times:</p>
-              <p>
-                
-              </p>
-            </li>
-            <li>
-              <p>Use the same final labels to find the shortest route and travel time from <m>B</m> to <m>F</m>.</p>
-              <p>
-                
-              </p>
-              <p>
-                
-              </p>
+              <p>Apply Dijkstra's algorithm to find the shortest route from <m>A</m> to <m>F</m>.</p>
             </li>
           </ol>
         </p>
       </statement>
     </example>
   </subsection>
+
   <exercises>
     <title>Check Your Understanding</title>
+
     <exercise xml:id="ex-crossing-without-vertex">
       <statement>
         <p>
           Two edges cross in a drawing, but no dot appears at the crossing. Is the crossing a
           vertex? Explain.
         </p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
       </statement>
     </exercise>
-    <exercise xml:id="ex-equivalent-graph-drawings">
-      <statement>
-        <p>
-          Can two different-looking drawings represent the same graph? What must remain
-          unchanged?
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
-      </statement>
-    </exercise>
+
     <exercise xml:id="ex-connected-degree-zero">
       <statement>
         <p>Can a connected graph with at least two vertices contain a vertex of degree zero? Explain.</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
       </statement>
     </exercise>
+
     <exercise xml:id="ex-shortest-looking-edge">
       <statement>
         <p>Why can the shortest-looking edge in a drawing fail to have the smallest weight?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
       </statement>
     </exercise>
-    <exercise xml:id="ex-dijkstra-label-update">
-      <statement>
-        <p>A vertex has the label 15(D). A new route through C has total weight 12, and a new route through E has total weight 17. What label should be kept, and why?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
-      </statement>
-    </exercise>
-    <exercise xml:id="ex-dijkstra-next-current">
-      <statement>
-        <p>After processing a current vertex, three unvisited vertices have tentative distances 8, 11, and 6. Which becomes current next?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
-      </statement>
-    </exercise>
+
     <exercise xml:id="ex-shortest-route-versus-weight">
       <statement>
         <p>Why is a shortest-path answer incomplete if it gives only the total weight and does not identify the route?</p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
       </statement>
     </exercise>
+
     <exercise xml:id="ex-dijkstra-independent-practice">
       <title>Practice: Find a Shortest Route</title>
       <statement>
-        <p>The weights represent distances in miles. Use Dijkstra’s algorithm, beginning at <m>T</m>,
-  to find the shortest route from <m>P</m> to <m>T</m>.</p>
-        <figure xml:id="fig-shortest-path-practice">
-          <caption>Road distances, in miles.</caption>
-          <image source="images/shortest-path-practice.png" width="80%">
-            <shortdescription>Weighted road graph with vertices P, Q, R, S, and T. The long description lists all roads and distances.</shortdescription>
-            <description>
-              <p>This undirected graph has vertices P, Q, R, S, and T. Its edges and weights,
-      in miles, are PQ: 7; PR: 3; QR: 2; QS: 4; RS: 7; RT: 11; and ST: 1.
-      There are no other edges. The drawing is not to scale.</p>
-            </description>
-          </image>
-        </figure>
-        <tabular halign="center" valign="middle" top="minor" left="minor" right="minor" bottom="minor">
-          <col width="15.000%" right="minor"/>
-          <col width="17.000%" right="minor"/>
-          <col width="17.000%" right="minor"/>
-          <col width="17.000%" right="minor"/>
-          <col width="17.000%" right="minor"/>
-          <col width="17.000%" right="minor"/>
-          <row header="yes" bottom="medium">
-            <cell>Current</cell>
-            <cell>
-              <m>P</m>
-            </cell>
-            <cell>
-              <m>Q</m>
-            </cell>
-            <cell>
-              <m>R</m>
-            </cell>
-            <cell>
-              <m>S</m>
-            </cell>
-            <cell>
-              <m>T</m>
-            </cell>
-          </row>
-          <row bottom="minor">
-            <cell>Initial</cell>
-            <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>
-              <m>\infty</m>
-            </cell>
-            <cell>0</cell>
-          </row>
-          <row bottom="minor">
-            <cell>
-              <m>T</m>
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-          </row>
-          <row bottom="minor">
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-          </row>
-          <row bottom="minor">
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-          </row>
-          <row bottom="minor">
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-          </row>
-          <row bottom="minor">
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-            <cell>
-              
-            </cell>
-          </row>
-        </tabular>
-        <p>Shortest route: 
-        </p>
-        <p>Total distance, including units: 
-        </p>
-        <p>Check the total by adding the edge weights:</p>
-        <p>
-          
-        </p>
+        <p>The weights represent distances in miles. Use Dijkstra's algorithm to find the shortest route from <m>P</m> to <m>T</m>.</p>
+        
+        <image source="images/shortest-path-practice.png" width="50%">
+          <shortdescription>Weighted road graph with vertices P, Q, R, S, and T. The long description lists all roads and distances.</shortdescription>
+          <description>
+            <p>This undirected graph has vertices P, Q, R, S, and T. Its edges and weights, in miles, are PQ: 7; PR: 3; QR: 2; QS: 4; RS: 7; RT: 11; and ST: 1. There are no other edges. The drawing is not to scale.</p>
+          </description>
+        </image>
       </statement>
     </exercise>
   </exercises>

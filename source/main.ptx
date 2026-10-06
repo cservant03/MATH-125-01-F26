@@ -28,6 +28,7 @@
       <xi:include href="./notes/basics-of-apportionment.ptx"/>
       <xi:include href="./notes/quota-based-apportionment-methods.ptx"/>
       <xi:include href="./notes/divisor-based-apportionment-methods.ptx"/>
+      <xi:include href="./notes/graphs-and-shortest-paths.ptx"/>
     </chapter>
 
     </book>
