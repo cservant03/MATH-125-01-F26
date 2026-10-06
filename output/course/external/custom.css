@@ -6,58 +6,6 @@ a.mathjax-link {
   display: none !important;
 }
 
-#def-graph {
-  padding-bottom: 1.25in;
-}
-
-#def-vertex {
-  padding-bottom: 1.25in;
-}
-
-#def-edge {
-  padding-bottom: 1.25in;
-}
-
-#def-loop {
-  padding-bottom: 1.25in;
-}
-
-#def-degree-vertex {
-  padding-bottom: 1.25in;
-}
-
-#def-path {
-  padding-bottom: 1.25in;
-}
-
-#def-circuit {
-  padding-bottom: 1.25in;
-}
-
-#def-connected-graph {
-  padding-bottom: 1.25in;
-}
-
-#def-weight {
-  padding-bottom: 1.25in;
-}
-
-#ex-reading-a-graph {
-  padding-bottom: 2in;
-}
-
-#ex-crossing-without-vertex {
-  padding-bottom: 1.25in;
-}
-
-#ex-equivalent-graph-drawings {
-  padding-bottom: 1.25in;
-}
-
-#ex-connected-degree-zero {
-  padding-bottom: 1.25in;
-}
-
 #def-preference-ballot {
   padding-bottom: 1.2in;
 }

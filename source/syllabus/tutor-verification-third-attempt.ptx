@@ -1,0 +1,65 @@
+<worksheet xml:id="tutor-verification-third-attempt">
+  <title>Tutoring Verification for Third Attempt</title>
+
+  <p>
+    Student Name: <fillin characters="45"/>
+  </p>
+  <p>
+    Course/Section: <fillin characters="15"/>
+    <nbsp/><nbsp/>
+    Outcome Quiz: <fillin characters="15"/>
+  </p>
+
+  <p>
+    A third attempt on an outcome quiz is available only after completing a tutoring session.
+    During the session, the student must:
+  </p>
+
+  <ul>
+    <li><p>Review and correct mistakes from their first two quiz attempts.</p></li>
+    <li><p>Work through similar problems from the assigned MyOpenMath practice.</p></li>
+    <li><p>Remain actively engaged in the session for a minimum of 30 minutes.</p></li>
+  </ul>
+
+  <p>
+    Students must bring their previous attempts and relevant materials to the session.
+  </p>
+
+  <assemblage xml:id="tutoring-session-information">
+    <title>Tutoring Session Information</title>
+    <p>
+      Location: Zahnow Library Second Floor
+    </p>
+    <p>
+      <ul>
+        <li><strong>Monday to Thursday:</strong> 9 AM to 8 PM</li>
+        <li><strong>Friday:</strong> 10 AM to 4 PM</li>
+        <li><strong>Sunday:</strong> 3 PM to 8 PM</li>
+      </ul>
+    </p>
+    <p>
+      Scan to schedule an appointment.
+    </p>
+    <image source="images/tutoring-appointment-qr.png" width="22%">
+      <description>QR code for scheduling a tutoring appointment.</description>
+    </image>
+  </assemblage>
+
+  <assemblage xml:id="tutor-verification">
+    <title>Tutor Verification</title>
+    <p>
+      I confirm that the student named above has met the requirements outlined above.
+    </p>
+    <p>
+      Tutor Name (print): <fillin characters="45"/>
+    </p>
+    <p>
+      Tutor Signature: <fillin characters="45"/>
+    </p>
+    <p>
+      Date: <fillin characters="20"/>
+      <nbsp/><nbsp/><nbsp/>
+      Duration of Session (minutes): <fillin characters="20"/>
+    </p>
+  </assemblage>
+</worksheet>

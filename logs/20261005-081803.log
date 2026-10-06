@@ -15,3 +15,4 @@ INFO    : Added pretext web server entry 09ee5ccfac 167495 8128 localhost
 
 INFO    : Server will soon be available at http://localhost:8128
 INFO    : Opening browser for target `course` at http://localhost:8128/output/course
+INFO    : Stopping PreTeXt web server.
