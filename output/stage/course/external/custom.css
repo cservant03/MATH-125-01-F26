@@ -433,3 +433,44 @@ a.mathjax-link {
 #def-balinski-young-impossibility-theorem {
   padding-bottom: 0.7in;
 }
+
+#def-graph,
+#def-vertex,
+#def-edge,
+#def-loop,
+#def-degree-vertex,
+#def-path,
+#def-circuit,
+#def-connected-graph,
+#def-weight,
+#def-total-path-weight,
+#def-shortest-path {
+    padding-bottom: 0.7in;
+}
+
+#subsec-real-situation-to-graph {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-campus-graph {
+  padding-bottom: 3in;
+}
+
+#subsec-weighted-graphs-shortest-paths .heading {
+    margin-top: 0 !important;
+}
+
+#ex-comparing-campus-routes ol > li {
+  padding-bottom: 1in;
+}
+
+#ex-dijkstra-campus {
+  padding-bottom: 3in;
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-delivery-travel-table ol > li {
+  padding-bottom: 2.5in;
+}

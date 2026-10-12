@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section xml:id="sec-spanning-trees">
+  <title>Spanning Trees</title>
+
+  <objectives>
+    <title>Learning Outcomes</title>
+    <ol>
+      <li>
+        <p>Recognize trees and spanning trees and use their basic properties.</p>
+      </li>
+      <li>
+        <p>Apply Kruskal's algorithm to find a minimum-cost spanning tree.</p>
+      </li>
+    </ol>
+  </objectives>
+  
+  <subsection xml:id="subsec-st-vocabulary">
+    <title>Connecting a network</title>
+
+    <definition xml:id="def-st-tree">
+      <title>Tree</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-st-spanning-tree">
+      <title>Spanning Tree</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <p>
+      <em>Properties of a tree</em>
+    </p>
+
+    <p>
+      <ul>
+        <li>A tree with <m>n</m> vertices has exactly <m>n-1</m> edges.</li>
+        <li>There is exactly one simple path between any two vertices.</li>
+        <li>Removing any edge disconnects the tree.</li>
+        <li>Adding an edge between two of its vertices creates a circuit.</li>
+        <li>Vertices may have degree greater than 2.</li>
+      </ul>
+    </p>
+
+    <example xml:id="ex-st-first-tree">
+      <title>Keep the buildings connected</title>
+      <statement>
+        
+        <image source="images/st-original.png" width="70%">
+          <shortdescription>Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; AE; BE; BF; CF; CG; DG; EF; FG. There are no other edges. Crossings without a marked vertex are not vertices.</shortdescription>
+        </image>
+          
+        <p>
+          <ol>
+            <li>
+              <p>How many edges must a spanning tree have? Select one spanning tree by marking the edges to keep.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-st-recognize-and-kruskal">
+    <title>Recognizing and choosing a spanning tree</title>
+    
+    <example xml:id="ex-st-candidates">
+      <title>Compare three candidates</title>
+      <statement>
+        <p>Each candidate uses only connections from the seven-building graph. Candidate III omits building G.</p>
+        <figure>
+          <caption>Candidate I</caption>
+          <image source="images/st-candidate-i.png" width="70%">
+            <shortdescription>Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; BE; EF; FG. There are no other edges. Crossings without a marked vertex are not vertices.</shortdescription>
+          </image>
+        </figure>
+        <figure>
+          <caption>Candidate II</caption>
+          <image source="images/st-candidate-ii.png" width="70%">
+            <shortdescription>Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; AE; BE; CF; FG; DG. There are no other edges. Crossings without a marked vertex are not vertices.</shortdescription>
+          </image>
+        </figure>
+        <figure>
+          <caption>Candidate III (G is omitted)</caption>
+          <image source="images/st-candidate-iii.png" width="70%">
+            <shortdescription>Undirected graph. Vertices: A, B, C, D, E, F. Edges: AB; BC; CD; BE; EF. There are no other edges. Crossings without a marked vertex are not vertices.</shortdescription>
+          </image>
+        </figure>
+        <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
+          <col width="62.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <row header="yes" bottom="medium">
+            <cell>Check</cell>
+            <cell>I</cell>
+            <cell>II</cell>
+            <cell>III</cell>
+          </row>
+          <row bottom="minor">
+            <cell>Contains every original vertex?</cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>Connected?</cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>Contains a circuit?</cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>Is a spanning tree of the original graph?</cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+            <cell>
+              <fillin characters="9"/>
+            </cell>
+          </row>
+        </tabular>
+      </statement>
+    </example>
+
+    <definition xml:id="def-st-minimum-cost">
+      <title>Minimum-Cost Spanning Tree (MCST)</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <algorithm xml:id="alg-st-kruskal">
+      <title>Kruskal's algorithm</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>Select the cheapest unused edge in the graph.</p>
+            </li>
+            <li>
+              <p>Repeat step 1, adding the cheapest unused edge, unless adding the edge would create a circuit
+              </p>
+            </li>
+            <li>
+              <p>Repeat until a spanning tree is formed</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+
+    <remark>
+      <p>The selected edges need not be connected at intermediate steps. Equal-weight edges may be considered in either order. If the original graph is disconnected, no spanning tree exists.</p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="subsec-st-kruskal-example">
+    <title>Practice</title>
+
+    <example xml:id="ex-st-campus-cable">
+      <title>Cable installation</title>
+      <statement>
+        <p>The graph shows fourteen available connections among eight buildings. The weights are installation costs, in thousands of dollars. Use Kruskal’s algorithm to find a minimum-cost spanning tree.</p>
+        
+        <image source="images/st-kruskal.png" width="70%">
+          <shortdescription>Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges and weights: AB: 2; BE: 3; AE: 4; BC: 5; EF: 6; BF: 7; CF: 8; CD: 9; FG: 10; CG: 11; DG: 12; EH: 13; GH: 14; AH: 15. There are no other edges. Crossings without a marked vertex are not vertices. Weights are thousands of dollars.</shortdescription>
+        </image>
+
+        <p>Number of vertices: ________     Required number of selected edges: ________</p>
+        
+        <p>
+          <ol>
+            <li>
+              <p>List the selected edges and report the total installation cost in dollars.</p>
+            </li>
+            <li>
+              <p>Trace the selected edges on the graph. Which vertices have degree 3, and why is that allowed?</p>
+            </li>
+            <li>
+              <p>Explain why AC is not an eligible edge in this problem, even if it looks like a useful connection.</p>
+            </li>
+            <li>
+              <p>Identify the first rejected edge and the circuit it would create.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    
+    <example xml:id="ex-st-table-network">
+      <title>Connect seven buildings</title>
+      <statement>
+        <p>The table gives possible cable lengths in hundreds of feet. A dash means there is no direct connection (or the row and column name the same building). Each listed connection can be used in either direction.</p>
+        <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <col width="12.500%" right="minor"/>
+          <row header="yes" bottom="medium">
+            <cell/>
+            <cell>A</cell>
+            <cell>B</cell>
+            <cell>C</cell>
+            <cell>D</cell>
+            <cell>E</cell>
+            <cell>F</cell>
+            <cell>G</cell>
+          </row>
+          <row bottom="minor">
+            <cell>A</cell>
+            <cell>—</cell>
+            <cell>4</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>7</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+          </row>
+          <row bottom="minor">
+            <cell>B</cell>
+            <cell>4</cell>
+            <cell>—</cell>
+            <cell>5</cell>
+            <cell>—</cell>
+            <cell>2</cell>
+            <cell>8</cell>
+            <cell>13</cell>
+          </row>
+          <row bottom="minor">
+            <cell>C</cell>
+            <cell>—</cell>
+            <cell>5</cell>
+            <cell>—</cell>
+            <cell>11</cell>
+            <cell>—</cell>
+            <cell>3</cell>
+            <cell>12</cell>
+          </row>
+          <row bottom="minor">
+            <cell>D</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>11</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>6</cell>
+          </row>
+          <row bottom="minor">
+            <cell>E</cell>
+            <cell>7</cell>
+            <cell>2</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>—</cell>
+            <cell>9</cell>
+            <cell>—</cell>
+          </row>
+          <row bottom="minor">
+            <cell>F</cell>
+            <cell>—</cell>
+            <cell>8</cell>
+            <cell>3</cell>
+            <cell>—</cell>
+            <cell>9</cell>
+            <cell>—</cell>
+            <cell>10</cell>
+          </row>
+          <row bottom="minor">
+            <cell>G</cell>
+            <cell>—</cell>
+            <cell>13</cell>
+            <cell>12</cell>
+            <cell>6</cell>
+            <cell>—</cell>
+            <cell>10</cell>
+            <cell>—</cell>
+          </row>
+        </tabular>
+        <p>
+          <ol>
+            <li>
+              <p>Draw the graph represented by the table.</p>
+            </li>
+            <li>
+              <p>Apply Kruskal's algorithm. Record edges considered in order and explain each rejection.</p>
+            </li>
+            <li>
+              <p>Draw the resulting tree. Report its selected edges, total weight, and total length in feet.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

@@ -1079,6 +1079,222 @@ var ptx_lunr_docs = [
   "number": "140",
   "title": "Balinski-Young Impossibility Theorem.",
   "body": " Balinski-Young Impossibility Theorem    "
+},
+{
+  "id": "sec-graphs-vocabulary-representations",
+  "level": "1",
+  "url": "sec-graphs-vocabulary-representations.html",
+  "type": "Section",
+  "number": "",
+  "title": "Graphs and Shortest Paths",
+  "body": " Graphs and Shortest Paths   Learning Outcomes    Translate a real situation into a graph.    Identify vertices, edges, loops, degrees, paths, circuits, and connected graphs.    Explain why different drawings can represent the same graph.    Interpret edge weights and calculate the total weight of a route.    Use Dijkstra's algorithm to find a shortest path from a weighted graph or a table.    Report the shortest route, its total weight, and the appropriate units.      Core Vocabulary   Graph        Vertex        Edge        Loop        Degree of a Vertex        Path        Circuit        Connected Graph        Weights and Weighted Graphs         From a Real Situation to a Graph  A complicated map can be simplified by representing important locations with and connections with .   Campus Walking Routes  A college has six important locations: Student Center, Library, Science Building, Math Building, Recreation Center, Parking Lot.  Direct walking paths connect the following locations:     Student Center ↔ Library    Student Center ↔ Math Building    Student Center ↔ Recreation Center    Science Building ↔ Parking Lot    Recreation Center ↔ Parking Lot      Library ↔ Science Building    Library ↔ Math Building    Science Building ↔ Math Building    Math Building ↔ Recreation Center     Create a graph that represents the campus. Let each location be a vertex and each direct walking path be an edge.     Reading a Graph   Reading a Graph   Use the graph below to answer the questions.   Graph with vertices A through E and six undirected edges.   An undirected graph with vertices A, B, C, D, and E. The edges are AB, AC, BC, CD, CE, and DE.       How many vertices and edges are present?    Give one path from A to E.    Give one circuit that starts and ends at C.    Is the graph connected? Explain.         Weighted Graphs and Shortest Paths  In a route-finding problem, the weights may measure distance, travel time, or cost Read the weights rather than measuring the lengths of the drawn edges.   Total Weight of a Path        Shortest Path        Comparing Campus Routes   A student walks from location to location . Each edge weight is a walking time in minutes. Each walkway can be used in either direction.   Weighted campus graph with vertices A through G. The long description lists all connections and times.   This undirected graph has vertices A, B, C, D, E, F, and G. Its edge weights, in minutes, are AB: 5; AC: 2; BC: 1; BD: 4; CD: 7; CE: 9; DE: 2; DF: 6; EF: 3; FG: 2; and EG: 7. There are no other edges. The drawing is not to scale.    Calculate the number of edges and total walking time for each listed route.       Route  Number of edges  Total time (minutes)                                  Which listed route has the smallest total time? Which uses the fewest edges?    Does checking only these three routes establish the shortest possible route from to ? Explain.         Dijkstra’s Algorithm  Guess-and-check becomes difficult when a graph has many possible routes. Dijkstra's algorithm keeps track of the best distances found so far. Following the textbook, we begin at the destination and work backward. Here, distance means the sum of the weights, even when the weights measure time or cost.   Dijkstra's Algorithm: Complete the Key Ideas   Use this procedure when all edge weights are nonnegative. The graphs in these notes are undirected.     Give the ending vertex a distance of and designate it as current.    For each unvisited vertex adjacent to the current vertex, add the connecting edge's weight to the current vertex's distance. Replace the vertex's recorded distance only if the new distance is smaller.    Mark the current vertex as visited. Its distance is now final; do not change its label or use it as an unvisited vertex again.    Choose the unvisited vertex with the smallest recorded distance as the new current vertex. Repeat Steps 2-4 until the all vertices have been visited or you visit the starting vertex.     If two unvisited vertices have the same smallest distance, either may be chosen. If a new route has the same distance as an existing label, keep the existing label.     Finding the Shortest Campus Route   Use Dijkstra's algorithm to find the shortest route from to .   Weighted campus graph with vertices A through G. The long description lists all connections and times.   This undirected graph has vertices A, B, C, D, E, F, and G. Its edge weights, in minutes, are AB: 5; AC: 2; BC: 1; BD: 4; CD: 7; CE: 9; DE: 2; DF: 6; EF: 3; FG: 2; and EG: 7. There are no other edges. The drawing is not to scale.      Dijkstra's algorithm is both optimal and efficient for graphs with nonnegative edge weights. Explain how its repeated label updates avoid the need to list every possible route.    Shortest Paths from a Table  A table can show the same connections and weights as a graph. A number gives the weight of a direct connection; a dash means there is no direct connection. A missing direct connection does not rule out a route through other vertices.   Routing a Delivery   A delivery service has six processing centers, labeled through . Direct travel times, in hours, are shown below. Travel time is the same in either direction, and no additional time is added at the centers.           Center                         0  6  3  —  —  —       6  0  2  5  —  —       3  2  0  8  7  —       —  5  8  0  1  8       —  —  7  1  0  4       —  —  —  8  4  0       Draw the graph represented by the table.    Apply Dijkstra's algorithm to find the shortest route from to .         Check Your Understanding    Two edges cross in a drawing, but no dot appears at the crossing. Is the crossing a vertex? Explain.      Can a connected graph with at least two vertices contain a vertex of degree zero? Explain.      Why can the shortest-looking edge in a drawing fail to have the smallest weight?      Why is a shortest-path answer incomplete if it gives only the total weight and does not identify the route?     Practice: Find a Shortest Route   The weights represent distances in miles. Use Dijkstra's algorithm to find the shortest route from to .   Weighted road graph with vertices P, Q, R, S, and T. The long description lists all roads and distances.   This undirected graph has vertices P, Q, R, S, and T. Its edges and weights, in miles, are PQ: 7; PR: 3; QR: 2; QS: 4; RS: 7; RT: 11; and ST: 1. There are no other edges. The drawing is not to scale.       "
+},
+{
+  "id": "sec-graphs-vocabulary-representations-2",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#sec-graphs-vocabulary-representations-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "Learning Outcomes",
+  "body": " Learning Outcomes    Translate a real situation into a graph.    Identify vertices, edges, loops, degrees, paths, circuits, and connected graphs.    Explain why different drawings can represent the same graph.    Interpret edge weights and calculate the total weight of a route.    Use Dijkstra's algorithm to find a shortest path from a weighted graph or a table.    Report the shortest route, its total weight, and the appropriate units.    "
+},
+{
+  "id": "def-graph",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-graph",
+  "type": "Definition",
+  "number": "141",
+  "title": "Graph.",
+  "body": " Graph      "
+},
+{
+  "id": "def-vertex",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-vertex",
+  "type": "Definition",
+  "number": "142",
+  "title": "Vertex.",
+  "body": " Vertex      "
+},
+{
+  "id": "def-edge",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-edge",
+  "type": "Definition",
+  "number": "143",
+  "title": "Edge.",
+  "body": " Edge      "
+},
+{
+  "id": "def-loop",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-loop",
+  "type": "Definition",
+  "number": "144",
+  "title": "Loop.",
+  "body": " Loop      "
+},
+{
+  "id": "def-degree-vertex",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-degree-vertex",
+  "type": "Definition",
+  "number": "145",
+  "title": "Degree of a Vertex.",
+  "body": " Degree of a Vertex      "
+},
+{
+  "id": "def-path",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-path",
+  "type": "Definition",
+  "number": "146",
+  "title": "Path.",
+  "body": " Path      "
+},
+{
+  "id": "def-circuit",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-circuit",
+  "type": "Definition",
+  "number": "147",
+  "title": "Circuit.",
+  "body": " Circuit      "
+},
+{
+  "id": "def-connected-graph",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-connected-graph",
+  "type": "Definition",
+  "number": "148",
+  "title": "Connected Graph.",
+  "body": " Connected Graph      "
+},
+{
+  "id": "def-weight",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-weight",
+  "type": "Definition",
+  "number": "149",
+  "title": "Weights and Weighted Graphs.",
+  "body": " Weights and Weighted Graphs      "
+},
+{
+  "id": "ex-campus-graph",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-campus-graph",
+  "type": "Example",
+  "number": "150",
+  "title": "Campus Walking Routes.",
+  "body": " Campus Walking Routes  A college has six important locations: Student Center, Library, Science Building, Math Building, Recreation Center, Parking Lot.  Direct walking paths connect the following locations:     Student Center ↔ Library    Student Center ↔ Math Building    Student Center ↔ Recreation Center    Science Building ↔ Parking Lot    Recreation Center ↔ Parking Lot      Library ↔ Science Building    Library ↔ Math Building    Science Building ↔ Math Building    Math Building ↔ Recreation Center     Create a graph that represents the campus. Let each location be a vertex and each direct walking path be an edge.  "
+},
+{
+  "id": "ex-reading-a-graph",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-reading-a-graph",
+  "type": "Example",
+  "number": "151",
+  "title": "Reading a Graph.",
+  "body": " Reading a Graph   Use the graph below to answer the questions.   Graph with vertices A through E and six undirected edges.   An undirected graph with vertices A, B, C, D, and E. The edges are AB, AC, BC, CD, CE, and DE.       How many vertices and edges are present?    Give one path from A to E.    Give one circuit that starts and ends at C.    Is the graph connected? Explain.      "
+},
+{
+  "id": "def-total-path-weight",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-total-path-weight",
+  "type": "Definition",
+  "number": "152",
+  "title": "Total Weight of a Path.",
+  "body": " Total Weight of a Path      "
+},
+{
+  "id": "def-shortest-path",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#def-shortest-path",
+  "type": "Definition",
+  "number": "153",
+  "title": "Shortest Path.",
+  "body": " Shortest Path      "
+},
+{
+  "id": "ex-comparing-campus-routes",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-comparing-campus-routes",
+  "type": "Example",
+  "number": "154",
+  "title": "Comparing Campus Routes.",
+  "body": " Comparing Campus Routes   A student walks from location to location . Each edge weight is a walking time in minutes. Each walkway can be used in either direction.   Weighted campus graph with vertices A through G. The long description lists all connections and times.   This undirected graph has vertices A, B, C, D, E, F, and G. Its edge weights, in minutes, are AB: 5; AC: 2; BC: 1; BD: 4; CD: 7; CE: 9; DE: 2; DF: 6; EF: 3; FG: 2; and EG: 7. There are no other edges. The drawing is not to scale.    Calculate the number of edges and total walking time for each listed route.       Route  Number of edges  Total time (minutes)                                  Which listed route has the smallest total time? Which uses the fewest edges?    Does checking only these three routes establish the shortest possible route from to ? Explain.      "
+},
+{
+  "id": "alg-dijkstra-destination-first",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#alg-dijkstra-destination-first",
+  "type": "Algorithm",
+  "number": "155",
+  "title": "Dijkstra’s Algorithm: Complete the Key Ideas.",
+  "body": " Dijkstra's Algorithm: Complete the Key Ideas   Use this procedure when all edge weights are nonnegative. The graphs in these notes are undirected.     Give the ending vertex a distance of and designate it as current.    For each unvisited vertex adjacent to the current vertex, add the connecting edge's weight to the current vertex's distance. Replace the vertex's recorded distance only if the new distance is smaller.    Mark the current vertex as visited. Its distance is now final; do not change its label or use it as an unvisited vertex again.    Choose the unvisited vertex with the smallest recorded distance as the new current vertex. Repeat Steps 2-4 until the all vertices have been visited or you visit the starting vertex.     If two unvisited vertices have the same smallest distance, either may be chosen. If a new route has the same distance as an existing label, keep the existing label.   "
+},
+{
+  "id": "ex-dijkstra-campus",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-dijkstra-campus",
+  "type": "Example",
+  "number": "156",
+  "title": "Finding the Shortest Campus Route.",
+  "body": " Finding the Shortest Campus Route   Use Dijkstra's algorithm to find the shortest route from to .   Weighted campus graph with vertices A through G. The long description lists all connections and times.   This undirected graph has vertices A, B, C, D, E, F, and G. Its edge weights, in minutes, are AB: 5; AC: 2; BC: 1; BD: 4; CD: 7; CE: 9; DE: 2; DF: 6; EF: 3; FG: 2; and EG: 7. There are no other edges. The drawing is not to scale.     "
+},
+{
+  "id": "ex-delivery-travel-table",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-delivery-travel-table",
+  "type": "Example",
+  "number": "157",
+  "title": "Routing a Delivery.",
+  "body": " Routing a Delivery   A delivery service has six processing centers, labeled through . Direct travel times, in hours, are shown below. Travel time is the same in either direction, and no additional time is added at the centers.           Center                         0  6  3  —  —  —       6  0  2  5  —  —       3  2  0  8  7  —       —  5  8  0  1  8       —  —  7  1  0  4       —  —  —  8  4  0       Draw the graph represented by the table.    Apply Dijkstra's algorithm to find the shortest route from to .      "
+},
+{
+  "id": "ex-crossing-without-vertex",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-crossing-without-vertex",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Two edges cross in a drawing, but no dot appears at the crossing. Is the crossing a vertex? Explain.   "
+},
+{
+  "id": "ex-connected-degree-zero",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-connected-degree-zero",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Can a connected graph with at least two vertices contain a vertex of degree zero? Explain.   "
+},
+{
+  "id": "ex-shortest-looking-edge",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-shortest-looking-edge",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Why can the shortest-looking edge in a drawing fail to have the smallest weight?   "
+},
+{
+  "id": "ex-shortest-route-versus-weight",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-shortest-route-versus-weight",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Why is a shortest-path answer incomplete if it gives only the total weight and does not identify the route?   "
+},
+{
+  "id": "ex-dijkstra-independent-practice",
+  "level": "2",
+  "url": "sec-graphs-vocabulary-representations.html#ex-dijkstra-independent-practice",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Practice: Find a Shortest Route.",
+  "body": " Practice: Find a Shortest Route   The weights represent distances in miles. Use Dijkstra's algorithm to find the shortest route from to .   Weighted road graph with vertices P, Q, R, S, and T. The long description lists all roads and distances.   This undirected graph has vertices P, Q, R, S, and T. Its edges and weights, in miles, are PQ: 7; PR: 3; QR: 2; QS: 4; RS: 7; RT: 11; and ST: 1. There are no other edges. The drawing is not to scale.     "
 }
 ]
 

@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<section xml:id="sec-euler-hamiltonian-paths-circuits">
+  <title>Euler and Hamiltonian Circuits</title>
+
+  <objectives>
+    <title>Learning Outcomes</title>
+    <ol>
+      <li>
+        <p>Distinguish routes that use every edge from routes that visit every vertex.</p>
+      </li>
+      <li>
+        <p>Use degree tests, Fleury's algorithm, and eulerization to plan Euler routes.</p>
+      </li>
+      <li>
+        <p>Identify Hamiltonian paths and circuits and compare tour-finding methods.</p>
+      </li>
+      <li>
+        <p>Calculate route weights and distinguish an optimal answer from a heuristic result.</p>
+      </li>
+    </ol>
+  </objectives>
+
+  <subsection xml:id="subsec-eh-euler-vocabulary">
+    <title>Every edge or every vertex?</title>
+
+    <p>A street sweeper must cover every street. A delivery driver must visit every delivery location. Both tasks involve a route, but the objects that must be covered are different.</p>
+
+    <definition xml:id="def-eh-euler-path">
+      <title>Euler Path</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-eh-euler-circuit">
+      <title>Euler Circuit</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>An Euler route may revisit vertices. It must use each edge exactly once. Here, an <em>open Euler path</em> has different starting and ending vertices; an Euler circuit is a closed Euler path.</p>
+    </remark>
+
+    <p>For the connected graphs considered here, count the vertices of odd degree.</p>
+
+    <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
+      <col width="30%" right="minor"/>
+      <col width="60%" right="minor"/>
+      <row header="yes" bottom="medium">
+        <cell>Odd-degree vertices</cell>
+        <cell>What is possible?</cell>
+      </row>
+      <row bottom="minor">
+        <cell>0</cell>
+        <cell>An Euler circuit exists. Start at any vertex.</cell>
+      </row>
+      <row bottom="minor">
+        <cell>2</cell>
+        <cell>An Euler path exists. Start at one odd-degree vertex and end at the other.</cell>
+      </row>
+      <row bottom="minor">
+        <cell>More than 2</cell>
+        <cell>Neither an Euler circuit nor an open Euler path exists.</cell>
+      </row>
+    </tabular>
+
+    <remark>
+      <p>Check connectedness first. If edges lie in separate components, one route cannot cover them all.</p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="subsec-eh-euler-tests">
+    <title>Recognizing Euler routes</title>
+
+    <example xml:id="ex-eh-three-euler-graphs">
+      <title>Example: Same vertices, different connections</title>
+      <statement>
+        <p>For each graph, find either an euler circuit or path, if possible.</p>
+
+        <image source="images/eh-euler-i.png" width="30%">
+          <description>
+            <p>
+              Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA. There are no other edges.
+            </p>
+          </description>
+        </image>
+        
+        <sidebyside widths="30% 30%">
+          <image source="images/eh-euler-ii.png" width="30%">
+            <description>
+              <p>
+                Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; BD. There are no other edges.
+              </p>              
+            </description>
+          </image>
+          
+          <image source="images/eh-euler-iii.png" width="30%">
+            <description>
+              <p>
+                Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; BD; EG. There are no other edges.
+              </p>
+            </description>
+          </image> 
+        </sidebyside>
+               
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-eh-fleury">
+    <title>Finding an Euler route</title>
+
+    <algorithm xml:id="alg-eh-fleury">
+      <title>Fleury's algorithm</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>Start at any vertex if finding an Euler circuit. If finding an Euler path, start at one of the two vertices with odd degree.</p>
+            </li>
+            <li>
+              <p>Choose any edge leaving your current vertex, provided deleting that edge will not separate the graph into two disconnected sets of edges.</p>
+            </li>
+            <li>
+              <p>Add that edge to your circuit, and delete it from the graph..</p>
+            </li>
+            <li>
+              <p>Continue until every edge has been used exactly once.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+
+    <example xml:id="ex-eh-fleury-route">
+      <title>Using Fleury's Algorithm</title>
+
+      <statement>
+        <p>
+          Find the Euler path in the following graph.
+        </p>
+
+        <image source="images/eh-fleury.png" width="50%">
+          <description>
+            <p>
+              Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges: AB; BC; CA; CD; DE; EC; CF; FG; GH; HF. There are no other edges.
+            </p>
+          </description>
+        </image>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-eh-eulerization">
+    <title>When some edges must be repeated</title>
+
+    <definition xml:id="def-eh-eulerization">
+      <title>Eulerization</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>Duplicating an edge means traveling an existing street again. It does not mean building a new street. For weighted graphs, minimize the <em>added total weight</em>, not just the number of duplicated edges. This is the closed-route Chinese Postman Problem.</p>
+    </remark>
+
+    <example xml:id="ex-eh-street-sweeper">
+      <title>A street-sweeping route</title>
+
+      <statement>
+        <p>A sweeper must cover every street in this eight-intersection neighborhood and return to its starting point. Each street may be traveled in either direction. The weights in the graph represent the number of blocks.</p>
+
+        <image source="images/eh-eulerize.png" width="70%">
+          <description>
+            <p>
+              Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges and weights: AB: 3; BC: 4; CD: 5; EF: 5; FG: 7; GH: 3; AE: 4; BF: 8; CG: 9; DH: 4. There are no other edges. Weights are blocks.
+            </p>
+          </description>
+        </image>
+
+        <p>
+          Find the degree of each vertex. Which vertices must be paired? Choose the pair that adds the least amount of blocks.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-eh-hamilton-vocabulary">
+    <title>Hamiltonian paths and circuits</title>
+
+    <definition xml:id="def-eh-hamilton-path">
+      <title>Hamiltonian Path</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-eh-hamilton-circuit">
+      <title>Hamiltonian Circuit</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
+      <col width="25%" right="minor"/>
+      <col width="25%" right="minor"/>
+      <col width="45%" right="minor"/>
+      <row header="yes" bottom="medium">
+        <cell>Question</cell>
+        <cell>Euler route</cell>
+        <cell>Hamiltonian route</cell>
+      </row>
+      <row bottom="minor">
+        <cell>What must be covered?</cell>
+        <cell>Every edge exactly once</cell>
+        <cell>Every vertex exactly once</cell>
+      </row>
+      <row bottom="minor">
+        <cell>May a vertex be revisited?</cell>
+        <cell>Yes</cell>
+        <cell>Only the start</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Existence?</cell>
+        <cell>Yes</cell>
+        <cell>No</cell>
+      </row>
+    </tabular>
+
+    <example xml:id="ex-eh-hamilton-existence">
+      <title>Find a route if possble</title>
+      <statement>
+        <sidebyside widths="45% 45%">
+          <image source="images/eh-hamilton-i.png" width="40%">
+            <description>
+              <p>
+                Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DA; DE; EF; FG; GD. There are no other edges.
+              </p>
+            </description>
+          </image>
+
+          <image source="images/eh-hamilton-ii.png" width="40%">
+            <description>
+              <p>
+                Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; DH. There are no other edges.
+              </p>
+            </description>
+          </image>
+        </sidebyside>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-eh-tsp-brute-force">
+    <title>Finding a least-weight tour</title>
+
+    <p>The <em>Traveling Salesman Problem (TSP)</em> asks for a Hamiltonian circuit with the smallest total edge weight. In the examples here, every pair of locations is connected and travel weights are the same in either direction.</p>
+
+    <algorithm xml:id="alg-eh-brute-force">
+      <title>Brute force (exhaustive search)</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>List all possible Hamiltonian circuits</p>
+            </li>
+            <li>
+              <p>Find the length of each circuit by adding the edge weights</p>
+            </li>
+            <li>
+              <p>Select the circuit with minimal total weight</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+
+    <example xml:id="ex-eh-brute-force">
+      <title>Four delivery locations</title>
+
+      <statement>
+        <p>Find the least travel time for a driver that must visit every delivery location.</p>
+
+        <image source="images/eh-travel.png" width="50%">
+          <description>
+            <p>
+              Undirected graph. Vertices: A, B, C, D. Edges and weights: AB: 8; AC: 4; AD: 3; BC: 21; BD: 13; CD: 11. There are no other edges. Crossings without a marked vertex are not vertices. Weights are minutes.
+            </p>
+          </description>
+        </image>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-eh-nearest-neighbor">
+    <title>Counting tours and using heuristics</title>    
+
+    <algorithm xml:id="alg-eh-nearest-neighbor">
+      <title>Nearest neighbor algorithm (NNA)</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>Choose a starting vertex</p>
+            </li>
+            <li>
+              <p>Move to the nearest unvisited vertex (the edge with smallest weight)</p>
+            </li>
+            <li>
+              <p>Repeat until the circuit is complete</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+
+    <algorithm xml:id="alg-eh-repeated-nearest-neighbor">
+      <title>Repeated nearest neighbor algorithm (RNNA)</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>Do the Nearest Neighbor Algorithm starting at each vertex</p>
+            </li>
+            <li>
+              <p>Choose the circuit produced with minimal total weight</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+
+    <remark>
+      <p>These quick methods can find useful tours, but neither guarantees the optimal tour.</p>
+    </remark>
+
+    <example xml:id="ex-eh-nearest-neighbor">
+      <title>Example: Five delivery locations</title>
+
+      <statement>
+        <p>A driver must visit all five locations and return to the starting location. Use the table of travel times. The weights are the same in both directions.</p>
+
+        <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
+          <col width="15%" right="minor"/>
+          <col width="15%" right="minor"/>
+          <col width="15%" right="minor"/>
+          <col width="15%" right="minor"/>
+          <col width="15%" right="minor"/>
+          <col width="15%" right="minor"/>
+          <row header="yes" bottom="medium">
+            <cell/>
+            <cell>A</cell>
+            <cell>B</cell>
+            <cell>C</cell>
+            <cell>D</cell>
+            <cell>E</cell>
+          </row>
+          <row bottom="minor">
+            <cell>A</cell>
+            <cell>—</cell>
+            <cell>10</cell>
+            <cell>18</cell>
+            <cell>13</cell>
+            <cell>25</cell>
+          </row>
+          <row bottom="minor">
+            <cell>B</cell>
+            <cell>10</cell>
+            <cell>—</cell>
+            <cell>20</cell>
+            <cell>4</cell>
+            <cell>21</cell>
+          </row>
+          <row bottom="minor">
+            <cell>C</cell>
+            <cell>18</cell>
+            <cell>20</cell>
+            <cell>—</cell>
+            <cell>5</cell>
+            <cell>26</cell>
+          </row>
+          <row bottom="minor">
+            <cell>D</cell>
+            <cell>13</cell>
+            <cell>4</cell>
+            <cell>5</cell>
+            <cell>—</cell>
+            <cell>11</cell>
+          </row>
+          <row bottom="minor">
+            <cell>E</cell>
+            <cell>25</cell>
+            <cell>21</cell>
+            <cell>26</cell>
+            <cell>11</cell>
+            <cell>—</cell>
+          </row>
+        </tabular>
+
+        <p>First use nearest neighbor from A. Then repeat it from each other vertex. Include the return trip in every total.</p>
+
+        <p>Which circuit does repeated nearest neighbor select? Rewrite it starting and ending at A.</p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-eh-sorted-edges">
+    <title>Choosing the cheapest eligible edges</title>
+
+    <algorithm xml:id="alg-eh-sorted-edges">
+      <title>Sorted edges (cheapest link)</title>
+
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>Select the cheapest unused edge in the graph.</p>
+            </li>
+
+            <li>
+              <p>Repeat step 1, adding the cheapest unused edge to the circuit, unless:</p>
+              <ol>
+                <li>
+                  <p>adding the edge would create a circuit that doesn’t contain all vertices, or</p>
+                </li>
+                <li>
+                  <p>adding the edge would give a vertex degree 3.</p>
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <p>Repeat until a circuit containing all vertices is formed.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+
+    <remark>
+      <p>Sorted edges does not guarantee a minimum-weight Hamiltonian circuit.</p>
+    </remark>
+
+    <example xml:id="ex-eh-sorted-edges">
+      <title>Sorted Edges</title>
+
+      <statement>
+        <image source="images/eh-travel-five.png" width="50%">
+          <description>
+            <p>
+              Undirected graph. Vertices: A, B, C, D, E. Edges and weights: AB: 10; AC: 18; AD: 13; AE: 25; BC: 20; BD: 4; BE: 21; CD: 5; CE: 26; DE: 11. There are no other edges. Weights are minutes.
+            </p>
+          </description>
+        </image>
+
+        <p>
+          <ol>
+            <li>
+              <p>Use the cheapest link algorithm to find a Hamiltonian circuit.</p>
+            </li>
+            <li>
+              <p>Compare this result with NNA from A and RNNA on the same graph. Which generated tour is best?</p>
+            </li>
+            <li>
+              <p>Does that comparison prove the best generated tour is optimal? Explain how brute force could settle the question.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

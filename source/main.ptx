@@ -29,6 +29,8 @@
       <xi:include href="./notes/quota-based-apportionment-methods.ptx"/>
       <xi:include href="./notes/divisor-based-apportionment-methods.ptx"/>
       <xi:include href="./notes/graphs-and-shortest-paths.ptx"/>
+      <xi:include href="./notes/euler-hamiltonian-paths-circuits.ptx"/>
+      <xi:include href="./notes/spanning-trees.ptx"/>
     </chapter>
 
     </book>
