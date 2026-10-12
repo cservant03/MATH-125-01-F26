@@ -1295,6 +1295,321 @@ var ptx_lunr_docs = [
   "number": "5",
   "title": "Practice: Find a Shortest Route.",
   "body": " Practice: Find a Shortest Route   The weights represent distances in miles. Use Dijkstra's algorithm to find the shortest route from to .   Weighted road graph with vertices P, Q, R, S, and T. The long description lists all roads and distances.   This undirected graph has vertices P, Q, R, S, and T. Its edges and weights, in miles, are PQ: 7; PR: 3; QR: 2; QS: 4; RS: 7; RT: 11; and ST: 1. There are no other edges. The drawing is not to scale.     "
+},
+{
+  "id": "sec-euler-hamiltonian-paths-circuits",
+  "level": "1",
+  "url": "sec-euler-hamiltonian-paths-circuits.html",
+  "type": "Section",
+  "number": "",
+  "title": "Euler and Hamiltonian Circuits",
+  "body": " Euler and Hamiltonian Circuits   Learning Outcomes    Distinguish routes that use every edge from routes that visit every vertex.    Use degree tests, Fleury's algorithm, and eulerization to plan Euler routes.    Identify Hamiltonian paths and circuits and compare tour-finding methods.    Calculate route weights and distinguish an optimal answer from a heuristic result.      Every edge or every vertex?  A street sweeper must cover every street. A delivery driver must visit every delivery location. Both tasks involve a route, but the objects that must be covered are different.   Euler Path        Euler Circuit        An Euler route may revisit vertices. It must use each edge exactly once. Here, an open Euler path has different starting and ending vertices; an Euler circuit is a closed Euler path.   For the connected graphs considered here, count the vertices of odd degree.      Odd-degree vertices  What is possible?    0  An Euler circuit exists. Start at any vertex.    2  An Euler path exists. Start at one odd-degree vertex and end at the other.    More than 2  Neither an Euler circuit nor an open Euler path exists.     Check connectedness first. If edges lie in separate components, one route cannot cover them all.     Recognizing Euler routes   Example: Same vertices, different connections   For each graph, find either an euler circuit or path, if possible.    Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA. There are no other edges.       Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; BD. There are no other edges.      Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; BD; EG. There are no other edges.         Finding an Euler route   Fleury's algorithm      Start at any vertex if finding an Euler circuit. If finding an Euler path, start at one of the two vertices with odd degree.    Choose any edge leaving your current vertex, provided deleting that edge will not separate the graph into two disconnected sets of edges.    Add that edge to your circuit, and delete it from the graph..    Continue until every edge has been used exactly once.        Using Fleury's Algorithm   Find the Euler path in the following graph.    Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges: AB; BC; CA; CD; DE; EC; CF; FG; GH; HF. There are no other edges.        When some edges must be repeated   Eulerization        Duplicating an edge means traveling an existing street again. It does not mean building a new street. For weighted graphs, minimize the added total weight , not just the number of duplicated edges. This is the closed-route Chinese Postman Problem.    A street-sweeping route   A sweeper must cover every street in this eight-intersection neighborhood and return to its starting point. Each street may be traveled in either direction. The weights in the graph represent the number of blocks.    Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges and weights: AB: 3; BC: 4; CD: 5; EF: 5; FG: 7; GH: 3; AE: 4; BF: 8; CG: 9; DH: 4. There are no other edges. Weights are blocks.    Find the degree of each vertex. Which vertices must be paired? Choose the pair that adds the least amount of blocks.      Hamiltonian paths and circuits   Hamiltonian Path        Hamiltonian Circuit            Question  Euler route  Hamiltonian route    What must be covered?  Every edge exactly once  Every vertex exactly once    May a vertex be revisited?  Yes  Only the start    Existence?  Yes  No     Find a route if possble      Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DA; DE; EF; FG; GD. There are no other edges.      Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; DH. There are no other edges.         Finding a least-weight tour  The Traveling Salesman Problem (TSP) asks for a Hamiltonian circuit with the smallest total edge weight. In the examples here, every pair of locations is connected and travel weights are the same in either direction.   Brute force (exhaustive search)      List all possible Hamiltonian circuits    Find the length of each circuit by adding the edge weights    Select the circuit with minimal total weight        Four delivery locations   Find the least travel time for a driver that must visit every delivery location.    Undirected graph. Vertices: A, B, C, D. Edges and weights: AB: 8; AC: 4; AD: 3; BC: 21; BD: 13; CD: 11. There are no other edges. Crossings without a marked vertex are not vertices. Weights are minutes.        Counting tours and using heuristics   Nearest neighbor algorithm (NNA)      Choose a starting vertex    Move to the nearest unvisited vertex (the edge with smallest weight)    Repeat until the circuit is complete        Repeated nearest neighbor algorithm (RNNA)      Do the Nearest Neighbor Algorithm starting at each vertex    Choose the circuit produced with minimal total weight        These quick methods can find useful tours, but neither guarantees the optimal tour.    Example: Five delivery locations   A driver must visit all five locations and return to the starting location. Use the table of travel times. The weights are the same in both directions.           A  B  C  D  E    A  —  10  18  13  25    B  10  —  20  4  21    C  18  20  —  5  26    D  13  4  5  —  11    E  25  21  26  11  —    First use nearest neighbor from A. Then repeat it from each other vertex. Include the return trip in every total.  Which circuit does repeated nearest neighbor select? Rewrite it starting and ending at A.      Choosing the cheapest eligible edges   Sorted edges (cheapest link)      Select the cheapest unused edge in the graph.    Repeat step 1, adding the cheapest unused edge to the circuit, unless:    adding the edge would create a circuit that doesn’t contain all vertices, or    adding the edge would give a vertex degree 3.      Repeat until a circuit containing all vertices is formed.        Sorted edges does not guarantee a minimum-weight Hamiltonian circuit.    Sorted Edges     Undirected graph. Vertices: A, B, C, D, E. Edges and weights: AB: 10; AC: 18; AD: 13; AE: 25; BC: 20; BD: 4; BE: 21; CD: 5; CE: 26; DE: 11. There are no other edges. Weights are minutes.       Use the cheapest link algorithm to find a Hamiltonian circuit.    Compare this result with NNA from A and RNNA on the same graph. Which generated tour is best?    Does that comparison prove the best generated tour is optimal? Explain how brute force could settle the question.        "
+},
+{
+  "id": "sec-euler-hamiltonian-paths-circuits-2",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#sec-euler-hamiltonian-paths-circuits-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "Learning Outcomes",
+  "body": " Learning Outcomes    Distinguish routes that use every edge from routes that visit every vertex.    Use degree tests, Fleury's algorithm, and eulerization to plan Euler routes.    Identify Hamiltonian paths and circuits and compare tour-finding methods.    Calculate route weights and distinguish an optimal answer from a heuristic result.    "
+},
+{
+  "id": "def-eh-euler-path",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#def-eh-euler-path",
+  "type": "Definition",
+  "number": "158",
+  "title": "Euler Path.",
+  "body": " Euler Path      "
+},
+{
+  "id": "def-eh-euler-circuit",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#def-eh-euler-circuit",
+  "type": "Definition",
+  "number": "159",
+  "title": "Euler Circuit.",
+  "body": " Euler Circuit      "
+},
+{
+  "id": "subsec-eh-euler-vocabulary-5",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#subsec-eh-euler-vocabulary-5",
+  "type": "Remark",
+  "number": "160",
+  "title": "",
+  "body": " An Euler route may revisit vertices. It must use each edge exactly once. Here, an open Euler path has different starting and ending vertices; an Euler circuit is a closed Euler path.  "
+},
+{
+  "id": "subsec-eh-euler-vocabulary-8",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#subsec-eh-euler-vocabulary-8",
+  "type": "Remark",
+  "number": "161",
+  "title": "",
+  "body": " Check connectedness first. If edges lie in separate components, one route cannot cover them all.  "
+},
+{
+  "id": "ex-eh-three-euler-graphs",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#ex-eh-three-euler-graphs",
+  "type": "Example",
+  "number": "162",
+  "title": "Example: Same vertices, different connections.",
+  "body": " Example: Same vertices, different connections   For each graph, find either an euler circuit or path, if possible.    Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA. There are no other edges.       Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; BD. There are no other edges.      Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; BD; EG. There are no other edges.      "
+},
+{
+  "id": "alg-eh-fleury",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#alg-eh-fleury",
+  "type": "Algorithm",
+  "number": "163",
+  "title": "Fleury’s algorithm.",
+  "body": " Fleury's algorithm      Start at any vertex if finding an Euler circuit. If finding an Euler path, start at one of the two vertices with odd degree.    Choose any edge leaving your current vertex, provided deleting that edge will not separate the graph into two disconnected sets of edges.    Add that edge to your circuit, and delete it from the graph..    Continue until every edge has been used exactly once.      "
+},
+{
+  "id": "ex-eh-fleury-route",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#ex-eh-fleury-route",
+  "type": "Example",
+  "number": "164",
+  "title": "Using Fleury’s Algorithm.",
+  "body": " Using Fleury's Algorithm   Find the Euler path in the following graph.    Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges: AB; BC; CA; CD; DE; EC; CF; FG; GH; HF. There are no other edges.     "
+},
+{
+  "id": "def-eh-eulerization",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#def-eh-eulerization",
+  "type": "Definition",
+  "number": "165",
+  "title": "Eulerization.",
+  "body": " Eulerization      "
+},
+{
+  "id": "subsec-eh-eulerization-3",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#subsec-eh-eulerization-3",
+  "type": "Remark",
+  "number": "166",
+  "title": "",
+  "body": " Duplicating an edge means traveling an existing street again. It does not mean building a new street. For weighted graphs, minimize the added total weight , not just the number of duplicated edges. This is the closed-route Chinese Postman Problem.  "
+},
+{
+  "id": "ex-eh-street-sweeper",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#ex-eh-street-sweeper",
+  "type": "Example",
+  "number": "167",
+  "title": "A street-sweeping route.",
+  "body": " A street-sweeping route   A sweeper must cover every street in this eight-intersection neighborhood and return to its starting point. Each street may be traveled in either direction. The weights in the graph represent the number of blocks.    Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges and weights: AB: 3; BC: 4; CD: 5; EF: 5; FG: 7; GH: 3; AE: 4; BF: 8; CG: 9; DH: 4. There are no other edges. Weights are blocks.    Find the degree of each vertex. Which vertices must be paired? Choose the pair that adds the least amount of blocks.   "
+},
+{
+  "id": "def-eh-hamilton-path",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#def-eh-hamilton-path",
+  "type": "Definition",
+  "number": "168",
+  "title": "Hamiltonian Path.",
+  "body": " Hamiltonian Path      "
+},
+{
+  "id": "def-eh-hamilton-circuit",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#def-eh-hamilton-circuit",
+  "type": "Definition",
+  "number": "169",
+  "title": "Hamiltonian Circuit.",
+  "body": " Hamiltonian Circuit      "
+},
+{
+  "id": "ex-eh-hamilton-existence",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#ex-eh-hamilton-existence",
+  "type": "Example",
+  "number": "170",
+  "title": "Find a route if possble.",
+  "body": " Find a route if possble      Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DA; DE; EF; FG; GD. There are no other edges.      Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; DH. There are no other edges.      "
+},
+{
+  "id": "alg-eh-brute-force",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#alg-eh-brute-force",
+  "type": "Algorithm",
+  "number": "171",
+  "title": "Brute force (exhaustive search).",
+  "body": " Brute force (exhaustive search)      List all possible Hamiltonian circuits    Find the length of each circuit by adding the edge weights    Select the circuit with minimal total weight      "
+},
+{
+  "id": "ex-eh-brute-force",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#ex-eh-brute-force",
+  "type": "Example",
+  "number": "172",
+  "title": "Four delivery locations.",
+  "body": " Four delivery locations   Find the least travel time for a driver that must visit every delivery location.    Undirected graph. Vertices: A, B, C, D. Edges and weights: AB: 8; AC: 4; AD: 3; BC: 21; BD: 13; CD: 11. There are no other edges. Crossings without a marked vertex are not vertices. Weights are minutes.     "
+},
+{
+  "id": "alg-eh-nearest-neighbor",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#alg-eh-nearest-neighbor",
+  "type": "Algorithm",
+  "number": "173",
+  "title": "Nearest neighbor algorithm (NNA).",
+  "body": " Nearest neighbor algorithm (NNA)      Choose a starting vertex    Move to the nearest unvisited vertex (the edge with smallest weight)    Repeat until the circuit is complete      "
+},
+{
+  "id": "alg-eh-repeated-nearest-neighbor",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#alg-eh-repeated-nearest-neighbor",
+  "type": "Algorithm",
+  "number": "174",
+  "title": "Repeated nearest neighbor algorithm (RNNA).",
+  "body": " Repeated nearest neighbor algorithm (RNNA)      Do the Nearest Neighbor Algorithm starting at each vertex    Choose the circuit produced with minimal total weight      "
+},
+{
+  "id": "subsec-eh-nearest-neighbor-4",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#subsec-eh-nearest-neighbor-4",
+  "type": "Remark",
+  "number": "175",
+  "title": "",
+  "body": " These quick methods can find useful tours, but neither guarantees the optimal tour.  "
+},
+{
+  "id": "ex-eh-nearest-neighbor",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#ex-eh-nearest-neighbor",
+  "type": "Example",
+  "number": "176",
+  "title": "Example: Five delivery locations.",
+  "body": " Example: Five delivery locations   A driver must visit all five locations and return to the starting location. Use the table of travel times. The weights are the same in both directions.           A  B  C  D  E    A  —  10  18  13  25    B  10  —  20  4  21    C  18  20  —  5  26    D  13  4  5  —  11    E  25  21  26  11  —    First use nearest neighbor from A. Then repeat it from each other vertex. Include the return trip in every total.  Which circuit does repeated nearest neighbor select? Rewrite it starting and ending at A.   "
+},
+{
+  "id": "alg-eh-sorted-edges",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#alg-eh-sorted-edges",
+  "type": "Algorithm",
+  "number": "177",
+  "title": "Sorted edges (cheapest link).",
+  "body": " Sorted edges (cheapest link)      Select the cheapest unused edge in the graph.    Repeat step 1, adding the cheapest unused edge to the circuit, unless:    adding the edge would create a circuit that doesn’t contain all vertices, or    adding the edge would give a vertex degree 3.      Repeat until a circuit containing all vertices is formed.      "
+},
+{
+  "id": "subsec-eh-sorted-edges-3",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#subsec-eh-sorted-edges-3",
+  "type": "Remark",
+  "number": "178",
+  "title": "",
+  "body": " Sorted edges does not guarantee a minimum-weight Hamiltonian circuit.  "
+},
+{
+  "id": "ex-eh-sorted-edges",
+  "level": "2",
+  "url": "sec-euler-hamiltonian-paths-circuits.html#ex-eh-sorted-edges",
+  "type": "Example",
+  "number": "179",
+  "title": "Sorted Edges.",
+  "body": " Sorted Edges     Undirected graph. Vertices: A, B, C, D, E. Edges and weights: AB: 10; AC: 18; AD: 13; AE: 25; BC: 20; BD: 4; BE: 21; CD: 5; CE: 26; DE: 11. There are no other edges. Weights are minutes.       Use the cheapest link algorithm to find a Hamiltonian circuit.    Compare this result with NNA from A and RNNA on the same graph. Which generated tour is best?    Does that comparison prove the best generated tour is optimal? Explain how brute force could settle the question.      "
+},
+{
+  "id": "sec-spanning-trees",
+  "level": "1",
+  "url": "sec-spanning-trees.html",
+  "type": "Section",
+  "number": "",
+  "title": "Spanning Trees",
+  "body": " Spanning Trees   Learning Outcomes    Recognize trees and spanning trees and use their basic properties.    Apply Kruskal's algorithm to find a minimum-cost spanning tree.      Connecting a network   Tree        Spanning Tree        Properties of a tree     A tree with vertices has exactly edges.  There is exactly one simple path between any two vertices.  Removing any edge disconnects the tree.  Adding an edge between two of its vertices creates a circuit.  Vertices may have degree greater than 2.     Keep the buildings connected    Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; AE; BE; BF; CF; CG; DG; EF; FG. There are no other edges. Crossings without a marked vertex are not vertices.      How many edges must a spanning tree have? Select one spanning tree by marking the edges to keep.         Recognizing and choosing a spanning tree   Compare three candidates   Each candidate uses only connections from the seven-building graph. Candidate III omits building G.   Candidate I   Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; BE; EF; FG. There are no other edges. Crossings without a marked vertex are not vertices.     Candidate II   Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; AE; BE; CF; FG; DG. There are no other edges. Crossings without a marked vertex are not vertices.     Candidate III (G is omitted)   Undirected graph. Vertices: A, B, C, D, E, F. Edges: AB; BC; CD; BE; EF. There are no other edges. Crossings without a marked vertex are not vertices.          Check  I  II  III    Contains every original vertex?             Connected?             Contains a circuit?             Is a spanning tree of the original graph?                Minimum-Cost Spanning Tree (MCST)        Kruskal's algorithm      Select the cheapest unused edge in the graph.    Repeat step 1, adding the cheapest unused edge, unless adding the edge would create a circuit    Repeat until a spanning tree is formed        The selected edges need not be connected at intermediate steps. Equal-weight edges may be considered in either order. If the original graph is disconnected, no spanning tree exists.     Practice   Cable installation   The graph shows fourteen available connections among eight buildings. The weights are installation costs, in thousands of dollars. Use Kruskal’s algorithm to find a minimum-cost spanning tree.   Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges and weights: AB: 2; BE: 3; AE: 4; BC: 5; EF: 6; BF: 7; CF: 8; CD: 9; FG: 10; CG: 11; DG: 12; EH: 13; GH: 14; AH: 15. There are no other edges. Crossings without a marked vertex are not vertices. Weights are thousands of dollars.   Number of vertices: ________ Required number of selected edges: ________     List the selected edges and report the total installation cost in dollars.    Trace the selected edges on the graph. Which vertices have degree 3, and why is that allowed?    Explain why AC is not an eligible edge in this problem, even if it looks like a useful connection.    Identify the first rejected edge and the circuit it would create.        Connect seven buildings   The table gives possible cable lengths in hundreds of feet. A dash means there is no direct connection (or the row and column name the same building). Each listed connection can be used in either direction.             A  B  C  D  E  F  G    A  —  4  —  —  7  —  —    B  4  —  5  —  2  8  13    C  —  5  —  11  —  3  12    D  —  —  11  —  —  —  6    E  7  2  —  —  —  9  —    F  —  8  3  —  9  —  10    G  —  13  12  6  —  10  —       Draw the graph represented by the table.    Apply Kruskal's algorithm. Record edges considered in order and explain each rejection.    Draw the resulting tree. Report its selected edges, total weight, and total length in feet.        "
+},
+{
+  "id": "sec-spanning-trees-2",
+  "level": "2",
+  "url": "sec-spanning-trees.html#sec-spanning-trees-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "Learning Outcomes",
+  "body": " Learning Outcomes    Recognize trees and spanning trees and use their basic properties.    Apply Kruskal's algorithm to find a minimum-cost spanning tree.    "
+},
+{
+  "id": "def-st-tree",
+  "level": "2",
+  "url": "sec-spanning-trees.html#def-st-tree",
+  "type": "Definition",
+  "number": "180",
+  "title": "Tree.",
+  "body": " Tree      "
+},
+{
+  "id": "def-st-spanning-tree",
+  "level": "2",
+  "url": "sec-spanning-trees.html#def-st-spanning-tree",
+  "type": "Definition",
+  "number": "181",
+  "title": "Spanning Tree.",
+  "body": " Spanning Tree      "
+},
+{
+  "id": "ex-st-first-tree",
+  "level": "2",
+  "url": "sec-spanning-trees.html#ex-st-first-tree",
+  "type": "Example",
+  "number": "182",
+  "title": "Keep the buildings connected.",
+  "body": " Keep the buildings connected    Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; AE; BE; BF; CF; CG; DG; EF; FG. There are no other edges. Crossings without a marked vertex are not vertices.      How many edges must a spanning tree have? Select one spanning tree by marking the edges to keep.      "
+},
+{
+  "id": "ex-st-candidates",
+  "level": "2",
+  "url": "sec-spanning-trees.html#ex-st-candidates",
+  "type": "Example",
+  "number": "183",
+  "title": "Compare three candidates.",
+  "body": " Compare three candidates   Each candidate uses only connections from the seven-building graph. Candidate III omits building G.   Candidate I   Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; BE; EF; FG. There are no other edges. Crossings without a marked vertex are not vertices.     Candidate II   Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; AE; BE; CF; FG; DG. There are no other edges. Crossings without a marked vertex are not vertices.     Candidate III (G is omitted)   Undirected graph. Vertices: A, B, C, D, E, F. Edges: AB; BC; CD; BE; EF. There are no other edges. Crossings without a marked vertex are not vertices.          Check  I  II  III    Contains every original vertex?             Connected?             Contains a circuit?             Is a spanning tree of the original graph?              "
+},
+{
+  "id": "def-st-minimum-cost",
+  "level": "2",
+  "url": "sec-spanning-trees.html#def-st-minimum-cost",
+  "type": "Definition",
+  "number": "187",
+  "title": "Minimum-Cost Spanning Tree (MCST).",
+  "body": " Minimum-Cost Spanning Tree (MCST)      "
+},
+{
+  "id": "alg-st-kruskal",
+  "level": "2",
+  "url": "sec-spanning-trees.html#alg-st-kruskal",
+  "type": "Algorithm",
+  "number": "188",
+  "title": "Kruskal’s algorithm.",
+  "body": " Kruskal's algorithm      Select the cheapest unused edge in the graph.    Repeat step 1, adding the cheapest unused edge, unless adding the edge would create a circuit    Repeat until a spanning tree is formed      "
+},
+{
+  "id": "subsec-st-recognize-and-kruskal-5",
+  "level": "2",
+  "url": "sec-spanning-trees.html#subsec-st-recognize-and-kruskal-5",
+  "type": "Remark",
+  "number": "189",
+  "title": "",
+  "body": " The selected edges need not be connected at intermediate steps. Equal-weight edges may be considered in either order. If the original graph is disconnected, no spanning tree exists.  "
+},
+{
+  "id": "ex-st-campus-cable",
+  "level": "2",
+  "url": "sec-spanning-trees.html#ex-st-campus-cable",
+  "type": "Example",
+  "number": "190",
+  "title": "Cable installation.",
+  "body": " Cable installation   The graph shows fourteen available connections among eight buildings. The weights are installation costs, in thousands of dollars. Use Kruskal’s algorithm to find a minimum-cost spanning tree.   Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges and weights: AB: 2; BE: 3; AE: 4; BC: 5; EF: 6; BF: 7; CF: 8; CD: 9; FG: 10; CG: 11; DG: 12; EH: 13; GH: 14; AH: 15. There are no other edges. Crossings without a marked vertex are not vertices. Weights are thousands of dollars.   Number of vertices: ________ Required number of selected edges: ________     List the selected edges and report the total installation cost in dollars.    Trace the selected edges on the graph. Which vertices have degree 3, and why is that allowed?    Explain why AC is not an eligible edge in this problem, even if it looks like a useful connection.    Identify the first rejected edge and the circuit it would create.      "
+},
+{
+  "id": "ex-st-table-network",
+  "level": "2",
+  "url": "sec-spanning-trees.html#ex-st-table-network",
+  "type": "Example",
+  "number": "191",
+  "title": "Connect seven buildings.",
+  "body": " Connect seven buildings   The table gives possible cable lengths in hundreds of feet. A dash means there is no direct connection (or the row and column name the same building). Each listed connection can be used in either direction.             A  B  C  D  E  F  G    A  —  4  —  —  7  —  —    B  4  —  5  —  2  8  13    C  —  5  —  11  —  3  12    D  —  —  11  —  —  —  6    E  7  2  —  —  —  9  —    F  —  8  3  —  9  —  10    G  —  13  12  6  —  10  —       Draw the graph represented by the table.    Apply Kruskal's algorithm. Record edges considered in order and explain each rejection.    Draw the resulting tree. Report its selected edges, total weight, and total length in feet.      "
 }
 ]
 

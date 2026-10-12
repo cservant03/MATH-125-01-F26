@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Euler and Hamiltonian Circuits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends decimal; prefix: ''; suffix: ') '; }
+@counter-style ptx-marker-0 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<link rel="stylesheet" type="text/css" href="external/custom.css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Contemporary Mathematics">
+<meta property="og:title" content="Contemporary Mathematics">
+<meta property="book:title" content="Contemporary Mathematics">
+<meta name="twitter:description" content="MATH 125 01 Fall 2026">
+<meta property="og:description" content="MATH 125 01 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.3adcbea95009347b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.7a45395f326e122c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Contemporary Mathematics</span> <span class="subtitle">MATH 125 01 Fall 2026</span></a></div>
+<p class="byline">Christopher</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-graphs-vocabulary-representations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-spanning-trees.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#instructor-info" class="internal"><span class="title">Instructor Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-desc" class="internal"><span class="title">Course Description</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-materials" class="internal"><span class="title">Course Matrials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#online-course-comp" class="internal"><span class="title">Online Course Component</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-outcomes" class="internal"><span class="title">Course Outcomes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#eval" class="internal"><span class="title">Evaluatation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#grade" class="internal"><span class="title">Grading</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#tips" class="internal"><span class="title">Tips for Success</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#academic-integrity" class="internal"><span class="title">Academic Integrity Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#withdrawal-policy" class="internal"><span class="title">Withdrawal Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#important-dates" class="internal"><span class="title">Important Dates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#disability-statement" class="internal"><span class="title">Disability Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#nondiscrimination-statement" class="internal"><span class="title">Non-Discrimination Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#land-acknowledgment" class="internal"><span class="title">Land Acknowledgment Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#tentative-syllabus" class="internal"><span class="title">Tentative Syllabus</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="tutor-verification-third-attempt.html" class="internal"><span class="title">Tutoring Verification for Third Attempt</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Notes</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-course-notes">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics-of-voting.html" class="internal"><span class="title">Basics of Voting</span></a></div>
+<ul id="ptx-toc-group-basics-of-voting" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#preference-ballots-schedules" class="internal"><span class="title">Preference Ballots and Preference Schedules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#majority-voting-basics" class="internal"><span class="title">Majority</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#pairwise-comparisons-condorcet" class="internal"><span class="title">Pairwise Comparisons and Condorcet Winners</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#fairness-criteria" class="internal"><span class="title">Fairness Criteria</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#basics-voting-mixed-examples" class="internal"><span class="title">Additional Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="choice-based-voting-methods.html" class="internal"><span class="title">Choice-based Voting Methods</span></a></div>
+<ul id="ptx-toc-group-choice-based-voting-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#plurality-voting-method" class="internal"><span class="title">Plurality Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#instant-runoff-voting-method" class="internal"><span class="title">Instant Runoff Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#approval-voting-method" class="internal"><span class="title">Approval Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#choice-methods-comparison" class="internal"><span class="title">Comparing Choice-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ranked-based-voting-methods.html" class="internal"><span class="title">Ranked-Based Voting Methods</span></a></div>
+<ul id="ptx-toc-group-ranked-based-voting-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#borda-count-method" class="internal"><span class="title">Borda Count</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#copeland-pairwise-comparison-method" class="internal"><span class="title">Copeland’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#ranked-methods-comparison" class="internal"><span class="title">Comparing Ranked-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="weighted-voting-and-power.html" class="internal"><span class="title">Weighted Voting and Power</span></a></div>
+<ul id="ptx-toc-group-weighted-voting-and-power" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="weighted-voting-and-power.html#weighted-voting-systems" class="internal"><span class="title">Weighted Voting Systems</span></a></div>
+<ul id="ptx-toc-group-weighted-voting-systems" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#weighted-voting-quota-limits" class="internal"><span class="title">Limits on the Quota</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#special-players-weighted-voting" class="internal"><span class="title">Dictators, Veto Power, and Dummies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#coalitions-critical-players" class="internal"><span class="title">Coalitions and Critical Players</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#banzhaf-power-index" class="internal"><span class="title">The Banzhaf Power Index</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics-of-apportionment.html" class="internal"><span class="title">Basics of Apportionment</span></a></div>
+<ul id="ptx-toc-group-basics-of-apportionment" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#apportionment-problem-rules" class="internal"><span class="title">The Apportionment Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#standard-divisor-and-quotas" class="internal"><span class="title">Standard Divisor and Standard Quotas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#quota-rule-apportionment" class="internal"><span class="title">The Quota Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="quota-based-apportionment-methods.html" class="internal"><span class="title">Quota-Based Apportionment Methods</span></a></div>
+<ul id="ptx-toc-group-quota-based-apportionment-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#hamilton-apportionment-method" class="internal"><span class="title">Hamilton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#hamilton-apportionment-paradoxes" class="internal"><span class="title">Paradoxes of Hamilton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#lowndes-apportionment-method" class="internal"><span class="title">Lowndes’ Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="divisor-based-apportionment-methods.html" class="internal"><span class="title">Divisor-Based Apportionment Methods</span></a></div>
+<ul id="ptx-toc-group-divisor-based-apportionment-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#jefferson-apportionment-method" class="internal"><span class="title">Jefferson’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#webster-apportionment-method" class="internal"><span class="title">Webster’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#huntington-hill-apportionment-method" class="internal"><span class="title">Huntington-Hill Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#compare-divisor-apportionment-methods" class="internal"><span class="title">Comparing the Divisor-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html" class="internal"><span class="title">Graphs and Shortest Paths</span></a></div>
+<ul id="ptx-toc-group-sec-graphs-vocabulary-representations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-core-graph-vocabulary" class="internal"><span class="title">Core Vocabulary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-real-situation-to-graph" class="internal"><span class="title">From a Real Situation to a Graph</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-reading-a-graph" class="internal"><span class="title">Reading a Graph</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-weighted-graphs-shortest-paths" class="internal"><span class="title">Weighted Graphs and Shortest Paths</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-dijkstra-algorithm" class="internal"><span class="title">Dijkstra’s Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-shortest-paths-table" class="internal"><span class="title">Shortest Paths from a Table</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#sec-graphs-vocabulary-representations-9" class="internal"><span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html" class="internal"><span class="title">Euler and Hamiltonian Circuits</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-sec-euler-hamiltonian-paths-circuits">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-euler-vocabulary" class="internal"><span class="title">Every edge or every vertex?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-euler-tests" class="internal"><span class="title">Recognizing Euler routes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-fleury" class="internal"><span class="title">Finding an Euler route</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-eulerization" class="internal"><span class="title">When some edges must be repeated</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-hamilton-vocabulary" class="internal"><span class="title">Hamiltonian paths and circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-tsp-brute-force" class="internal"><span class="title">Finding a least-weight tour</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-nearest-neighbor" class="internal"><span class="title">Counting tours and using heuristics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-sorted-edges" class="internal"><span class="title">Choosing the cheapest eligible edges</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-spanning-trees.html" class="internal"><span class="title">Spanning Trees</span></a></div>
+<ul id="ptx-toc-group-sec-spanning-trees" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-spanning-trees.html#subsec-st-vocabulary" class="internal"><span class="title">Connecting a network</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-spanning-trees.html#subsec-st-recognize-and-kruskal" class="internal"><span class="title">Recognizing and choosing a spanning tree</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-spanning-trees.html#subsec-st-kruskal-example" class="internal"><span class="title">Practice</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-euler-hamiltonian-paths-circuits">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler and Hamiltonian Circuits</span>
+</h1>
+<article class="objectives goal-like" id="sec-euler-hamiltonian-paths-circuits-2"><h2 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Learning Outcomes</span>
+</h2>
+<ol class="decimal" id="sec-euler-hamiltonian-paths-circuits-2-2">
+<li id="sec-euler-hamiltonian-paths-circuits-2-2-1">
+<div class="para" id="sec-euler-hamiltonian-paths-circuits-2-2-1-1">Distinguish routes that use every edge from routes that visit every vertex.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 1"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2-2-1" title="Copy heading and permalink for Objective 1" aria-label="Copy heading and permalink for Objective 1">🔗</a></div>
+</li>
+<li id="sec-euler-hamiltonian-paths-circuits-2-2-2">
+<div class="para" id="sec-euler-hamiltonian-paths-circuits-2-2-2-1">Use degree tests, Fleury’s algorithm, and eulerization to plan Euler routes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 2"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2-2-2" title="Copy heading and permalink for Objective 2" aria-label="Copy heading and permalink for Objective 2">🔗</a></div>
+</li>
+<li id="sec-euler-hamiltonian-paths-circuits-2-2-3">
+<div class="para" id="sec-euler-hamiltonian-paths-circuits-2-2-3-1">Identify Hamiltonian paths and circuits and compare tour-finding methods.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 3"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2-2-3" title="Copy heading and permalink for Objective 3" aria-label="Copy heading and permalink for Objective 3">🔗</a></div>
+</li>
+<li id="sec-euler-hamiltonian-paths-circuits-2-2-4">
+<div class="para" id="sec-euler-hamiltonian-paths-circuits-2-2-4-1">Calculate route weights and distinguish an optimal answer from a heuristic result.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 4"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2-2-4" title="Copy heading and permalink for Objective 4" aria-label="Copy heading and permalink for Objective 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Objectives: Learning Outcomes"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits-2" title="Copy heading and permalink for Objectives: Learning Outcomes" aria-label="Copy heading and permalink for Objectives: Learning Outcomes">🔗</a></div>
+</article>
+<section class="subsection" id="subsec-eh-euler-vocabulary">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Every edge or every vertex?</span>
+</h2>
+<div class="para" id="subsec-eh-euler-vocabulary-2">A street sweeper must cover every street. A delivery driver must visit every delivery location. Both tasks involve a route, but the objects that must be covered are different.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-eh-euler-vocabulary-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-eh-euler-path"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">158</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler Path.</span>
+</h3>
+<div class="para" id="def-eh-euler-path-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-eh-euler-path-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 158: Euler Path"><a tabindex="-1" href="#def-eh-euler-path" title="Copy heading and permalink for Definition 158: Euler Path" aria-label="Copy heading and permalink for Definition 158: Euler Path">🔗</a></div>
+</article>
+<article class="definition definition-like" id="def-eh-euler-circuit"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">159</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler Circuit.</span>
+</h3>
+<div class="para" id="def-eh-euler-circuit-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-eh-euler-circuit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 159: Euler Circuit"><a tabindex="-1" href="#def-eh-euler-circuit" title="Copy heading and permalink for Definition 159: Euler Circuit" aria-label="Copy heading and permalink for Definition 159: Euler Circuit">🔗</a></div>
+</article>
+<article class="remark remark-like" id="subsec-eh-euler-vocabulary-5"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">160</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="subsec-eh-euler-vocabulary-5-1">An Euler route may revisit vertices. It must use each edge exactly once. Here, an <em class="emphasis">open Euler path</em> has different starting and ending vertices; an Euler circuit is a closed Euler path.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-eh-euler-vocabulary-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 160"><a tabindex="-1" href="#subsec-eh-euler-vocabulary-5" title="Copy heading and permalink for Remark 160" aria-label="Copy heading and permalink for Remark 160">🔗</a></div>
+</article>
+<div class="para" id="subsec-eh-euler-vocabulary-6">For the connected graphs considered here, count the vertices of odd degree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-eh-euler-vocabulary-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r1 l1 t1 lines">Odd-degree vertices</th>
+<th scope="col" class="l m b2 r1 l0 t1 lines">What is possible?</th>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">An Euler circuit exists. Start at any vertex.</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">2</td>
+<td class="l m b1 r1 l0 t0 lines">An Euler path exists. Start at one odd-degree vertex and end at the other.</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">More than 2</td>
+<td class="l m b1 r1 l0 t0 lines">Neither an Euler circuit nor an open Euler path exists.</td>
+</tr>
+</table></div>
+<article class="remark remark-like" id="subsec-eh-euler-vocabulary-8"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">161</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="subsec-eh-euler-vocabulary-8-1">Check connectedness first. If edges lie in separate components, one route cannot cover them all.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-eh-euler-vocabulary-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 161"><a tabindex="-1" href="#subsec-eh-euler-vocabulary-8" title="Copy heading and permalink for Remark 161" aria-label="Copy heading and permalink for Remark 161">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Every edge or every vertex?"><a tabindex="-1" href="#subsec-eh-euler-vocabulary" title="Copy heading and permalink for Subsection: Every edge or every vertex?" aria-label="Copy heading and permalink for Subsection: Every edge or every vertex?">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-eh-euler-tests">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Recognizing Euler routes</span>
+</h2>
+<article class="example example-like" id="ex-eh-three-euler-graphs"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">162</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example: Same vertices, different connections.</span>
+</h3>
+<div class="para" id="ex-eh-three-euler-graphs-2-1">For each graph, find either an euler circuit or path, if possible.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-three-euler-graphs-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;">
+<img src="external/images/eh-euler-i.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-three-euler-graphs-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-three-euler-graphs-2-2-description">
+<div class="para" id="ex-eh-three-euler-graphs-2-2-1-1">Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA. There are no other edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-three-euler-graphs-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div> 
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:37.5% 37.5%;column-gap:20%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box">
+<img src="external/images/eh-euler-ii.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-three-euler-graphs-2-3-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-three-euler-graphs-2-3-1-description">
+<div class="para" id="ex-eh-three-euler-graphs-2-3-1-1-1">Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; BD. There are no other edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-three-euler-graphs-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box">
+<img src="external/images/eh-euler-iii.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-three-euler-graphs-2-3-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-three-euler-graphs-2-3-2-description">
+<div class="para" id="ex-eh-three-euler-graphs-2-3-2-1-1">Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; BD; EG. There are no other edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-three-euler-graphs-2-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div></div>
+</div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 162: Example: Same vertices, different connections"><a tabindex="-1" href="#ex-eh-three-euler-graphs" title="Copy heading and permalink for Example 162: Example: Same vertices, different connections" aria-label="Copy heading and permalink for Example 162: Example: Same vertices, different connections">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Recognizing Euler routes"><a tabindex="-1" href="#subsec-eh-euler-tests" title="Copy heading and permalink for Subsection: Recognizing Euler routes" aria-label="Copy heading and permalink for Subsection: Recognizing Euler routes">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-eh-fleury">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding an Euler route</span>
+</h2>
+<article class="algorithm theorem-like" id="alg-eh-fleury"><h3 class="heading">
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">163</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fleury’s algorithm.</span>
+</h3>
+<div class="para logical" id="alg-eh-fleury-2-1">
+<ol class="decimal" id="alg-eh-fleury-2-1-1">
+<li id="alg-eh-fleury-2-1-1-1">
+<div class="para" id="alg-eh-fleury-2-1-1-1-1">Start at any vertex if finding an Euler circuit. If finding an Euler path, start at one of the two vertices with odd degree.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-fleury-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#alg-eh-fleury-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="alg-eh-fleury-2-1-1-2">
+<div class="para" id="alg-eh-fleury-2-1-1-2-1">Choose any edge leaving your current vertex, provided deleting that edge will not separate the graph into two disconnected sets of edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-fleury-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#alg-eh-fleury-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="alg-eh-fleury-2-1-1-3">
+<div class="para" id="alg-eh-fleury-2-1-1-3-1">Add that edge to your circuit, and delete it from the graph..<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-fleury-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#alg-eh-fleury-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="alg-eh-fleury-2-1-1-4">
+<div class="para" id="alg-eh-fleury-2-1-1-4-1">Continue until every edge has been used exactly once.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-fleury-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#alg-eh-fleury-2-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-fleury-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Algorithm 163: Fleury’s algorithm"><a tabindex="-1" href="#alg-eh-fleury" title="Copy heading and permalink for Algorithm 163: Fleury’s algorithm" aria-label="Copy heading and permalink for Algorithm 163: Fleury’s algorithm">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-eh-fleury-route"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">164</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Fleury’s Algorithm.</span>
+</h3>
+<div class="para" id="ex-eh-fleury-route-2-1">Find the Euler path in the following graph.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-fleury-route-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="external/images/eh-fleury.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-fleury-route-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-fleury-route-2-2-description">
+<div class="para" id="ex-eh-fleury-route-2-2-1-1">Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges: AB; BC; CA; CD; DE; EC; CF; FG; GH; HF. There are no other edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-fleury-route-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 164: Using Fleury’s Algorithm"><a tabindex="-1" href="#ex-eh-fleury-route" title="Copy heading and permalink for Example 164: Using Fleury’s Algorithm" aria-label="Copy heading and permalink for Example 164: Using Fleury’s Algorithm">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Finding an Euler route"><a tabindex="-1" href="#subsec-eh-fleury" title="Copy heading and permalink for Subsection: Finding an Euler route" aria-label="Copy heading and permalink for Subsection: Finding an Euler route">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-eh-eulerization">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">When some edges must be repeated</span>
+</h2>
+<article class="definition definition-like" id="def-eh-eulerization"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">165</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerization.</span>
+</h3>
+<div class="para" id="def-eh-eulerization-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-eh-eulerization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 165: Eulerization"><a tabindex="-1" href="#def-eh-eulerization" title="Copy heading and permalink for Definition 165: Eulerization" aria-label="Copy heading and permalink for Definition 165: Eulerization">🔗</a></div>
+</article>
+<article class="remark remark-like" id="subsec-eh-eulerization-3"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">166</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="subsec-eh-eulerization-3-1">Duplicating an edge means traveling an existing street again. It does not mean building a new street. For weighted graphs, minimize the <em class="emphasis">added total weight</em>, not just the number of duplicated edges. This is the closed-route Chinese Postman Problem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-eh-eulerization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 166"><a tabindex="-1" href="#subsec-eh-eulerization-3" title="Copy heading and permalink for Remark 166" aria-label="Copy heading and permalink for Remark 166">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-eh-street-sweeper"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">167</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A street-sweeping route.</span>
+</h3>
+<div class="para" id="ex-eh-street-sweeper-2-1">A sweeper must cover every street in this eight-intersection neighborhood and return to its starting point. Each street may be traveled in either direction. The weights in the graph represent the number of blocks.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-street-sweeper-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
+<img src="external/images/eh-eulerize.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-street-sweeper-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-street-sweeper-2-2-description">
+<div class="para" id="ex-eh-street-sweeper-2-2-1-1">Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges and weights: AB: 3; BC: 4; CD: 5; EF: 5; FG: 7; GH: 3; AE: 4; BF: 8; CG: 9; DH: 4. There are no other edges. Weights are blocks.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-street-sweeper-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div> 
+<div class="para" id="ex-eh-street-sweeper-2-3">Find the degree of each vertex. Which vertices must be paired? Choose the pair that adds the least amount of blocks.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-street-sweeper-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 167: A street-sweeping route"><a tabindex="-1" href="#ex-eh-street-sweeper" title="Copy heading and permalink for Example 167: A street-sweeping route" aria-label="Copy heading and permalink for Example 167: A street-sweeping route">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: When some edges must be repeated"><a tabindex="-1" href="#subsec-eh-eulerization" title="Copy heading and permalink for Subsection: When some edges must be repeated" aria-label="Copy heading and permalink for Subsection: When some edges must be repeated">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-eh-hamilton-vocabulary">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hamiltonian paths and circuits</span>
+</h2>
+<article class="definition definition-like" id="def-eh-hamilton-path"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">168</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hamiltonian Path.</span>
+</h3>
+<div class="para" id="def-eh-hamilton-path-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-eh-hamilton-path-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 168: Hamiltonian Path"><a tabindex="-1" href="#def-eh-hamilton-path" title="Copy heading and permalink for Definition 168: Hamiltonian Path" aria-label="Copy heading and permalink for Definition 168: Hamiltonian Path">🔗</a></div>
+</article>
+<article class="definition definition-like" id="def-eh-hamilton-circuit"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">169</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hamiltonian Circuit.</span>
+</h3>
+<div class="para" id="def-eh-hamilton-circuit-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-eh-hamilton-circuit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 169: Hamiltonian Circuit"><a tabindex="-1" href="#def-eh-hamilton-circuit" title="Copy heading and permalink for Definition 169: Hamiltonian Circuit" aria-label="Copy heading and permalink for Definition 169: Hamiltonian Circuit">🔗</a></div>
+</article><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r1 l1 t1 lines">Question</th>
+<th scope="col" class="l m b2 r1 l0 t1 lines">Euler route</th>
+<th scope="col" class="l m b2 r1 l0 t1 lines">Hamiltonian route</th>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">What must be covered?</td>
+<td class="l m b1 r1 l0 t0 lines">Every edge exactly once</td>
+<td class="l m b1 r1 l0 t0 lines">Every vertex exactly once</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">May a vertex be revisited?</td>
+<td class="l m b1 r1 l0 t0 lines">Yes</td>
+<td class="l m b1 r1 l0 t0 lines">Only the start</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">Existence?</td>
+<td class="l m b1 r1 l0 t0 lines">Yes</td>
+<td class="l m b1 r1 l0 t0 lines">No</td>
+</tr>
+</table></div>
+<article class="example example-like" id="ex-eh-hamilton-existence"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">170</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Find a route if possble.</span>
+</h3>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box">
+<img src="external/images/eh-hamilton-i.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-hamilton-existence-2-1-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-hamilton-existence-2-1-1-description">
+<div class="para" id="ex-eh-hamilton-existence-2-1-1-1-1">Undirected graph. Vertices: A, B, C, D, E, F, G. Edges: AB; BC; CD; DA; DE; EF; FG; GD. There are no other edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-hamilton-existence-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box">
+<img src="external/images/eh-hamilton-ii.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-hamilton-existence-2-1-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-hamilton-existence-2-1-2-description">
+<div class="para" id="ex-eh-hamilton-existence-2-1-2-1-1">Undirected graph. Vertices: A, B, C, D, E, F, G, H. Edges: AB; BC; CD; DE; EF; FG; GA; AC; CE; EA; DH. There are no other edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-hamilton-existence-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div></div>
+</div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 170: Find a route if possble"><a tabindex="-1" href="#ex-eh-hamilton-existence" title="Copy heading and permalink for Example 170: Find a route if possble" aria-label="Copy heading and permalink for Example 170: Find a route if possble">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Hamiltonian paths and circuits"><a tabindex="-1" href="#subsec-eh-hamilton-vocabulary" title="Copy heading and permalink for Subsection: Hamiltonian paths and circuits" aria-label="Copy heading and permalink for Subsection: Hamiltonian paths and circuits">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-eh-tsp-brute-force">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding a least-weight tour</span>
+</h2>
+<div class="para" id="subsec-eh-tsp-brute-force-2">The <em class="emphasis">Traveling Salesman Problem (TSP)</em> asks for a Hamiltonian circuit with the smallest total edge weight. In the examples here, every pair of locations is connected and travel weights are the same in either direction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-eh-tsp-brute-force-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="algorithm theorem-like" id="alg-eh-brute-force"><h3 class="heading">
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">171</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Brute force (exhaustive search).</span>
+</h3>
+<div class="para logical" id="alg-eh-brute-force-2-1">
+<ol class="decimal" id="alg-eh-brute-force-2-1-1">
+<li id="alg-eh-brute-force-2-1-1-1">
+<div class="para" id="alg-eh-brute-force-2-1-1-1-1">List all possible Hamiltonian circuits<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-brute-force-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#alg-eh-brute-force-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="alg-eh-brute-force-2-1-1-2">
+<div class="para" id="alg-eh-brute-force-2-1-1-2-1">Find the length of each circuit by adding the edge weights<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-brute-force-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#alg-eh-brute-force-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="alg-eh-brute-force-2-1-1-3">
+<div class="para" id="alg-eh-brute-force-2-1-1-3-1">Select the circuit with minimal total weight<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-brute-force-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#alg-eh-brute-force-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-brute-force-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Algorithm 171: Brute force (exhaustive search)"><a tabindex="-1" href="#alg-eh-brute-force" title="Copy heading and permalink for Algorithm 171: Brute force (exhaustive search)" aria-label="Copy heading and permalink for Algorithm 171: Brute force (exhaustive search)">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-eh-brute-force"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">172</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Four delivery locations.</span>
+</h3>
+<div class="para" id="ex-eh-brute-force-2-1">Find the least travel time for a driver that must visit every delivery location.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-brute-force-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="external/images/eh-travel.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-brute-force-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-brute-force-2-2-description">
+<div class="para" id="ex-eh-brute-force-2-2-1-1">Undirected graph. Vertices: A, B, C, D. Edges and weights: AB: 8; AC: 4; AD: 3; BC: 21; BD: 13; CD: 11. There are no other edges. Crossings without a marked vertex are not vertices. Weights are minutes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-brute-force-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 172: Four delivery locations"><a tabindex="-1" href="#ex-eh-brute-force" title="Copy heading and permalink for Example 172: Four delivery locations" aria-label="Copy heading and permalink for Example 172: Four delivery locations">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Finding a least-weight tour"><a tabindex="-1" href="#subsec-eh-tsp-brute-force" title="Copy heading and permalink for Subsection: Finding a least-weight tour" aria-label="Copy heading and permalink for Subsection: Finding a least-weight tour">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-eh-nearest-neighbor">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Counting tours and using heuristics</span>
+</h2>
+<article class="algorithm theorem-like" id="alg-eh-nearest-neighbor"><h3 class="heading">
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">173</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Nearest neighbor algorithm (NNA).</span>
+</h3>
+<div class="para logical" id="alg-eh-nearest-neighbor-2-1">
+<ol class="decimal" id="alg-eh-nearest-neighbor-2-1-1">
+<li id="alg-eh-nearest-neighbor-2-1-1-1">
+<div class="para" id="alg-eh-nearest-neighbor-2-1-1-1-1">Choose a starting vertex<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-nearest-neighbor-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#alg-eh-nearest-neighbor-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="alg-eh-nearest-neighbor-2-1-1-2">
+<div class="para" id="alg-eh-nearest-neighbor-2-1-1-2-1">Move to the nearest unvisited vertex (the edge with smallest weight)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-nearest-neighbor-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#alg-eh-nearest-neighbor-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="alg-eh-nearest-neighbor-2-1-1-3">
+<div class="para" id="alg-eh-nearest-neighbor-2-1-1-3-1">Repeat until the circuit is complete<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-nearest-neighbor-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#alg-eh-nearest-neighbor-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-nearest-neighbor-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Algorithm 173: Nearest neighbor algorithm (NNA)"><a tabindex="-1" href="#alg-eh-nearest-neighbor" title="Copy heading and permalink for Algorithm 173: Nearest neighbor algorithm (NNA)" aria-label="Copy heading and permalink for Algorithm 173: Nearest neighbor algorithm (NNA)">🔗</a></div>
+</article>
+<article class="algorithm theorem-like" id="alg-eh-repeated-nearest-neighbor"><h3 class="heading">
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">174</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Repeated nearest neighbor algorithm (RNNA).</span>
+</h3>
+<div class="para logical" id="alg-eh-repeated-nearest-neighbor-2-1">
+<ol class="decimal" id="alg-eh-repeated-nearest-neighbor-2-1-1">
+<li id="alg-eh-repeated-nearest-neighbor-2-1-1-1">
+<div class="para" id="alg-eh-repeated-nearest-neighbor-2-1-1-1-1">Do the Nearest Neighbor Algorithm starting at each vertex<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-repeated-nearest-neighbor-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#alg-eh-repeated-nearest-neighbor-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="alg-eh-repeated-nearest-neighbor-2-1-1-2">
+<div class="para" id="alg-eh-repeated-nearest-neighbor-2-1-1-2-1">Choose the circuit produced with minimal total weight<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-repeated-nearest-neighbor-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#alg-eh-repeated-nearest-neighbor-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-repeated-nearest-neighbor-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Algorithm 174: Repeated nearest neighbor algorithm (RNNA)"><a tabindex="-1" href="#alg-eh-repeated-nearest-neighbor" title="Copy heading and permalink for Algorithm 174: Repeated nearest neighbor algorithm (RNNA)" aria-label="Copy heading and permalink for Algorithm 174: Repeated nearest neighbor algorithm (RNNA)">🔗</a></div>
+</article>
+<article class="remark remark-like" id="subsec-eh-nearest-neighbor-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">175</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="subsec-eh-nearest-neighbor-4-1">These quick methods can find useful tours, but neither guarantees the optimal tour.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-eh-nearest-neighbor-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 175"><a tabindex="-1" href="#subsec-eh-nearest-neighbor-4" title="Copy heading and permalink for Remark 175" aria-label="Copy heading and permalink for Remark 175">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-eh-nearest-neighbor"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">176</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example: Five delivery locations.</span>
+</h3>
+<div class="para" id="ex-eh-nearest-neighbor-2-1">A driver must visit all five locations and return to the starting location. Use the table of travel times. The weights are the same in both directions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-nearest-neighbor-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<td class="l m b2 r1 l1 t1 lines"></td>
+<th scope="col" class="l m b2 r1 l0 t1 lines">A</th>
+<th scope="col" class="l m b2 r1 l0 t1 lines">B</th>
+<th scope="col" class="l m b2 r1 l0 t1 lines">C</th>
+<th scope="col" class="l m b2 r1 l0 t1 lines">D</th>
+<th scope="col" class="l m b2 r1 l0 t1 lines">E</th>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">A</td>
+<td class="l m b1 r1 l0 t0 lines">—</td>
+<td class="l m b1 r1 l0 t0 lines">10</td>
+<td class="l m b1 r1 l0 t0 lines">18</td>
+<td class="l m b1 r1 l0 t0 lines">13</td>
+<td class="l m b1 r1 l0 t0 lines">25</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">B</td>
+<td class="l m b1 r1 l0 t0 lines">10</td>
+<td class="l m b1 r1 l0 t0 lines">—</td>
+<td class="l m b1 r1 l0 t0 lines">20</td>
+<td class="l m b1 r1 l0 t0 lines">4</td>
+<td class="l m b1 r1 l0 t0 lines">21</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">C</td>
+<td class="l m b1 r1 l0 t0 lines">18</td>
+<td class="l m b1 r1 l0 t0 lines">20</td>
+<td class="l m b1 r1 l0 t0 lines">—</td>
+<td class="l m b1 r1 l0 t0 lines">5</td>
+<td class="l m b1 r1 l0 t0 lines">26</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">D</td>
+<td class="l m b1 r1 l0 t0 lines">13</td>
+<td class="l m b1 r1 l0 t0 lines">4</td>
+<td class="l m b1 r1 l0 t0 lines">5</td>
+<td class="l m b1 r1 l0 t0 lines">—</td>
+<td class="l m b1 r1 l0 t0 lines">11</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">E</td>
+<td class="l m b1 r1 l0 t0 lines">25</td>
+<td class="l m b1 r1 l0 t0 lines">21</td>
+<td class="l m b1 r1 l0 t0 lines">26</td>
+<td class="l m b1 r1 l0 t0 lines">11</td>
+<td class="l m b1 r1 l0 t0 lines">—</td>
+</tr>
+</table></div> 
+<div class="para" id="ex-eh-nearest-neighbor-2-3">First use nearest neighbor from A. Then repeat it from each other vertex. Include the return trip in every total.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-nearest-neighbor-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ex-eh-nearest-neighbor-2-4">Which circuit does repeated nearest neighbor select? Rewrite it starting and ending at A.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-nearest-neighbor-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 176: Example: Five delivery locations"><a tabindex="-1" href="#ex-eh-nearest-neighbor" title="Copy heading and permalink for Example 176: Example: Five delivery locations" aria-label="Copy heading and permalink for Example 176: Example: Five delivery locations">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Counting tours and using heuristics"><a tabindex="-1" href="#subsec-eh-nearest-neighbor" title="Copy heading and permalink for Subsection: Counting tours and using heuristics" aria-label="Copy heading and permalink for Subsection: Counting tours and using heuristics">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-eh-sorted-edges">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choosing the cheapest eligible edges</span>
+</h2>
+<article class="algorithm theorem-like" id="alg-eh-sorted-edges"><h3 class="heading">
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">177</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sorted edges (cheapest link).</span>
+</h3>
+<div class="para logical" id="alg-eh-sorted-edges-2-1">
+<ol class="decimal" id="alg-eh-sorted-edges-2-1-1">
+<li id="alg-eh-sorted-edges-2-1-1-1">
+<div class="para" id="alg-eh-sorted-edges-2-1-1-1-1">Select the cheapest unused edge in the graph.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="alg-eh-sorted-edges-2-1-1-2">
+<div class="para" id="alg-eh-sorted-edges-2-1-1-2-1">Repeat step 1, adding the cheapest unused edge to the circuit, unless:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-0;" id="alg-eh-sorted-edges-2-1-1-2-2">
+<li id="alg-eh-sorted-edges-2-1-1-2-2-1">
+<div class="para" id="alg-eh-sorted-edges-2-1-1-2-2-1-1">adding the edge would create a circuit that doesn’t contain all vertices, or<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.a"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-2-2-1" title="Copy heading and permalink for Item 2.a" aria-label="Copy heading and permalink for Item 2.a">🔗</a></div>
+</li>
+<li id="alg-eh-sorted-edges-2-1-1-2-2-2">
+<div class="para" id="alg-eh-sorted-edges-2-1-1-2-2-2-1">adding the edge would give a vertex degree 3.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.b"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-2-2-2" title="Copy heading and permalink for Item 2.b" aria-label="Copy heading and permalink for Item 2.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="alg-eh-sorted-edges-2-1-1-3">
+<div class="para" id="alg-eh-sorted-edges-2-1-1-3-1">Repeat until a circuit containing all vertices is formed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg-eh-sorted-edges-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Algorithm 177: Sorted edges (cheapest link)"><a tabindex="-1" href="#alg-eh-sorted-edges" title="Copy heading and permalink for Algorithm 177: Sorted edges (cheapest link)" aria-label="Copy heading and permalink for Algorithm 177: Sorted edges (cheapest link)">🔗</a></div>
+</article>
+<article class="remark remark-like" id="subsec-eh-sorted-edges-3"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">178</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="subsec-eh-sorted-edges-3-1">Sorted edges does not guarantee a minimum-weight Hamiltonian circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-eh-sorted-edges-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 178"><a tabindex="-1" href="#subsec-eh-sorted-edges-3" title="Copy heading and permalink for Remark 178" aria-label="Copy heading and permalink for Remark 178">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-eh-sorted-edges"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">179</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sorted Edges.</span>
+</h3>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="external/images/eh-travel-five.png" class="contained" alt="described in detail following the image" aria-describedby="ex-eh-sorted-edges-2-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-eh-sorted-edges-2-1-description">
+<div class="para" id="ex-eh-sorted-edges-2-1-1-1">Undirected graph. Vertices: A, B, C, D, E. Edges and weights: AB: 10; AC: 18; AD: 13; AE: 25; BC: 20; BD: 4; BE: 21; CD: 5; CE: 26; DE: 11. There are no other edges. Weights are minutes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-sorted-edges-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div> 
+<div class="para logical" id="ex-eh-sorted-edges-2-2">
+<ol class="decimal" id="ex-eh-sorted-edges-2-2-1">
+<li id="ex-eh-sorted-edges-2-2-1-1">
+<div class="para" id="ex-eh-sorted-edges-2-2-1-1-1">Use the cheapest link algorithm to find a Hamiltonian circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-sorted-edges-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ex-eh-sorted-edges-2-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-eh-sorted-edges-2-2-1-2">
+<div class="para" id="ex-eh-sorted-edges-2-2-1-2-1">Compare this result with NNA from A and RNNA on the same graph. Which generated tour is best?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-sorted-edges-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ex-eh-sorted-edges-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-eh-sorted-edges-2-2-1-3">
+<div class="para" id="ex-eh-sorted-edges-2-2-1-3-1">Does that comparison prove the best generated tour is optimal? Explain how brute force could settle the question.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-sorted-edges-2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ex-eh-sorted-edges-2-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eh-sorted-edges-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 179: Sorted Edges"><a tabindex="-1" href="#ex-eh-sorted-edges" title="Copy heading and permalink for Example 179: Sorted Edges" aria-label="Copy heading and permalink for Example 179: Sorted Edges">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Choosing the cheapest eligible edges"><a tabindex="-1" href="#subsec-eh-sorted-edges" title="Copy heading and permalink for Subsection: Choosing the cheapest eligible edges" aria-label="Copy heading and permalink for Subsection: Choosing the cheapest eligible edges">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section: Euler and Hamiltonian Circuits"><a tabindex="-1" href="#sec-euler-hamiltonian-paths-circuits" title="Copy heading and permalink for Section: Euler and Hamiltonian Circuits" aria-label="Copy heading and permalink for Section: Euler and Hamiltonian Circuits">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-graphs-vocabulary-representations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-spanning-trees.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" alt="Runestone Academy logo" src="data:image/png;base64,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"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" alt="MathJax logo" src="data:image/png;base64,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"></a>
+</div>
+</body>
+</html>
