@@ -31,6 +31,7 @@
       <xi:include href="./notes/graphs-and-shortest-paths.ptx"/>
       <xi:include href="./notes/euler-hamiltonian-paths-circuits.ptx"/>
       <xi:include href="./notes/spanning-trees.ptx"/>
+      <xi:include href="./notes/scheduling.ptx"/>
     </chapter>
 
     </book>

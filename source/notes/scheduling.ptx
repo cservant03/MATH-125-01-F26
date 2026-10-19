@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section xml:id="sec-scheduling">
+  <title>Scheduling</title>
+
+  <objectives>
+    <title>Learning Outcomes</title>
+    <ol>
+      <li>
+        <p>Represent task durations and prerequisites with a digraph.</p>
+      </li>
+      <li>
+        <p>Use a priority list and the list processing algorithm to schedule identical processors.</p>
+      </li>
+      <li>
+        <p>Create priority lists using decreasing time and the critical path algorithm.</p>
+      </li>
+      <li>
+        <p>Use backflow to find critical times and identify a critical path.</p>
+      </li>
+      <li>
+        <p>Find finishing time and idle time, and use lower bounds to assess optimality.</p>
+      </li>
+    </ol>
+  </objectives>
+  
+  <subsection xml:id="subsec-sch-model">
+    <title>Modeling tasks and prerequisites</title>
+
+    <definition xml:id="def-sch-digraph">
+      <title>Digraph</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-sch-processor">
+      <title>Processor</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-sch-ready-task">
+      <title>Ready Task</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <p>An arrow <m>T_i\to T_j</m> means that <m>T_i</m> must be <em>completed</em> before <m>T_j</m> can begin. When several arrows enter a task, <em>all</em> of those requirements must be satisfied. A task duration is shown in parentheses next to its label.</p>
+
+    <assemblage>
+      <title>Assumptions for Our Scheduling Model</title>
+      <p>
+        <ul>
+          <li>
+            <p>All processors are available at time 0, can do every task, and work at the same speed.</p>
+          </li>
+          <li>
+            <p>Each processor works on at most one task at a time, and each task uses exactly one processor.</p>
+          </li>
+          <li>
+            <p>Once a task starts, it runs to completion without pausing or moving to another processor.</p>
+          </li>
+          <li>
+            <p>Task durations are fixed; moving between tasks takes no additional time.</p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+
+    <example xml:id="ex-sch-workshop-model">
+      <title>Preparing a Campus Workshop</title>
+      <statement>
+        <p>Two staff members are preparing a workshop. The table lists immediate prerequisites; earlier requirements along a directed path are also enforced.</p>
+        <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor" row-headers="yes">
+          <col width="10%" right="minor"/>
+          <col width="42%" right="minor"/>
+          <col width="12%" right="minor"/>
+          <col width="36%" right="minor"/>
+          <row header="yes" bottom="medium">
+            <cell>Task</cell>
+            <cell>Description</cell>
+            <cell>Hours</cell>
+            <cell>Must be completed first</cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <m>T_{1}</m>
+            </cell>
+            <cell>Plan the workshop</cell>
+            <cell>3</cell>
+            <cell>None</cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <m>T_{2}</m>
+            </cell>
+            <cell>Prepare the room</cell>
+            <cell>4</cell>
+            <cell>None</cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <m>T_{3}</m>
+            </cell>
+            <cell>Create the presentation</cell>
+            <cell>7</cell>
+            <cell>None</cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <m>T_{4}</m>
+            </cell>
+            <cell>Set up activity stations</cell>
+            <cell>6</cell>
+            <cell><m>T_{1}</m>, <m>T_{2}</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <m>T_{5}</m>
+            </cell>
+            <cell>Arrange refreshments</cell>
+            <cell>5</cell>
+            <cell>
+              <m>T_{2}</m>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <m>T_{6}</m>
+            </cell>
+            <cell>Complete the final setup check</cell>
+            <cell>5</cell>
+            <cell><m>T_{4}</m>, <m>T_{5}</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <m>T_{7}</m>
+            </cell>
+            <cell>Prepare the welcome desk</cell>
+            <cell>4</cell>
+            <cell>
+              <m>T_{5}</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+          <ol>
+            <li>
+              <p>Draw a digraph. Label every task with its duration and draw arrows for the immediate prerequisites.</p>
+            </li>
+            <li>
+              <p>Which tasks are ready at time 0? If only <m>T_{2}</m> has been completed, which additional tasks become ready?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-sch-schedule">
+    <title>Schedules, Finishing Time, and Idle Time</title>
+
+    <definition xml:id="def-sch-finishing-time">
+      <title>Finishing Time</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-sch-optimal-schedule">
+      <title>Optimal Schedule</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-sch-idle-time">
+      <title>Idle Time</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+    
+    <example xml:id="ex-sch-read-schedule">
+      <title>Reading a Schedule</title>
+
+      <statement>
+        <p>Three independent tasks take 2, 2, and 4 hours. Since they are independent, there are no prerequisites.</p>
+
+        <image source="images/sch-reading-schedule.png" width="100%">
+          <shortdescription>
+            Processor 1 performs T1 from time 0 to 2 and T3 from 2 to 6.
+            Processor 2 performs T2 from time 0 to 2 and is idle from 2 to 6.
+          </shortdescription>
+        </image>
+
+        <p>
+          <ol>
+            <li>
+              <p>Find the finishing time. How much idle time does each processor have before the project finishes?</p>
+            </li>
+            <li>
+              <p>Create a different schedule on the same two processors that finishes sooner. Explain why your improved schedule is optimal.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-sch-list-processing">
+    <title>Using a Priority List</title>
+
+    <definition xml:id="def-sch-priority-list">
+      <title>Priority List</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <p>A priority list ranks tasks for assignment. It can place a task before its prerequisites: the list processing algorithm skips any task that is not ready. Priority order does not have to match start order or finish order.</p>
+
+    <algorithm xml:id="alg-sch-list-processing">
+      <title>List Processing</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>At the current time, mark every unstarted task whose prerequisites have all finished. These tasks are ready.</p>
+            </li>
+            <li>
+              <p>Visit the available processors in order <m>P_1,P_2,\ldots</m>. Give each processor the first ready task in the priority list. Mark that task as in progress so it is not assigned twice.</p>
+            </li>
+            <li>
+              <p>If an available processor has no ready task, leave it idle. Advance to the next time at which a task finishes.</p>
+            </li>
+            <li>
+              <p>Mark <em>all</em> tasks finishing at that time as completed before making new assignments. Recheck readiness and repeat until every task is completed.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+
+    <example xml:id="ex-sch-project-list">
+      <title>A Ten-Task Project</title>
+
+      <statement>
+        <p>Use this project for the next several examples. The durations are in hours. Only immediate prerequisite arrows are drawn; requirements along longer paths still apply.</p>
+        
+        <image source="images/sch-project-digraph.png" width="80%">
+          <shortdescription>Directed task graph; numbers in parentheses are durations in hours. T1 (6) points to T5 (5). T2 (3) points to T6 (10). T3 (7) points to T7 (4). T4 (4) has no arrows. T6 points to T5 and T7. T5 points to T8 (3) and T9 (2). T7 points to T8. T8 points to T10 (7). There are no other arrows. Every incoming prerequisite must be finished before a task begins.</shortdescription>
+        </image>          
+        
+        <p>Use <em>two processors</em> and the priority list</p>
+
+        <p><m>T_{4}</m>, <m>T_{1}</m>, <m>T_{2}</m>, <m>T_{3}</m>, <m>T_{5}</m>, <m>T_{6}</m>, <m>T_{7}</m>, <m>T_{8}</m>, <m>T_{9}</m>, <m>T_{10}</m>.</p>
+
+        <p>
+          <ol>
+            <li>
+              <p>Identify all tasks ready at time 0. Which task is assigned to each processor?</p>
+            </li>
+            <li>
+              <p>Apply list processing to complete the schedule below. Label each task and its starting and finishing times; mark idle time.</p>
+
+              <image source="images/sch-timeline-two-35.png" width="100%">
+                <shortdescription>Blank processor timeline with rows P1 through P2 and a time axis from 0 to 35 hours. Each grid interval is one hour. Record each task with its start and finish time; mark intervals with no task as idle.</shortdescription>
+              </image>
+            </li>
+            <li>
+              <p>Find the finishing time and the total idle time across both processors.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-sch-decreasing-time">
+    <title>The Decreasing Time Algorithm</title>
+
+    <algorithm xml:id="alg-sch-decreasing-time">
+      <title>Decreasing Time</title>
+
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>Create a priority list by arranging tasks from longest <em>individual duration</em> to shortest.</p>
+            </li>
+            <li>
+              <p>Break ties by placing the smaller task number first.</p>
+            </li>
+            <li>
+              <p>Use that list with the list processing algorithm for the stated number of processors.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+
+    <example xml:id="ex-sch-project-dt">
+      <title>Longest Tasks First</title>
+
+      <statement>
+        <p>Return to the ten-task project in <xref ref="ex-sch-project-list"/> and use two processors.</p>
+        <p>
+          <ol>
+            <li>
+              <p>Write the decreasing time priority list. Include every task, even if it is not ready at time 0.</p>
+            </li>
+            <li>
+              <p>Which two tasks start at time 0? Explain why the first task in the priority list cannot start immediately.</p>
+            </li>
+            <li>
+              <p>Complete the schedule. Find its finishing time and total idle time.</p>
+
+              <image source="images/sch-timeline-two-35.png" width="100%">
+                <shortdescription>Blank processor timeline with rows P1 through P2 and a time axis from 0 to 35 hours. Each grid interval is one hour. Record each task with its start and finish time; mark intervals with no task as idle.</shortdescription>
+              </image>
+            </li>
+            <li>
+              <p>Compare this result with the previous schedule. Does putting long tasks first guarantee a shorter finishing time?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  
+  <subsection xml:id="subsec-sch-practice">
+    <title>Practice</title>
+    
+    <example xml:id="ex-sch-extra-decreasing-time">
+      <title>Creating a Decreasing Time Priority List</title>
+
+      <statement>
+        <p>Use three processors for this project. Durations in parentheses are in hours.</p>
+        <image source="images/sch-extra-decreasing-digraph.png" width="80%">
+          <shortdescription>Directed task graph with durations in hours: T1 takes 3, T2 takes 5, T3 takes 4, T4 takes 6, T5 takes 2, T6 takes 7, T7 takes 4, and T8 takes 3. T1, T2, and T3 have no prerequisites. T4 requires T1. T5 requires T1 and T2. T6 requires T3. T7 requires T4 and T5. T8 requires T6 and T7. These are all the arrows. Every prerequisite must finish before a task begins.</shortdescription>
+        </image>
+        <p>
+          <ol>
+            <li>
+              <p>Use the decreasing time algorithm to create a priority list containing every task. Include tasks that are not ready at time 0.</p>
+            </li>
+            <li>
+              <p>Which three tasks are assigned at time 0, and to which processors? Explain why the first task in the priority list cannot start immediately.</p>
+            </li>
+            <li>
+              <p>Use your priority list and the list processing algorithm to complete the schedule. Label task intervals and mark idle time.</p>
+              <image source="images/sch-extra-decreasing-grid.png" width="100%">
+                <shortdescription>Blank processor schedule with rows P1, P2, and P3 and time from 0 to 20 hours. Each vertical division is 1 hour, with numerical labels every 2 hours.</shortdescription>
+              </image>
+            </li>
+            <li>
+              <p>Find the project finishing time and each processor's total idle time through project completion. At time 9, which processor receives <m>T_7</m>?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-sch-extra-given-priority">
+      <title>Scheduling from a Given Priority List</title>
+
+      <statement>
+        <p>Use two processors for the tasks below. Durations in parentheses are measured in hours.</p>
+        <image source="images/sch-extra-given-digraph.png" width="80%">
+          <shortdescription>Directed task graph with durations in hours: T1 takes 4, T2 takes 3, T3 takes 5, T4 takes 6, T5 takes 2, T6 takes 3, and T7 takes 4. T1, T2, and T3 have no prerequisites. T4 requires T1 and T2. T5 requires T2 and T3. T6 requires T4 and T5. T7 requires T5. These are all the arrows. Every prerequisite must finish before a task begins.</shortdescription>
+        </image>
+        <p>Use the priority list <m>T_{6},\ T_{4},\ T_{1},\ T_{7},\ T_{3},\ T_{2},\ T_{5}</m>.</p>
+        <p>
+          <ol>
+            <li>
+              <p>Which tasks are ready at time 0? Which task is assigned to each processor initially?</p>
+            </li>
+            <li>
+              <p>Apply the list processing algorithm to complete the schedule. Label every task with its start and finish times, and mark idle time.</p>
+              <image source="images/sch-extra-given-grid.png" width="100%">
+                <shortdescription>Blank processor schedule with rows P1 and P2 and time from 0 to 20 hours. Each vertical division is 1 hour, with numerical labels at 0, 2, 4, and so on through 20.</shortdescription>
+              </image>
+            </li>
+            <li>
+              <p>Find the project finishing time and the total idle time for each processor, measured from time 0 through project completion.</p>
+            </li>
+            <li>
+              <p>At time 5, why must an available processor wait even though some tasks have not yet been started?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

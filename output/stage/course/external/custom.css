@@ -474,3 +474,77 @@ a.mathjax-link {
 #ex-delivery-travel-table ol > li {
   padding-bottom: 2.5in;
 }
+
+/* ---------- Euler and Hamiltonian Circuits ---------- */
+
+#def-eh-euler-path {
+  padding-bottom: 0.8in;
+}
+
+#def-eh-euler-circuit {
+  padding-bottom: 0.8in;
+}
+
+#subsec-eh-euler-tests .heading {
+    margin-top: 0 !important;
+}
+
+#subsec-eh-fleury .heading {
+    margin-top: 0 !important;
+}
+
+#def-eh-eulerization {
+  padding-bottom: 0.8in;
+}
+
+#def-eh-hamilton-path {
+  padding-bottom: 0.8in;
+}
+
+#def-eh-hamilton-circuit {
+  padding-bottom: 0.8in;
+}
+
+#subsec-eh-tsp-brute-force {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-eh-brute-force {
+  padding-bottom: 2in;
+}
+
+#ex-eh-nearest-neighbor {
+  padding-bottom: 2in;
+}
+
+#ex-eh-sorted-edges {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-eh-sorted-edges ol > li {
+  padding-bottom: 1in;
+}
+
+/* ---------- Spanning Trees ---------- */
+
+#def-st-tree {
+  padding-bottom: 1in;
+}
+
+#def-st-spanning-tree {
+  padding-bottom: 1in;
+}
+
+#def-st-minimum-cost {
+  padding-bottom: 1in;
+}
+
+#ex-st-campus-cable ol > li {
+  padding-bottom: 0.7in;
+}
+
+#ex-st-table-network ol > li {
+  padding-bottom: 0.7in;
+}

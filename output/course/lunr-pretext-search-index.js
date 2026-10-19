@@ -1610,6 +1610,159 @@ var ptx_lunr_docs = [
   "number": "191",
   "title": "Connect seven buildings.",
   "body": " Connect seven buildings   The table gives possible cable lengths in hundreds of feet. A dash means there is no direct connection (or the row and column name the same building). Each listed connection can be used in either direction.             A  B  C  D  E  F  G    A  —  4  —  —  7  —  —    B  4  —  5  —  2  8  13    C  —  5  —  11  —  3  12    D  —  —  11  —  —  —  6    E  7  2  —  —  —  9  —    F  —  8  3  —  9  —  10    G  —  13  12  6  —  10  —       Draw the graph represented by the table.    Apply Kruskal's algorithm. Record edges considered in order and explain each rejection.    Draw the resulting tree. Report its selected edges, total weight, and total length in feet.      "
+},
+{
+  "id": "sec-scheduling",
+  "level": "1",
+  "url": "sec-scheduling.html",
+  "type": "Section",
+  "number": "",
+  "title": "Scheduling",
+  "body": " Scheduling   Learning Outcomes    Represent task durations and prerequisites with a digraph.    Use a priority list and the list processing algorithm to schedule identical processors.    Create priority lists using decreasing time and the critical path algorithm.    Use backflow to find critical times and identify a critical path.    Find finishing time and idle time, and use lower bounds to assess optimality.      Modeling tasks and prerequisites   Digraph        Processor        Ready Task       An arrow means that must be completed before can begin. When several arrows enter a task, all of those requirements must be satisfied. A task duration is shown in parentheses next to its label.   Assumptions for Our Scheduling Model     All processors are available at time 0, can do every task, and work at the same speed.    Each processor works on at most one task at a time, and each task uses exactly one processor.    Once a task starts, it runs to completion without pausing or moving to another processor.    Task durations are fixed; moving between tasks takes no additional time.       Preparing a Campus Workshop   Two staff members are preparing a workshop. The table lists immediate prerequisites; earlier requirements along a directed path are also enforced.        Task  Description  Hours  Must be completed first       Plan the workshop  3  None       Prepare the room  4  None       Create the presentation  7  None       Set up activity stations  6  ,       Arrange refreshments  5          Complete the final setup check  5  ,       Prepare the welcome desk  4          Draw a digraph. Label every task with its duration and draw arrows for the immediate prerequisites.    Which tasks are ready at time 0? If only has been completed, which additional tasks become ready?         Schedules, Finishing Time, and Idle Time   Finishing Time        Optimal Schedule        Idle Time        Reading a Schedule   Three independent tasks take 2, 2, and 4 hours. Since they are independent, there are no prerequisites.   Processor 1 performs T1 from time 0 to 2 and T3 from 2 to 6. Processor 2 performs T2 from time 0 to 2 and is idle from 2 to 6.      Find the finishing time. How much idle time does each processor have before the project finishes?    Create a different schedule on the same two processors that finishes sooner. Explain why your improved schedule is optimal.         Using a Priority List   Priority List       A priority list ranks tasks for assignment. It can place a task before its prerequisites: the list processing algorithm skips any task that is not ready. Priority order does not have to match start order or finish order.   List Processing      At the current time, mark every unstarted task whose prerequisites have all finished. These tasks are ready.    Visit the available processors in order . Give each processor the first ready task in the priority list. Mark that task as in progress so it is not assigned twice.    If an available processor has no ready task, leave it idle. Advance to the next time at which a task finishes.    Mark all tasks finishing at that time as completed before making new assignments. Recheck readiness and repeat until every task is completed.        A Ten-Task Project   Use this project for the next several examples. The durations are in hours. Only immediate prerequisite arrows are drawn; requirements along longer paths still apply.   Directed task graph; numbers in parentheses are durations in hours. T1 (6) points to T5 (5). T2 (3) points to T6 (10). T3 (7) points to T7 (4). T4 (4) has no arrows. T6 points to T5 and T7. T5 points to T8 (3) and T9 (2). T7 points to T8. T8 points to T10 (7). There are no other arrows. Every incoming prerequisite must be finished before a task begins.   Use two processors and the priority list  , , , , , , , , , .     Identify all tasks ready at time 0. Which task is assigned to each processor?    Apply list processing to complete the schedule below. Label each task and its starting and finishing times; mark idle time.   Blank processor timeline with rows P1 through P2 and a time axis from 0 to 35 hours. Each grid interval is one hour. Record each task with its start and finish time; mark intervals with no task as idle.     Find the finishing time and the total idle time across both processors.         The Decreasing Time Algorithm   Decreasing Time      Create a priority list by arranging tasks from longest individual duration to shortest.    Break ties by placing the smaller task number first.    Use that list with the list processing algorithm for the stated number of processors.        Longest Tasks First   Return to the ten-task project in and use two processors.     Write the decreasing time priority list. Include every task, even if it is not ready at time 0.    Which two tasks start at time 0? Explain why the first task in the priority list cannot start immediately.    Complete the schedule. Find its finishing time and total idle time.   Blank processor timeline with rows P1 through P2 and a time axis from 0 to 35 hours. Each grid interval is one hour. Record each task with its start and finish time; mark intervals with no task as idle.     Compare this result with the previous schedule. Does putting long tasks first guarantee a shorter finishing time?         Practice   Creating a Decreasing Time Priority List   Use three processors for this project. Durations in parentheses are in hours.   Directed task graph with durations in hours: T1 takes 3, T2 takes 5, T3 takes 4, T4 takes 6, T5 takes 2, T6 takes 7, T7 takes 4, and T8 takes 3. T1, T2, and T3 have no prerequisites. T4 requires T1. T5 requires T1 and T2. T6 requires T3. T7 requires T4 and T5. T8 requires T6 and T7. These are all the arrows. Every prerequisite must finish before a task begins.      Use the decreasing time algorithm to create a priority list containing every task. Include tasks that are not ready at time 0.    Which three tasks are assigned at time 0, and to which processors? Explain why the first task in the priority list cannot start immediately.    Use your priority list and the list processing algorithm to complete the schedule. Label task intervals and mark idle time.   Blank processor schedule with rows P1, P2, and P3 and time from 0 to 20 hours. Each vertical division is 1 hour, with numerical labels every 2 hours.     Find the project finishing time and each processor's total idle time through project completion. At time 9, which processor receives ?        Scheduling from a Given Priority List   Use two processors for the tasks below. Durations in parentheses are measured in hours.   Directed task graph with durations in hours: T1 takes 4, T2 takes 3, T3 takes 5, T4 takes 6, T5 takes 2, T6 takes 3, and T7 takes 4. T1, T2, and T3 have no prerequisites. T4 requires T1 and T2. T5 requires T2 and T3. T6 requires T4 and T5. T7 requires T5. These are all the arrows. Every prerequisite must finish before a task begins.   Use the priority list .     Which tasks are ready at time 0? Which task is assigned to each processor initially?    Apply the list processing algorithm to complete the schedule. Label every task with its start and finish times, and mark idle time.   Blank processor schedule with rows P1 and P2 and time from 0 to 20 hours. Each vertical division is 1 hour, with numerical labels at 0, 2, 4, and so on through 20.     Find the project finishing time and the total idle time for each processor, measured from time 0 through project completion.    At time 5, why must an available processor wait even though some tasks have not yet been started?        "
+},
+{
+  "id": "sec-scheduling-2",
+  "level": "2",
+  "url": "sec-scheduling.html#sec-scheduling-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "Learning Outcomes",
+  "body": " Learning Outcomes    Represent task durations and prerequisites with a digraph.    Use a priority list and the list processing algorithm to schedule identical processors.    Create priority lists using decreasing time and the critical path algorithm.    Use backflow to find critical times and identify a critical path.    Find finishing time and idle time, and use lower bounds to assess optimality.    "
+},
+{
+  "id": "def-sch-digraph",
+  "level": "2",
+  "url": "sec-scheduling.html#def-sch-digraph",
+  "type": "Definition",
+  "number": "192",
+  "title": "Digraph.",
+  "body": " Digraph      "
+},
+{
+  "id": "def-sch-processor",
+  "level": "2",
+  "url": "sec-scheduling.html#def-sch-processor",
+  "type": "Definition",
+  "number": "193",
+  "title": "Processor.",
+  "body": " Processor      "
+},
+{
+  "id": "def-sch-ready-task",
+  "level": "2",
+  "url": "sec-scheduling.html#def-sch-ready-task",
+  "type": "Definition",
+  "number": "194",
+  "title": "Ready Task.",
+  "body": " Ready Task      "
+},
+{
+  "id": "ex-sch-workshop-model",
+  "level": "2",
+  "url": "sec-scheduling.html#ex-sch-workshop-model",
+  "type": "Example",
+  "number": "195",
+  "title": "Preparing a Campus Workshop.",
+  "body": " Preparing a Campus Workshop   Two staff members are preparing a workshop. The table lists immediate prerequisites; earlier requirements along a directed path are also enforced.        Task  Description  Hours  Must be completed first       Plan the workshop  3  None       Prepare the room  4  None       Create the presentation  7  None       Set up activity stations  6  ,       Arrange refreshments  5          Complete the final setup check  5  ,       Prepare the welcome desk  4          Draw a digraph. Label every task with its duration and draw arrows for the immediate prerequisites.    Which tasks are ready at time 0? If only has been completed, which additional tasks become ready?      "
+},
+{
+  "id": "def-sch-finishing-time",
+  "level": "2",
+  "url": "sec-scheduling.html#def-sch-finishing-time",
+  "type": "Definition",
+  "number": "196",
+  "title": "Finishing Time.",
+  "body": " Finishing Time      "
+},
+{
+  "id": "def-sch-optimal-schedule",
+  "level": "2",
+  "url": "sec-scheduling.html#def-sch-optimal-schedule",
+  "type": "Definition",
+  "number": "197",
+  "title": "Optimal Schedule.",
+  "body": " Optimal Schedule      "
+},
+{
+  "id": "def-sch-idle-time",
+  "level": "2",
+  "url": "sec-scheduling.html#def-sch-idle-time",
+  "type": "Definition",
+  "number": "198",
+  "title": "Idle Time.",
+  "body": " Idle Time      "
+},
+{
+  "id": "ex-sch-read-schedule",
+  "level": "2",
+  "url": "sec-scheduling.html#ex-sch-read-schedule",
+  "type": "Example",
+  "number": "199",
+  "title": "Reading a Schedule.",
+  "body": " Reading a Schedule   Three independent tasks take 2, 2, and 4 hours. Since they are independent, there are no prerequisites.   Processor 1 performs T1 from time 0 to 2 and T3 from 2 to 6. Processor 2 performs T2 from time 0 to 2 and is idle from 2 to 6.      Find the finishing time. How much idle time does each processor have before the project finishes?    Create a different schedule on the same two processors that finishes sooner. Explain why your improved schedule is optimal.      "
+},
+{
+  "id": "def-sch-priority-list",
+  "level": "2",
+  "url": "sec-scheduling.html#def-sch-priority-list",
+  "type": "Definition",
+  "number": "200",
+  "title": "Priority List.",
+  "body": " Priority List      "
+},
+{
+  "id": "alg-sch-list-processing",
+  "level": "2",
+  "url": "sec-scheduling.html#alg-sch-list-processing",
+  "type": "Algorithm",
+  "number": "201",
+  "title": "List Processing.",
+  "body": " List Processing      At the current time, mark every unstarted task whose prerequisites have all finished. These tasks are ready.    Visit the available processors in order . Give each processor the first ready task in the priority list. Mark that task as in progress so it is not assigned twice.    If an available processor has no ready task, leave it idle. Advance to the next time at which a task finishes.    Mark all tasks finishing at that time as completed before making new assignments. Recheck readiness and repeat until every task is completed.      "
+},
+{
+  "id": "ex-sch-project-list",
+  "level": "2",
+  "url": "sec-scheduling.html#ex-sch-project-list",
+  "type": "Example",
+  "number": "202",
+  "title": "A Ten-Task Project.",
+  "body": " A Ten-Task Project   Use this project for the next several examples. The durations are in hours. Only immediate prerequisite arrows are drawn; requirements along longer paths still apply.   Directed task graph; numbers in parentheses are durations in hours. T1 (6) points to T5 (5). T2 (3) points to T6 (10). T3 (7) points to T7 (4). T4 (4) has no arrows. T6 points to T5 and T7. T5 points to T8 (3) and T9 (2). T7 points to T8. T8 points to T10 (7). There are no other arrows. Every incoming prerequisite must be finished before a task begins.   Use two processors and the priority list  , , , , , , , , , .     Identify all tasks ready at time 0. Which task is assigned to each processor?    Apply list processing to complete the schedule below. Label each task and its starting and finishing times; mark idle time.   Blank processor timeline with rows P1 through P2 and a time axis from 0 to 35 hours. Each grid interval is one hour. Record each task with its start and finish time; mark intervals with no task as idle.     Find the finishing time and the total idle time across both processors.      "
+},
+{
+  "id": "alg-sch-decreasing-time",
+  "level": "2",
+  "url": "sec-scheduling.html#alg-sch-decreasing-time",
+  "type": "Algorithm",
+  "number": "203",
+  "title": "Decreasing Time.",
+  "body": " Decreasing Time      Create a priority list by arranging tasks from longest individual duration to shortest.    Break ties by placing the smaller task number first.    Use that list with the list processing algorithm for the stated number of processors.      "
+},
+{
+  "id": "ex-sch-project-dt",
+  "level": "2",
+  "url": "sec-scheduling.html#ex-sch-project-dt",
+  "type": "Example",
+  "number": "204",
+  "title": "Longest Tasks First.",
+  "body": " Longest Tasks First   Return to the ten-task project in and use two processors.     Write the decreasing time priority list. Include every task, even if it is not ready at time 0.    Which two tasks start at time 0? Explain why the first task in the priority list cannot start immediately.    Complete the schedule. Find its finishing time and total idle time.   Blank processor timeline with rows P1 through P2 and a time axis from 0 to 35 hours. Each grid interval is one hour. Record each task with its start and finish time; mark intervals with no task as idle.     Compare this result with the previous schedule. Does putting long tasks first guarantee a shorter finishing time?      "
+},
+{
+  "id": "ex-sch-extra-decreasing-time",
+  "level": "2",
+  "url": "sec-scheduling.html#ex-sch-extra-decreasing-time",
+  "type": "Example",
+  "number": "205",
+  "title": "Creating a Decreasing Time Priority List.",
+  "body": " Creating a Decreasing Time Priority List   Use three processors for this project. Durations in parentheses are in hours.   Directed task graph with durations in hours: T1 takes 3, T2 takes 5, T3 takes 4, T4 takes 6, T5 takes 2, T6 takes 7, T7 takes 4, and T8 takes 3. T1, T2, and T3 have no prerequisites. T4 requires T1. T5 requires T1 and T2. T6 requires T3. T7 requires T4 and T5. T8 requires T6 and T7. These are all the arrows. Every prerequisite must finish before a task begins.      Use the decreasing time algorithm to create a priority list containing every task. Include tasks that are not ready at time 0.    Which three tasks are assigned at time 0, and to which processors? Explain why the first task in the priority list cannot start immediately.    Use your priority list and the list processing algorithm to complete the schedule. Label task intervals and mark idle time.   Blank processor schedule with rows P1, P2, and P3 and time from 0 to 20 hours. Each vertical division is 1 hour, with numerical labels every 2 hours.     Find the project finishing time and each processor's total idle time through project completion. At time 9, which processor receives ?      "
+},
+{
+  "id": "ex-sch-extra-given-priority",
+  "level": "2",
+  "url": "sec-scheduling.html#ex-sch-extra-given-priority",
+  "type": "Example",
+  "number": "206",
+  "title": "Scheduling from a Given Priority List.",
+  "body": " Scheduling from a Given Priority List   Use two processors for the tasks below. Durations in parentheses are measured in hours.   Directed task graph with durations in hours: T1 takes 4, T2 takes 3, T3 takes 5, T4 takes 6, T5 takes 2, T6 takes 3, and T7 takes 4. T1, T2, and T3 have no prerequisites. T4 requires T1 and T2. T5 requires T2 and T3. T6 requires T4 and T5. T7 requires T5. These are all the arrows. Every prerequisite must finish before a task begins.   Use the priority list .     Which tasks are ready at time 0? Which task is assigned to each processor initially?    Apply the list processing algorithm to complete the schedule. Label every task with its start and finish times, and mark idle time.   Blank processor schedule with rows P1 and P2 and time from 0 to 20 hours. Each vertical division is 1 hour, with numerical labels at 0, 2, 4, and so on through 20.     Find the project finishing time and the total idle time for each processor, measured from time 0 through project completion.    At time 5, why must an available processor wait even though some tasks have not yet been started?      "
 }
 ]
 
