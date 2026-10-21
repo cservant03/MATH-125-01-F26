@@ -1,0 +1,649 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section xml:id="sec-annuities-and-loans">
+  <title>Annuities and Loans</title>
+  <objectives>
+    <title>Learning Outcomes</title>
+    <ol>
+      <li>
+        <p>Distinguish a savings annuity, a payout annuity, and an amortized loan.</p>
+      </li>
+      <li>
+        <p>Find future balances and required regular deposits for savings annuities.</p>
+      </li>
+      <li>
+        <p>Find starting balances and regular withdrawals for payout annuities.</p>
+      </li>
+      <li>
+        <p>Calculate loan amounts, payments, total interest, and remaining balances.</p>
+      </li>
+      <li>
+        <p>Select an appropriate model from the cash flows described in a problem.</p>
+      </li>
+      <li>
+        <p>Use logarithms to find a savings period or loan payoff time.</p>
+      </li>
+    </ol>
+  </objectives>
+  <introduction>
+    <p>Complete the boxed definitions and examples during class. Keep full calculator precision in intermediate steps. Round final dollar amounts to the nearest cent unless a question requests a different rounding rule.</p>
+  </introduction>
+  <subsection xml:id="subsec-fin2-timing">
+    <title>Regular Payments and Timing</title>
+    <definition xml:id="def-fin2-annuity">
+      <title>Annuity</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+    <assemblage xml:id="form-fin2-assumptions">
+      <title>Payment Conventions for These Notes</title>
+      <p>Deposits, withdrawals, and loan payments occur at the <em>end</em> of each period. The first occurs one full period after the account or loan begins. This is the ordinary-annuity timing convention.</p>
+      <p>The annual rate is fixed. Compounding occurs as often as the regular deposits, withdrawals, or loan payments. When a problem does not separately state the compounding frequency, match it to the payment frequency.</p>
+      <p>The formulas model principal and interest. Other charges, taxes, and insurance are excluded.</p>
+      <p>Keep unrounded model values in follow-up calculations. A payment displayed to cents approximates the exact model payment; using rounded payments in a payment schedule may require a small adjustment to the last payment.</p>
+    </assemblage>
+    <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor" row-headers="yes">
+      <col width="25%" right="minor"/>
+      <col width="75%" right="minor"/>
+      <row header="yes" bottom="medium">
+        <cell>Symbol</cell>
+        <cell>Meaning</cell>
+      </row>
+      <row bottom="minor">
+        <cell>
+          <m>P_0</m>
+        </cell>
+        <cell>Starting balance or original loan principal</cell>
+      </row>
+      <row bottom="minor">
+        <cell>
+          <m>P_N</m>
+        </cell>
+        <cell>Account balance after <m>N</m> years</cell>
+      </row>
+      <row bottom="minor">
+        <cell>
+          <m>d</m>
+        </cell>
+        <cell>Regular deposit, withdrawal, or loan payment</cell>
+      </row>
+      <row bottom="minor">
+        <cell>
+          <m>r</m>
+        </cell>
+        <cell>Annual interest rate written as a decimal</cell>
+      </row>
+      <row bottom="minor">
+        <cell>
+          <m>k</m>
+        </cell>
+        <cell>Number of periods per year</cell>
+      </row>
+      <row bottom="minor">
+        <cell>
+          <m>N</m>
+        </cell>
+        <cell>Length of time in years</cell>
+      </row>
+      <row bottom="minor">
+        <cell>
+          <m>i=r/k</m>
+        </cell>
+        <cell>Interest rate per period</cell>
+      </row>
+      <row bottom="minor">
+        <cell>
+          <m>n=Nk</m>
+        </cell>
+        <cell>Total number of regular payments or deposits</cell>
+      </row>
+    </tabular>
+  </subsection>
+  <subsection xml:id="subsec-fin2-savings">
+    <title>Savings Annuities</title>
+    <definition xml:id="def-fin2-savings-annuity">
+      <title>Savings Annuity</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+    <example xml:id="ex-fin2-first-deposits">
+      <title>Building an Account One Deposit at a Time</title>
+      <statement>
+        <p>An account starts empty. At the end of each month, you deposit $100. The annual rate is 6%, compounded monthly.</p>
+        <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor" row-headers="yes">
+          <col width="12%" right="minor"/>
+          <col width="29%" right="minor"/>
+          <col width="29%" right="minor"/>
+          <col width="30%" right="minor"/>
+          <row header="yes" bottom="medium">
+            <cell>Month</cell>
+            <cell>Previous balance</cell>
+            <cell>After interest</cell>
+            <cell>After the deposit</cell>
+          </row>
+          <row bottom="minor">
+            <cell>1</cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>2</cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>3</cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+          </row>
+        </tabular>
+        <p xml:id="fin2-work-first-deposits">
+          <ol>
+            <li xml:id="fin2-work-first-deposits-item-1">
+              <p>Find the periodic rate and complete the table. Does the first deposit earn interest before the end of month 1?</p>
+            </li>
+            <li xml:id="fin2-work-first-deposits-item-2">
+              <p>If <m>B_j</m> is the balance just after deposit <m>j</m>, explain the rule <m>B_j=(1+i)B_{j-1}+d</m>, starting with <m>B_0=0</m>.</p>
+            </li>
+            <li xml:id="fin2-work-first-deposits-item-3">
+              <p>Let <m>q=1+i</m>. Explain why the balance after three deposits is <m>dq^2+dq+d</m>. After <m>n</m> deposits, how many periods of interest has the first deposit earned?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <assemblage xml:id="form-fin2-savings">
+      <title>Savings Annuity Formulas</title>
+      <p>
+        <m>P_N=d\frac{\left(1+\frac{r}{k}\right)^{Nk}-1}{r/k}</m>
+      </p>
+      <p>
+        <m>d=\frac{P_N(r/k)}{\left(1+\frac{r}{k}\right)^{Nk}-1}</m>
+      </p>
+      <p>For an account starting at zero, total deposits are <m>dNk</m>, and interest earned is <m>P_N-dNk</m>.</p>
+      <p>The final balance is measured immediately after the last deposit. Each deposit earns interest only after it has entered the account.</p>
+    </assemblage>
+    <example xml:id="ex-fin2-save-monthly">
+      <title>A Monthly Savings Plan</title>
+      <statement>
+        <p>You deposit $100 at the end of every month for 20 years in an account earning 6% annual interest compounded monthly. The starting balance is zero.</p>
+        <p xml:id="fin2-work-save-monthly">
+          <ol>
+            <li xml:id="fin2-work-save-monthly-item-1">
+              <p>Identify <m>d</m>, <m>r</m>, <m>k</m>, <m>N</m>, and the total number of deposits.</p>
+            </li>
+            <li xml:id="fin2-work-save-monthly-item-2">
+              <p>Find the balance immediately after the final deposit.</p>
+            </li>
+            <li xml:id="fin2-work-save-monthly-item-3">
+              <p>Find the total amount deposited and the interest earned. Why would treating $24,000 as a single deposit at time 0 give the wrong answer?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <example xml:id="ex-fin2-required-deposit">
+      <title>Solving for a Regular Deposit</title>
+      <statement>
+        <p>You want a savings account to contain $200,000 after 30 years. The account starts empty and earns 8% annual interest compounded monthly. Deposits are made at the end of each month.</p>
+        <p xml:id="fin2-work-required-deposit">
+          <ol>
+            <li xml:id="fin2-work-required-deposit-item-1">
+              <p>Set up an equation and solve for the model monthly deposit <m>d</m>. Report it to the nearest cent.</p>
+            </li>
+            <li xml:id="fin2-work-required-deposit-item-2">
+              <p>Using the unrounded model deposit, find total contributions and the interest earned over 30 years.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsec-fin2-payout">
+    <title>Payout Annuities</title>
+    <definition xml:id="def-fin2-payout-annuity">
+      <title>Payout Annuity</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+    <assemblage xml:id="form-fin2-payout">
+      <title>Payout Annuity Formulas</title>
+      <p>
+        <m>P_0=d\frac{1-\left(1+\frac{r}{k}\right)^{-Nk}}{r/k}</m>
+      </p>
+      <p>
+        <m>d=\frac{P_0(r/k)}{1-\left(1+\frac{r}{k}\right)^{-Nk}}</m>
+      </p>
+      <p>The account begins with <m>P_0</m>, earns interest, and makes equal withdrawals at period ends. These formulas assume the account reaches zero immediately after the last planned withdrawal.</p>
+      <p>Total withdrawals are <m>dNk</m>. Interest earned during the payout period is <m>dNk-P_0</m>.</p>
+    </assemblage>
+    <example xml:id="ex-fin2-retirement-principal">
+      <title>How Much Is Needed at the Start?</title>
+      <statement>
+        <p>You want to withdraw $1,000 at the end of every month for 20 years. The account earns 6% annual interest compounded monthly and is to be empty after the last withdrawal.</p>
+        <p xml:id="fin2-work-retirement-principal">
+          <ol>
+            <li xml:id="fin2-work-retirement-principal-item-1">
+              <p>Find the amount needed in the account before the withdrawal plan begins.</p>
+            </li>
+            <li xml:id="fin2-work-retirement-principal-item-2">
+              <p>Find the total withdrawn and the interest earned during the 20-year payout period.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <example xml:id="ex-fin2-monthly-withdrawal">
+      <title>How Much Can Be Withdrawn Each Month?</title>
+      <statement>
+        <p>An account starts with $500,000 and earns 8% annual interest compounded monthly. Equal withdrawals will be made at the end of each month for 30 years, leaving a zero balance.</p>
+        <p xml:id="fin2-work-monthly-withdrawal">
+          <ol>
+            <li xml:id="fin2-work-monthly-withdrawal-item-1">
+              <p>Find the model monthly withdrawal.</p>
+            </li>
+            <li xml:id="fin2-work-monthly-withdrawal-item-2">
+              <p>Compare your answer with $500,000 divided by the number of withdrawals. Why does interest change the amount available?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <example xml:id="ex-fin2-scholarships">
+      <title>Annual Scholarships</title>
+      <statement>
+        <p>A donor provides $100,000 for a scholarship fund earning 4% annual interest compounded annually. The university plans equal scholarship awards at the end of each year for 20 years, using up the fund.</p>
+        <p xml:id="fin2-work-scholarships">
+          <ol>
+            <li xml:id="fin2-work-scholarships-item-1">
+              <p>Find the model annual scholarship amount.</p>
+            </li>
+            <li xml:id="fin2-work-scholarships-item-2">
+              <p>If the university instead wanted to leave the principal unchanged and distribute only each year's interest, how much could it award annually in this fixed-rate model?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsec-fin2-loans">
+    <title>Amortized Loans</title>
+    <definition xml:id="def-fin2-amortized-loan">
+      <title>Amortized Loan</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+    <definition xml:id="def-fin2-amortization">
+      <title>Amortization</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+    <p>A payout annuity and an amortized loan use the same present-value relationship. For a loan, <m>P_0</m> is the amount borrowed and <m>d</m> is paid by the borrower. Interest is charged on the outstanding balance before each period-end payment.</p>
+    <assemblage xml:id="form-fin2-loan">
+      <title>Loan Amount and Payment</title>
+      <p>
+        <m>P_0=d\frac{1-\left(1+\frac{r}{k}\right)^{-Nk}}{r/k}</m>
+      </p>
+      <p>
+        <m>d=\frac{P_0(r/k)}{1-\left(1+\frac{r}{k}\right)^{-Nk}}</m>
+      </p>
+      <p>Total loan payments are <m>dNk</m>, and total interest paid is <m>dNk-P_0</m>. A down payment is separate from the amount borrowed.</p>
+      <p>These formulas describe fixed-rate loans repaid by equal period-end payments with a zero balance after the last payment.</p>
+    </assemblage>
+    <example xml:id="ex-fin2-car-budget">
+      <title>A Loan Amount from a Payment Budget</title>
+      <statement>
+        <p>You can pay $200 at the end of every month for 5 years on a loan charging 3% annual interest compounded monthly.</p>
+        <p xml:id="fin2-work-car-budget">
+          <ol>
+            <li xml:id="fin2-work-car-budget-item-1">
+              <p>Find the loan principal supported by this payment plan.</p>
+            </li>
+            <li xml:id="fin2-work-car-budget-item-2">
+              <p>Find the total payments and the total interest. If there is no down payment or additional charge, how does the loan principal relate to the purchase price?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <example xml:id="ex-fin2-mortgage">
+      <title>A Purchase Price, Down Payment, and Mortgage</title>
+      <statement>
+        <p>A home costs $200,000. The buyer pays 10% down and finances the rest with a 30-year loan at 4% annual interest compounded monthly. Payments are made at the end of each month.</p>
+        <p xml:id="fin2-work-mortgage">
+          <ol>
+            <li xml:id="fin2-work-mortgage-item-1">
+              <p>Find the down payment and the original loan principal.</p>
+            </li>
+            <li xml:id="fin2-work-mortgage-item-2">
+              <p>Find the monthly payment. Store the unrounded model payment for later calculations.</p>
+            </li>
+            <li xml:id="fin2-work-mortgage-item-3">
+              <p>Using that unrounded payment, find total loan payments and total interest over 30 years. Is the down payment part of the loan interest?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <p>If a rate of zero is specified, use the no-interest model instead of dividing by <m>r/k</m>: a savings balance is <m>dn</m>, and a loan payment is <m>P_0/n</m>.</p>
+  </subsection>
+  <subsection xml:id="subsec-fin2-loan-balances">
+    <title>Where Payments Go and What Is Still Owed</title>
+    <definition xml:id="def-fin2-outstanding-balance">
+      <title>Outstanding Loan Balance</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+    <assemblage xml:id="form-fin2-amortization">
+      <title>One Period of an Amortized Loan</title>
+      <p>If <m>B_{j-1}</m> is the balance immediately after the previous payment, interest in the next period is <m>iB_{j-1}</m>, where <m>i=r/k</m>.</p>
+      <p>Principal repaid by payment <m>j</m> is <m>d-iB_{j-1}</m>.</p>
+      <p>The new balance is <m>B_j=(1+i)B_{j-1}-d</m>.</p>
+    </assemblage>
+    <example xml:id="ex-fin2-amortization-table">
+      <title>The First Three Mortgage Payments</title>
+      <statement>
+        <p>Use the mortgage from <xref ref="ex-fin2-mortgage"/>. Retain the unrounded model payment when calculating the rows and display final monetary entries to cents.</p>
+        <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor" row-headers="yes">
+          <col width="12%" right="minor"/>
+          <col width="23%" right="minor"/>
+          <col width="19%" right="minor"/>
+          <col width="23%" right="minor"/>
+          <col width="23%" right="minor"/>
+          <row header="yes" bottom="medium">
+            <cell>Payment</cell>
+            <cell>Beginning balance</cell>
+            <cell>Interest</cell>
+            <cell>Principal repaid</cell>
+            <cell>Ending balance</cell>
+          </row>
+          <row bottom="minor">
+            <cell>1</cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>2</cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>3</cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+            <cell>
+              <fillin characters="7"/>
+            </cell>
+          </row>
+        </tabular>
+        <p xml:id="fin2-work-amortization">
+          <ol>
+            <li xml:id="fin2-work-amortization-item-1">
+              <p>Complete the first three rows. Which part of the payment reduces the debt?</p>
+            </li>
+            <li xml:id="fin2-work-amortization-item-2">
+              <p>Explain why the interest portion decreases and the principal portion increases as the outstanding balance falls.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <assemblage xml:id="form-fin2-remaining">
+      <title>Remaining Loan Balance</title>
+      <p>Let <m>n=Nk</m> be the original number of payments and <m>j</m> the number already made. Immediately after payment <m>j</m>,</p>
+      <p><m>B_j=d\frac{1-(1+i)^{-(n-j)}}{i},\qquad i=\frac{r}{k}</m>.</p>
+      <p>This is the present value of the remaining payments. Use the <em>remaining</em> number of payments in the exponent. The model assumes the original payment was chosen to amortize the original loan exactly.</p>
+    </assemblage>
+    <algorithm xml:id="alg-fin2-remaining">
+      <title>Finding a Remaining Balance</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>Find the original regular payment if it is not already given. Retain its unrounded value.</p>
+            </li>
+            <li>
+              <p>Determine how many payments have been made and how many remain.</p>
+            </li>
+            <li>
+              <p>Use the loan present-value formula with the regular payment and the remaining number of payments.</p>
+            </li>
+            <li>
+              <p>To analyze past payments, subtract the current balance from the original principal to find principal repaid. Subtract that principal reduction from total payments made to find interest paid so far.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+    <example xml:id="ex-fin2-after-five-years">
+      <title>What Is Owed After Five Years?</title>
+      <statement>
+        <p>Return to the mortgage in <xref ref="ex-fin2-mortgage"/>. Find values immediately after the 60th monthly payment, exactly 5 years after the loan began.</p>
+        <p xml:id="fin2-work-after-five">
+          <ol>
+            <li xml:id="fin2-work-after-five-item-1">
+              <p>How many payments remain? Find the outstanding balance using the unrounded original payment.</p>
+            </li>
+            <li xml:id="fin2-work-after-five-item-2">
+              <p>Find the amount by which the original principal has been reduced.</p>
+            </li>
+            <li xml:id="fin2-work-after-five-item-3">
+              <p>Find the total payments made during the first 5 years and the interest paid during those years.</p>
+            </li>
+            <li xml:id="fin2-work-after-five-item-4">
+              <p>Explain why subtracting 60 full payments directly from the original loan principal gives the wrong balance.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsec-fin2-model-selection">
+    <title>Choosing an Equation</title>
+    <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor" row-headers="yes">
+      <col width="43%" right="minor"/>
+      <col width="25%" right="minor"/>
+      <col width="32%" right="minor"/>
+      <row header="yes" bottom="medium">
+        <cell>Cash-flow pattern</cell>
+        <cell>Model</cell>
+        <cell>Typical unknown</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Interest is based only on original principal</cell>
+        <cell>Simple interest</cell>
+        <cell>Interest or total repayment</cell>
+      </row>
+      <row bottom="minor">
+        <cell>One deposit stays in the account</cell>
+        <cell>Compound interest</cell>
+        <cell>Future balance or initial deposit</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Equal deposits are added regularly</cell>
+        <cell>Savings annuity</cell>
+        <cell>Future balance or regular deposit</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Equal withdrawals use up an initial fund</cell>
+        <cell>Payout annuity</cell>
+        <cell>Initial fund or withdrawal</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Equal payments repay borrowed principal</cell>
+        <cell>Amortized loan</cell>
+        <cell>Loan amount, payment, or balance</cell>
+      </row>
+    </tabular>
+    <example xml:id="ex-fin2-mixed-models">
+      <title>Identify the Cash Flows Before Calculating</title>
+      <statement>
+        <p>For each scenario, identify the model and the unknown, write a substituted formula, and calculate the answer. All regular deposits and withdrawals occur at period ends.</p>
+        <p xml:id="fin2-work-mixed">
+          <ol>
+            <li xml:id="fin2-work-mixed-item-1">
+              <p>Marcy starts with $20,000 for college expenses. It earns 6% annual interest compounded quarterly. What equal quarterly withdrawal will use it up in 3 years?</p>
+            </li>
+            <li xml:id="fin2-work-mixed-item-2">
+              <p>Paul deposits $200 each month into an initially empty account earning 3% annual interest compounded monthly. What will the balance be after 3 years?</p>
+            </li>
+            <li xml:id="fin2-work-mixed-item-3">
+              <p>A nonprofit wants $30,000 in 6 years from one deposit earning 5% annual interest compounded annually. How much should it deposit now?</p>
+            </li>
+            <li xml:id="fin2-work-mixed-item-4">
+              <p>Miao can pay $100 monthly for 4 years on an equipment loan charging 2% annual interest compounded monthly. What loan amount does that support?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsec-fin2-time">
+    <title>Solving for Time with Logarithms</title>
+    <assemblage xml:id="form-fin2-savings-time">
+      <title>Time to Reach a Savings Goal</title>
+      <p>For a savings annuity starting at zero, <m>P_N=d\frac{(1+i)^{kN}-1}{i}</m>, where <m>i=r/k</m>.</p>
+      <p>Isolating the exponential term gives <m>(1+i)^{kN}=1+\frac{iP_N}{d}</m>.</p>
+      <p>Therefore <m>N=\frac{\log(1+iP_N/d)}{k\log(1+i)}</m>.</p>
+      <p>Deposits occur at whole period ends. Round <m>kN</m> up to determine the first deposit number that reaches the goal.</p>
+    </assemblage>
+    <example xml:id="ex-fin2-savings-time">
+      <title>When Will the Savings Goal Be Reached?</title>
+      <statement>
+        <p>An account starts empty. You deposit $100 at the end of each month, and it earns 3% annual interest compounded monthly. The goal is $10,000.</p>
+        <p xml:id="fin2-work-savings-time">
+          <ol>
+            <li xml:id="fin2-work-savings-time-item-1">
+              <p>Set up the annuity equation, isolate the exponential expression, and use logarithms to find the model time in years.</p>
+            </li>
+            <li xml:id="fin2-work-savings-time-item-2">
+              <p>Find the first whole deposit number at which the goal is reached. Check that deposit and the preceding one.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <assemblage xml:id="form-fin2-loan-time">
+      <title>Loan Payoff Time with a Fixed Payment</title>
+      <p>For an original balance <m>P_0</m> and a fixed period-end payment <m>d</m>, isolate <m>(1+i)^{-kN}=1-\frac{iP_0}{d}</m>.</p>
+      <p>Then <m>N=\frac{-\log(1-iP_0/d)}{k\log(1+i)}</m>.</p>
+      <p>For a positive rate, the payment must satisfy <m>d&gt;iP_0</m> to reduce the balance. A payment equal to the first period's interest leaves the balance unchanged; a smaller payment allows it to grow.</p>
+      <p>If the result is not a whole number of periods, use the next payment date. The final payment can be smaller than the regular payment.</p>
+    </assemblage>
+    <example xml:id="ex-fin2-loan-time">
+      <title>Paying Off a Purchase</title>
+      <statement>
+        <p>A fixed-rate loan starts at $1,000 and charges 12% annual interest compounded monthly. You pay $30 at each month end and make no new purchases or additional borrowing.</p>
+        <p xml:id="fin2-work-loan-time">
+          <ol>
+            <li xml:id="fin2-work-loan-time-item-1">
+              <p>Check that the payment exceeds the first month's interest.</p>
+            </li>
+            <li xml:id="fin2-work-loan-time-item-2">
+              <p>Use logarithms to find the model number of months and years. On which monthly payment date will the debt be paid off?</p>
+            </li>
+            <li xml:id="fin2-work-loan-time-item-3">
+              <p>Use the balance recurrence to explain why the final payment is smaller than $30.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsec-fin2-practice">
+    <title>Practice and a Two-Stage Plan</title>
+    <example xml:id="ex-fin2-practice">
+      <title>Practice with the Payment Models</title>
+      <statement>
+        <p xml:id="fin2-work-practice">
+          <ol>
+            <li xml:id="fin2-work-practice-item-1">
+              <p>An initially empty account receives $5 at the end of every day for 10 years and earns 3% annual interest compounded daily. Use 365 days per year. Find the final balance, total deposits, and interest earned.</p>
+            </li>
+            <li xml:id="fin2-work-practice-item-2">
+              <p>A $3,000 furniture loan charges 16% annual interest compounded monthly and is repaid over 2 years. Find the monthly payment and model total interest.</p>
+            </li>
+            <li xml:id="fin2-work-practice-item-3">
+              <p>A loan charges 6% annual interest compounded monthly and has payments of $1,000 per month. Find the outstanding balance immediately after a payment when exactly 10 years of payments remain.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <example xml:id="ex-fin2-two-stage">
+      <title>Saving First and Withdrawing Later</title>
+      <statement>
+        <p>Kendra will save at each year end for 35 years, then withdraw $60,000 at each year end for 30 years after retirement. The account earns a fixed 7% annual rate, compounded annually, during both stages. The first retirement withdrawal occurs one year after the final savings deposit.</p>
+        <p xml:id="fin2-work-two-stage">
+          <ol>
+            <li xml:id="fin2-work-two-stage-item-1">
+              <p>Use a payout annuity to find the balance needed at retirement.</p>
+            </li>
+            <li xml:id="fin2-work-two-stage-item-2">
+              <p>Use that retirement balance as the future-value goal for a savings annuity. Find the required equal annual saving during the first 35 years.</p>
+            </li>
+            <li xml:id="fin2-work-two-stage-item-3">
+              <p>Explain why the end of the savings stage and the beginning of the payout stage refer to the same balance at the same time.</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <conclusion>
+    <p>Adapted from David Lippman, <em>Math in Society</em>, <q>Finance,</q> supplied chapter, printed pages 204-219, with selected exercises from pages 222-225. The chapter is marked Creative Commons BY-SA; these adapted notes are shared under the same license. Explanations and exercises were reorganized, and numerical answers were recomputed without early rounding.</p>
+  </conclusion>
+</section>

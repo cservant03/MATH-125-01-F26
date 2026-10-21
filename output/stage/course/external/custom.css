@@ -548,3 +548,41 @@ a.mathjax-link {
 #ex-st-table-network ol > li {
   padding-bottom: 0.7in;
 }
+
+/* ---------- Scheduling ---------- */
+
+#def-sch-digraph {
+  padding-bottom: 0.7in;
+}
+
+#def-sch-processor {
+  padding-bottom: 0.7in;
+}
+
+#def-sch-ready-task {
+  padding-bottom: 0.7in;
+}
+
+#ex-sch-workshop-model ol > li {
+  padding-bottom: 1.5in;
+}
+
+#def-sch-finishing-time {
+  padding-bottom: 0.7in;
+}
+
+#def-sch-optimal-schedule {
+  padding-bottom: 0.7in;
+}
+
+#def-sch-idle-time {
+  padding-bottom: 0.7in;
+}
+
+#ex-sch-read-schedule{
+  padding-bottom: 1.5in;
+}
+
+#def-sch-priority-list{
+  padding-bottom: 0.7in;
+}

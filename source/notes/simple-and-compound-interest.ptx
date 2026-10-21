@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section xml:id="sec-simple-and-compound-interest">
+  <title>Simple and Compound Interest</title>
+  <objectives>
+    <title>Learning Outcomes</title>
+    <ol>
+      <li>
+        <p>Identify principal, interest, and the time period associated with an interest rate.</p>
+      </li>
+      <li>
+        <p>Calculate simple interest and total repayment, matching rate and time units.</p>
+      </li>
+      <li>
+        <p>Calculate compound interest using the stated compounding frequency.</p>
+      </li>
+      <li>
+        <p>Find present value and compare simple growth with compound growth.</p>
+      </li>
+    </ol>
+  </objectives>
+
+  <subsection xml:id="subsec-fin1-simple">
+    <title>Simple Interest</title>
+
+    <definition xml:id="def-fin1-simple-interest">
+      <title>Simple Interest</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-fin1-one-time">
+      <title>A One-Time Interest Charge</title>
+
+      <statement>
+        <p>A friend borrows $300 for 30 days and agrees to pay 3% anual interest. Find the interest charged and the total amount repaid.</p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-fin1-months">
+      <title>Simple Interest for Part of a Year</title>
+      <statement>
+        <p>A $2,400 investment earns 5.5% annual simple interest for 9 months. Find the final worth of the investment after the 9 months.</p>
+      </statement>
+    </example>
+    
+    <example xml:id="ex-fin1-find-rate">
+      <title>Working Backward to a Rate</title>
+      <statement>
+        <p>A lender charges $30 interest on a $500 loan for one month. Find the anual interest rate.</p>
+      </statement>
+    </example>
+  </subsection>
+  
+  <subsection xml:id="subsec-fin1-compound">
+    <title>Compound Interest</title>
+
+    <definition xml:id="def-fin1-compound-interest">
+      <title>Compound Interest</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <p>When interest remains in the account, the next interest calculation uses the new balance. The starting amount for each period can therefore change even though no new money is deposited.</p>
+    <tabular halign="left" valign="middle" top="minor" bottom="minor" left="minor" right="minor" row-headers="yes">
+      <col width="68%" right="minor"/>
+      <col width="32%" right="minor"/>
+      <row header="yes" bottom="medium">
+        <cell>Compounding frequency</cell>
+        <cell>Periods per year, <m>k</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell>Annually</cell>
+        <cell>1</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Semiannually</cell>
+        <cell>2</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Quarterly</cell>
+        <cell>4</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Monthly</cell>
+        <cell>12</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Weekly</cell>
+        <cell>52</cell>
+      </row>
+      <row bottom="minor">
+        <cell>Daily</cell>
+        <cell>365 or 360</cell>
+      </row>
+    </tabular>
+
+    <example xml:id="ex-fin1-cd">
+      <title>A Single Deposit Grows</title>
+      <statement>
+        <p>You deposit $3,000 into an account paying 6% annual interest compounded monthly and leave it for 20 years. Find the interest earned.</p>
+      </statement>
+    </example>
+    
+    <example xml:id="ex-fin1-present-value">
+      <title>Funding a Future Goal</title>
+      <statement>
+        <p>You want an account to contain $40,000 in 18 years. It earns 4% annual interest compounded quarterly, and you will make only one deposit. Estimate how much must be deposited now. Find the interest earned between the initial deposit and the future goal.</p>
+      </statement>
+    </example>
+
+  </subsection>
+
+  <subsection xml:id="subsec-fin1-practice">
+    <title>Practice and Model Selection</title>
+
+    <example xml:id="ex-fin1-practice">
+      <title>Choose the Formula and Show the Setup</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>You deposit $2,000 at 3% annual interest compounded monthly for 20 years. Find the ending balance and the interest earned.</p>
+            </li>
+            <li>
+              <p>How much should be deposited now to have about $6,000 in 8 years at 6% annual interest compounded monthly?</p>
+            </li>
+            <li>
+              <p>A 13-week note costs $9,800 and pays $10,000 at maturity. Find the annual simple interest rate.</p>
+            </li>
+            <li>
+              <p>An investment of $2,000 grows to $3,000 in 2 years with annual compounding. Solve for the annual interest rate.</p>
+            </li>
+            <li>
+              <p>Why is the compound interest formula insufficient by itself for an account receiving a new $100 deposit every month?</p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>
