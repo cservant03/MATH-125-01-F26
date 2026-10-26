@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Annuities and Loans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends decimal; prefix: ''; suffix: ') '; }
+@counter-style ptx-marker-0 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<link rel="stylesheet" type="text/css" href="external/custom.css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Contemporary Mathematics">
+<meta property="og:title" content="Contemporary Mathematics">
+<meta property="book:title" content="Contemporary Mathematics">
+<meta name="twitter:description" content="MATH 125 01 Fall 2026">
+<meta property="og:description" content="MATH 125 01 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.6';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Contemporary Mathematics</span> <span class="subtitle">MATH 125 01 Fall 2026</span></a></div>
+<p class="byline">Christopher</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-simple-and-compound-interest.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#instructor-info" class="internal"><span class="title">Instructor Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-desc" class="internal"><span class="title">Course Description</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-materials" class="internal"><span class="title">Course Matrials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#online-course-comp" class="internal"><span class="title">Online Course Component</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#course-outcomes" class="internal"><span class="title">Course Outcomes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#eval" class="internal"><span class="title">Evaluatation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#grade" class="internal"><span class="title">Grading</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#tips" class="internal"><span class="title">Tips for Success</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#academic-integrity" class="internal"><span class="title">Academic Integrity Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#withdrawal-policy" class="internal"><span class="title">Withdrawal Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#important-dates" class="internal"><span class="title">Important Dates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#disability-statement" class="internal"><span class="title">Disability Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#nondiscrimination-statement" class="internal"><span class="title">Non-Discrimination Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#land-acknowledgment" class="internal"><span class="title">Land Acknowledgment Statement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#tentative-syllabus" class="internal"><span class="title">Tentative Syllabus</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="tutor-verification-third-attempt.html" class="internal"><span class="title">Tutoring Verification for Third Attempt</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Notes</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-course-notes">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics-of-voting.html" class="internal"><span class="title">Basics of Voting</span></a></div>
+<ul id="ptx-toc-group-basics-of-voting" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#preference-ballots-schedules" class="internal"><span class="title">Preference Ballots and Preference Schedules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#majority-voting-basics" class="internal"><span class="title">Majority</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#pairwise-comparisons-condorcet" class="internal"><span class="title">Pairwise Comparisons and Condorcet Winners</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#fairness-criteria" class="internal"><span class="title">Fairness Criteria</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-voting.html#basics-voting-mixed-examples" class="internal"><span class="title">Additional Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="choice-based-voting-methods.html" class="internal"><span class="title">Choice-based Voting Methods</span></a></div>
+<ul id="ptx-toc-group-choice-based-voting-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#plurality-voting-method" class="internal"><span class="title">Plurality Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#instant-runoff-voting-method" class="internal"><span class="title">Instant Runoff Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#approval-voting-method" class="internal"><span class="title">Approval Voting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="choice-based-voting-methods.html#choice-methods-comparison" class="internal"><span class="title">Comparing Choice-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ranked-based-voting-methods.html" class="internal"><span class="title">Ranked-Based Voting Methods</span></a></div>
+<ul id="ptx-toc-group-ranked-based-voting-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#borda-count-method" class="internal"><span class="title">Borda Count</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#copeland-pairwise-comparison-method" class="internal"><span class="title">Copeland’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ranked-based-voting-methods.html#ranked-methods-comparison" class="internal"><span class="title">Comparing Ranked-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="weighted-voting-and-power.html" class="internal"><span class="title">Weighted Voting and Power</span></a></div>
+<ul id="ptx-toc-group-weighted-voting-and-power" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="weighted-voting-and-power.html#weighted-voting-systems" class="internal"><span class="title">Weighted Voting Systems</span></a></div>
+<ul id="ptx-toc-group-weighted-voting-systems" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#weighted-voting-quota-limits" class="internal"><span class="title">Limits on the Quota</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#special-players-weighted-voting" class="internal"><span class="title">Dictators, Veto Power, and Dummies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#coalitions-critical-players" class="internal"><span class="title">Coalitions and Critical Players</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="weighted-voting-and-power.html#banzhaf-power-index" class="internal"><span class="title">The Banzhaf Power Index</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics-of-apportionment.html" class="internal"><span class="title">Basics of Apportionment</span></a></div>
+<ul id="ptx-toc-group-basics-of-apportionment" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#apportionment-problem-rules" class="internal"><span class="title">The Apportionment Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#standard-divisor-and-quotas" class="internal"><span class="title">Standard Divisor and Standard Quotas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics-of-apportionment.html#quota-rule-apportionment" class="internal"><span class="title">The Quota Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="quota-based-apportionment-methods.html" class="internal"><span class="title">Quota-Based Apportionment Methods</span></a></div>
+<ul id="ptx-toc-group-quota-based-apportionment-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#hamilton-apportionment-method" class="internal"><span class="title">Hamilton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#hamilton-apportionment-paradoxes" class="internal"><span class="title">Paradoxes of Hamilton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quota-based-apportionment-methods.html#lowndes-apportionment-method" class="internal"><span class="title">Lowndes’ Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="divisor-based-apportionment-methods.html" class="internal"><span class="title">Divisor-Based Apportionment Methods</span></a></div>
+<ul id="ptx-toc-group-divisor-based-apportionment-methods" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#jefferson-apportionment-method" class="internal"><span class="title">Jefferson’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#webster-apportionment-method" class="internal"><span class="title">Webster’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#huntington-hill-apportionment-method" class="internal"><span class="title">Huntington-Hill Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="divisor-based-apportionment-methods.html#compare-divisor-apportionment-methods" class="internal"><span class="title">Comparing the Divisor-Based Methods</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html" class="internal"><span class="title">Graphs and Shortest Paths</span></a></div>
+<ul id="ptx-toc-group-sec-graphs-vocabulary-representations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-core-graph-vocabulary" class="internal"><span class="title">Core Vocabulary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-real-situation-to-graph" class="internal"><span class="title">From a Real Situation to a Graph</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-reading-a-graph" class="internal"><span class="title">Reading a Graph</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-weighted-graphs-shortest-paths" class="internal"><span class="title">Weighted Graphs and Shortest Paths</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-dijkstra-algorithm" class="internal"><span class="title">Dijkstra’s Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#subsec-shortest-paths-table" class="internal"><span class="title">Shortest Paths from a Table</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-graphs-vocabulary-representations.html#sec-graphs-vocabulary-representations-9" class="internal"><span class="title">Check Your Understanding</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html" class="internal"><span class="title">Euler and Hamiltonian Circuits</span></a></div>
+<ul id="ptx-toc-group-sec-euler-hamiltonian-paths-circuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-euler-vocabulary" class="internal"><span class="title">Every edge or every vertex?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-euler-tests" class="internal"><span class="title">Recognizing Euler routes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-fleury" class="internal"><span class="title">Finding an Euler route</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-eulerization" class="internal"><span class="title">When some edges must be repeated</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-hamilton-vocabulary" class="internal"><span class="title">Hamiltonian paths and circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-tsp-brute-force" class="internal"><span class="title">Finding a least-weight tour</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-nearest-neighbor" class="internal"><span class="title">Counting tours and using heuristics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-euler-hamiltonian-paths-circuits.html#subsec-eh-sorted-edges" class="internal"><span class="title">Choosing the cheapest eligible edges</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-spanning-trees.html" class="internal"><span class="title">Spanning Trees</span></a></div>
+<ul id="ptx-toc-group-sec-spanning-trees" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-spanning-trees.html#subsec-st-vocabulary" class="internal"><span class="title">Connecting a network</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-spanning-trees.html#subsec-st-recognize-and-kruskal" class="internal"><span class="title">Recognizing and choosing a spanning tree</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-spanning-trees.html#subsec-st-kruskal-example" class="internal"><span class="title">Practice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-scheduling.html" class="internal"><span class="title">Scheduling</span></a></div>
+<ul id="ptx-toc-group-sec-scheduling" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-scheduling.html#subsec-sch-model" class="internal"><span class="title">Modeling tasks and prerequisites</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-scheduling.html#subsec-sch-schedule" class="internal"><span class="title">Schedules, Finishing Time, and Idle Time</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-scheduling.html#subsec-sch-list-processing" class="internal"><span class="title">Using a Priority List</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-scheduling.html#subsec-sch-decreasing-time" class="internal"><span class="title">The Decreasing Time Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-scheduling.html#subsec-sch-practice" class="internal"><span class="title">Practice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-simple-and-compound-interest.html" class="internal"><span class="title">Simple and Compound Interest</span></a></div>
+<ul id="ptx-toc-group-sec-simple-and-compound-interest" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple-and-compound-interest.html#subsec-fin1-simple" class="internal"><span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple-and-compound-interest.html#subsec-fin1-compound" class="internal"><span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple-and-compound-interest.html#subsec-fin1-practice" class="internal"><span class="title">Practice and Model Selection</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-annuities-and-loans.html" class="internal"><span class="title">Annuities and Loans</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-sec-annuities-and-loans">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-annuities-and-loans.html#subsec-fin2-savings" class="internal"><span class="title">Ordinary Savings Annuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-annuities-and-loans.html#subsec-fin2-payout" class="internal"><span class="title">Payout Annuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-annuities-and-loans.html#subsec-fin2-loans" class="internal"><span class="title">Loans</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-annuities-and-loans.html#subsec-fin2-model-selection" class="internal"><span class="title">Choosing the Correct Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-annuities-and-loans.html#subsec-fin2-multistage" class="internal"><span class="title">Multistage Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-annuities-and-loans">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Annuities and Loans</span>
+</h1>
+<article class="objectives goal-like" id="sec-annuities-and-loans-2"><h2 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Learning Outcomes</span>
+</h2>
+<ol class="decimal" id="sec-annuities-and-loans-2-2">
+<li id="sec-annuities-and-loans-2-2-1">
+<div class="para" id="sec-annuities-and-loans-2-2-1-1">Use ordinary-annuity formulas to find future balances, regular deposits, and interest earned.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 1"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-1" title="Copy heading and permalink for Objective 1" aria-label="Copy heading and permalink for Objective 1">🔗</a></div>
+</li>
+<li id="sec-annuities-and-loans-2-2-2">
+<div class="para" id="sec-annuities-and-loans-2-2-2-1">Find the remaining balance, initial investment, or regular withdrawal for a payout annuity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 2"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-2" title="Copy heading and permalink for Objective 2" aria-label="Copy heading and permalink for Objective 2">🔗</a></div>
+</li>
+<li id="sec-annuities-and-loans-2-2-3">
+<div class="para" id="sec-annuities-and-loans-2-2-3-1">Find loan payments, remaining debt, borrowing amounts, and interest paid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 3"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-3" title="Copy heading and permalink for Objective 3" aria-label="Copy heading and permalink for Objective 3">🔗</a></div>
+</li>
+<li id="sec-annuities-and-loans-2-2-4">
+<div class="para" id="sec-annuities-and-loans-2-2-4-1">Choose a finance model from the pattern of deposits, withdrawals, or payments.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 4"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-4" title="Copy heading and permalink for Objective 4" aria-label="Copy heading and permalink for Objective 4">🔗</a></div>
+</li>
+<li id="sec-annuities-and-loans-2-2-5">
+<div class="para" id="sec-annuities-and-loans-2-2-5-1">Connect the ending balance of one stage to the starting balance of the next.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective 5"><a tabindex="-1" href="#sec-annuities-and-loans-2-2-5" title="Copy heading and permalink for Objective 5" aria-label="Copy heading and permalink for Objective 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Objectives: Learning Outcomes"><a tabindex="-1" href="#sec-annuities-and-loans-2" title="Copy heading and permalink for Objectives: Learning Outcomes" aria-label="Copy heading and permalink for Objectives: Learning Outcomes">🔗</a></div>
+</article>
+<section class="subsection" id="subsec-fin2-savings">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ordinary Savings Annuities</span>
+</h2>
+<article class="definition definition-like" id="def-fin2-savings-annuity"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">215</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ordinary Savings Annuity.</span>
+</h3>
+<div class="para" id="def-fin2-savings-annuity-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-fin2-savings-annuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 215: Ordinary Savings Annuity"><a tabindex="-1" href="#def-fin2-savings-annuity" title="Copy heading and permalink for Definition 215: Ordinary Savings Annuity" aria-label="Copy heading and permalink for Definition 215: Ordinary Savings Annuity">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-01"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">216</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Final Amount: Monthly Deposits.</span>
+</h3>
+<div class="para" id="ex-fin2-01-2-1">You deposit $150 at the end of each month for 6 years. The account earns 4.8% annual interest compounded monthly. How much will be in the account after the final deposit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-01-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 216: Final Amount: Monthly Deposits"><a tabindex="-1" href="#ex-fin2-01" title="Copy heading and permalink for Example 216: Final Amount: Monthly Deposits" aria-label="Copy heading and permalink for Example 216: Final Amount: Monthly Deposits">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-02"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">217</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Final Amount: Quarterly Deposits.</span>
+</h3>
+<div class="para" id="ex-fin2-02-2-1">You deposit $600 at the end of each quarter into an account earning 5% annual interest compounded quarterly. You continue for 12 years. What will the final account balance be?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-02-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 217: Final Amount: Quarterly Deposits"><a tabindex="-1" href="#ex-fin2-02" title="Copy heading and permalink for Example 217: Final Amount: Quarterly Deposits" aria-label="Copy heading and permalink for Example 217: Final Amount: Quarterly Deposits">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-03"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">218</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interest Earned on Regular Savings.</span>
+</h3>
+<div class="para" id="ex-fin2-03-2-1">You deposit $200 at the end of every month for 15 years into an account earning 6% annual interest compounded monthly. Find the final account balance and the total amount deposited. How much interest did the account earn?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-03-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 218: Interest Earned on Regular Savings"><a tabindex="-1" href="#ex-fin2-03" title="Copy heading and permalink for Example 218: Interest Earned on Regular Savings" aria-label="Copy heading and permalink for Example 218: Interest Earned on Regular Savings">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-04"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">219</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Regular Investment: A Savings Goal.</span>
+</h3>
+<div class="para" id="ex-fin2-04-2-1">You want $20,000 in 5 years. An account earns 4.5% annual interest compounded monthly. You will make equal deposits at the end of every month. Find the monthly deposit that will reach the goal.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-04-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 219: Regular Investment: A Savings Goal"><a tabindex="-1" href="#ex-fin2-04" title="Copy heading and permalink for Example 219: Regular Investment: A Savings Goal" aria-label="Copy heading and permalink for Example 219: Regular Investment: A Savings Goal">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-05"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">220</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Regular Investment: Quarterly Saving.</span>
+</h3>
+<div class="para" id="ex-fin2-05-2-1">A community organization wants to accumulate $75,000 in 10 years. Its account earns 4% annual interest compounded quarterly, and receives equal deposits at the end of each quarter. Find the required quarterly deposit so that the organization meets its goal.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-05-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 220: Regular Investment: Quarterly Saving"><a tabindex="-1" href="#ex-fin2-05" title="Copy heading and permalink for Example 220: Regular Investment: Quarterly Saving" aria-label="Copy heading and permalink for Example 220: Regular Investment: Quarterly Saving">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Ordinary Savings Annuities"><a tabindex="-1" href="#subsec-fin2-savings" title="Copy heading and permalink for Subsection: Ordinary Savings Annuities" aria-label="Copy heading and permalink for Subsection: Ordinary Savings Annuities">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-fin2-payout">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Payout Annuities</span>
+</h2>
+<article class="definition definition-like" id="def-fin2-payout-annuity"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">221</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Payout Annuity.</span>
+</h3>
+<div class="para" id="def-fin2-payout-annuity-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-fin2-payout-annuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 221: Payout Annuity"><a tabindex="-1" href="#def-fin2-payout-annuity" title="Copy heading and permalink for Definition 221: Payout Annuity" aria-label="Copy heading and permalink for Definition 221: Payout Annuity">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-06"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">222</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Final Amount: Monthly Withdrawals.</span>
+</h3>
+<div class="para" id="ex-fin2-06-2-1">How much must a fund begin with if it earns 4.8% annual interest compounded monthly, and you plan to withdraw $1,000 at the end of every month for 5 years.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-06-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 222: Final Amount: Monthly Withdrawals"><a tabindex="-1" href="#ex-fin2-06" title="Copy heading and permalink for Example 222: Final Amount: Monthly Withdrawals" aria-label="Copy heading and permalink for Example 222: Final Amount: Monthly Withdrawals">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-07"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">223</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Final Amount: Annual Scholarships.</span>
+</h3>
+<div class="para" id="ex-fin2-07-2-1">A scholarship fund that earns 5% annual interest compounded annually pays out $5,000 in scholarships at the end of each year for 8 years. How much must the fund start with for this to be achievable?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-07-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 223: Final Amount: Annual Scholarships"><a tabindex="-1" href="#ex-fin2-07" title="Copy heading and permalink for Example 223: Final Amount: Annual Scholarships" aria-label="Copy heading and permalink for Example 223: Final Amount: Annual Scholarships">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-08"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">224</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Amount That Can Be Withdrawn Each Month.</span>
+</h3>
+<div class="para" id="ex-fin2-08-2-1">You have $180,000 in an account earning 4.2% annual interest compounded monthly. Equal withdrawals are made at the end of every month for 20 years, leaving a zero balance. Find the monthly withdrawal, and compare it with the amount obtained by dividing $180,000 by the number of withdrawals without allowing for interest.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-08-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 224: Amount That Can Be Withdrawn Each Month"><a tabindex="-1" href="#ex-fin2-08" title="Copy heading and permalink for Example 224: Amount That Can Be Withdrawn Each Month" aria-label="Copy heading and permalink for Example 224: Amount That Can Be Withdrawn Each Month">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Payout Annuities"><a tabindex="-1" href="#subsec-fin2-payout" title="Copy heading and permalink for Subsection: Payout Annuities" aria-label="Copy heading and permalink for Subsection: Payout Annuities">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-fin2-loans">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Loans</span>
+</h2>
+<article class="definition definition-like" id="def-fin2-amortized-loan"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">225</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Loan.</span>
+</h3>
+<div class="para" id="def-fin2-amortized-loan-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-fin2-amortized-loan-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 225: Loan"><a tabindex="-1" href="#def-fin2-amortized-loan" title="Copy heading and permalink for Definition 225: Loan" aria-label="Copy heading and permalink for Definition 225: Loan">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-09"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">226</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interest Paid on a Loan.</span>
+</h3>
+<div class="para" id="ex-fin2-09-2-1">You borrow $24,000 for 5 years at 5.4% annual interest compounded monthly. The loan is repaid by equal payments at the end of each month. Find the monthly payment. Using its unrounded value, determine the total amount repaid and the total interest paid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-09-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 226: Interest Paid on a Loan"><a tabindex="-1" href="#ex-fin2-09" title="Copy heading and permalink for Example 226: Interest Paid on a Loan" aria-label="Copy heading and permalink for Example 226: Interest Paid on a Loan">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-10"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">227</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Amount Borrowed: A Monthly Budget.</span>
+</h3>
+<div class="para" id="ex-fin2-10-2-1">You can afford loan payments of $350 at the end of each month for 5 years. The lender charges 7.2% annual interest compounded monthly. What loan amount does this payment budget support?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 227: Amount Borrowed: A Monthly Budget"><a tabindex="-1" href="#ex-fin2-10" title="Copy heading and permalink for Example 227: Amount Borrowed: A Monthly Budget" aria-label="Copy heading and permalink for Example 227: Amount Borrowed: A Monthly Budget">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-11"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">228</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Amount Borrowed: A Mortgage Budget.</span>
+</h3>
+<div class="para" id="ex-fin2-11-2-1">A buyer can pay $1,600 per month toward mortgage principal and interest. The mortgage will last 20 years at 5.1% annual interest compounded monthly, with payments at the end of each month. Find the amount the buyer can borrow. If the buyer also has a $30,000 down payment, what purchase price does this support? Ignore other costs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 228: Amount Borrowed: A Mortgage Budget"><a tabindex="-1" href="#ex-fin2-11" title="Copy heading and permalink for Example 228: Amount Borrowed: A Mortgage Budget" aria-label="Copy heading and permalink for Example 228: Amount Borrowed: A Mortgage Budget">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Loans"><a tabindex="-1" href="#subsec-fin2-loans" title="Copy heading and permalink for Subsection: Loans" aria-label="Copy heading and permalink for Subsection: Loans">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-fin2-model-selection">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choosing the Correct Model</span>
+</h2>
+<div class="para" id="subsec-fin2-model-selection-2">Choose the model based on how money enters or leaves the account and how interest is calculated.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-fin2-model-selection-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r2 l2 t2 lines">Model</th>
+<th scope="col" class="l m b2 r2 l0 t2 lines">When to use it</th>
+<th scope="col" class="l m b2 r2 l0 t2 lines">Formula</th>
+</tr>
+<tr>
+<th scope="row" class="l m b2 r2 l2 t0 lines">Simple interest</th>
+<td class="l m b2 r2 l0 t0 lines">Interest only on deposit.</td>
+<td class="l m b2 r2 l0 t0" style="max-width:300px;">
+<div class="para" id="subsec-fin2-model-selection-3-5-3-1">
+<span class="process-math">\(A=P(1+rt)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-fin2-model-selection-3-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="l m b2 r2 l2 t0 lines">Compound interest</th>
+<td class="l m b2 r2 l0 t0 lines">One deposit.</td>
+<td class="l m b2 r2 l0 t0" style="max-width:300px;">
+<div class="para" id="subsec-fin2-model-selection-3-6-3-1">
+<span class="process-math">\(A=P\left(1+\frac{r}{n}\right)^{nt}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-fin2-model-selection-3-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="l m b2 r2 l2 t0 lines">Annuity</th>
+<td class="l m b2 r2 l0 t0 lines">Many deposits</td>
+<td class="l m b2 r2 l0 t0" style="max-width:300px;">
+<div class="para" id="subsec-fin2-model-selection-3-7-3-1">
+<span class="process-math">\(P=\dfrac{d\left(\left(1+\frac{r}{n}\right)^{nt}-1\right)}{\frac{r}{n}}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-fin2-model-selection-3-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="l m b2 r2 l2 t0 lines">Payout annuity</th>
+<td class="l m b2 r2 l0 t0 lines">Many withdrawals</td>
+<td class="l m b2 r2 l0 t0" style="max-width:300px;">
+<div class="para" id="subsec-fin2-model-selection-3-8-3-1">
+<span class="process-math">\(A=\dfrac{w\left(1-\left(1+\frac{r}{n}\right)^{-nt}\right)}{\frac{r}{n}}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-fin2-model-selection-3-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="l m b2 r2 l2 t0 lines">Loan</th>
+<td class="l m b2 r2 l0 t0 lines">Many payments</td>
+<td class="l m b2 r2 l0 t0" style="max-width:300px;">
+<div class="para" id="subsec-fin2-model-selection-3-9-3-1">
+<span class="process-math">\(A=\dfrac{l\left(1-\left(1+\frac{r}{n}\right)^{-nt}\right)}{\frac{r}{n}}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-fin2-model-selection-3-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+</tr>
+</table></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection: Choosing the Correct Model"><a tabindex="-1" href="#subsec-fin2-model-selection" title="Copy heading and permalink for Subsection: Choosing the Correct Model" aria-label="Copy heading and permalink for Subsection: Choosing the Correct Model">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-fin2-multistage">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multistage Problems</span>
+</h2>
+<article class="example example-like" id="ex-fin2-12"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">229</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Save, Let It Grow, Then Withdraw.</span>
+</h3>
+<div class="para" id="ex-fin2-12-2-1">You deposit $300 at the end of each month for 25 years into an account earning 6% annual interest compounded monthly. Immediately after the last deposit, the annual rate changes to 5%, compounded monthly. You make no deposits or withdrawals for the next 5 years. The annual rate then changes to 4%, compounded monthly. You begin equal monthly withdrawals and want the account to last exactly 20 more years. Find the balance after the 25-year savings stage and the balance after the 5-year growth-only stage. Then determine the monthly withdrawal that uses up the account over the final 20 years.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 229: Save, Let It Grow, Then Withdraw"><a tabindex="-1" href="#ex-fin2-12" title="Copy heading and permalink for Example 229: Save, Let It Grow, Then Withdraw" aria-label="Copy heading and permalink for Example 229: Save, Let It Grow, Then Withdraw">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-13"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">230</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Save for a Down Payment, Then Borrow.</span>
+</h3>
+<div class="para" id="ex-fin2-13-2-1">You place $3,500 in an investment that earns 4% annual simple interest for 2 years. At the same time, you deposit $150 at the end of every month for 2 years into a separate earning 4.8% annual interest compounded monthly. After 2 years, you use both balances as the down payment on a $32,000 car. You finance the rest for 5 years at 6% annual interest compounded monthly. Find the balance in each savings account and the total down payment. Then determine the amount borrowed, the monthly loan payment, and the total interest paid on the loan.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 230: Save for a Down Payment, Then Borrow"><a tabindex="-1" href="#ex-fin2-13" title="Copy heading and permalink for Example 230: Save for a Down Payment, Then Borrow" aria-label="Copy heading and permalink for Example 230: Save for a Down Payment, Then Borrow">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-fin2-14"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">231</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Work Backward from Future Education Expenses.</span>
+</h3>
+<div class="para" id="ex-fin2-14-2-1">A 15-year savings period begins today. After that savings period ends, a fund must provide four withdrawals of $20,000 at the end of each of the next four years. During those four years, it earns 4% annual interest compounded annually and is exhausted by the final withdrawal. You already have $8,000 to invest today. During the 15-year savings period, the account earns 5% annual interest compounded monthly, and you also make equal deposits at the end of every month. Find the balance needed at the end of the 15-year savings period. Determine how much the current $8,000 will grow to during those 15 years, and use that amount to find the additional monthly deposit needed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-fin2-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 231: Work Backward from Future Education Expenses"><a tabindex="-1" href="#ex-fin2-14" title="Copy heading and permalink for Example 231: Work Backward from Future Education Expenses" aria-label="Copy heading and permalink for Example 231: Work Backward from Future Education Expenses">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Multistage Problems"><a tabindex="-1" href="#subsec-fin2-multistage" title="Copy heading and permalink for Subsection: Multistage Problems" aria-label="Copy heading and permalink for Subsection: Multistage Problems">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section: Annuities and Loans"><a tabindex="-1" href="#sec-annuities-and-loans" title="Copy heading and permalink for Section: Annuities and Loans" aria-label="Copy heading and permalink for Section: Annuities and Loans">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-simple-and-compound-interest.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" alt="Runestone Academy logo" src="data:image/png;base64,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"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" alt="MathJax logo" src="data:image/png;base64,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"></a>
+</div>
+</body>
+</html>
