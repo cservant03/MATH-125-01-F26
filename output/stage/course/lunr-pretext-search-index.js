@@ -1763,6 +1763,96 @@ var ptx_lunr_docs = [
   "number": "206",
   "title": "Scheduling from a Given Priority List.",
   "body": " Scheduling from a Given Priority List   Use two processors for the tasks below. Durations in parentheses are measured in hours.   Directed task graph with durations in hours: T1 takes 4, T2 takes 3, T3 takes 5, T4 takes 6, T5 takes 2, T6 takes 3, and T7 takes 4. T1, T2, and T3 have no prerequisites. T4 requires T1 and T2. T5 requires T2 and T3. T6 requires T4 and T5. T7 requires T5. These are all the arrows. Every prerequisite must finish before a task begins.   Use the priority list .     Which tasks are ready at time 0? Which task is assigned to each processor initially?    Apply the list processing algorithm to complete the schedule. Label every task with its start and finish times, and mark idle time.   Blank processor schedule with rows P1 and P2 and time from 0 to 20 hours. Each vertical division is 1 hour, with numerical labels at 0, 2, 4, and so on through 20.     Find the project finishing time and the total idle time for each processor, measured from time 0 through project completion.    At time 5, why must an available processor wait even though some tasks have not yet been started?      "
+},
+{
+  "id": "sec-simple-and-compound-interest",
+  "level": "1",
+  "url": "sec-simple-and-compound-interest.html",
+  "type": "Section",
+  "number": "",
+  "title": "Simple and Compound Interest",
+  "body": " Simple and Compound Interest   Learning Outcomes    Identify principal, interest, and the time period associated with an interest rate.    Calculate simple interest and total repayment, matching rate and time units.    Calculate compound interest using the stated compounding frequency.    Find present value and compare simple growth with compound growth.      Simple Interest   Simple Interest        A One-Time Interest Charge   A friend borrows $300 for 30 days and agrees to pay 3% anual interest. Find the interest charged and the total amount repaid.     Simple Interest for Part of a Year   A $2,400 investment earns 5.5% annual simple interest for 9 months. Find the final worth of the investment after the 9 months.     Working Backward to a Rate   A lender charges $30 interest on a $500 loan for one month. Find the anual interest rate.      Compound Interest   Compound Interest       When interest remains in the account, the next interest calculation uses the new balance. The starting amount for each period can therefore change even though no new money is deposited.      Compounding frequency  Periods per year,    Annually  1    Semiannually  2    Quarterly  4    Monthly  12    Weekly  52    Daily  365 or 360     A Single Deposit Grows   You deposit $3,000 into an account paying 6% annual interest compounded monthly and leave it for 20 years. Find the interest earned.     Funding a Future Goal   You want an account to contain $40,000 in 18 years. It earns 4% annual interest compounded quarterly, and you will make only one deposit. Estimate how much must be deposited now. Find the interest earned between the initial deposit and the future goal.      Practice and Model Selection   Choose the Formula and Show the Setup      You deposit $2,000 at 3% annual interest compounded monthly for 20 years. Find the ending balance and the interest earned.    How much should be deposited now to have about $6,000 in 8 years at 6% annual interest compounded monthly?    A 13-week note costs $9,800 and pays $10,000 at maturity. Find the annual simple interest rate.    An investment of $2,000 grows to $3,000 in 2 years with annual compounding. Solve for the annual interest rate.    Why is the compound interest formula insufficient by itself for an account receiving a new $100 deposit every month?        "
+},
+{
+  "id": "sec-simple-and-compound-interest-2",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#sec-simple-and-compound-interest-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "Learning Outcomes",
+  "body": " Learning Outcomes    Identify principal, interest, and the time period associated with an interest rate.    Calculate simple interest and total repayment, matching rate and time units.    Calculate compound interest using the stated compounding frequency.    Find present value and compare simple growth with compound growth.    "
+},
+{
+  "id": "def-fin1-simple-interest",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#def-fin1-simple-interest",
+  "type": "Definition",
+  "number": "207",
+  "title": "Simple Interest.",
+  "body": " Simple Interest      "
+},
+{
+  "id": "ex-fin1-one-time",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#ex-fin1-one-time",
+  "type": "Example",
+  "number": "208",
+  "title": "A One-Time Interest Charge.",
+  "body": " A One-Time Interest Charge   A friend borrows $300 for 30 days and agrees to pay 3% anual interest. Find the interest charged and the total amount repaid.   "
+},
+{
+  "id": "ex-fin1-months",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#ex-fin1-months",
+  "type": "Example",
+  "number": "209",
+  "title": "Simple Interest for Part of a Year.",
+  "body": " Simple Interest for Part of a Year   A $2,400 investment earns 5.5% annual simple interest for 9 months. Find the final worth of the investment after the 9 months.   "
+},
+{
+  "id": "ex-fin1-find-rate",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#ex-fin1-find-rate",
+  "type": "Example",
+  "number": "210",
+  "title": "Working Backward to a Rate.",
+  "body": " Working Backward to a Rate   A lender charges $30 interest on a $500 loan for one month. Find the anual interest rate.   "
+},
+{
+  "id": "def-fin1-compound-interest",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#def-fin1-compound-interest",
+  "type": "Definition",
+  "number": "211",
+  "title": "Compound Interest.",
+  "body": " Compound Interest      "
+},
+{
+  "id": "ex-fin1-cd",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#ex-fin1-cd",
+  "type": "Example",
+  "number": "212",
+  "title": "A Single Deposit Grows.",
+  "body": " A Single Deposit Grows   You deposit $3,000 into an account paying 6% annual interest compounded monthly and leave it for 20 years. Find the interest earned.   "
+},
+{
+  "id": "ex-fin1-present-value",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#ex-fin1-present-value",
+  "type": "Example",
+  "number": "213",
+  "title": "Funding a Future Goal.",
+  "body": " Funding a Future Goal   You want an account to contain $40,000 in 18 years. It earns 4% annual interest compounded quarterly, and you will make only one deposit. Estimate how much must be deposited now. Find the interest earned between the initial deposit and the future goal.   "
+},
+{
+  "id": "ex-fin1-practice",
+  "level": "2",
+  "url": "sec-simple-and-compound-interest.html#ex-fin1-practice",
+  "type": "Example",
+  "number": "214",
+  "title": "Choose the Formula and Show the Setup.",
+  "body": " Choose the Formula and Show the Setup      You deposit $2,000 at 3% annual interest compounded monthly for 20 years. Find the ending balance and the interest earned.    How much should be deposited now to have about $6,000 in 8 years at 6% annual interest compounded monthly?    A 13-week note costs $9,800 and pays $10,000 at maturity. Find the annual simple interest rate.    An investment of $2,000 grows to $3,000 in 2 years with annual compounding. Solve for the annual interest rate.    Why is the compound interest formula insufficient by itself for an account receiving a new $100 deposit every month?      "
 }
 ]
 

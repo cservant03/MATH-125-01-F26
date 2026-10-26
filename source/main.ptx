@@ -33,6 +33,7 @@
       <xi:include href="./notes/spanning-trees.ptx"/>
       <xi:include href="./notes/scheduling.ptx"/>
       <xi:include href="./notes/simple-and-compound-interest.ptx"/>
+      <xi:include href="./notes/annuities-and-loans.ptx"/>
     </chapter>
 
     </book>

@@ -586,3 +586,37 @@ a.mathjax-link {
 #def-sch-priority-list{
   padding-bottom: 0.7in;
 }
+
+/* ---------- Simple and Compound Interest ---------- */
+
+#def-fin1-simple-interest{
+  padding-bottom: 1.2in;
+}
+
+#ex-fin1-one-time{
+  padding-bottom: 1.2in;
+}
+
+#ex-fin1-months{
+  padding-bottom: 1.2in;
+}
+
+#ex-fin1-find-rate{
+  padding-bottom: 1.2in;
+}
+
+#def-fin1-compound-interest{
+  padding-bottom: 1.2in;
+}
+
+#ex-fin1-cd{
+  padding-bottom: 2in;
+}
+
+#ex-fin1-present-value{
+  padding-bottom: 2in;
+}
+
+#ex-fin1-practice ol > li {
+  padding-bottom: 1in;
+}
