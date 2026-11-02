@@ -1853,6 +1853,177 @@ var ptx_lunr_docs = [
   "number": "214",
   "title": "Choose the Formula and Show the Setup.",
   "body": " Choose the Formula and Show the Setup      You deposit $2,000 at 3% annual interest compounded monthly for 20 years. Find the ending balance and the interest earned.    How much should be deposited now to have about $6,000 in 8 years at 6% annual interest compounded monthly?    A 13-week note costs $9,800 and pays $10,000 at maturity. Find the annual simple interest rate.    An investment of $2,000 grows to $3,000 in 2 years with annual compounding. Solve for the annual interest rate.    Why is the compound interest formula insufficient by itself for an account receiving a new $100 deposit every month?      "
+},
+{
+  "id": "sec-annuities-and-loans",
+  "level": "1",
+  "url": "sec-annuities-and-loans.html",
+  "type": "Section",
+  "number": "",
+  "title": "Annuities and Loans",
+  "body": " Annuities and Loans   Learning Outcomes    Use ordinary-annuity formulas to find future balances, regular deposits, and interest earned.    Find the remaining balance, initial investment, or regular withdrawal for a payout annuity.    Find loan payments, remaining debt, borrowing amounts, and interest paid.    Choose a finance model from the pattern of deposits, withdrawals, or payments.    Connect the ending balance of one stage to the starting balance of the next.      Ordinary Savings Annuities   Ordinary Savings Annuity        Final Amount: Monthly Deposits   You deposit $150 at the end of each month for 6 years. The account earns 4.8% annual interest compounded monthly. How much will be in the account after the final deposit?     Final Amount: Quarterly Deposits   You deposit $600 at the end of each quarter into an account earning 5% annual interest compounded quarterly. You continue for 12 years. What will the final account balance be?     Interest Earned on Regular Savings   You deposit $200 at the end of every month for 15 years into an account earning 6% annual interest compounded monthly. Find the final account balance and the total amount deposited. How much interest did the account earn?     Regular Investment: A Savings Goal   You want $20,000 in 5 years. An account earns 4.5% annual interest compounded monthly. You will make equal deposits at the end of every month. Find the monthly deposit that will reach the goal.     Regular Investment: Quarterly Saving   A community organization wants to accumulate $75,000 in 10 years. Its account earns 4% annual interest compounded quarterly, and receives equal deposits at the end of each quarter. Find the required quarterly deposit so that the organization meets its goal.      Payout Annuities   Payout Annuity        Final Amount: Monthly Withdrawals   How much must a fund begin with if it earns 4.8% annual interest compounded monthly, and you plan to withdraw $1,000 at the end of every month for 5 years.     Final Amount: Annual Scholarships   A scholarship fund that earns 5% annual interest compounded annually pays out $5,000 in scholarships at the end of each year for 8 years. How much must the fund start with for this to be achievable?     Amount That Can Be Withdrawn Each Month   You have $180,000 in an account earning 4.2% annual interest compounded monthly. Equal withdrawals are made at the end of every month for 20 years, leaving a zero balance. Find the monthly withdrawal, and compare it with the amount obtained by dividing $180,000 by the number of withdrawals without allowing for interest.      Loans   Loan        Interest Paid on a Loan   You borrow $24,000 for 5 years at 5.4% annual interest compounded monthly. The loan is repaid by equal payments at the end of each month. Find the monthly payment. Using its unrounded value, determine the total amount repaid and the total interest paid.     Amount Borrowed: A Monthly Budget   You can afford loan payments of $350 at the end of each month for 5 years. The lender charges 7.2% annual interest compounded monthly. What loan amount does this payment budget support?     Amount Borrowed: A Mortgage Budget   A buyer can pay $1,600 per month toward mortgage principal and interest. The mortgage will last 20 years at 5.1% annual interest compounded monthly, with payments at the end of each month. Find the amount the buyer can borrow. If the buyer also has a $30,000 down payment, what purchase price does this support? Ignore other costs.      Choosing the Correct Model  Choose the model based on how money enters or leaves the account and how interest is calculated.       Model  When to use it  Formula    Simple interest  Interest only on deposit.         Compound interest  One deposit.         Annuity  Many deposits         Payout annuity  Many withdrawals         Loan  Many payments           Multistage Problems   Save, Let It Grow, Then Withdraw   You deposit $300 at the end of each month for 25 years into an account earning 6% annual interest compounded monthly. Immediately after the last deposit, the annual rate changes to 5%, compounded monthly. You make no deposits or withdrawals for the next 5 years. The annual rate then changes to 4%, compounded monthly. You begin equal monthly withdrawals and want the account to last exactly 20 more years. Find the balance after the 25-year savings stage and the balance after the 5-year growth-only stage. Then determine the monthly withdrawal that uses up the account over the final 20 years.     Save for a Down Payment, Then Borrow   You place $3,500 in an investment that earns 4% annual simple interest for 2 years. At the same time, you deposit $150 at the end of every month for 2 years into a separate earning 4.8% annual interest compounded monthly. After 2 years, you use both balances as the down payment on a $32,000 car. You finance the rest for 5 years at 6% annual interest compounded monthly. Find the balance in each savings account and the total down payment. Then determine the amount borrowed, the monthly loan payment, and the total interest paid on the loan.     Work Backward from Future Education Expenses   A 15-year savings period begins today. After that savings period ends, a fund must provide four withdrawals of $20,000 at the end of each of the next four years. During those four years, it earns 4% annual interest compounded annually and is exhausted by the final withdrawal. You already have $8,000 to invest today. During the 15-year savings period, the account earns 5% annual interest compounded monthly, and you also make equal deposits at the end of every month. Find the balance needed at the end of the 15-year savings period. Determine how much the current $8,000 will grow to during those 15 years, and use that amount to find the additional monthly deposit needed.     "
+},
+{
+  "id": "sec-annuities-and-loans-2",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#sec-annuities-and-loans-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "Learning Outcomes",
+  "body": " Learning Outcomes    Use ordinary-annuity formulas to find future balances, regular deposits, and interest earned.    Find the remaining balance, initial investment, or regular withdrawal for a payout annuity.    Find loan payments, remaining debt, borrowing amounts, and interest paid.    Choose a finance model from the pattern of deposits, withdrawals, or payments.    Connect the ending balance of one stage to the starting balance of the next.    "
+},
+{
+  "id": "def-fin2-savings-annuity",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#def-fin2-savings-annuity",
+  "type": "Definition",
+  "number": "215",
+  "title": "Ordinary Savings Annuity.",
+  "body": " Ordinary Savings Annuity      "
+},
+{
+  "id": "ex-fin2-01",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-01",
+  "type": "Example",
+  "number": "216",
+  "title": "Final Amount: Monthly Deposits.",
+  "body": " Final Amount: Monthly Deposits   You deposit $150 at the end of each month for 6 years. The account earns 4.8% annual interest compounded monthly. How much will be in the account after the final deposit?   "
+},
+{
+  "id": "ex-fin2-02",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-02",
+  "type": "Example",
+  "number": "217",
+  "title": "Final Amount: Quarterly Deposits.",
+  "body": " Final Amount: Quarterly Deposits   You deposit $600 at the end of each quarter into an account earning 5% annual interest compounded quarterly. You continue for 12 years. What will the final account balance be?   "
+},
+{
+  "id": "ex-fin2-03",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-03",
+  "type": "Example",
+  "number": "218",
+  "title": "Interest Earned on Regular Savings.",
+  "body": " Interest Earned on Regular Savings   You deposit $200 at the end of every month for 15 years into an account earning 6% annual interest compounded monthly. Find the final account balance and the total amount deposited. How much interest did the account earn?   "
+},
+{
+  "id": "ex-fin2-04",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-04",
+  "type": "Example",
+  "number": "219",
+  "title": "Regular Investment: A Savings Goal.",
+  "body": " Regular Investment: A Savings Goal   You want $20,000 in 5 years. An account earns 4.5% annual interest compounded monthly. You will make equal deposits at the end of every month. Find the monthly deposit that will reach the goal.   "
+},
+{
+  "id": "ex-fin2-05",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-05",
+  "type": "Example",
+  "number": "220",
+  "title": "Regular Investment: Quarterly Saving.",
+  "body": " Regular Investment: Quarterly Saving   A community organization wants to accumulate $75,000 in 10 years. Its account earns 4% annual interest compounded quarterly, and receives equal deposits at the end of each quarter. Find the required quarterly deposit so that the organization meets its goal.   "
+},
+{
+  "id": "def-fin2-payout-annuity",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#def-fin2-payout-annuity",
+  "type": "Definition",
+  "number": "221",
+  "title": "Payout Annuity.",
+  "body": " Payout Annuity      "
+},
+{
+  "id": "ex-fin2-06",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-06",
+  "type": "Example",
+  "number": "222",
+  "title": "Final Amount: Monthly Withdrawals.",
+  "body": " Final Amount: Monthly Withdrawals   How much must a fund begin with if it earns 4.8% annual interest compounded monthly, and you plan to withdraw $1,000 at the end of every month for 5 years.   "
+},
+{
+  "id": "ex-fin2-07",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-07",
+  "type": "Example",
+  "number": "223",
+  "title": "Final Amount: Annual Scholarships.",
+  "body": " Final Amount: Annual Scholarships   A scholarship fund that earns 5% annual interest compounded annually pays out $5,000 in scholarships at the end of each year for 8 years. How much must the fund start with for this to be achievable?   "
+},
+{
+  "id": "ex-fin2-08",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-08",
+  "type": "Example",
+  "number": "224",
+  "title": "Amount That Can Be Withdrawn Each Month.",
+  "body": " Amount That Can Be Withdrawn Each Month   You have $180,000 in an account earning 4.2% annual interest compounded monthly. Equal withdrawals are made at the end of every month for 20 years, leaving a zero balance. Find the monthly withdrawal, and compare it with the amount obtained by dividing $180,000 by the number of withdrawals without allowing for interest.   "
+},
+{
+  "id": "def-fin2-amortized-loan",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#def-fin2-amortized-loan",
+  "type": "Definition",
+  "number": "225",
+  "title": "Loan.",
+  "body": " Loan      "
+},
+{
+  "id": "ex-fin2-09",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-09",
+  "type": "Example",
+  "number": "226",
+  "title": "Interest Paid on a Loan.",
+  "body": " Interest Paid on a Loan   You borrow $24,000 for 5 years at 5.4% annual interest compounded monthly. The loan is repaid by equal payments at the end of each month. Find the monthly payment. Using its unrounded value, determine the total amount repaid and the total interest paid.   "
+},
+{
+  "id": "ex-fin2-10",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-10",
+  "type": "Example",
+  "number": "227",
+  "title": "Amount Borrowed: A Monthly Budget.",
+  "body": " Amount Borrowed: A Monthly Budget   You can afford loan payments of $350 at the end of each month for 5 years. The lender charges 7.2% annual interest compounded monthly. What loan amount does this payment budget support?   "
+},
+{
+  "id": "ex-fin2-11",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-11",
+  "type": "Example",
+  "number": "228",
+  "title": "Amount Borrowed: A Mortgage Budget.",
+  "body": " Amount Borrowed: A Mortgage Budget   A buyer can pay $1,600 per month toward mortgage principal and interest. The mortgage will last 20 years at 5.1% annual interest compounded monthly, with payments at the end of each month. Find the amount the buyer can borrow. If the buyer also has a $30,000 down payment, what purchase price does this support? Ignore other costs.   "
+},
+{
+  "id": "ex-fin2-12",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-12",
+  "type": "Example",
+  "number": "229",
+  "title": "Save, Let It Grow, Then Withdraw.",
+  "body": " Save, Let It Grow, Then Withdraw   You deposit $300 at the end of each month for 25 years into an account earning 6% annual interest compounded monthly. Immediately after the last deposit, the annual rate changes to 5%, compounded monthly. You make no deposits or withdrawals for the next 5 years. The annual rate then changes to 4%, compounded monthly. You begin equal monthly withdrawals and want the account to last exactly 20 more years. Find the balance after the 25-year savings stage and the balance after the 5-year growth-only stage. Then determine the monthly withdrawal that uses up the account over the final 20 years.   "
+},
+{
+  "id": "ex-fin2-13",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-13",
+  "type": "Example",
+  "number": "230",
+  "title": "Save for a Down Payment, Then Borrow.",
+  "body": " Save for a Down Payment, Then Borrow   You place $3,500 in an investment that earns 4% annual simple interest for 2 years. At the same time, you deposit $150 at the end of every month for 2 years into a separate earning 4.8% annual interest compounded monthly. After 2 years, you use both balances as the down payment on a $32,000 car. You finance the rest for 5 years at 6% annual interest compounded monthly. Find the balance in each savings account and the total down payment. Then determine the amount borrowed, the monthly loan payment, and the total interest paid on the loan.   "
+},
+{
+  "id": "ex-fin2-14",
+  "level": "2",
+  "url": "sec-annuities-and-loans.html#ex-fin2-14",
+  "type": "Example",
+  "number": "231",
+  "title": "Work Backward from Future Education Expenses.",
+  "body": " Work Backward from Future Education Expenses   A 15-year savings period begins today. After that savings period ends, a fund must provide four withdrawals of $20,000 at the end of each of the next four years. During those four years, it earns 4% annual interest compounded annually and is exhausted by the final withdrawal. You already have $8,000 to invest today. During the 15-year savings period, the account earns 5% annual interest compounded monthly, and you also make equal deposits at the end of every month. Find the balance needed at the end of the 15-year savings period. Determine how much the current $8,000 will grow to during those 15 years, and use that amount to find the additional monthly deposit needed.   "
 }
 ]
 

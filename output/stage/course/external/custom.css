@@ -620,3 +620,78 @@ a.mathjax-link {
 #ex-fin1-practice ol > li {
   padding-bottom: 1in;
 }
+
+/* ---------- Annuities and Loans ---------- */
+
+#def-fin2-savings-annuity{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-01{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-02{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-03{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-04{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-05{
+  padding-bottom: 1.5in;
+}
+
+#def-fin2-payout-annuity{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-06{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-07{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-08{
+  padding-bottom: 1.5in;
+}
+
+#def-fin2-amortized-loan{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-09{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-10{
+  padding-bottom: 1.5in;
+}
+
+#ex-fin2-11{
+  padding-bottom: 1.5in;
+}
+
+#subsec-fin2-multistage {
+  break-before: page;
+  page-break-before: always;
+}
+
+#ex-fin2-12{
+  padding-bottom: 6in;
+}
+
+#ex-fin2-13{
+  padding-bottom: 6.2in;
+}
+
+#ex-fin2-14{
+  padding-bottom: 6in;
+}

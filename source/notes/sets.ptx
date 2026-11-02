@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section xml:id="sets">
+  <title>Sets</title>
+
+  <introduction>
+    <p>Sets help us describe groups, compare their members, and interpret survey results. In this section, we will represent sets with words, symbols, and Venn diagrams, then count how many objects belong to different combinations of sets.</p>
+  </introduction>
+
+  <subsection xml:id="sets-basics">
+    <title>Sets and Elements</title>
+
+    <definition xml:id="sets-def-sets">
+      <title>Sets</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sets-def-elements">
+      <title>Elements</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+
+    <assemblage>
+      <title>Basic Set Notation</title>
+      <sidebyside widths="47% 47%" valigns="top top">
+        <stack>
+          <p>
+            <m>x\in A</m>: <m>x</m> is an element of <m>A</m>.</p>
+          <p>
+            <m>x\notin A</m>: <m>x</m> is not an element of <m>A</m>.</p>
+        </stack>
+        <stack>
+          <p>
+            <m>\varnothing=\{\}</m>: the <term>empty set</term>, which has no elements.</p>
+          <p>
+            <m>A=B</m>: the sets have exactly the same elements.</p>
+        </stack>
+      </sidebyside>
+    </assemblage>
+
+    <p>Order does not matter, and repeated entries do not create additional elements. Thus <m>\{1,2,3\}=\{3,1,2\}=\{1,1,2,3\}</m>.</p>
+    <p>The phrase <q>well-defined</q> means that we can determine whether an object belongs to the set. For example, <q>the students enrolled in MATH 125 this semester</q> is well-defined. The description <q>the most interesting students</q> is subjective.</p>
+
+    <example xml:id="sets-ex-des-sets">
+      <title>Describing Sets</title>
+      <statement>
+        <p>Write each set in roster notation or describe it in words, as requested.</p>
+        <p><ol marker="a)">
+          <li>
+            <p>List the distinct letters in the word MATHEMATICS.</p>
+          </li>
+          <li>
+            <p>List the positive multiples of four that are less than twenty.</p>
+          </li>
+          <li>
+            <p>Describe the set <m>\{a,e,i,o,u\}</m> in words.</p>
+          </li>
+        </ol></p>
+      </statement>
+    </example>
+
+    <example xml:id="sets-ex-mem-eq">
+      <title>Membership and Equality</title>
+
+      <statement>
+        <p>Let <m>A=\{2,4,6,8\}</m>. Determine whether each statement is true or false, and explain.</p>
+        <p><ol marker="a)" cols = "2">
+          <li>
+            <p>
+              <m>4\in A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>5\notin A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\{4\}\in A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A=\{8,6,4,2,2\}</m>
+            </p>
+          </li>
+        </ol></p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sets-subsets">
+    <title>Subsets and Universal Sets</title>
+
+    <definition xml:id="sets-def-subset">
+      <title>Subsets</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <p>Every set is a subset of itself, <m>A\subseteq A</m>. The empty set is a subset of every set, <m>\varnothing\subseteq A</m>.</p>
+    <p>Use <m>\in</m> to compare an element within a set. Use <m>\subseteq</m> to compare two different sets. For example, <m>2\in\{1,2,3\}</m>, while <m>\{2\}\subseteq\{1,2,3\}</m>.</p>
+
+    <example xml:id="sets-ex-rec-subsets">
+      <title>Recognizing Subsets</title>
+
+      <statement>
+        <p>Let <m>A=\{1,2,3,4,5,6\}</m>, <m>B=\{2,4,6\}</m>, <m>C=\{2,3,7\}</m>, and <m>D=\{6,5,4,3,2,1\}</m>. Determine whether each statement is true or false, and explain.</p>
+        <ol marker="a)" cols = "2">
+          <li>
+            <p>
+              <m>B\subseteq A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B\subsetneq A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>C\subseteq A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\subseteq D</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\subsetneq D</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\varnothing\subsetneq B</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+
+    <definition xml:id="sets-def-universe">
+      <title>Universal Set</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+  </subsection>
+
+  <subsection xml:id="sets-operations">
+    <title>Union, Intersection, and Complement</title>
+
+    <definition xml:id="sets-def-union">
+      <title>Union</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sets-def-intersection">
+      <title>Intersection</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sets-def-complement">
+      <title>Complement</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sets-def-diff">
+      <title>Set Difference</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sets-def-disjoint">
+      <title>Disjoint</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="sets-ex-set-comp">
+      <title>Computing Set Operations</title>
+      <statement>
+        <p>Use the universal set and subsets below.</p>
+        <p><md>U=\{1,2,3,4,5,6,7,8,9,10,11,12\}</md></p>
+        <p><md>A=\{2,4,6,8,10,12\},\qquad B=\{3,6,9,12\}, \qquad C=\{1,5,7,11\}</md></p>
+        <p>List the elements of each set.</p>
+        <ol marker="a)" cols = "2">
+          <li>
+            <p>
+              <m>A\cup B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\cap B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B^c\cap A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\cap C</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A \setminus B</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+
+    <p>When several operations appear together, begin with the grouping symbols. In these notes, we will use parentheses whenever an order could be unclear.</p>
+    <example xml:id="sets-ex-comb-set-ops">
+      <title>Combining Set Operations</title>
+      <statement>
+        <p>Use the sets <m>U</m>, <m>A</m>, <m>B</m>, and <m>C</m> from <xref ref="sets-ex-set-comp"/>. List the elements of each set.</p>
+        <ol marker="a)">
+          <li>
+            <p>
+              <m>(A\cap B)\cup C</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\cap(B\cup C)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(A\cup B)^c</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+
+    <example xml:id="sets-ex-words">
+      <title>Translating Words into Symbols</title>
+      <statement>
+        <p>Among a group of students, let <m>W</m> be those who attended a study workshop and <m>T</m> be those who attended tutoring. Write a set expression for each group.</p>
+        <ol marker="a)">
+          <li>
+            <p>Students who attended a workshop or tutoring, including those who attended both.</p>
+          </li>
+          <li>
+            <p>Students who attended a workshop but did not attend tutoring.</p>
+          </li>
+          <li>
+            <p>Students who attended neither a workshop nor tutoring.</p>
+          </li>
+          <li>
+            <p>Students who attended exactly one of the two types of support.</p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sets-venn">
+    <title>Venn Diagrams</title>
+
+    <definition xml:id="sets-def-venn">
+      <title>Venn Diagram</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <figure>
+      <caption>The four regions of a two-set Venn diagram.</caption>
+      <image source="images/sets-two-regions.png" width="50%">
+        <description>A rectangle labeled U contains overlapping circles A and B. The left-only region is labeled A only, the overlap Both, the right-only region B only, and the region outside both circles Neither.</description>
+      </image>
+    </figure>
+
+    <sidebyside widths="47% 47%" valigns="top top">
+      <figure>
+        <caption>
+          <m>A\cup B</m></caption>
+        <image source="images/sets-two-union.png" width="75%">
+          <description>Both circles A and B, including their overlap, are shaded. The region outside both is unshaded.</description>
+        </image>
+      </figure>
+      <figure>
+        <caption>
+          <m>A\cap B</m></caption>
+        <image source="images/sets-two-intersection.png" width="75%">
+          <description>Only the overlap of circles A and B is shaded.</description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <sidebyside widths="47% 47%" valigns="top top">
+      <figure>
+        <caption>
+          <m>A^c</m></caption>
+        <image source="images/sets-two-complement.png" width="75%">
+          <description>Everything in the universal rectangle outside circle A is shaded, including the portion of B outside A. All of circle A is unshaded.</description>
+        </image>
+      </figure>
+      <figure>
+        <caption>
+          <m>A^c\cap B</m></caption>
+        <image source="images/sets-two-b-only.png" width="75%">
+          <description>Only the portion of circle B outside circle A is shaded.</description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <example xml:id="sets-ex-shading">
+      <title>Shading Two-Set Diagrams</title>
+      <statement>
+        <p>Shade each expression on its diagram.</p>
+        <sidebyside widths="47% 47%" valigns="top top">
+          <figure>
+            <caption>
+              <m>A\cap B^c</m>
+            </caption>
+            <image source="images/sets-two-blank.png" width="65%">
+              <description>An unshaded two-set Venn diagram with circles A and B inside U.</description>
+            </image>
+          </figure>
+          <figure>
+            <caption>
+              <m>(A\cup B)^c</m>
+            </caption>
+            <image source="images/sets-two-blank.png" width="65%">
+              <description>An unshaded two-set Venn diagram with circles A and B inside U.</description>
+            </image>
+          </figure>
+        </sidebyside>
+      </statement>
+    </example>
+
+    <p>With three sets, the center belongs to all three sets. An intersection such as <m>A\cap B</m> includes that center unless the problem specifically excludes <m>C</m>.</p>
+
+    <example xml:id="sets-ex-read-shading">
+      <title>Reading a Shaded Three-Set Diagram</title>
+      <statement>
+        <p>Write a set expression for the shaded region and describe it in words.</p>
+        <figure>
+          <caption>Describe the shaded region.</caption>
+          <image source="images/sets-three-ab-outside-c.png" width="50%">
+            <description>Three overlapping circles A, B, and C lie inside U. Every part of A or B that lies outside C is shaded. No part of C or of the region outside all three circles is shaded.</description>
+          </image>
+        </figure>
+      </statement>
+    </example>
+
+    <example xml:id="sets-ex-shade-three-set">
+      <title>Shading a Three-Set Expression</title>
+      <statement>
+        <p>Shade <m>(A\cap B)^c\cap C</m>, and describe the result in words.</p>
+        <figure>
+          <caption>Use all parts of each circle when interpreting an intersection.</caption>
+          <image source="images/sets-three-blank.png" width="40%">
+            <description>An unshaded three-set Venn diagram with circles A, B, and C inside U.</description>
+          </image>
+        </figure>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sets-cardinality">
+    <title>Cardinality and Two-Set Counting</title>
+
+    <definition xml:id="sets-def-cardinality">
+      <title>Cardinality</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="sets-ex-count">
+      <title>Counting Listed Elements</title>
+      <statement>
+        <p>Let <m>U=\{1,2,3,4,5,6,7,8,9,10\}</m>, <m>A=\{1,2,3,4,5,6\}</m>, and <m>B=\{2,4,6,8\}</m>. Find each cardinality.</p>
+        <ol marker="a)" cols="2">
+          <li>
+            <p>
+              <m>n(A)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>n(B)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>n(A\cup B)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>n(A\cap B)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>n(A^c)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>n(A \setminus B)</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+    
+    <example xml:id="sets-example-11">
+      <title>A Two-Club Survey</title>
+      <statement>
+        <p>A survey of 80 students found that 46 belong to an art club, 35 belong to a book club, and 18 belong to both. Let <m>A</m> be the art-club members and <m>B</m> be the book-club members. Complete a Venn diagram, then answer each question.</p>
+        <figure>
+          <caption>Record a count in each of the four regions.</caption>
+          <image source="images/sets-two-blank.png" width="40%">
+            <description>An unfilled two-set Venn diagram with A for art club and B for book club.</description>
+          </image>
+        </figure>
+        <ol marker="a)" cols="2">
+          <li>
+            <p>How many students belong to at least one club?</p>
+          </li>
+          <li>
+            <p>How many belong to neither club?</p>
+          </li>
+          <li>
+            <p>How many belong to the art club only?</p>
+          </li>
+          <li>
+            <p>How many belong to exactly one of the clubs?</p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+
+    <example xml:id="sets-example-12">
+      <title>Finding an Unknown Overlap</title>
+      <statement>
+        <p>Of 100 households surveyed, 61 subscribe to service S, 47 subscribe to service T, and 82 subscribe to at least one of these services.</p>
+        <ol marker="a)">
+          <li>
+            <p>How many subscribe to both services?</p>
+          </li>
+          <li>
+            <p>How many subscribe to exactly one service?</p>
+          </li>
+          <li>
+            <p>How many subscribe to neither service?</p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+
+    <example xml:id="sets-example-13">
+      <title>A Survey Given in Percentages</title>
+      <statement>
+        <p>In a survey, <m>48\%</m> of respondents walk for exercise, <m>35\%</m> bike for exercise, and <m>16\%</m> do both. Find the percentage in each group.</p>
+        <ol marker="a)">
+          <li>
+            <p>Those who walk or bike, including those who do both.</p>
+          </li>
+          <li>
+            <p>Those who do neither.</p>
+          </li>
+          <li>
+            <p>Those who walk but do not bike.</p>
+          </li>
+          <li>
+            <p>Those who do exactly one of the two activities.</p>
+          </li>
+        </ol>
+      </statement>
+    </example>
+  </subsection>
+</section>

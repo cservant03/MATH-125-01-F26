@@ -2024,6 +2024,285 @@ var ptx_lunr_docs = [
   "number": "231",
   "title": "Work Backward from Future Education Expenses.",
   "body": " Work Backward from Future Education Expenses   A 15-year savings period begins today. After that savings period ends, a fund must provide four withdrawals of $20,000 at the end of each of the next four years. During those four years, it earns 4% annual interest compounded annually and is exhausted by the final withdrawal. You already have $8,000 to invest today. During the 15-year savings period, the account earns 5% annual interest compounded monthly, and you also make equal deposits at the end of every month. Find the balance needed at the end of the 15-year savings period. Determine how much the current $8,000 will grow to during those 15 years, and use that amount to find the additional monthly deposit needed.   "
+},
+{
+  "id": "sets",
+  "level": "1",
+  "url": "sets.html",
+  "type": "Section",
+  "number": "",
+  "title": "Sets",
+  "body": " Sets   Sets help us describe groups, compare their members, and interpret survey results. In this section, we will represent sets with words, symbols, and Venn diagrams, then count how many objects belong to different combinations of sets.    Sets and Elements   Sets        Elements        Basic Set Notation     : is an element of .   : is not an element of .     : the empty set , which has no elements.   : the sets have exactly the same elements.     Order does not matter, and repeated entries do not create additional elements. Thus .  The phrase well-defined means that we can determine whether an object belongs to the set. For example, the students enrolled in MATH 125 this semester is well-defined. The description the most interesting students is subjective.   Describing Sets   Write each set in roster notation or describe it in words, as requested.    List the distinct letters in the word MATHEMATICS.    List the positive multiples of four that are less than twenty.    Describe the set in words.       Membership and Equality   Let . Determine whether each statement is true or false, and explain.                            Subsets and Universal Sets   Subsets       Every set is a subset of itself, . The empty set is a subset of every set, .  Use to compare an element within a set. Use to compare two different sets. For example, , while .   Recognizing Subsets   Let , , , and . Determine whether each statement is true or false, and explain.                                     Universal Set         Union, Intersection, and Complement   Union        Intersection        Complement        Set Difference        Disjoint        Computing Set Operations   Use the universal set and subsets below.    List the elements of each set.                                    When several operations appear together, begin with the grouping symbols. In these notes, we will use parentheses whenever an order could be unclear.   Combining Set Operations   Use the sets , , , and from . List the elements of each set.                      Translating Words into Symbols   Among a group of students, let be those who attended a study workshop and be those who attended tutoring. Write a set expression for each group.    Students who attended a workshop or tutoring, including those who attended both.    Students who attended a workshop but did not attend tutoring.    Students who attended neither a workshop nor tutoring.    Students who attended exactly one of the two types of support.        Venn Diagrams   Venn Diagram        The four regions of a two-set Venn diagram.   A rectangle labeled U contains overlapping circles A and B. The left-only region is labeled A only, the overlap Both, the right-only region B only, and the region outside both circles Neither.         Both circles A and B, including their overlap, are shaded. The region outside both is unshaded.        Only the overlap of circles A and B is shaded.          Everything in the universal rectangle outside circle A is shaded, including the portion of B outside A. All of circle A is unshaded.        Only the portion of circle B outside circle A is shaded.      Shading Two-Set Diagrams   Shade each expression on its diagram.        An unshaded two-set Venn diagram with circles A and B inside U.         An unshaded two-set Venn diagram with circles A and B inside U.       With three sets, the center belongs to all three sets. An intersection such as includes that center unless the problem specifically excludes .   Reading a Shaded Three-Set Diagram   Write a set expression for the shaded region and describe it in words.   Describe the shaded region.   Three overlapping circles A, B, and C lie inside U. Every part of A or B that lies outside C is shaded. No part of C or of the region outside all three circles is shaded.       Shading a Three-Set Expression   Shade , and describe the result in words.   Use all parts of each circle when interpreting an intersection.   An unshaded three-set Venn diagram with circles A, B, and C inside U.        Cardinality and Two-Set Counting   Cardinality        Counting Listed Elements   Let , , and . Find each cardinality.                                     A Two-Club Survey   A survey of 80 students found that 46 belong to an art club, 35 belong to a book club, and 18 belong to both. Let be the art-club members and be the book-club members. Complete a Venn diagram, then answer each question.   Record a count in each of the four regions.   An unfilled two-set Venn diagram with A for art club and B for book club.      How many students belong to at least one club?    How many belong to neither club?    How many belong to the art club only?    How many belong to exactly one of the clubs?       Finding an Unknown Overlap   Of 100 households surveyed, 61 subscribe to service S, 47 subscribe to service T, and 82 subscribe to at least one of these services.    How many subscribe to both services?    How many subscribe to exactly one service?    How many subscribe to neither service?       A Survey Given in Percentages   In a survey, of respondents walk for exercise, bike for exercise, and do both. Find the percentage in each group.    Those who walk or bike, including those who do both.    Those who do neither.    Those who walk but do not bike.    Those who do exactly one of the two activities.       "
+},
+{
+  "id": "sets-def-sets",
+  "level": "2",
+  "url": "sets.html#sets-def-sets",
+  "type": "Definition",
+  "number": "232",
+  "title": "Sets.",
+  "body": " Sets      "
+},
+{
+  "id": "sets-def-elements",
+  "level": "2",
+  "url": "sets.html#sets-def-elements",
+  "type": "Definition",
+  "number": "233",
+  "title": "Elements.",
+  "body": " Elements      "
+},
+{
+  "id": "sets-basics-4-2-2-1",
+  "level": "2",
+  "url": "sets.html#sets-basics-4-2-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "empty set "
+},
+{
+  "id": "sets-ex-des-sets",
+  "level": "2",
+  "url": "sets.html#sets-ex-des-sets",
+  "type": "Example",
+  "number": "234",
+  "title": "Describing Sets.",
+  "body": " Describing Sets   Write each set in roster notation or describe it in words, as requested.    List the distinct letters in the word MATHEMATICS.    List the positive multiples of four that are less than twenty.    Describe the set in words.     "
+},
+{
+  "id": "sets-ex-mem-eq",
+  "level": "2",
+  "url": "sets.html#sets-ex-mem-eq",
+  "type": "Example",
+  "number": "235",
+  "title": "Membership and Equality.",
+  "body": " Membership and Equality   Let . Determine whether each statement is true or false, and explain.                         "
+},
+{
+  "id": "sets-def-subset",
+  "level": "2",
+  "url": "sets.html#sets-def-subset",
+  "type": "Definition",
+  "number": "236",
+  "title": "Subsets.",
+  "body": " Subsets      "
+},
+{
+  "id": "sets-ex-rec-subsets",
+  "level": "2",
+  "url": "sets.html#sets-ex-rec-subsets",
+  "type": "Example",
+  "number": "237",
+  "title": "Recognizing Subsets.",
+  "body": " Recognizing Subsets   Let , , , and . Determine whether each statement is true or false, and explain.                                   "
+},
+{
+  "id": "sets-def-universe",
+  "level": "2",
+  "url": "sets.html#sets-def-universe",
+  "type": "Definition",
+  "number": "238",
+  "title": "Universal Set.",
+  "body": " Universal Set      "
+},
+{
+  "id": "sets-def-union",
+  "level": "2",
+  "url": "sets.html#sets-def-union",
+  "type": "Definition",
+  "number": "239",
+  "title": "Union.",
+  "body": " Union      "
+},
+{
+  "id": "sets-def-intersection",
+  "level": "2",
+  "url": "sets.html#sets-def-intersection",
+  "type": "Definition",
+  "number": "240",
+  "title": "Intersection.",
+  "body": " Intersection      "
+},
+{
+  "id": "sets-def-complement",
+  "level": "2",
+  "url": "sets.html#sets-def-complement",
+  "type": "Definition",
+  "number": "241",
+  "title": "Complement.",
+  "body": " Complement      "
+},
+{
+  "id": "sets-def-diff",
+  "level": "2",
+  "url": "sets.html#sets-def-diff",
+  "type": "Definition",
+  "number": "242",
+  "title": "Set Difference.",
+  "body": " Set Difference      "
+},
+{
+  "id": "sets-def-disjoint",
+  "level": "2",
+  "url": "sets.html#sets-def-disjoint",
+  "type": "Definition",
+  "number": "243",
+  "title": "Disjoint.",
+  "body": " Disjoint      "
+},
+{
+  "id": "sets-ex-set-comp",
+  "level": "2",
+  "url": "sets.html#sets-ex-set-comp",
+  "type": "Example",
+  "number": "244",
+  "title": "Computing Set Operations.",
+  "body": " Computing Set Operations   Use the universal set and subsets below.    List the elements of each set.                                   "
+},
+{
+  "id": "sets-ex-comb-set-ops",
+  "level": "2",
+  "url": "sets.html#sets-ex-comb-set-ops",
+  "type": "Example",
+  "number": "245",
+  "title": "Combining Set Operations.",
+  "body": " Combining Set Operations   Use the sets , , , and from . List the elements of each set.                    "
+},
+{
+  "id": "sets-ex-words",
+  "level": "2",
+  "url": "sets.html#sets-ex-words",
+  "type": "Example",
+  "number": "246",
+  "title": "Translating Words into Symbols.",
+  "body": " Translating Words into Symbols   Among a group of students, let be those who attended a study workshop and be those who attended tutoring. Write a set expression for each group.    Students who attended a workshop or tutoring, including those who attended both.    Students who attended a workshop but did not attend tutoring.    Students who attended neither a workshop nor tutoring.    Students who attended exactly one of the two types of support.     "
+},
+{
+  "id": "sets-def-venn",
+  "level": "2",
+  "url": "sets.html#sets-def-venn",
+  "type": "Definition",
+  "number": "247",
+  "title": "Venn Diagram.",
+  "body": " Venn Diagram      "
+},
+{
+  "id": "sets-venn-3",
+  "level": "2",
+  "url": "sets.html#sets-venn-3",
+  "type": "Figure",
+  "number": "248",
+  "title": "",
+  "body": " The four regions of a two-set Venn diagram.   A rectangle labeled U contains overlapping circles A and B. The left-only region is labeled A only, the overlap Both, the right-only region B only, and the region outside both circles Neither.   "
+},
+{
+  "id": "sets-venn-4-1",
+  "level": "2",
+  "url": "sets.html#sets-venn-4-1",
+  "type": "Figure",
+  "number": "249",
+  "title": "",
+  "body": "    Both circles A and B, including their overlap, are shaded. The region outside both is unshaded.   "
+},
+{
+  "id": "sets-venn-4-2",
+  "level": "2",
+  "url": "sets.html#sets-venn-4-2",
+  "type": "Figure",
+  "number": "250",
+  "title": "",
+  "body": "    Only the overlap of circles A and B is shaded.   "
+},
+{
+  "id": "sets-venn-5-1",
+  "level": "2",
+  "url": "sets.html#sets-venn-5-1",
+  "type": "Figure",
+  "number": "251",
+  "title": "",
+  "body": "    Everything in the universal rectangle outside circle A is shaded, including the portion of B outside A. All of circle A is unshaded.   "
+},
+{
+  "id": "sets-venn-5-2",
+  "level": "2",
+  "url": "sets.html#sets-venn-5-2",
+  "type": "Figure",
+  "number": "252",
+  "title": "",
+  "body": "    Only the portion of circle B outside circle A is shaded.   "
+},
+{
+  "id": "sets-ex-shading",
+  "level": "2",
+  "url": "sets.html#sets-ex-shading",
+  "type": "Example",
+  "number": "253",
+  "title": "Shading Two-Set Diagrams.",
+  "body": " Shading Two-Set Diagrams   Shade each expression on its diagram.        An unshaded two-set Venn diagram with circles A and B inside U.         An unshaded two-set Venn diagram with circles A and B inside U.      "
+},
+{
+  "id": "sets-ex-read-shading",
+  "level": "2",
+  "url": "sets.html#sets-ex-read-shading",
+  "type": "Example",
+  "number": "256",
+  "title": "Reading a Shaded Three-Set Diagram.",
+  "body": " Reading a Shaded Three-Set Diagram   Write a set expression for the shaded region and describe it in words.   Describe the shaded region.   Three overlapping circles A, B, and C lie inside U. Every part of A or B that lies outside C is shaded. No part of C or of the region outside all three circles is shaded.     "
+},
+{
+  "id": "sets-ex-shade-three-set",
+  "level": "2",
+  "url": "sets.html#sets-ex-shade-three-set",
+  "type": "Example",
+  "number": "258",
+  "title": "Shading a Three-Set Expression.",
+  "body": " Shading a Three-Set Expression   Shade , and describe the result in words.   Use all parts of each circle when interpreting an intersection.   An unshaded three-set Venn diagram with circles A, B, and C inside U.     "
+},
+{
+  "id": "sets-def-cardinality",
+  "level": "2",
+  "url": "sets.html#sets-def-cardinality",
+  "type": "Definition",
+  "number": "260",
+  "title": "Cardinality.",
+  "body": " Cardinality      "
+},
+{
+  "id": "sets-ex-count",
+  "level": "2",
+  "url": "sets.html#sets-ex-count",
+  "type": "Example",
+  "number": "261",
+  "title": "Counting Listed Elements.",
+  "body": " Counting Listed Elements   Let , , and . Find each cardinality.                                   "
+},
+{
+  "id": "sets-example-11",
+  "level": "2",
+  "url": "sets.html#sets-example-11",
+  "type": "Example",
+  "number": "262",
+  "title": "A Two-Club Survey.",
+  "body": " A Two-Club Survey   A survey of 80 students found that 46 belong to an art club, 35 belong to a book club, and 18 belong to both. Let be the art-club members and be the book-club members. Complete a Venn diagram, then answer each question.   Record a count in each of the four regions.   An unfilled two-set Venn diagram with A for art club and B for book club.      How many students belong to at least one club?    How many belong to neither club?    How many belong to the art club only?    How many belong to exactly one of the clubs?     "
+},
+{
+  "id": "sets-example-12",
+  "level": "2",
+  "url": "sets.html#sets-example-12",
+  "type": "Example",
+  "number": "264",
+  "title": "Finding an Unknown Overlap.",
+  "body": " Finding an Unknown Overlap   Of 100 households surveyed, 61 subscribe to service S, 47 subscribe to service T, and 82 subscribe to at least one of these services.    How many subscribe to both services?    How many subscribe to exactly one service?    How many subscribe to neither service?     "
+},
+{
+  "id": "sets-example-13",
+  "level": "2",
+  "url": "sets.html#sets-example-13",
+  "type": "Example",
+  "number": "265",
+  "title": "A Survey Given in Percentages.",
+  "body": " A Survey Given in Percentages   In a survey, of respondents walk for exercise, bike for exercise, and do both. Find the percentage in each group.    Those who walk or bike, including those who do both.    Those who do neither.    Those who walk but do not bike.    Those who do exactly one of the two activities.     "
 }
 ]
 

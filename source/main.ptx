@@ -34,6 +34,8 @@
       <xi:include href="./notes/scheduling.ptx"/>
       <xi:include href="./notes/simple-and-compound-interest.ptx"/>
       <xi:include href="./notes/annuities-and-loans.ptx"/>
+      <xi:include href="./notes/sets.ptx"/>
+      
     </chapter>
 
     </book>

@@ -695,3 +695,103 @@ a.mathjax-link {
 #ex-fin2-14{
   padding-bottom: 6in;
 }
+
+/* ---------- Sets ---------- */
+
+#sets-def-sets{
+  padding-bottom: 0.7in;
+}
+
+#sets-def-elements{
+  padding-bottom: 0.7in;
+}
+
+#sets-ex-des-sets ol > li{
+  padding-bottom: 0.7in;
+}
+
+#sets-ex-mem-eq ol > li{
+  padding-bottom: 0.4in;
+}
+
+#sets-subsets{
+  break-before: page;
+  page-break-before: always;
+}
+
+#sets-def-subset{
+  padding-bottom: 0.7in;
+}
+
+#sets-ex-rec-subsets ol > li{
+  padding-bottom: 0.4in;
+}
+
+#sets-def-universe{
+  padding-bottom: 0.7in;
+}
+
+#sets-def-union{
+  padding-bottom: 0.7in;
+}
+
+#sets-def-intersection{
+  padding-bottom: 0.7in;
+}
+
+#sets-def-complement{
+  padding-bottom: 0.7in;
+}
+
+#sets-def-diff{
+  padding-bottom: 0.7in;
+}
+
+#sets-def-disjoint{
+  padding-bottom: 0.7in;
+}
+
+#sets-ex-set-comp{
+  break-before: page;
+  page-break-before: always;
+}
+
+#sets-ex-set-comp ol > li{
+  padding-bottom: 0.3in;
+}
+
+#sets-ex-comb-set-ops ol > li{
+  padding-bottom: 0.3in;
+}
+
+#sets-ex-words ol > li{
+  padding-bottom: 0.4in;
+}
+
+#sets-def-venn{
+  padding-bottom: 1.4in;
+}
+
+#sets-cardinality .heading {
+    margin-top: 0 !important;
+}
+
+#sets-def-cardinality{
+  padding-bottom: 0.7in;
+}
+
+#sets-ex-count ol > li{
+  padding-bottom: 0.2in;
+}
+
+#sets-example-11 ol > li{
+  padding-bottom: 0.2in;
+}
+
+#sets-example-12 ol > li{
+  padding-bottom: 0.2in;
+}
+
+#sets-example-13 ol > li{
+  padding-bottom: 0.4in;
+}
