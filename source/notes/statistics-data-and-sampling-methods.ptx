@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="statistics-data-and-sampling-methods">
+  <title>Statistics, Data, and Sampling Methods</title>
+  
+  <subsection xml:id="stats-data-introduction">
+    <title>Introduction</title>
+
+    <definition xml:id="sdsm-def-stats">
+      <title>Statistics</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-data">
+      <title>Data</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <assemblage>
+      <title>Questions to Ask About a Statistical Claim</title>
+      <p>
+        <ul>
+          <li><p>Who is the claim about?</p></li>
+          <li><p>Who supplied the data, and how were they selected?</p></li>
+          <li><p>What was measured or asked?</p></li>
+          <li><p>What conclusion do the data support?</p></li>
+        </ul>
+      </p>
+    </assemblage>
+
+    <example xml:id="sdsm-ex-headline">
+      <title>Reading a Headline</title>
+      <p>
+        A campus newspaper reports that 70% of students would use an evening shuttle.
+        The reporter asked 100 students leaving the library after 8 p.m., and 70 said yes.
+        Rewrite the headline so that it describes the people who were surveyed.
+        Explain why the percentage for all enrolled undergraduates could be different.
+      </p>
+    </example>
+  </subsection>
+  
+  <subsection xml:id="stats-data-populations-and-samples">
+    <title>Populations and Samples</title>
+
+    <definition xml:id="sdsm-def-pop">
+      <title>Population</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-sample">
+      <title>Sample</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-census">
+      <title>Census</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-parameter">
+      <title>Parameter</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-statistic">
+      <title>Statistic</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+    
+    <example xml:id="sdsm-ex-id">
+      <title>Identifying Terms</title>
+      <p>
+        A college has 1,200 enrolled undergraduates. Staff randomly select 120 students
+        from the enrollment roster. All 120 respond, and 78 say they would use an evening
+        shuttle at least once a week.
+      </p>
+      
+      <p>
+        <ol marker="(a)">
+          <li>
+            <p>
+              Identify the population and sample.
+            </p>
+          </li>
+          <li>
+            <p>
+              Identify any parameters discussed.
+            </p>
+          </li>
+          <li>
+            <p>
+              Identify any statistics discussed.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="sdsm-ex-library">
+      <title>Library Survey</title>
+      <p>
+        A county library wants to know what percentage of its current cardholders
+        borrowed an e-book in the past 30 days. It randomly selects 80 cardholders
+        from the list of those with an email address on file. All 80 respond, and 35%
+        report borrowing an e-book during that time.
+        <ol marker="(a)">
+          <li><p>Identify the target population and the sample.</p></li>
+          <li><p>Is 35% a parameter or a statistic? Explain.</p></li>
+          <li><p>What would the library need to do to conduct a census of its target population?</p></li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+  
+  <subsection xml:id="stats-data-categorizing-data">
+    <title>Categorizing Data</title>
+
+    <definition xml:id="sdsm-def-variable">
+      <title>Variable</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>   
+
+    <definition xml:id="sdsm-def-cat">
+      <title>Categorical Data</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-quant">
+      <title>Quantitative Data</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <table>
+      <title>Variables in a Campus Transportation Survey</title>
+      <tabular>
+        <row header="yes" bottom="minor">
+          <cell>Variable</cell>
+          <cell>One response</cell>
+          <cell>Type</cell>
+        </row>
+        <row>
+          <cell>Primary way of getting to campus</cell>
+          <cell>Bus</cell>
+          <cell>Categorical</cell>
+        </row>
+        <row>
+          <cell>Home ZIP code</cell>
+          <cell>48710</cell>
+          <cell>Categorical</cell>
+        </row>
+        <row>
+          <cell>Shuttle interest (1 to 5)</cell>
+          <cell>4</cell>
+          <cell>Categorical (ordered)</cell>
+        </row>
+        <row>
+          <cell>Number of evening trips last week</cell>
+          <cell>3</cell>
+          <cell>Quantitative</cell>
+        </row>
+        <row>
+          <cell>Travel time to campus</cell>
+          <cell>18 minutes</cell>
+          <cell>Quantitative</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      A ZIP code uses digits as a label for a location. The interest scale goes from
+      1 (low) to 5 (high), so a 4 shows greater interest than a 2. Interpreting the
+      gap between the ratings would require knowing how much interest each step
+      represents. For travel time, a difference of 5 minutes has a clear meaning.
+    </p>
+
+    <example xml:id="sdsm-ex-classify">
+      <title>Classify the Variable</title>
+      <p>
+        For each variable recorded by the campus parking office, decide whether it
+        is categorical or quantitative. Explain what the recorded values represent.
+        <ol marker="(a)">
+          <li><p>Type of parking permit purchased.</p></li>
+          <li><p>Six-digit parking permit number.</p></li>
+          <li><p>Number of days the student parked on campus last week.</p></li>
+          <li><p>Amount the student paid for parking this semester.</p></li>
+          <li><p>Parking satisfaction rated as poor, fair, good, or excellent.</p></li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+  
+  <subsection xml:id="stats-data-sampling-methods">
+    <title>Sampling Methods</title>
+
+    <definition xml:id="sdsm-def-srs">
+      <title>Simple Random Sampling</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-systematic">
+      <title>Systematic Sampling</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-strat">
+      <title>Statified Sampling</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-cluster">
+      <title>Cluster Sampling</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <image source="images/four-sampling-methods.png" width="85%">
+      <shortdescription>
+        Four dot diagrams comparing simple random, systematic, stratified,
+        and cluster sampling.
+      </shortdescription>
+      <description>
+        <p>
+          Orange rings mark selected members. In simple random sampling,
+          every sample of a given size is equally likely. Systematic sampling
+          follows an ordered path at a fixed interval after a random start.
+          Stratified sampling selects some members from every group.
+          Cluster sampling selects every member of the chosen groups.
+        </p>
+      </description>
+    </image>
+
+    <definition xml:id="sdsm-def-quota">
+      <title>Quota Sampling</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-convenience">
+      <title>Convenience Sampling</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="sdsm-def-voluntary">
+      <title>Voluntary Response Sampling</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="sdsm-ex-identify-sampling">
+      <title>Identify the Sampling Method</title>
+      <p>
+        A city wants to estimate the percentage of households that use a public park
+        at least once a week. Name the sampling method in each plan and point to
+        the detail that identifies it.
+        <ol marker="(a)">
+          <li><p>Randomly select 80 households from a complete list of city households.</p></li>
+          <li><p>Divide the city into neighborhoods and randomly select a proportional number of households from each neighborhood.</p></li>
+          <li><p>Randomly select four city blocks and survey every household on those blocks.</p></li>
+          <li><p>Start at a randomly chosen position among the first 15 entries on a household list, then select every 15th entry.</p></li>
+          <li><p>In each neighborhood, approach households that are easy to reach until 20 households from that neighborhood have responded.</p></li>
+          <li><p>Survey households on the streets nearest the park.</p></li>
+          <li><p>Post an open link on the city website and collect responses from households that choose to answer.</p></li>
+        </ol>
+      </p>
+      <p>
+        How could using only the streets nearest the park affect the estimate of
+        the citywide percentage?
+      </p>
+    </example>
+  </subsection>
+</section>

@@ -795,3 +795,93 @@ a.mathjax-link {
 #sets-example-13 ol > li{
   padding-bottom: 0.4in;
 }
+
+/* ---------- Statistics, Data, and Sampling Methods ---------- */
+
+#sdsm-def-stats{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-data{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-ex-headline{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-pop{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-sample{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-census{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-parameter{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-statistic{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-ex-id ol > li{
+  padding-bottom: 0.4in;
+}
+
+#sdsm-ex-library ol > li{
+  padding-bottom: 0.4in;
+}
+
+#sdsm-def-variable{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-cat{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-quant{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-ex-classify ol > li{
+  padding-bottom: 0.4in;
+}
+
+#sdsm-def-srs{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-systematic{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-strat{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-cluster{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-quota{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-convenience{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-def-voluntary{
+  padding-bottom: 0.7in;
+}
+
+#sdsm-ex-identify-sampling ol > li{
+  padding-bottom: 0.4in;
+}
