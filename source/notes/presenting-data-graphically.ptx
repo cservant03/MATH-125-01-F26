@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+  <title>Presenting Data Graphically</title>
+
+  <subsection>
+    <title>Frequency Tables</title>
+
+    <definition xml:id="pdf-def-freq-table">
+      <title>Frequency Table</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="pdf-def-rel-freq-table">
+      <title>Relative Frequency Table</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="pdf-ex-newspaper-frequency-table">
+      <title>Campus Newspaper Articles</title>
+      <p>
+        An editor sampled <m>20</m> articles from a campus newspaper. The letters record
+        their sections. A stands for Arts, C for Campus Life, O for Opinion, and S for Sports.
+      </p>
+      <p>
+        A, C, O, A, S, C, A, S, O, C,
+        A, C, A, O, A, S, C, O, A, A
+      </p>
+      <p>
+        Make a table showing the frequency of each section.
+      </p>
+    </example>
+
+    <example xml:id="pdf-ex-archive-frequency-table">
+      <title>Requests at a University Archive</title>
+      <p>
+        A university archive sampled <m>25</m> requests. L stands for letters, N for newspapers, P for photographs, and T for oral history transcripts. Make a table showing the relative frequency of each type of request.
+      </p>
+      <p>
+        P, P, L, N, T, N, P, N, L, N,
+        T, L, N, P, L, L, T, L, N, L,
+        P, N, P, T, L
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="pdf-subsec-bar-chart">
+    <title>Bar Charts</title>
+
+    <definition xml:id="pdf-def-bar-chart">
+      <title>Bar Chart</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="pdf-ex-newspaper-frequency-bar-plot">
+      <title>Bar Plot of Newspaper Sections</title>
+      <p>
+        Use your table from <xref ref="pdf-ex-newspaper-frequency-table"/> to draw a bar plot with the newspaper sections on the horizontal axis and frequency on the vertical axis.
+      </p>
+
+      <image source="images/newspaper-frequency-bar-axes.png" width="65%">
+        <shortdescription>Blank bar plot axes for campus newspaper sections, with frequency from 0 to 10.</shortdescription>
+        <description>
+          <p>
+            The vertical axis is marked in increments of 1. The categories from left
+            to right are Arts, Campus Life, Opinion, and Sports.
+          </p>
+        </description>
+      </image>
+    </example>
+
+    <example xml:id="pdf-ex-archive-relative-frequency-bar-plot">
+      <title>Bar Plot of Archive Requests</title>
+      <p>
+        Use your table from <xref ref="pdf-ex-archive-frequency-table"/> to draw a bar plot
+        with the types of requests on the horizontal axis. Show relative frequency as a percent
+        on the vertical axis.
+      </p>
+
+      <image source="images/archive-relative-frequency-bar-axes.png" width="65%">
+        <shortdescription>Blank bar plot axes for university archive requests, with relative frequency from 0 to 40 percent.</shortdescription>
+        <description>
+          <p>
+            The vertical axis is marked every 4 percentage points. The categories from
+            left to right are Letters, Newspapers, Photographs, and Oral history transcripts.
+          </p>
+        </description>
+      </image>
+    </example>
+
+    <example xml:id="pdf-ex-read-theater-bar-plot">
+      <title>Read a Bar Plot of Theater Crew Sign-Ups</title>
+      <p>Each student who signed up to help with a theater production selected one crew assignment.</p>
+      <figure>
+        <caption>Student sign-ups by theater crew assignment.</caption>
+        <image width="50%">
+          <shortdescription>Bar plot of student sign-ups for four theater crew assignments.</shortdescription>
+          <description>
+            <p>Lighting has 8 students, Sets has 14, Sound has 6, and Costumes has 12.</p>
+          </description>
+          <latex-image label="md-img-theater-bar-plot"><![CDATA[
+\begin{tikzpicture}[x=1.65cm,y=0.29cm,font=\small\sffamily]
+  \foreach \y in {0,2,...,16}{
+    \draw[gray!30] (0,\y) -- (4.8,\y);
+    \draw (0,\y) -- (-0.07,\y) node[left] {\y};
+  }
+  \foreach \x/\freq/\category in {0.6/8/Lighting,1.8/14/Sets,3/6/Sound,4.2/12/Costumes}{
+    \draw[fill=teal!40,draw=teal!70!black] (\x-0.35,0) rectangle (\x+0.35,\freq);
+    \node[below=3pt] at (\x,0) {\category};
+  }
+  \draw[thick] (0,16.5) -- (0,0) -- (4.8,0);
+  \node[above right] at (0,16.5) {Number of students};
+  \node[below=18pt] at (2.4,0) {Crew assignment};
+\end{tikzpicture}
+          ]]></latex-image>
+        </image>
+      </figure>
+      <p>
+        <ol marker="a)">
+          <li><p>How many students chose Sets?</p></li>
+          <li><p>How many more students chose Costumes than Sound?</p></li>
+          <li><p>How many students signed up in all?</p></li>
+          <li><p>What percent of the students chose Lighting or Sound?</p></li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="math125-histograms">
+    <title>Histograms</title>
+
+    <definition xml:id="pdf-def-histogram">
+      <title>Histogram</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="pdf-ex-histogram-philosophy-reading-times">
+      <title>Reading a Philosophy Essay</title>
+      <p>
+        A sample of <m>24</m> students recorded how long it took them to read a short
+        philosophy essay. Their times, in minutes, are given below.
+        <md number="no">
+          <mrow>30,\ 11,\ 16,\ 22,\ 29,\ 21,\ 24,\ 22,\ 20,\ 27,\ 33,\ 17,</mrow>
+          <mrow>19,\ 26,\ 25,\ 32,\ 20,\ 31,\ 14,\ 15,\ 28,\ 18,\ 36,\ 23</mrow>
+        </md>
+        Make a  histogram. Use five-minute bins.
+      </p>
+
+      <image source="images/philosophy-reading-histogram-axes.png" width="65%">
+        <shortdescription>Blank histogram grid with five-minute bins from 10 to 40 and a frequency scale from 0 to 8 in steps of one.</shortdescription>
+      </image>
+    </example>
+
+    <example xml:id="pdf-ex-histogram-museum-audio-clips">
+      <title>Museum Audio Guide Clips</title>
+      <p>
+        A museum sampled <m>30</m> clips from its audio guide, in seconds.
+        <md number="no">
+          <mrow>88,\ 37,\ 102,\ 40,\ 51,\ 94,\ 84,\ 108,\ 120,\ 123,</mrow>
+          <mrow>28,\ 22,\ 46,\ 31,\ 98,\ 100,\ 105,\ 80,\ 112,\ 117,</mrow>
+          <mrow>54,\ 91,\ 110,\ 50,\ 42,\ 81,\ 107,\ 134,\ 59,\ 47</mrow>
+        </md>
+        Draw a frequency histogram using 20-second bins.
+      </p>
+
+      <image source="images/museum-audio-histogram-axes.png" width="65%">
+        <shortdescription>Blank histogram grid with 20-second bins from 20 to 140 and a frequency scale from 0 to 10 in steps of one.</shortdescription>
+      </image>
+    </example>
+
+    <example xml:id="pdf-ex-read-documentary-histogram">
+      <title>Read a Histogram of Documentary Running Times</title>
+      <p>The histogram shows the running times of short documentaries at a film showcase.</p>
+      <figure>
+        <caption>Documentary running times in five-minute bins.</caption>
+        <image width="45%">
+          <shortdescription>Histogram of documentary running times in six five-minute bins.</shortdescription>
+          <description>
+            <p>
+              The bins start at 0, 5, 10, 15, 20, and 25 minutes. Each bin includes its
+              lower endpoint and excludes its upper endpoint. The counts in order are 1, 9, 7, 4, 3, and 1.
+            </p>
+          </description>
+          <latex-image label="md-img-documentary-histogram"><![CDATA[
+\begin{tikzpicture}[x=0.26cm,y=0.43cm,font=\small\sffamily]
+  \foreach \y in {0,...,10}{
+    \draw[gray!30] (0,\y) -- (30,\y);
+    \draw (0,\y) -- (-0.4,\y) node[left] {\y};
+  }
+  \foreach \lo/\hi/\freq in {0/5/1,5/10/9,10/15/7,15/20/4,20/25/3,25/30/1}{
+    \draw[fill=teal!40,draw=teal!70!black] (\lo,0) rectangle (\hi,\freq);
+  }
+  \draw[thick] (0,10.3) -- (0,0) -- (30,0);
+  \foreach \x in {0,5,...,30}{
+    \draw (\x,0) -- (\x,-0.22) node[below] {\x};
+  }
+  \node[above right] at (0,10.3) {Number of films};
+  \node[below=17pt] at (15,0) {Running time (minutes)};
+\end{tikzpicture}
+          ]]></latex-image>
+        </image>
+      </figure>
+      <p>
+        <ol marker="a)">
+          <li><p>Which five-minute interval contains the most documentaries?</p></li>
+          <li><p>How many documentaries run at least <m>15</m> minutes?</p></li>
+          <li><p>What percent run under <m>10</m> minutes?</p></li>
+          <li><p>Describe the shape of the distribution and identify the side with the longer tail.</p></li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="math125-box-plots">
+    <title>Box Plots</title>
+
+    <definition xml:id="pdf-def-box-plot">
+      <title>Box Plot</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="pdf-def-fences">
+      <title>Fences</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="pdf-ex-box-plot-exhibit-label-word-counts">
+      <title>Word Counts for Exhibit Labels</title>
+      <p>
+        A curator recorded the word counts of ten labels in a museum exhibit.
+        <md number="no">31,\ 43,\ 29,\ 37,\ 24,\ 46,\ 34,\ 41,\ 26,\ 36</md>
+        Draw a box plot on a labeled number line.
+      </p>
+
+      <image source="images/exhibit-label-word-count-number-line.png" width="85%">
+        <shortdescription>Blank number line for word counts from 20 to 50, labeled every five, with a tick at each whole number.</shortdescription>
+      </image>
+    </example>
+
+    <example xml:id="pdf-ex-modified-box-plot-poetry-attendance">
+      <title>Attendance at Campus Poetry Readings</title>
+      <p>
+        A student organization recorded attendance at eleven campus poetry readings.
+        <md number="no">23,\ 31,\ 18,\ 25,\ 4,\ 21,\ 29,\ 52,\ 20,\ 27,\ 24</md>
+        Draw a box plot.
+      </p>
+
+      <image source="images/poetry-reading-attendance-number-line.png" width="85%">
+        <shortdescription>Blank number line for attendance from 0 to 55, labeled every five, with a tick at each whole number.</shortdescription>
+      </image>
+    </example>
+
+    <example xml:id="md-ex-read-museum-exhibit-box-plots">
+      <title>Compare Visit Lengths at Three Museum Exhibits</title>
+      <p>The three basic box plots show how long visitors stayed at each exhibit.</p>
+      <figure>
+        <caption>Visit lengths at the Prints, Photography, and Sculpture exhibits.</caption>
+        <image width="50%">
+          <shortdescription>Three vertical box plots of visit lengths on a shared scale in minutes.</shortdescription>
+          <description>
+            <p>
+              For Prints, the minimum, first quartile, median, third quartile, and maximum
+              are 5, 10, 20, 25, and 45 minutes. The corresponding values are 10, 15, 25, 35,
+              and 45 for Photography and 15, 25, 30, 35, and 40 for Sculpture.
+            </p>
+          </description>
+          <latex-image label="md-img-museum-exhibit-box-plots"><![CDATA[
+\begin{tikzpicture}[x=2.4cm,y=0.095cm,font=\small\sffamily]
+  \foreach \y in {0,5,...,50}{
+    \draw[gray!30] (0,\y) -- (3.55,\y);
+    \draw (0,\y) -- (-0.045,\y) node[left] {\y};
+  }
+  \foreach \x/\low/\qone/\med/\qthree/\high/\exhibit in {
+    0.65/5/10/20/25/45/Prints,
+    1.78/10/15/25/35/45/Photography,
+    2.91/15/25/30/35/40/Sculpture
+  }{
+    \draw[semithick] (\x,\low) -- (\x,\high);
+    \draw[semithick] (\x-0.13,\low) -- (\x+0.13,\low);
+    \draw[semithick] (\x-0.13,\high) -- (\x+0.13,\high);
+    \draw[fill=teal!25,draw=teal!70!black] (\x-0.26,\qone) rectangle (\x+0.26,\qthree);
+    \draw[thick] (\x-0.26,\med) -- (\x+0.26,\med);
+    \node[below=3pt] at (\x,0) {\exhibit};
+  }
+  \draw[thick] (0,51) -- (0,0) -- (3.55,0);
+  \node[above right] at (0,51) {Visit length (minutes)};
+\end{tikzpicture}
+          ]]></latex-image>
+        </image>
+      </figure>
+      <p>
+        <ol marker="a)">
+          <li><p>Which exhibit has the largest median visit length? Give the median in minutes.</p></li>
+          <li><p>Which exhibit has the largest IQR? Give the IQR in minutes.</p></li>
+          <li><p>Which exhibit has the largest range? Give the range in minutes.</p></li>
+          <li><p>At the Prints exhibit, about what percentage of visits lasted between <m>10</m> and <m>25</m> minutes?</p></li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+</section>

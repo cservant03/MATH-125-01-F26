@@ -2303,6 +2303,222 @@ var ptx_lunr_docs = [
   "number": "265",
   "title": "A Survey Given in Percentages.",
   "body": " A Survey Given in Percentages   In a survey, of respondents walk for exercise, bike for exercise, and do both. Find the percentage in each group.    Those who walk or bike, including those who do both.    Those who do neither.    Those who walk but do not bike.    Those who do exactly one of the two activities.     "
+},
+{
+  "id": "statistics-data-and-sampling-methods",
+  "level": "1",
+  "url": "statistics-data-and-sampling-methods.html",
+  "type": "Section",
+  "number": "",
+  "title": "Statistics, Data, and Sampling Methods",
+  "body": " Statistics, Data, and Sampling Methods   Introduction   Statistics        Data        Questions to Ask About a Statistical Claim    Who is the claim about?  Who supplied the data, and how were they selected?  What was measured or asked?  What conclusion do the data support?      Reading a Headline  A campus newspaper reports that 70% of students would use an evening shuttle. The reporter asked 100 students leaving the library after 8 p.m., and 70 said yes. Rewrite the headline so that it describes the people who were surveyed. Explain why the percentage for all enrolled undergraduates could be different.     Populations and Samples   Population        Sample        Census        Parameter        Statistic        Identifying Terms  A college has 1,200 enrolled undergraduates. Staff randomly select 120 students from the enrollment roster. All 120 respond, and 78 say they would use an evening shuttle at least once a week.     Identify the population and sample.    Identify any parameters discussed.    Identify any statistics discussed.       Library Survey  A county library wants to know what percentage of its current cardholders borrowed an e-book in the past 30 days. It randomly selects 80 cardholders from the list of those with an email address on file. All 80 respond, and 35% report borrowing an e-book during that time.  Identify the target population and the sample.  Is 35% a parameter or a statistic? Explain.  What would the library need to do to conduct a census of its target population?       Categorizing Data   Variable        Categorical Data        Quantitative Data        Variables in a Campus Transportation Survey    Variable  One response  Type    Primary way of getting to campus  Bus  Categorical    Home ZIP code  48710  Categorical    Shuttle interest (1 to 5)  4  Categorical (ordered)    Number of evening trips last week  3  Quantitative    Travel time to campus  18 minutes  Quantitative     A ZIP code uses digits as a label for a location. The interest scale goes from 1 (low) to 5 (high), so a 4 shows greater interest than a 2. Interpreting the gap between the ratings would require knowing how much interest each step represents. For travel time, a difference of 5 minutes has a clear meaning.   Classify the Variable  For each variable recorded by the campus parking office, decide whether it is categorical or quantitative. Explain what the recorded values represent.  Type of parking permit purchased.  Six-digit parking permit number.  Number of days the student parked on campus last week.  Amount the student paid for parking this semester.  Parking satisfaction rated as poor, fair, good, or excellent.       Sampling Methods   Simple Random Sampling        Systematic Sampling        Statified Sampling        Cluster Sampling        Four dot diagrams comparing simple random, systematic, stratified, and cluster sampling.   Orange rings mark selected members. In simple random sampling, every sample of a given size is equally likely. Systematic sampling follows an ordered path at a fixed interval after a random start. Stratified sampling selects some members from every group. Cluster sampling selects every member of the chosen groups.     Quota Sampling        Convenience Sampling        Voluntary Response Sampling        Identify the Sampling Method  A city wants to estimate the percentage of households that use a public park at least once a week. Name the sampling method in each plan and point to the detail that identifies it.  Randomly select 80 households from a complete list of city households.  Divide the city into neighborhoods and randomly select a proportional number of households from each neighborhood.  Randomly select four city blocks and survey every household on those blocks.  Start at a randomly chosen position among the first 15 entries on a household list, then select every 15th entry.  In each neighborhood, approach households that are easy to reach until 20 households from that neighborhood have responded.  Survey households on the streets nearest the park.  Post an open link on the city website and collect responses from households that choose to answer.    How could using only the streets nearest the park affect the estimate of the citywide percentage?    "
+},
+{
+  "id": "sdsm-def-stats",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-stats",
+  "type": "Definition",
+  "number": "266",
+  "title": "Statistics.",
+  "body": " Statistics      "
+},
+{
+  "id": "sdsm-def-data",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-data",
+  "type": "Definition",
+  "number": "267",
+  "title": "Data.",
+  "body": " Data      "
+},
+{
+  "id": "sdsm-ex-headline",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-ex-headline",
+  "type": "Example",
+  "number": "268",
+  "title": "Reading a Headline.",
+  "body": " Reading a Headline  A campus newspaper reports that 70% of students would use an evening shuttle. The reporter asked 100 students leaving the library after 8 p.m., and 70 said yes. Rewrite the headline so that it describes the people who were surveyed. Explain why the percentage for all enrolled undergraduates could be different.  "
+},
+{
+  "id": "sdsm-def-pop",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-pop",
+  "type": "Definition",
+  "number": "269",
+  "title": "Population.",
+  "body": " Population      "
+},
+{
+  "id": "sdsm-def-sample",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-sample",
+  "type": "Definition",
+  "number": "270",
+  "title": "Sample.",
+  "body": " Sample      "
+},
+{
+  "id": "sdsm-def-census",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-census",
+  "type": "Definition",
+  "number": "271",
+  "title": "Census.",
+  "body": " Census      "
+},
+{
+  "id": "sdsm-def-parameter",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-parameter",
+  "type": "Definition",
+  "number": "272",
+  "title": "Parameter.",
+  "body": " Parameter      "
+},
+{
+  "id": "sdsm-def-statistic",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-statistic",
+  "type": "Definition",
+  "number": "273",
+  "title": "Statistic.",
+  "body": " Statistic      "
+},
+{
+  "id": "sdsm-ex-id",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-ex-id",
+  "type": "Example",
+  "number": "274",
+  "title": "Identifying Terms.",
+  "body": " Identifying Terms  A college has 1,200 enrolled undergraduates. Staff randomly select 120 students from the enrollment roster. All 120 respond, and 78 say they would use an evening shuttle at least once a week.     Identify the population and sample.    Identify any parameters discussed.    Identify any statistics discussed.     "
+},
+{
+  "id": "sdsm-ex-library",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-ex-library",
+  "type": "Example",
+  "number": "275",
+  "title": "Library Survey.",
+  "body": " Library Survey  A county library wants to know what percentage of its current cardholders borrowed an e-book in the past 30 days. It randomly selects 80 cardholders from the list of those with an email address on file. All 80 respond, and 35% report borrowing an e-book during that time.  Identify the target population and the sample.  Is 35% a parameter or a statistic? Explain.  What would the library need to do to conduct a census of its target population?    "
+},
+{
+  "id": "sdsm-def-variable",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-variable",
+  "type": "Definition",
+  "number": "276",
+  "title": "Variable.",
+  "body": " Variable      "
+},
+{
+  "id": "sdsm-def-cat",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-cat",
+  "type": "Definition",
+  "number": "277",
+  "title": "Categorical Data.",
+  "body": " Categorical Data      "
+},
+{
+  "id": "sdsm-def-quant",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-quant",
+  "type": "Definition",
+  "number": "278",
+  "title": "Quantitative Data.",
+  "body": " Quantitative Data      "
+},
+{
+  "id": "stats-data-categorizing-data-5",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#stats-data-categorizing-data-5",
+  "type": "Table",
+  "number": "279",
+  "title": "Variables in a Campus Transportation Survey",
+  "body": " Variables in a Campus Transportation Survey    Variable  One response  Type    Primary way of getting to campus  Bus  Categorical    Home ZIP code  48710  Categorical    Shuttle interest (1 to 5)  4  Categorical (ordered)    Number of evening trips last week  3  Quantitative    Travel time to campus  18 minutes  Quantitative    "
+},
+{
+  "id": "sdsm-ex-classify",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-ex-classify",
+  "type": "Example",
+  "number": "280",
+  "title": "Classify the Variable.",
+  "body": " Classify the Variable  For each variable recorded by the campus parking office, decide whether it is categorical or quantitative. Explain what the recorded values represent.  Type of parking permit purchased.  Six-digit parking permit number.  Number of days the student parked on campus last week.  Amount the student paid for parking this semester.  Parking satisfaction rated as poor, fair, good, or excellent.    "
+},
+{
+  "id": "sdsm-def-srs",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-srs",
+  "type": "Definition",
+  "number": "281",
+  "title": "Simple Random Sampling.",
+  "body": " Simple Random Sampling      "
+},
+{
+  "id": "sdsm-def-systematic",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-systematic",
+  "type": "Definition",
+  "number": "282",
+  "title": "Systematic Sampling.",
+  "body": " Systematic Sampling      "
+},
+{
+  "id": "sdsm-def-strat",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-strat",
+  "type": "Definition",
+  "number": "283",
+  "title": "Statified Sampling.",
+  "body": " Statified Sampling      "
+},
+{
+  "id": "sdsm-def-cluster",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-cluster",
+  "type": "Definition",
+  "number": "284",
+  "title": "Cluster Sampling.",
+  "body": " Cluster Sampling      "
+},
+{
+  "id": "sdsm-def-quota",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-quota",
+  "type": "Definition",
+  "number": "285",
+  "title": "Quota Sampling.",
+  "body": " Quota Sampling      "
+},
+{
+  "id": "sdsm-def-convenience",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-convenience",
+  "type": "Definition",
+  "number": "286",
+  "title": "Convenience Sampling.",
+  "body": " Convenience Sampling      "
+},
+{
+  "id": "sdsm-def-voluntary",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-def-voluntary",
+  "type": "Definition",
+  "number": "287",
+  "title": "Voluntary Response Sampling.",
+  "body": " Voluntary Response Sampling      "
+},
+{
+  "id": "sdsm-ex-identify-sampling",
+  "level": "2",
+  "url": "statistics-data-and-sampling-methods.html#sdsm-ex-identify-sampling",
+  "type": "Example",
+  "number": "288",
+  "title": "Identify the Sampling Method.",
+  "body": " Identify the Sampling Method  A city wants to estimate the percentage of households that use a public park at least once a week. Name the sampling method in each plan and point to the detail that identifies it.  Randomly select 80 households from a complete list of city households.  Divide the city into neighborhoods and randomly select a proportional number of households from each neighborhood.  Randomly select four city blocks and survey every household on those blocks.  Start at a randomly chosen position among the first 15 entries on a household list, then select every 15th entry.  In each neighborhood, approach households that are easy to reach until 20 households from that neighborhood have responded.  Survey households on the streets nearest the park.  Post an open link on the city website and collect responses from households that choose to answer.    How could using only the streets nearest the park affect the estimate of the citywide percentage?  "
 }
 ]
 

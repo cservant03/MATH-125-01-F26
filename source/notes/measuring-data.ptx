@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+  <title>Measuring Data</title>
+
+  <subsection>
+    <title>Measures of Center</title>
+
+    <definition xml:id="md-def-mean">
+      <title>Mean</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="md-def-median">
+      <title>Median</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="md-def-mode">
+      <title>Mode</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="md-ex-literary-magazine-story-lengths">
+      <title>Story Lengths in a Literary Magazine</title>
+      <p>
+        Seven short stories submitted to a campus literary magazine have
+        the following lengths, in pages.
+        <md number="no">9,\ 12,\ 7,\ 9,\ 15,\ 8,\ 10</md>
+        Find the mean, median, and mode.
+      </p>
+    </example>
+
+    <example xml:id="md-ex-student-film-festival">
+      <title>Student Film Festival</title>
+      <p>
+        The eight films shown at a student film festival have the following
+        running times, in minutes.
+        <md number="no">12,\ 18,\ 10,\ 16,\ 12,\ 22,\ 14,\ 20</md>
+        Find the mean, median, and mode.
+      </p>
+    </example>
+
+    <example xml:id="md-ex-local-history-sources">
+      <title>Sources Cited in Local History Projects</title>
+      <p>
+        Nine students counted the number of primary sources they cited
+        in their local history projects.
+        <md number="no">3,\ 7,\ 4,\ 6,\ 5,\ 7,\ 3,\ 8,\ 11</md>
+        Find the mean, median, and all modes.
+      </p>
+    </example>
+
+    <example xml:id="md-ex-live-performance-attendance">
+      <title>Attendance at Live Performances</title>
+      <p>
+        A campus arts council surveyed students about how many live performances they attended during the semester.
+      </p>
+      <tabular row-headers="yes" halign="center" valign="middle"
+          top="medium" left="medium" bottom="medium" right="medium">
+        <row header="yes" bottom="medium">
+          <cell>Performances Attended</cell>
+          <cell>Number of Students</cell>
+        </row>
+        <row><cell>0</cell><cell>2</cell></row>
+        <row><cell>1</cell><cell>4</cell></row>
+        <row><cell>2</cell><cell>10</cell></row>
+        <row><cell>3</cell><cell>5</cell></row>
+        <row><cell>4</cell><cell>6</cell></row>
+      </tabular>
+      <p>
+        Use the frequency table to find the mean, median, and mode
+        of the number of performances attended per student.
+      </p>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Measures of Variation</title>
+
+    <definition xml:id="md-def-range">
+      <title>Range</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="md-def-variance">
+      <title>Variance</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="md-def-st-dev">
+      <title>Standard Deviation</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="md-ex-radio-editing-times">
+      <title>Editing Time at a Campus Radio Station</title>
+      <p>
+        A producer selects a sample of five segments from the semester's
+        broadcasts. Their editing times, in minutes, are
+        <md number="no">14,\ 18,\ 16,\ 20,\ 12.</md>
+        Find the sample variance and sample standard deviation.
+        Round the standard deviation to two decimal places.
+      </p>
+    </example>
+
+    <example xml:id="md-ex-spoken-word-readings">
+      <title>Readings at a Spoken Word Showcase</title>
+      <p>
+        A spoken word showcase features six readings. The organizer records
+        the duration of every reading, in minutes.
+        <md number="no">10,\ 12,\ 13,\ 15,\ 16,\ 18</md>
+        Treat the six readings at this showcase as the population.
+        Find the population variance and population standard deviation.
+        Round the standard deviation to two decimal places.
+      </p>
+    </example>
+
+    <definition xml:id="md-def-quartiles">
+      <title>Quartiles</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="md-def-five-num">
+      <title>5 Number Summary</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="md-def-iqr">
+      <title>Interquartile Range</title>
+      <statement>
+        <p> </p>
+      </statement>
+    </definition>
+
+    <example xml:id="md-ex-art-exhibit-visit-times">
+      <title>Time Spent at a Campus Art Exhibit</title>
+      <p>
+        A gallery attendant records how many minutes nine visitors spend
+        at a campus art exhibit.
+        <md number="no">19,\ 12,\ 24,\ 15,\ 18,\ 31,\ 21,\ 10,\ 27</md>
+        Find <m>Q_1</m>, <m>Q_2</m>, <m>Q_3</m>, and the interquartile range.
+      </p>
+    </example>
+
+    <example xml:id="md-ex-oral-history-recordings">
+      <title>Lengths of Oral History Recordings</title>
+      <p>
+        A campus archive has a sample of twelve oral history recordings.
+        Their lengths, in minutes, are
+        <md number="no">
+          8,\ 11,\ 12,\ 13,\ 14,\ 14,\ 16,\ 17,\ 19,\ 21,\ 23,\ 36.
+        </md>
+        Find the five-number summary and the interquartile range.
+      </p>
+    </example>
+  </subsection>
+</section>

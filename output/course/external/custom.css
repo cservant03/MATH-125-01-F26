@@ -885,3 +885,117 @@ a.mathjax-link {
 #sdsm-ex-identify-sampling ol > li{
   padding-bottom: 0.4in;
 }
+
+/* ---------- Measuring Data ---------- */
+
+#md-def-mean{
+  padding-bottom: 0.7in;
+}
+
+#md-def-median{
+  padding-bottom: 0.7in;
+}
+
+#md-def-mode{
+  padding-bottom: 0.7in;
+}
+
+#md-def-range{
+  padding-bottom: 0.7in;
+}
+
+#md-def-variance{
+  padding-bottom: 1.2in;
+}
+
+#md-def-st-dev{
+  padding-bottom: 1.2in;
+}
+
+#md-def-quartiles{
+  padding-bottom: 1in;
+}
+
+#md-def-five-num{
+  padding-bottom: 1in;
+}
+
+#md-def-iqr{
+  padding-bottom: 1in;
+}
+
+#md-ex-literary-magazine-story-lengths{
+  padding-bottom: 1.5in;
+}
+
+#md-ex-student-film-festival{
+  padding-bottom: 0.7in;
+}
+
+#md-ex-local-history-sources{
+  padding-bottom: 0.7in;
+}
+
+#md-ex-radio-editing-times{
+  padding-bottom: 1.3in;
+}
+
+#md-ex-spoken-word-readings{
+  padding-bottom: 1.3in;
+}
+
+#md-ex-art-exhibit-visit-times{
+  padding-bottom: 1.3in;
+}
+
+#md-ex-oral-history-recordings{
+  padding-bottom: 1.3in;
+}
+
+/* ---------- Presenting Data Graphically ---------- */
+
+#pdf-def-freq-table{
+  padding-bottom: 1.3in;
+}
+
+#pdf-def-rel-freq-table{
+  padding-bottom: 1.3in;
+}
+
+#pdf-ex-newspaper-frequency-table{
+  padding-bottom: 1.5in;
+}
+
+#pdf-ex-archive-frequency-table{
+  padding-bottom: 1.2in;
+}
+
+#pdf-def-bar-chart{
+  padding-bottom: 0.9in;
+}
+
+#pdf-def-histogram{
+  padding-bottom: 1.3in;
+}
+
+#pdf-def-box-plot{
+  padding-bottom: 1.3in;
+}
+
+#pdf-def-fences{
+  padding-bottom: 1.3in;
+}
+
+#pdf-subsec-bar-chart .heading {
+    margin-top: 0 !important;
+}
+
+#pdf-ex-box-plot-exhibit-label-word-counts{
+  break-before: page;
+  page-break-before: always;
+}
+
+#md-ex-read-museum-exhibit-box-plots{
+  break-before: page;
+  page-break-before: always;
+}
