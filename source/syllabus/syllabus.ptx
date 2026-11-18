@@ -253,12 +253,7 @@
         </li>
         <li>
           <p>
-            Logic and Statements
-          </p>
-        </li>
-        <li>
-          <p>
-            Truth Tables and De Morgan's Laws
+            Math in Music
           </p>
         </li>
       </ol>
@@ -329,32 +324,32 @@
 
       <row>
         <cell>A</cell>
-        <cell>180-210</cell>
-        <cell>51-63</cell>
+        <cell>170-200</cell>
+        <cell>48-60</cell>
       </row>
 
       <row>
         <cell>B</cell>
-        <cell>160-179</cell>
-        <cell>42-50</cell>
+        <cell>150-169</cell>
+        <cell>39-47</cell>
       </row>
 
       <row>
         <cell>C</cell>
-        <cell>140-159</cell>
-        <cell>33-41</cell>
+        <cell>130-149</cell>
+        <cell>30-38</cell>
       </row>
 
       <row>
         <cell>D</cell>
-        <cell>120-139</cell>
-        <cell>24-32</cell>
+        <cell>110-129</cell>
+        <cell>21-29</cell>
       </row>
 
       <row>
         <cell>F</cell>
-        <cell>0-119</cell>
-        <cell>0-23</cell>
+        <cell>0-109</cell>
+        <cell>0-20</cell>
       </row>
 
     </tabular>

@@ -999,3 +999,113 @@ a.mathjax-link {
   break-before: page;
   page-break-before: always;
 }
+
+/* Basic Probability */
+
+#def-outcome {
+  padding-bottom: 0.8in;
+}
+
+#def-sample-space {
+  padding-bottom: 0.8in;
+}
+
+#def-event {
+  padding-bottom: 0.8in;
+}
+
+#def-simple-event {
+  padding-bottom: 0.8in;
+}
+
+#def-compound-event {
+  padding-bottom: 0.8in;
+}
+
+#ex-die-probabilities ol > li {
+  padding-bottom: 0.45in;
+}
+
+#ex-visitor-survey ol > li {
+  padding-bottom: 0.5in;
+}
+
+#ex-probability-denominator ol > li {
+  padding-bottom: 0.5in;
+}
+
+/* Probability from Tables and Complements */
+
+#ex-museum-table ol > li {
+  padding-bottom: 0.3in;
+}
+
+#def-complement {
+  padding-bottom: 0.7in;
+}
+
+#ex-complement ol > li {
+  padding-bottom: 0.4in;
+}
+
+/* And and Or */
+
+#def-intersection {
+  padding-bottom: 0.7in;
+}
+
+#ex-intersection ol > li {
+  padding-bottom: 0.4in;
+}
+
+#def-union {
+  padding-bottom: 1in;
+}
+
+#def-mutually-exclusive {
+  padding-bottom: 1in;
+}
+
+#ex-union ol > li {
+  padding-bottom: 0.7in;
+}
+
+#ex-union-with-complement ol > li {
+  padding-bottom: 0.6in;
+}
+
+/* Conditional Probability */
+
+#def-conditional-probability {
+  padding-bottom: 1in;
+}
+
+#ex-conditional ol > li {
+  padding-bottom: 0.4in;
+}
+
+/* Independent and Dependent Events */
+
+#def-independent {
+  padding-bottom: 0.7in;
+}
+
+#def-dependent {
+  padding-bottom: 0.7in;
+}
+
+#ex-identifying-independence ol > li {
+  padding-bottom: 0.6in;
+}
+
+#ex-two-rolls ol > li {
+  padding-bottom: 0.6in;
+}
+
+#ex-with-replacement ol > li {
+  padding-bottom: 0.6in;
+}
+
+#ex-without-replacement ol > li {
+  padding-bottom: 0.4in;
+}
