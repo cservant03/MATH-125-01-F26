@@ -2519,6 +2519,330 @@ var ptx_lunr_docs = [
   "number": "288",
   "title": "Identify the Sampling Method.",
   "body": " Identify the Sampling Method  A city wants to estimate the percentage of households that use a public park at least once a week. Name the sampling method in each plan and point to the detail that identifies it.  Randomly select 80 households from a complete list of city households.  Divide the city into neighborhoods and randomly select a proportional number of households from each neighborhood.  Randomly select four city blocks and survey every household on those blocks.  Start at a randomly chosen position among the first 15 entries on a household list, then select every 15th entry.  In each neighborhood, approach households that are easy to reach until 20 households from that neighborhood have responded.  Survey households on the streets nearest the park.  Post an open link on the city website and collect responses from households that choose to answer.    How could using only the streets nearest the park affect the estimate of the citywide percentage?  "
+},
+{
+  "id": "course-notes-17",
+  "level": "1",
+  "url": "course-notes-17.html",
+  "type": "Section",
+  "number": "",
+  "title": "Measuring Data",
+  "body": " Measuring Data   Measures of Center   Mean        Median        Mode        Story Lengths in a Literary Magazine  Seven short stories submitted to a campus literary magazine have the following lengths, in pages. Find the mean, median, and mode.    Student Film Festival  The eight films shown at a student film festival have the following running times, in minutes. Find the mean, median, and mode.    Sources Cited in Local History Projects  Nine students counted the number of primary sources they cited in their local history projects. Find the mean, median, and all modes.    Attendance at Live Performances  A campus arts council surveyed students about how many live performances they attended during the semester.    Performances Attended  Number of Students   0 2  1 4  2 10  3 5  4 6   Use the frequency table to find the mean, median, and mode of the number of performances attended per student.     Measures of Variation   Range        Variance        Standard Deviation        Editing Time at a Campus Radio Station  A producer selects a sample of five segments from the semester's broadcasts. Their editing times, in minutes, are Find the sample variance and sample standard deviation. Round the standard deviation to two decimal places.    Readings at a Spoken Word Showcase  A spoken word showcase features six readings. The organizer records the duration of every reading, in minutes. Treat the six readings at this showcase as the population. Find the population variance and population standard deviation. Round the standard deviation to two decimal places.    Quartiles        5 Number Summary        Interquartile Range        Time Spent at a Campus Art Exhibit  A gallery attendant records how many minutes nine visitors spend at a campus art exhibit. Find , , , and the interquartile range.    Lengths of Oral History Recordings  A campus archive has a sample of twelve oral history recordings. Their lengths, in minutes, are Find the five-number summary and the interquartile range.    "
+},
+{
+  "id": "md-def-mean",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-mean",
+  "type": "Definition",
+  "number": "289",
+  "title": "Mean.",
+  "body": " Mean      "
+},
+{
+  "id": "md-def-median",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-median",
+  "type": "Definition",
+  "number": "290",
+  "title": "Median.",
+  "body": " Median      "
+},
+{
+  "id": "md-def-mode",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-mode",
+  "type": "Definition",
+  "number": "291",
+  "title": "Mode.",
+  "body": " Mode      "
+},
+{
+  "id": "md-ex-literary-magazine-story-lengths",
+  "level": "2",
+  "url": "course-notes-17.html#md-ex-literary-magazine-story-lengths",
+  "type": "Example",
+  "number": "292",
+  "title": "Story Lengths in a Literary Magazine.",
+  "body": " Story Lengths in a Literary Magazine  Seven short stories submitted to a campus literary magazine have the following lengths, in pages. Find the mean, median, and mode.  "
+},
+{
+  "id": "md-ex-student-film-festival",
+  "level": "2",
+  "url": "course-notes-17.html#md-ex-student-film-festival",
+  "type": "Example",
+  "number": "293",
+  "title": "Student Film Festival.",
+  "body": " Student Film Festival  The eight films shown at a student film festival have the following running times, in minutes. Find the mean, median, and mode.  "
+},
+{
+  "id": "md-ex-local-history-sources",
+  "level": "2",
+  "url": "course-notes-17.html#md-ex-local-history-sources",
+  "type": "Example",
+  "number": "294",
+  "title": "Sources Cited in Local History Projects.",
+  "body": " Sources Cited in Local History Projects  Nine students counted the number of primary sources they cited in their local history projects. Find the mean, median, and all modes.  "
+},
+{
+  "id": "md-ex-live-performance-attendance",
+  "level": "2",
+  "url": "course-notes-17.html#md-ex-live-performance-attendance",
+  "type": "Example",
+  "number": "295",
+  "title": "Attendance at Live Performances.",
+  "body": " Attendance at Live Performances  A campus arts council surveyed students about how many live performances they attended during the semester.    Performances Attended  Number of Students   0 2  1 4  2 10  3 5  4 6   Use the frequency table to find the mean, median, and mode of the number of performances attended per student.  "
+},
+{
+  "id": "md-def-range",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-range",
+  "type": "Definition",
+  "number": "296",
+  "title": "Range.",
+  "body": " Range      "
+},
+{
+  "id": "md-def-variance",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-variance",
+  "type": "Definition",
+  "number": "297",
+  "title": "Variance.",
+  "body": " Variance      "
+},
+{
+  "id": "md-def-st-dev",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-st-dev",
+  "type": "Definition",
+  "number": "298",
+  "title": "Standard Deviation.",
+  "body": " Standard Deviation      "
+},
+{
+  "id": "md-ex-radio-editing-times",
+  "level": "2",
+  "url": "course-notes-17.html#md-ex-radio-editing-times",
+  "type": "Example",
+  "number": "299",
+  "title": "Editing Time at a Campus Radio Station.",
+  "body": " Editing Time at a Campus Radio Station  A producer selects a sample of five segments from the semester's broadcasts. Their editing times, in minutes, are Find the sample variance and sample standard deviation. Round the standard deviation to two decimal places.  "
+},
+{
+  "id": "md-ex-spoken-word-readings",
+  "level": "2",
+  "url": "course-notes-17.html#md-ex-spoken-word-readings",
+  "type": "Example",
+  "number": "300",
+  "title": "Readings at a Spoken Word Showcase.",
+  "body": " Readings at a Spoken Word Showcase  A spoken word showcase features six readings. The organizer records the duration of every reading, in minutes. Treat the six readings at this showcase as the population. Find the population variance and population standard deviation. Round the standard deviation to two decimal places.  "
+},
+{
+  "id": "md-def-quartiles",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-quartiles",
+  "type": "Definition",
+  "number": "301",
+  "title": "Quartiles.",
+  "body": " Quartiles      "
+},
+{
+  "id": "md-def-five-num",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-five-num",
+  "type": "Definition",
+  "number": "302",
+  "title": "5 Number Summary.",
+  "body": " 5 Number Summary      "
+},
+{
+  "id": "md-def-iqr",
+  "level": "2",
+  "url": "course-notes-17.html#md-def-iqr",
+  "type": "Definition",
+  "number": "303",
+  "title": "Interquartile Range.",
+  "body": " Interquartile Range      "
+},
+{
+  "id": "md-ex-art-exhibit-visit-times",
+  "level": "2",
+  "url": "course-notes-17.html#md-ex-art-exhibit-visit-times",
+  "type": "Example",
+  "number": "304",
+  "title": "Time Spent at a Campus Art Exhibit.",
+  "body": " Time Spent at a Campus Art Exhibit  A gallery attendant records how many minutes nine visitors spend at a campus art exhibit. Find , , , and the interquartile range.  "
+},
+{
+  "id": "md-ex-oral-history-recordings",
+  "level": "2",
+  "url": "course-notes-17.html#md-ex-oral-history-recordings",
+  "type": "Example",
+  "number": "305",
+  "title": "Lengths of Oral History Recordings.",
+  "body": " Lengths of Oral History Recordings  A campus archive has a sample of twelve oral history recordings. Their lengths, in minutes, are Find the five-number summary and the interquartile range.  "
+},
+{
+  "id": "course-notes-18",
+  "level": "1",
+  "url": "course-notes-18.html",
+  "type": "Section",
+  "number": "",
+  "title": "Presenting Data Graphically",
+  "body": " Presenting Data Graphically   Frequency Tables   Frequency Table        Relative Frequency Table        Campus Newspaper Articles  An editor sampled articles from a campus newspaper. The letters record their sections. A stands for Arts, C for Campus Life, O for Opinion, and S for Sports.  A, C, O, A, S, C, A, S, O, C, A, C, A, O, A, S, C, O, A, A  Make a table showing the frequency of each section.    Requests at a University Archive  A university archive sampled requests. L stands for letters, N for newspapers, P for photographs, and T for oral history transcripts. Make a table showing the relative frequency of each type of request.  P, P, L, N, T, N, P, N, L, N, T, L, N, P, L, L, T, L, N, L, P, N, P, T, L     Bar Charts   Bar Chart        Bar Plot of Newspaper Sections  Use your table from to draw a bar plot with the newspaper sections on the horizontal axis and frequency on the vertical axis.   Blank bar plot axes for campus newspaper sections, with frequency from 0 to 10.   The vertical axis is marked in increments of 1. The categories from left to right are Arts, Campus Life, Opinion, and Sports.      Bar Plot of Archive Requests  Use your table from to draw a bar plot with the types of requests on the horizontal axis. Show relative frequency as a percent on the vertical axis.   Blank bar plot axes for university archive requests, with relative frequency from 0 to 40 percent.   The vertical axis is marked every 4 percentage points. The categories from left to right are Letters, Newspapers, Photographs, and Oral history transcripts.      Read a Bar Plot of Theater Crew Sign-Ups  Each student who signed up to help with a theater production selected one crew assignment.   Student sign-ups by theater crew assignment.   Bar plot of student sign-ups for four theater crew assignments.   Lighting has 8 students, Sets has 14, Sound has 6, and Costumes has 12.        How many students chose Sets?  How many more students chose Costumes than Sound?  How many students signed up in all?  What percent of the students chose Lighting or Sound?       Histograms   Histogram        Reading a Philosophy Essay  A sample of students recorded how long it took them to read a short philosophy essay. Their times, in minutes, are given below. Make a histogram. Use five-minute bins.   Blank histogram grid with five-minute bins from 10 to 40 and a frequency scale from 0 to 8 in steps of one.     Museum Audio Guide Clips  A museum sampled clips from its audio guide, in seconds. Draw a frequency histogram using 20-second bins.   Blank histogram grid with 20-second bins from 20 to 140 and a frequency scale from 0 to 10 in steps of one.     Read a Histogram of Documentary Running Times  The histogram shows the running times of short documentaries at a film showcase.   Documentary running times in five-minute bins.   Histogram of documentary running times in six five-minute bins.   The bins start at 0, 5, 10, 15, 20, and 25 minutes. Each bin includes its lower endpoint and excludes its upper endpoint. The counts in order are 1, 9, 7, 4, 3, and 1.        Which five-minute interval contains the most documentaries?  How many documentaries run at least minutes?  What percent run under minutes?  Describe the shape of the distribution and identify the side with the longer tail.       Box Plots   Box Plot        Fences        Word Counts for Exhibit Labels  A curator recorded the word counts of ten labels in a museum exhibit. Draw a box plot on a labeled number line.   Blank number line for word counts from 20 to 50, labeled every five, with a tick at each whole number.     Attendance at Campus Poetry Readings  A student organization recorded attendance at eleven campus poetry readings. Draw a box plot.   Blank number line for attendance from 0 to 55, labeled every five, with a tick at each whole number.     Compare Visit Lengths at Three Museum Exhibits  The three basic box plots show how long visitors stayed at each exhibit.   Visit lengths at the Prints, Photography, and Sculpture exhibits.   Three vertical box plots of visit lengths on a shared scale in minutes.   For Prints, the minimum, first quartile, median, third quartile, and maximum are 5, 10, 20, 25, and 45 minutes. The corresponding values are 10, 15, 25, 35, and 45 for Photography and 15, 25, 30, 35, and 40 for Sculpture.        Which exhibit has the largest median visit length? Give the median in minutes.  Which exhibit has the largest IQR? Give the IQR in minutes.  Which exhibit has the largest range? Give the range in minutes.  At the Prints exhibit, about what percentage of visits lasted between and minutes?      "
+},
+{
+  "id": "pdf-def-freq-table",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-def-freq-table",
+  "type": "Definition",
+  "number": "306",
+  "title": "Frequency Table.",
+  "body": " Frequency Table      "
+},
+{
+  "id": "pdf-def-rel-freq-table",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-def-rel-freq-table",
+  "type": "Definition",
+  "number": "307",
+  "title": "Relative Frequency Table.",
+  "body": " Relative Frequency Table      "
+},
+{
+  "id": "pdf-ex-newspaper-frequency-table",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-newspaper-frequency-table",
+  "type": "Example",
+  "number": "308",
+  "title": "Campus Newspaper Articles.",
+  "body": " Campus Newspaper Articles  An editor sampled articles from a campus newspaper. The letters record their sections. A stands for Arts, C for Campus Life, O for Opinion, and S for Sports.  A, C, O, A, S, C, A, S, O, C, A, C, A, O, A, S, C, O, A, A  Make a table showing the frequency of each section.  "
+},
+{
+  "id": "pdf-ex-archive-frequency-table",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-archive-frequency-table",
+  "type": "Example",
+  "number": "309",
+  "title": "Requests at a University Archive.",
+  "body": " Requests at a University Archive  A university archive sampled requests. L stands for letters, N for newspapers, P for photographs, and T for oral history transcripts. Make a table showing the relative frequency of each type of request.  P, P, L, N, T, N, P, N, L, N, T, L, N, P, L, L, T, L, N, L, P, N, P, T, L  "
+},
+{
+  "id": "pdf-def-bar-chart",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-def-bar-chart",
+  "type": "Definition",
+  "number": "310",
+  "title": "Bar Chart.",
+  "body": " Bar Chart      "
+},
+{
+  "id": "pdf-ex-newspaper-frequency-bar-plot",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-newspaper-frequency-bar-plot",
+  "type": "Example",
+  "number": "311",
+  "title": "Bar Plot of Newspaper Sections.",
+  "body": " Bar Plot of Newspaper Sections  Use your table from to draw a bar plot with the newspaper sections on the horizontal axis and frequency on the vertical axis.   Blank bar plot axes for campus newspaper sections, with frequency from 0 to 10.   The vertical axis is marked in increments of 1. The categories from left to right are Arts, Campus Life, Opinion, and Sports.    "
+},
+{
+  "id": "pdf-ex-archive-relative-frequency-bar-plot",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-archive-relative-frequency-bar-plot",
+  "type": "Example",
+  "number": "312",
+  "title": "Bar Plot of Archive Requests.",
+  "body": " Bar Plot of Archive Requests  Use your table from to draw a bar plot with the types of requests on the horizontal axis. Show relative frequency as a percent on the vertical axis.   Blank bar plot axes for university archive requests, with relative frequency from 0 to 40 percent.   The vertical axis is marked every 4 percentage points. The categories from left to right are Letters, Newspapers, Photographs, and Oral history transcripts.    "
+},
+{
+  "id": "pdf-ex-read-theater-bar-plot",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-read-theater-bar-plot",
+  "type": "Example",
+  "number": "313",
+  "title": "Read a Bar Plot of Theater Crew Sign-Ups.",
+  "body": " Read a Bar Plot of Theater Crew Sign-Ups  Each student who signed up to help with a theater production selected one crew assignment.   Student sign-ups by theater crew assignment.   Bar plot of student sign-ups for four theater crew assignments.   Lighting has 8 students, Sets has 14, Sound has 6, and Costumes has 12.        How many students chose Sets?  How many more students chose Costumes than Sound?  How many students signed up in all?  What percent of the students chose Lighting or Sound?    "
+},
+{
+  "id": "pdf-def-histogram",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-def-histogram",
+  "type": "Definition",
+  "number": "315",
+  "title": "Histogram.",
+  "body": " Histogram      "
+},
+{
+  "id": "pdf-ex-histogram-philosophy-reading-times",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-histogram-philosophy-reading-times",
+  "type": "Example",
+  "number": "316",
+  "title": "Reading a Philosophy Essay.",
+  "body": " Reading a Philosophy Essay  A sample of students recorded how long it took them to read a short philosophy essay. Their times, in minutes, are given below. Make a histogram. Use five-minute bins.   Blank histogram grid with five-minute bins from 10 to 40 and a frequency scale from 0 to 8 in steps of one.   "
+},
+{
+  "id": "pdf-ex-histogram-museum-audio-clips",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-histogram-museum-audio-clips",
+  "type": "Example",
+  "number": "317",
+  "title": "Museum Audio Guide Clips.",
+  "body": " Museum Audio Guide Clips  A museum sampled clips from its audio guide, in seconds. Draw a frequency histogram using 20-second bins.   Blank histogram grid with 20-second bins from 20 to 140 and a frequency scale from 0 to 10 in steps of one.   "
+},
+{
+  "id": "pdf-ex-read-documentary-histogram",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-read-documentary-histogram",
+  "type": "Example",
+  "number": "318",
+  "title": "Read a Histogram of Documentary Running Times.",
+  "body": " Read a Histogram of Documentary Running Times  The histogram shows the running times of short documentaries at a film showcase.   Documentary running times in five-minute bins.   Histogram of documentary running times in six five-minute bins.   The bins start at 0, 5, 10, 15, 20, and 25 minutes. Each bin includes its lower endpoint and excludes its upper endpoint. The counts in order are 1, 9, 7, 4, 3, and 1.        Which five-minute interval contains the most documentaries?  How many documentaries run at least minutes?  What percent run under minutes?  Describe the shape of the distribution and identify the side with the longer tail.    "
+},
+{
+  "id": "pdf-def-box-plot",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-def-box-plot",
+  "type": "Definition",
+  "number": "320",
+  "title": "Box Plot.",
+  "body": " Box Plot      "
+},
+{
+  "id": "pdf-def-fences",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-def-fences",
+  "type": "Definition",
+  "number": "321",
+  "title": "Fences.",
+  "body": " Fences      "
+},
+{
+  "id": "pdf-ex-box-plot-exhibit-label-word-counts",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-box-plot-exhibit-label-word-counts",
+  "type": "Example",
+  "number": "322",
+  "title": "Word Counts for Exhibit Labels.",
+  "body": " Word Counts for Exhibit Labels  A curator recorded the word counts of ten labels in a museum exhibit. Draw a box plot on a labeled number line.   Blank number line for word counts from 20 to 50, labeled every five, with a tick at each whole number.   "
+},
+{
+  "id": "pdf-ex-modified-box-plot-poetry-attendance",
+  "level": "2",
+  "url": "course-notes-18.html#pdf-ex-modified-box-plot-poetry-attendance",
+  "type": "Example",
+  "number": "323",
+  "title": "Attendance at Campus Poetry Readings.",
+  "body": " Attendance at Campus Poetry Readings  A student organization recorded attendance at eleven campus poetry readings. Draw a box plot.   Blank number line for attendance from 0 to 55, labeled every five, with a tick at each whole number.   "
+},
+{
+  "id": "md-ex-read-museum-exhibit-box-plots",
+  "level": "2",
+  "url": "course-notes-18.html#md-ex-read-museum-exhibit-box-plots",
+  "type": "Example",
+  "number": "324",
+  "title": "Compare Visit Lengths at Three Museum Exhibits.",
+  "body": " Compare Visit Lengths at Three Museum Exhibits  The three basic box plots show how long visitors stayed at each exhibit.   Visit lengths at the Prints, Photography, and Sculpture exhibits.   Three vertical box plots of visit lengths on a shared scale in minutes.   For Prints, the minimum, first quartile, median, third quartile, and maximum are 5, 10, 20, 25, and 45 minutes. The corresponding values are 10, 15, 25, 35, and 45 for Photography and 15, 25, 30, 35, and 40 for Sculpture.        Which exhibit has the largest median visit length? Give the median in minutes.  Which exhibit has the largest IQR? Give the IQR in minutes.  Which exhibit has the largest range? Give the range in minutes.  At the Prints exhibit, about what percentage of visits lasted between and minutes?    "
 }
 ]
 

@@ -38,6 +38,7 @@
       <xi:include href="./notes/statistics-data-and-sampling-methods.ptx"/>
       <xi:include href="./notes/measuring-data.ptx"/>
       <xi:include href="./notes/presenting-data-graphically.ptx"/>
+      <xi:include href="./notes/probability.ptx"/>
     </chapter>
 
     </book>

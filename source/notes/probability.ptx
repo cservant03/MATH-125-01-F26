@@ -1,351 +1,408 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<section xml:id="math125-probability">
+<section xml:id="probability">
   <title>Probability</title>
 
-  <introduction>
-    <p>
-      A campus arts festival records attendance at its film screening and poetry reading.
-      What is the probability that a randomly chosen festival attendee went to the poetry reading?
-      How does that probability change if we choose only from people who went to the film screening?
-    </p>
-  </introduction>
-
-  <subsection xml:id="math125-basic-probability">
+  <subsection xml:id="basic-probability">
     <title>Basic Probability</title>
 
-    <definition>
-      <title>Outcomes, Sample Spaces, and Events</title>
+    <definition xml:id="def-outcome">
+      <title>Outcome</title>
       <statement>
-        <p>
-          A <term>probability experiment</term> is a process such as drawing a slip from a shuffled box.
-          An <term>outcome</term> is one possible result of the experiment.
-          The <term>sample space</term>, denoted by <m>S</m>, is the set of all possible outcomes.
-          An <term>event</term> is a subset of <m>S</m>.
-          A <term>simple event</term> contains one outcome, and a <term>compound event</term> contains two or more.
-        </p>
+        <p/>
       </statement>
     </definition>
 
-    <p>
-      A <term>theoretical probability</term> comes from a model of how outcomes occur.
-      When the model gives each outcome the same chance, we can compute probabilities by counting.
-    </p>
+    <definition xml:id="def-sample-space">
+      <title>Sample Space</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
 
-    <assemblage>
+    <definition xml:id="def-event">
+      <title>Event</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-simple-event">
+      <title>Simple Event</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-compound-event">
+      <title>Compound Event</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <assemblage xml:id="formula-basic-probability">
       <title>Probability with Equally Likely Outcomes</title>
       <p>
-        If <m>S</m> is a finite sample space with equally likely outcomes and <m>E</m> is an event, then
+        For a finite sample space <m>S</m> with equally likely outcomes,
         <md>
-          <mrow>P(E) = \dfrac{\text{number of outcomes in } E}{\text{number of outcomes in } S}.</mrow>
+          <mrow>P(E)=\dfrac{\text{number of outcomes in }E}{\text{total number of outcomes in }S}.</mrow>
         </md>
       </p>
       <p>
-        Every probability satisfies <m>0 \le P(E) \le 1</m>.
-        The impossible event has <m>P(\varnothing)=0</m> and the certain event has <m>P(S)=1</m>.
+        <md>
+          <mrow>0\le P(E)\le 1,\qquad P(\varnothing)=0,\qquad P(S)=1.</mrow>
+        </md>
       </p>
     </assemblage>
 
-    <example>
-      <title>Choosing a Track for Campus Radio</title>
+    <example xml:id="ex-die-probabilities">
+      <title>Rolling a Die</title>
       <p>
-        A radio producer draws one of six numbered slips uniformly at random.
-        Slips 1, 2, and 3 list jazz tracks, slips 4 and 5 list classical tracks, and slip 6 lists a folk track.
-        What is the probability that the producer draws a classical track?
-      </p>
-      <p>
-        The sample space is <m>S=\{1,2,3,4,5,6\}</m> and the event <q>classical track</q> is <m>C=\{4,5\}</m>.
-        There are two classical slips among the six equally likely outcomes, so
-        <md>
-          <mrow>P(C)=\dfrac{2}{6}=\dfrac{1}{3}\approx 0.333=33.3\%.</mrow>
-        </md>
+        A fair six-sided die is rolled once.
+        <ol marker="a)">
+          <li><p>List the sample space.</p></li>
+          <li><p>Find the probability that the number showing is 5.</p></li>
+          <li><p>Find the probability that the number showing is odd.</p></li>
+          <li><p>Find the probability that the number showing is greater than 3.</p></li>
+          <li><p>Find the probability that the number showing is greater than 6.</p></li>
+          <li><p>Find the probability that the number showing is less than 7.</p></li>
+          <li><p>Identify a simple event and a compound event from the preceding parts.</p></li>
+        </ol>
       </p>
     </example>
 
-    <p>
-      An <term>experimental</term> or <term>empirical probability</term> estimates the chance of an event
-      using its observed relative frequency.
-      If 18 of the past 60 radio episodes ran over their scheduled time, the producer can use
-      <m>18/60=0.30</m> as an estimate for the chance of an overrun on the next episode.
-      A <term>subjective probability</term> is based on judgment, as when a curator estimates
-      the chance that a collector will lend a painting.
-    </p>
+    <example xml:id="ex-visitor-survey">
+      <title>Museum Visitor Survey</title>
+      <p>
+        Museum visitors were asked whether they had visited an art museum during the previous year.
+        There were 137 <q>yes</q> responses and 86 <q>no</q> responses.
+        One of these visitors is selected uniformly at random.
+        <ol marker="a)">
+          <li><p>Find the probability that the visitor answered <q>yes</q>. Give an exact fraction and a decimal rounded to three decimal places.</p></li>
+          <li><p>Find the probability that the visitor answered <q>no</q>. Give the answer as a percent rounded to one decimal place.</p></li>
+        </ol>
+      </p>
+    </example>
 
-    <exercise>
-      <title>Literary Magazine Submissions</title>
-      <statement>
-        <p>
-          The editors received 9 poems, 7 short stories, and 4 personal essays.
-          They select one of the 20 submissions uniformly at random for a mock layout.
-          Find the probability of selecting a poem as a fraction and a percent.
-          Which submissions count toward the numerator, and which count toward the denominator?
-        </p>
-      </statement>
-    </exercise>
+    <example xml:id="ex-probability-denominator">
+      <title>Checking a Probability Calculation</title>
+      <p>
+        An art studio has 7 blue markers and 11 black markers in a box.
+        A student selects one marker uniformly at random and claims that the probability of selecting a blue marker is
+        <m>\dfrac{7}{11}</m>.
+        <ol marker="a)">
+          <li><p>Is the student's probability correct? Give the correct probability and explain what the numerator and denominator count.</p></li>
+          <li><p>A classmate says the student's answer must be correct because it is between 0 and 1. Does this establish that the answer is correct? Explain.</p></li>
+          <li><p>Another classmate says that every probability must be written with a denominator of 100. Is that claim correct? Explain.</p></li>
+        </ol>
+      </p>
+    </example>
   </subsection>
 
-  <subsection xml:id="math125-combining-events">
-    <title>Complements, Intersections, and Unions</title>
+  <subsection xml:id="tables-and-complements">
+    <title>Probability from Tables and Complements</title>
 
-    <definition>
-      <title>Operations on Events</title>
+    <example xml:id="ex-museum-table">
+      <title>Art Museum Preferences</title>
+      <p>
+        Visitors at an art museum each selected one favorite type of exhibit.
+        Their choices and the times of their visits are summarized in <xref ref="museum-preferences"/>.
+        One of the surveyed visitors is selected uniformly at random.
+      </p>
+      <table xml:id="museum-preferences">
+        <title>Favorite Exhibit by Visit Time</title>
+        <tabular row-headers="yes" halign="center" valign="middle"
+                 top="medium" left="medium" bottom="medium" right="medium">
+          <row header="yes" bottom="medium">
+            <cell>Visit time</cell>
+            <cell>Paintings</cell>
+            <cell>Photographs</cell>
+            <cell>Sculptures</cell>
+            <cell>Total</cell>
+          </row>
+          <row>
+            <cell>Morning</cell>
+            <cell>20</cell>
+            <cell>12</cell>
+            <cell>8</cell>
+            <cell>40</cell>
+          </row>
+          <row bottom="medium">
+            <cell>Afternoon</cell>
+            <cell>8</cell>
+            <cell>16</cell>
+            <cell>6</cell>
+            <cell>30</cell>
+          </row>
+          <row>
+            <cell>Total</cell>
+            <cell>28</cell>
+            <cell>28</cell>
+            <cell>14</cell>
+            <cell>70</cell>
+          </row>
+        </tabular>
+      </table>
+      <p>
+        Give each probability as a simplified fraction.
+        <ol marker="a)">
+          <li><p>Find the probability that the visitor preferred photographs.</p></li>
+          <li><p>Find the probability that the visitor came in the afternoon.</p></li>
+          <li><p>Find the probability that the visitor preferred sculptures.</p></li>
+        </ol>
+      </p>
+    </example>
+
+    <definition xml:id="def-complement">
+      <title>Complement</title>
       <statement>
-        <p>
-          <ul>
-            <li>
-              <p>The <term>complement</term> <m>A^c</m> is the event that <m>A</m> does not occur.</p>
-            </li>
-            <li>
-              <p>The <term>intersection</term> <m>A\cap B</m> is the event that both <m>A</m> and <m>B</m> occur.</p>
-            </li>
-            <li>
-              <p>The <term>union</term> <m>A\cup B</m> is the event that <m>A</m> or <m>B</m> occurs, including when both occur.</p>
-            </li>
-          </ul>
-        </p>
+        <p/>
       </statement>
     </definition>
 
-    <assemblage>
+    <assemblage xml:id="formula-complement">
       <title>Complement Rule</title>
       <p>
-        An event and its complement together account for all possible outcomes, so
+        The complement of <m>A</m> is denoted by <m>A^c</m>.
         <md>
-          <mrow>P(A^c) = 1 - P(A).</mrow>
+          <mrow>P(A^c)=1-P(A).</mrow>
         </md>
       </p>
     </assemblage>
 
-    <assemblage>
-      <title>Addition Rule</title>
+    <example xml:id="ex-complement">
+      <title>Using a Complement</title>
       <p>
-        When we add <m>P(A)</m> and <m>P(B)</m>, we count their overlap twice.
-        Subtract the probability of the intersection once.
-        <md>
-          <mrow>P(A\cup B) = P(A) + P(B) - P(A\cap B).</mrow>
-        </md>
-      </p>
-      <p>
-        Events are <term>mutually exclusive</term> (or <term>disjoint</term>) when <m>A\cap B=\varnothing</m>.
-        In that case, <m>P(A\cup B)=P(A)+P(B)</m>.
-        For example, drawing slip 4 and drawing slip 5 are mutually exclusive events on a single draw.
-      </p>
-    </assemblage>
-
-    <p>
-      The attendance counts below cover 120 festival attendees.
-      Select one attendee uniformly at random.
-      Let <m>F</m> be the event that the attendee went to the film screening and let <m>R</m> be the event
-      that the attendee went to the poetry reading.
-    </p>
-
-    <table xml:id="math125-festival-attendance">
-      <title>Campus Arts Festival Attendance</title>
-      <tabular row-headers="yes" halign="center" valign="middle"
-               top="medium" left="medium" bottom="medium" right="medium">
-        <row header="yes" bottom="medium">
-          <cell>Film screening</cell>
-          <cell>Attended reading</cell>
-          <cell>Did not attend reading</cell>
-          <cell>Total</cell>
-        </row>
-        <row>
-          <cell>Attended</cell>
-          <cell>18</cell>
-          <cell>30</cell>
-          <cell>48</cell>
-        </row>
-        <row bottom="medium">
-          <cell>Did not attend</cell>
-          <cell>12</cell>
-          <cell>60</cell>
-          <cell>72</cell>
-        </row>
-        <row>
-          <cell>Total</cell>
-          <cell>30</cell>
-          <cell>90</cell>
-          <cell>120</cell>
-        </row>
-      </tabular>
-    </table>
-
-    <example>
-      <title>Attending Both, At Least One, or Neither</title>
-      <p>
-        The intersection uses the cell for attendees who went to both events.
-        Its probability is <m>P(F\cap R)=\dfrac{18}{120}=\dfrac{3}{20}</m>.
-      </p>
-      <p>
-        To find the probability of attending at least one event, use the film and reading totals and subtract the overlap.
-        <md>
-          <mrow>P(F\cup R)=\dfrac{48}{120}+\dfrac{30}{120}-\dfrac{18}{120}=\dfrac{60}{120}=\dfrac{1}{2}.</mrow>
-        </md>
-      </p>
-      <p>
-        The complement of attending at least one event is attending neither event.
-        <md>
-          <mrow>P((F\cup R)^c)=1-\dfrac{1}{2}=\dfrac{1}{2}.</mrow>
-        </md>
+        Use <xref ref="museum-preferences"/>. One visitor is selected uniformly at random.
+        <ol marker="a)">
+          <li><p>Find the probability that the visitor did not prefer sculptures.</p></li>
+          <li><p>Find the probability that the visitor did not come in the afternoon.</p></li>
+          <li><p>Check the answer to part (a) by adding the counts in the other exhibit categories.</p></li>
+        </ol>
       </p>
     </example>
-
-    <exercise>
-      <title>Attending Exactly One Event</title>
-      <statement>
-        <p>
-          Use <xref ref="math125-festival-attendance"/> to find the probability that the selected attendee
-          went to exactly one of the two events. Which two cells contribute to your numerator?
-        </p>
-      </statement>
-    </exercise>
   </subsection>
 
-  <subsection xml:id="math125-conditional-probability">
-    <title>Conditional Probability</title>
+  <subsection xml:id="combining-events">
+    <title>And and Or</title>
 
-    <definition>
-      <title>Conditioning on an Event</title>
+    <definition xml:id="def-intersection">
+      <title>Intersection</title>
       <statement>
-        <p>
-          The <term>conditional probability</term> <m>P(B\mid A)</m>, read <q>the probability of <m>B</m> given <m>A</m>,</q>
-          measures the chance of <m>B</m> among outcomes where <m>A</m> has occurred.
-          The event to the right of the bar is the condition.
-        </p>
+        <p/>
       </statement>
     </definition>
 
-    <assemblage>
+    <example xml:id="ex-intersection">
+      <title>Combining a Visit Time and a Preference</title>
+      <p>
+        Use <xref ref="museum-preferences"/>. One visitor is selected uniformly at random.
+        <ol marker="a)">
+          <li><p>Find the probability that the visitor came in the afternoon and preferred photographs.</p></li>
+          <li><p>Find the probability that the visitor came in the morning and preferred sculptures.</p></li>
+        </ol>
+      </p>
+    </example>
+
+    <definition xml:id="def-union">
+      <title>Union</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-mutually-exclusive">
+      <title>Mutually Exclusive Events</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <assemblage xml:id="formula-addition">
+      <title>Addition Rule</title>
+      <p>
+        <md>
+          <mrow>P(A\text{ or }B)=P(A\cup B)=P(A)+P(B)-P(A\cap B).</mrow>
+        </md>
+      </p>
+      <p>
+        For mutually exclusive events,
+        <md>
+          <mrow>P(A\text{ or }B)=P(A)+P(B).</mrow>
+        </md>
+      </p>
+    </assemblage>
+
+    <example xml:id="ex-union">
+      <title>At Least One of Two Events</title>
+      <p>
+        Use <xref ref="museum-preferences"/>. One visitor is selected uniformly at random.
+        <ol marker="a)">
+          <li><p>Find the probability that the visitor came in the morning or preferred photographs.</p></li>
+          <li><p>Find the probability that the visitor preferred photographs or sculptures.</p></li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="ex-union-with-complement">
+      <title>Library Cards and Writing Workshops</title>
+      <p>
+        A community library recorded whether each surveyed visitor has a library card and
+        whether the visitor attended a writing workshop. Each visitor appears once in the table.
+        One surveyed visitor is selected uniformly at random.
+      </p>
+      <table xml:id="library-workshop">
+        <title>Library Card Status and Workshop Attendance</title>
+        <tabular row-headers="yes" halign="center" valign="middle"
+                 top="medium" left="medium" bottom="medium" right="medium">
+          <row header="yes" bottom="medium">
+            <cell>Has a library card</cell>
+            <cell>Attended workshop</cell>
+            <cell>Did not attend workshop</cell>
+          </row>
+          <row>
+            <cell>Yes</cell>
+            <cell>38</cell>
+            <cell>97</cell>
+          </row>
+          <row>
+            <cell>No</cell>
+            <cell>26</cell>
+            <cell>54</cell>
+          </row>
+        </tabular>
+      </table>
+      <p>
+        <ol marker="a)">
+          <li><p>How many visitors are represented in the table?</p></li>
+          <li><p>Find the probability that the visitor attended the workshop or does not have a library card. Give the answer as a percent rounded to one decimal place.</p></li>
+          <li><p>Find the probability that the visitor has a library card and did not attend the workshop. Give the answer as a simplified fraction.</p></li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="conditional-probability">
+    <title>Conditional Probability</title>
+
+    <definition xml:id="def-conditional-probability">
+      <title>Conditional Probability</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <assemblage xml:id="formula-conditional">
       <title>Conditional Probability Formula</title>
       <p>
+        Read <m>P(B\mid A)</m> as <q>the probability of <m>B</m> given <m>A</m>.</q>
         If <m>P(A)>0</m>, then
         <md>
           <mrow>P(B\mid A)=\dfrac{P(A\cap B)}{P(A)}.</mrow>
         </md>
       </p>
-      <p>
-        In a two-way count table with a uniformly selected individual, divide the count in both events
-        by the total count in the group named by the condition.
-      </p>
     </assemblage>
 
-    <example>
-      <title>Changing the Condition</title>
+    <example xml:id="ex-conditional">
+      <title>Changing the Group Being Considered</title>
       <p>
-        In <xref ref="math125-festival-attendance"/>, 30 of the 120 attendees went to the reading,
-        so <m>P(R)=\dfrac{30}{120}=\dfrac{1}{4}</m>.
-        Among the 48 filmgoers, 18 went to the reading, so <m>P(R\mid F)=\dfrac{18}{48}=\dfrac{3}{8}</m>.
-        Among the 30 people at the reading, the probability of attending the film is
-        <m>P(F\mid R)=\dfrac{18}{30}=\dfrac{3}{5}</m>.
-        Reversing the condition changes the denominator in this example.
+        Use <xref ref="museum-preferences"/>.
+        Give each probability as a simplified fraction.
+        <ol marker="a)">
+          <li><p>Find the probability that a randomly selected visitor came in the afternoon, given that the visitor preferred photographs.</p></li>
+          <li><p>Find the probability that a randomly selected visitor preferred photographs, given that the visitor came in the afternoon.</p></li>
+          <li><p>Find the probability that a randomly selected visitor came in the afternoon and preferred photographs.</p></li>
+        </ol>
       </p>
     </example>
-
-    <exercise>
-      <title>Choosing the Denominator</title>
-      <statement>
-        <p>
-          Use <xref ref="math125-festival-attendance"/> for each probability.
-          <ol marker="a)">
-            <li><p>Find the probability that an attendee went to the reading, given that they skipped the film.</p></li>
-            <li><p>Find the probability that an attendee skipped the film and went to the reading.</p></li>
-            <li><p>Explain which group determines the denominator in each calculation.</p></li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
   </subsection>
 
-  <subsection xml:id="math125-independence">
-    <title>Independence and the Multiplication Rule</title>
+  <subsection xml:id="independence">
+    <title>Independent and Dependent Events</title>
 
-    <assemblage>
-      <title>Multiplication Rule</title>
-      <p>
-        If <m>P(A)>0</m>, the conditional probability formula gives
-        <md>
-          <mrow>P(A\cap B)=P(A)\cdot P(B\mid A).</mrow>
-        </md>
-        For two draws, multiply the probability of the first result by the probability of the second result
-        given the first.
-      </p>
-    </assemblage>
-
-    <definition>
-      <title>Independent and Dependent Events</title>
+    <definition xml:id="def-independent">
+      <title>Independent Events</title>
       <statement>
-        <p>
-          Events <m>A</m> and <m>B</m> are <term>independent</term> if
-          <md>
-            <mrow>P(A\cap B)=P(A)\cdot P(B).</mrow>
-          </md>
-          When <m>P(A)>0</m>, independence means <m>P(B\mid A)=P(B)</m>.
-          Events that fail the independence test are <term>dependent</term>.
-        </p>
+        <p/>
       </statement>
     </definition>
 
-    <p>
-      At the festival, <m>F</m> and <m>R</m> are dependent because
-      <m>P(R\mid F)=\dfrac{3}{8}</m> and <m>P(R)=\dfrac{1}{4}</m>.
-      Two mutually exclusive events with positive probabilities are also dependent, since the occurrence
-      of one makes the other impossible.
-    </p>
+    <definition xml:id="def-dependent">
+      <title>Dependent Events</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
 
-    <example>
-      <title>Two Theater Prompts</title>
+    <example xml:id="ex-identifying-independence">
+      <title>Identifying Independence</title>
       <p>
-        An improv team has 10 prompt cards, 4 for comedy and 6 for drama.
-        The team draws twice, with each available card equally likely on each draw.
-      </p>
-      <p>
-        <em>With replacement.</em> The team returns the first card and reshuffles before drawing again.
-        The draws are independent because the cards on the second draw have the original probabilities.
-        <md>
-          <mrow>P(\text{both comedy})=\dfrac{4}{10}\cdot\dfrac{4}{10}=\dfrac{4}{25}.</mrow>
-        </md>
-      </p>
-      <p>
-        <em>Without replacement.</em> The team sets aside the first card.
-        If the first card is comedy, 3 comedy cards remain among the 9 available cards.
-        <md>
-          <mrow>P(\text{both comedy})=\dfrac{4}{10}\cdot\dfrac{3}{9}=\dfrac{2}{15}.</mrow>
-        </md>
-      </p>
-      <p>
-        Without replacement, drawing one card of each type can happen in two mutually exclusive orders.
-        Multiply within each order, then add the probabilities of the two orders.
-        <md>
-          <mrow>P(\text{comedy, then drama}) &amp;= \dfrac{4}{10}\cdot\dfrac{6}{9}=\dfrac{4}{15}</mrow>
-          <mrow>P(\text{drama, then comedy}) &amp;= \dfrac{6}{10}\cdot\dfrac{4}{9}=\dfrac{4}{15}</mrow>
-          <mrow>P(\text{one of each}) &amp;= \dfrac{4}{15}+\dfrac{4}{15}=\dfrac{8}{15}.</mrow>
-        </md>
+        For each pair of events, determine whether the events are independent or dependent. Explain.
+        <ol marker="a)">
+          <li><p>A fair coin is tossed twice. The events are getting heads on the first toss and getting heads on the second toss.</p></li>
+          <li><p>One of 10 thoroughly mixed cards, including 4 comedy prompts, is selected at random and set aside. A second card is selected at random. The events are selecting comedy on the first draw and selecting comedy on the second draw.</p></li>
+          <li><p>The card selection in part (b) is repeated, this time returning the first card and mixing the cards before the second draw. The events are again selecting comedy on the first draw and selecting comedy on the second draw.</p></li>
+        </ol>
       </p>
     </example>
 
-    <exercise>
-      <title>Selections from a Museum Archive</title>
-      <statement>
-        <p>
-          A museum volunteer draws two items at random from a box with 5 photographs and 3 posters.
-          Each available item is equally likely on each draw.
-          For parts (a) through (c), the volunteer draws without replacement.
-          <ol marker="a)">
-            <li><p>Find the probability that both items are photographs.</p></li>
-            <li><p>Find the probability that exactly one item is a photograph.</p></li>
-            <li><p>Use a complement to find the probability that at least one item is a photograph.</p></li>
-            <li><p>Find the probability that both items are photographs if the volunteer instead replaces the first item and mixes the box before the second draw.</p></li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-  </subsection>
+    <assemblage xml:id="formula-independent">
+      <title>Multiplication Rule for Independent Events</title>
+      <p>
+        For independent events <m>A</m> and <m>B</m>,
+        <md>
+          <mrow>P(A\text{ and }B)=P(A)\cdot P(B).</mrow>
+        </md>
+      </p>
+    </assemblage>
 
-  <conclusion>
-    <p>
-      Adapted for MATH 125 with new examples and exercises from <q>Probability,</q> pp. 279<ndash/>289
-      of <url href="https://www.opentextbookstore.com/mathinsociety/">Math in Society</url>, 2.6,
-      by David Lippman, with contributions from Jeff Eldridge and Online Stat Book.
-      This adaptation is licensed under <url href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</url>.
-    </p>
-  </conclusion>
+    <example xml:id="ex-two-rolls">
+      <title>Two Rolls of a Die</title>
+      <p>
+        A fair six-sided die is rolled twice, with independent results.
+        <ol marker="a)">
+          <li><p>Find the probability of rolling a 4 on the first roll and a number greater than 4 on the second roll.</p></li>
+          <li><p>Find the probability of rolling an odd number on the first roll and an even number on the second roll.</p></li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="ex-with-replacement">
+      <title>Theater Prompts with Replacement</title>
+      <p>
+        An improv team has 4 comedy prompt cards, 6 drama prompt cards, 5 mystery prompt cards,
+        and 3 musical prompt cards. A card is drawn at random, returned to the stack, and thoroughly mixed
+        with the other cards before a second card is drawn at random.
+        <ol marker="a)">
+          <li><p>Find the probability that the first card is comedy and the second card is musical.</p></li>
+          <li><p>Find the probability that both cards are mystery prompts.</p></li>
+        </ol>
+      </p>
+    </example>
+
+    <assemblage xml:id="formula-general-multiplication">
+      <title>General Multiplication Rule</title>
+      <p>
+        If <m>P(A)>0</m>, then
+        <md>
+          <mrow>P(A\text{ and }B)=P(A)\cdot P(B\mid A).</mrow>
+        </md>
+      </p>
+    </assemblage>
+
+    <example xml:id="ex-without-replacement">
+      <title>Literary Showcase without Replacement</title>
+      <p>
+        A literary showcase received 6 poems, 8 short stories, 5 essays, and 7 plays.
+        An editor selects one submission uniformly at random and sets it aside,
+        then selects a second submission uniformly at random from those remaining.
+        <ol marker="a)">
+          <li><p>Find the probability that the first selection is an essay and the second selection is a poem. Give an exact fraction and a decimal rounded to four decimal places.</p></li>
+          <li><p>Find the probability that both selections are short stories.</p></li>
+          <li><p>Find the probability of selecting one essay and one poem, in either order.</p></li>
+          <li><p>For each part, explain how the first selection affects the counts used for the second selection.</p></li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
 </section>
