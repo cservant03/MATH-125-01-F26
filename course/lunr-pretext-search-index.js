@@ -2843,6 +2843,240 @@ var ptx_lunr_docs = [
   "number": "324",
   "title": "Compare Visit Lengths at Three Museum Exhibits.",
   "body": " Compare Visit Lengths at Three Museum Exhibits  The three basic box plots show how long visitors stayed at each exhibit.   Visit lengths at the Prints, Photography, and Sculpture exhibits.   Three vertical box plots of visit lengths on a shared scale in minutes.   For Prints, the minimum, first quartile, median, third quartile, and maximum are 5, 10, 20, 25, and 45 minutes. The corresponding values are 10, 15, 25, 35, and 45 for Photography and 15, 25, 30, 35, and 40 for Sculpture.        Which exhibit has the largest median visit length? Give the median in minutes.  Which exhibit has the largest IQR? Give the IQR in minutes.  Which exhibit has the largest range? Give the range in minutes.  At the Prints exhibit, about what percentage of visits lasted between and minutes?    "
+},
+{
+  "id": "probability",
+  "level": "1",
+  "url": "probability.html",
+  "type": "Section",
+  "number": "",
+  "title": "Probability",
+  "body": " Probability   Basic Probability   Outcome       Sample Space       Event       Simple Event       Compound Event       Probability with Equally Likely Outcomes  For a finite sample space with equally likely outcomes,        Rolling a Die  A fair six-sided die is rolled once.  List the sample space.  Find the probability that the number showing is 5.  Find the probability that the number showing is odd.  Find the probability that the number showing is greater than 3.  Find the probability that the number showing is greater than 6.  Find the probability that the number showing is less than 7.  Identify a simple event and a compound event from the preceding parts.      Museum Visitor Survey  Museum visitors were asked whether they had visited an art museum during the previous year. There were 137 yes responses and 86 no responses. One of these visitors is selected uniformly at random.  Find the probability that the visitor answered yes . Give an exact fraction and a decimal rounded to three decimal places.  Find the probability that the visitor answered no . Give the answer as a percent rounded to one decimal place.      Checking a Probability Calculation  An art studio has 7 blue markers and 11 black markers in a box. A student selects one marker uniformly at random and claims that the probability of selecting a blue marker is .  Is the student's probability correct? Give the correct probability and explain what the numerator and denominator count.  A classmate says the student's answer must be correct because it is between 0 and 1. Does this establish that the answer is correct? Explain.  Another classmate says that every probability must be written with a denominator of 100. Is that claim correct? Explain.       Probability from Tables and Complements   Art Museum Preferences  Visitors at an art museum each selected one favorite type of exhibit. Their choices and the times of their visits are summarized in . One of the surveyed visitors is selected uniformly at random.   Favorite Exhibit by Visit Time    Visit time  Paintings  Photographs  Sculptures  Total    Morning  20  12  8  40    Afternoon  8  16  6  30    Total  28  28  14  70     Give each probability as a simplified fraction.  Find the probability that the visitor preferred photographs.  Find the probability that the visitor came in the afternoon.  Find the probability that the visitor preferred sculptures.      Complement       Complement Rule  The complement of is denoted by .     Using a Complement  Use . One visitor is selected uniformly at random.  Find the probability that the visitor did not prefer sculptures.  Find the probability that the visitor did not come in the afternoon.  Check the answer to part (a) by adding the counts in the other exhibit categories.       And and Or   Intersection       Combining a Visit Time and a Preference  Use . One visitor is selected uniformly at random.  Find the probability that the visitor came in the afternoon and preferred photographs.  Find the probability that the visitor came in the morning and preferred sculptures.      Union       Mutually Exclusive Events       Addition Rule     For mutually exclusive events,     At Least One of Two Events  Use . One visitor is selected uniformly at random.  Find the probability that the visitor came in the morning or preferred photographs.  Find the probability that the visitor preferred photographs or sculptures.      Library Cards and Writing Workshops  A community library recorded whether each surveyed visitor has a library card and whether the visitor attended a writing workshop. Each visitor appears once in the table. One surveyed visitor is selected uniformly at random.   Library Card Status and Workshop Attendance    Has a library card  Attended workshop  Did not attend workshop    Yes  38  97    No  26  54       How many visitors are represented in the table?  Find the probability that the visitor attended the workshop or does not have a library card. Give the answer as a percent rounded to one decimal place.  Find the probability that the visitor has a library card and did not attend the workshop. Give the answer as a simplified fraction.       Conditional Probability   Conditional Probability       Conditional Probability Formula  Read as the probability of given . If , then     Changing the Group Being Considered  Use . Give each probability as a simplified fraction.  Find the probability that a randomly selected visitor came in the afternoon, given that the visitor preferred photographs.  Find the probability that a randomly selected visitor preferred photographs, given that the visitor came in the afternoon.  Find the probability that a randomly selected visitor came in the afternoon and preferred photographs.       Independent and Dependent Events   Independent Events       Dependent Events       Identifying Independence  For each pair of events, determine whether the events are independent or dependent. Explain.  A fair coin is tossed twice. The events are getting heads on the first toss and getting heads on the second toss.  One of 10 thoroughly mixed cards, including 4 comedy prompts, is selected at random and set aside. A second card is selected at random. The events are selecting comedy on the first draw and selecting comedy on the second draw.  The card selection in part (b) is repeated, this time returning the first card and mixing the cards before the second draw. The events are again selecting comedy on the first draw and selecting comedy on the second draw.      Multiplication Rule for Independent Events  For independent events and ,     Two Rolls of a Die  A fair six-sided die is rolled twice, with independent results.  Find the probability of rolling a 4 on the first roll and a number greater than 4 on the second roll.  Find the probability of rolling an odd number on the first roll and an even number on the second roll.      Theater Prompts with Replacement  An improv team has 4 comedy prompt cards, 6 drama prompt cards, 5 mystery prompt cards, and 3 musical prompt cards. A card is drawn at random, returned to the stack, and thoroughly mixed with the other cards before a second card is drawn at random.  Find the probability that the first card is comedy and the second card is musical.  Find the probability that both cards are mystery prompts.      General Multiplication Rule  If , then     Literary Showcase without Replacement  A literary showcase received 6 poems, 8 short stories, 5 essays, and 7 plays. An editor selects one submission uniformly at random and sets it aside, then selects a second submission uniformly at random from those remaining.  Find the probability that the first selection is an essay and the second selection is a poem. Give an exact fraction and a decimal rounded to four decimal places.  Find the probability that both selections are short stories.  Find the probability of selecting one essay and one poem, in either order.  For each part, explain how the first selection affects the counts used for the second selection.      "
+},
+{
+  "id": "def-outcome",
+  "level": "2",
+  "url": "probability.html#def-outcome",
+  "type": "Definition",
+  "number": "326",
+  "title": "Outcome.",
+  "body": " Outcome     "
+},
+{
+  "id": "def-sample-space",
+  "level": "2",
+  "url": "probability.html#def-sample-space",
+  "type": "Definition",
+  "number": "327",
+  "title": "Sample Space.",
+  "body": " Sample Space     "
+},
+{
+  "id": "def-event",
+  "level": "2",
+  "url": "probability.html#def-event",
+  "type": "Definition",
+  "number": "328",
+  "title": "Event.",
+  "body": " Event     "
+},
+{
+  "id": "def-simple-event",
+  "level": "2",
+  "url": "probability.html#def-simple-event",
+  "type": "Definition",
+  "number": "329",
+  "title": "Simple Event.",
+  "body": " Simple Event     "
+},
+{
+  "id": "def-compound-event",
+  "level": "2",
+  "url": "probability.html#def-compound-event",
+  "type": "Definition",
+  "number": "330",
+  "title": "Compound Event.",
+  "body": " Compound Event     "
+},
+{
+  "id": "ex-die-probabilities",
+  "level": "2",
+  "url": "probability.html#ex-die-probabilities",
+  "type": "Example",
+  "number": "331",
+  "title": "Rolling a Die.",
+  "body": " Rolling a Die  A fair six-sided die is rolled once.  List the sample space.  Find the probability that the number showing is 5.  Find the probability that the number showing is odd.  Find the probability that the number showing is greater than 3.  Find the probability that the number showing is greater than 6.  Find the probability that the number showing is less than 7.  Identify a simple event and a compound event from the preceding parts.    "
+},
+{
+  "id": "ex-visitor-survey",
+  "level": "2",
+  "url": "probability.html#ex-visitor-survey",
+  "type": "Example",
+  "number": "332",
+  "title": "Museum Visitor Survey.",
+  "body": " Museum Visitor Survey  Museum visitors were asked whether they had visited an art museum during the previous year. There were 137 yes responses and 86 no responses. One of these visitors is selected uniformly at random.  Find the probability that the visitor answered yes . Give an exact fraction and a decimal rounded to three decimal places.  Find the probability that the visitor answered no . Give the answer as a percent rounded to one decimal place.    "
+},
+{
+  "id": "ex-probability-denominator",
+  "level": "2",
+  "url": "probability.html#ex-probability-denominator",
+  "type": "Example",
+  "number": "333",
+  "title": "Checking a Probability Calculation.",
+  "body": " Checking a Probability Calculation  An art studio has 7 blue markers and 11 black markers in a box. A student selects one marker uniformly at random and claims that the probability of selecting a blue marker is .  Is the student's probability correct? Give the correct probability and explain what the numerator and denominator count.  A classmate says the student's answer must be correct because it is between 0 and 1. Does this establish that the answer is correct? Explain.  Another classmate says that every probability must be written with a denominator of 100. Is that claim correct? Explain.    "
+},
+{
+  "id": "ex-museum-table",
+  "level": "2",
+  "url": "probability.html#ex-museum-table",
+  "type": "Example",
+  "number": "334",
+  "title": "Art Museum Preferences.",
+  "body": " Art Museum Preferences  Visitors at an art museum each selected one favorite type of exhibit. Their choices and the times of their visits are summarized in . One of the surveyed visitors is selected uniformly at random.   Favorite Exhibit by Visit Time    Visit time  Paintings  Photographs  Sculptures  Total    Morning  20  12  8  40    Afternoon  8  16  6  30    Total  28  28  14  70     Give each probability as a simplified fraction.  Find the probability that the visitor preferred photographs.  Find the probability that the visitor came in the afternoon.  Find the probability that the visitor preferred sculptures.    "
+},
+{
+  "id": "def-complement",
+  "level": "2",
+  "url": "probability.html#def-complement",
+  "type": "Definition",
+  "number": "336",
+  "title": "Complement.",
+  "body": " Complement     "
+},
+{
+  "id": "ex-complement",
+  "level": "2",
+  "url": "probability.html#ex-complement",
+  "type": "Example",
+  "number": "337",
+  "title": "Using a Complement.",
+  "body": " Using a Complement  Use . One visitor is selected uniformly at random.  Find the probability that the visitor did not prefer sculptures.  Find the probability that the visitor did not come in the afternoon.  Check the answer to part (a) by adding the counts in the other exhibit categories.    "
+},
+{
+  "id": "def-intersection",
+  "level": "2",
+  "url": "probability.html#def-intersection",
+  "type": "Definition",
+  "number": "338",
+  "title": "Intersection.",
+  "body": " Intersection     "
+},
+{
+  "id": "ex-intersection",
+  "level": "2",
+  "url": "probability.html#ex-intersection",
+  "type": "Example",
+  "number": "339",
+  "title": "Combining a Visit Time and a Preference.",
+  "body": " Combining a Visit Time and a Preference  Use . One visitor is selected uniformly at random.  Find the probability that the visitor came in the afternoon and preferred photographs.  Find the probability that the visitor came in the morning and preferred sculptures.    "
+},
+{
+  "id": "def-union",
+  "level": "2",
+  "url": "probability.html#def-union",
+  "type": "Definition",
+  "number": "340",
+  "title": "Union.",
+  "body": " Union     "
+},
+{
+  "id": "def-mutually-exclusive",
+  "level": "2",
+  "url": "probability.html#def-mutually-exclusive",
+  "type": "Definition",
+  "number": "341",
+  "title": "Mutually Exclusive Events.",
+  "body": " Mutually Exclusive Events     "
+},
+{
+  "id": "ex-union",
+  "level": "2",
+  "url": "probability.html#ex-union",
+  "type": "Example",
+  "number": "342",
+  "title": "At Least One of Two Events.",
+  "body": " At Least One of Two Events  Use . One visitor is selected uniformly at random.  Find the probability that the visitor came in the morning or preferred photographs.  Find the probability that the visitor preferred photographs or sculptures.    "
+},
+{
+  "id": "ex-union-with-complement",
+  "level": "2",
+  "url": "probability.html#ex-union-with-complement",
+  "type": "Example",
+  "number": "343",
+  "title": "Library Cards and Writing Workshops.",
+  "body": " Library Cards and Writing Workshops  A community library recorded whether each surveyed visitor has a library card and whether the visitor attended a writing workshop. Each visitor appears once in the table. One surveyed visitor is selected uniformly at random.   Library Card Status and Workshop Attendance    Has a library card  Attended workshop  Did not attend workshop    Yes  38  97    No  26  54       How many visitors are represented in the table?  Find the probability that the visitor attended the workshop or does not have a library card. Give the answer as a percent rounded to one decimal place.  Find the probability that the visitor has a library card and did not attend the workshop. Give the answer as a simplified fraction.    "
+},
+{
+  "id": "def-conditional-probability",
+  "level": "2",
+  "url": "probability.html#def-conditional-probability",
+  "type": "Definition",
+  "number": "345",
+  "title": "Conditional Probability.",
+  "body": " Conditional Probability     "
+},
+{
+  "id": "ex-conditional",
+  "level": "2",
+  "url": "probability.html#ex-conditional",
+  "type": "Example",
+  "number": "346",
+  "title": "Changing the Group Being Considered.",
+  "body": " Changing the Group Being Considered  Use . Give each probability as a simplified fraction.  Find the probability that a randomly selected visitor came in the afternoon, given that the visitor preferred photographs.  Find the probability that a randomly selected visitor preferred photographs, given that the visitor came in the afternoon.  Find the probability that a randomly selected visitor came in the afternoon and preferred photographs.    "
+},
+{
+  "id": "def-independent",
+  "level": "2",
+  "url": "probability.html#def-independent",
+  "type": "Definition",
+  "number": "347",
+  "title": "Independent Events.",
+  "body": " Independent Events     "
+},
+{
+  "id": "def-dependent",
+  "level": "2",
+  "url": "probability.html#def-dependent",
+  "type": "Definition",
+  "number": "348",
+  "title": "Dependent Events.",
+  "body": " Dependent Events     "
+},
+{
+  "id": "ex-identifying-independence",
+  "level": "2",
+  "url": "probability.html#ex-identifying-independence",
+  "type": "Example",
+  "number": "349",
+  "title": "Identifying Independence.",
+  "body": " Identifying Independence  For each pair of events, determine whether the events are independent or dependent. Explain.  A fair coin is tossed twice. The events are getting heads on the first toss and getting heads on the second toss.  One of 10 thoroughly mixed cards, including 4 comedy prompts, is selected at random and set aside. A second card is selected at random. The events are selecting comedy on the first draw and selecting comedy on the second draw.  The card selection in part (b) is repeated, this time returning the first card and mixing the cards before the second draw. The events are again selecting comedy on the first draw and selecting comedy on the second draw.    "
+},
+{
+  "id": "ex-two-rolls",
+  "level": "2",
+  "url": "probability.html#ex-two-rolls",
+  "type": "Example",
+  "number": "350",
+  "title": "Two Rolls of a Die.",
+  "body": " Two Rolls of a Die  A fair six-sided die is rolled twice, with independent results.  Find the probability of rolling a 4 on the first roll and a number greater than 4 on the second roll.  Find the probability of rolling an odd number on the first roll and an even number on the second roll.    "
+},
+{
+  "id": "ex-with-replacement",
+  "level": "2",
+  "url": "probability.html#ex-with-replacement",
+  "type": "Example",
+  "number": "351",
+  "title": "Theater Prompts with Replacement.",
+  "body": " Theater Prompts with Replacement  An improv team has 4 comedy prompt cards, 6 drama prompt cards, 5 mystery prompt cards, and 3 musical prompt cards. A card is drawn at random, returned to the stack, and thoroughly mixed with the other cards before a second card is drawn at random.  Find the probability that the first card is comedy and the second card is musical.  Find the probability that both cards are mystery prompts.    "
+},
+{
+  "id": "ex-without-replacement",
+  "level": "2",
+  "url": "probability.html#ex-without-replacement",
+  "type": "Example",
+  "number": "352",
+  "title": "Literary Showcase without Replacement.",
+  "body": " Literary Showcase without Replacement  A literary showcase received 6 poems, 8 short stories, 5 essays, and 7 plays. An editor selects one submission uniformly at random and sets it aside, then selects a second submission uniformly at random from those remaining.  Find the probability that the first selection is an essay and the second selection is a poem. Give an exact fraction and a decimal rounded to four decimal places.  Find the probability that both selections are short stories.  Find the probability of selecting one essay and one poem, in either order.  For each part, explain how the first selection affects the counts used for the second selection.    "
 }
 ]
 
