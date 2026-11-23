@@ -3077,6 +3077,249 @@ var ptx_lunr_docs = [
   "number": "352",
   "title": "Literary Showcase without Replacement.",
   "body": " Literary Showcase without Replacement  A literary showcase received 6 poems, 8 short stories, 5 essays, and 7 plays. An editor selects one submission uniformly at random and sets it aside, then selects a second submission uniformly at random from those remaining.  Find the probability that the first selection is an essay and the second selection is a poem. Give an exact fraction and a decimal rounded to four decimal places.  Find the probability that both selections are short stories.  Find the probability of selecting one essay and one poem, in either order.  For each part, explain how the first selection affects the counts used for the second selection.    "
+},
+{
+  "id": "fractals",
+  "level": "1",
+  "url": "fractals.html",
+  "type": "Section",
+  "number": "",
+  "title": "Fractals",
+  "body": " Fractals   Iterated Fractals   Fractal       Self-Similarity       Recursion       Initiator       Generator       Building Successive Stages  Label the initiator Stage 0 and the generator Stage 1.     Apply the stated replacement rule to every eligible piece of the current stage.    Resize and rotate the replacement to match the piece being replaced.    Complete all replacements before beginning the next stage.     For the directed line examples, follow the path from Start to End. Each replacement follows the same direction as the segment it replaces.    A Square Bump  Replace each directed segment by the five-segment generator shown. Each new segment has one third the length of the segment it replaces.   A segment and its replacement by five equal segments forming a square bump; endpoints show direction.   Stage 0 is one horizontal segment directed left to right. Stage 1 moves right one third, up one third, right one third, down one third, and right one third, making a square bump.       Draw Stage 2.    Draw Stage 3.    How many segments appear in Stages 1, 2, and 3? If the original segment has length 1, what is the length of one segment in each of those stages?       A Zigzag Replacement  Replace every directed segment by a scaled and rotated copy of the entire zigzag below. Match the start and end of the replacement to the endpoints of the old segment. The first and last segments of the generator have equal lengths; the middle segment is shorter.   A segment and its replacement by a three-segment zigzag; endpoints show direction.   A horizontal initiator is replaced by three connected segments. The path runs diagonally upward to its midpoint, straight downward, then diagonally upward to an endpoint level with the starting point.       Draw Stage 2.    Draw Stage 3.       A Branching Tree  Begin with a vertical trunk. To create Stage 1, add two branches at its upper tip. Each branch has 65 percent of the trunk's length and forms a 35-degree angle with the upward continuation of the trunk. At each later stage, apply this same rule only at the terminal tips. Keep the trunk and all existing branches.   A vertical trunk and the same trunk with two shorter branches, leaning 35 degrees left and right.   Stage 0 is a vertical trunk. Stage 1 keeps the trunk and adds two shorter branches at its upper tip, leaning 35 degrees left and right of vertical.       Draw Stage 2.    Draw Stage 3.    How many new branches are added in each stage? Explain how that differs from the total number of segments already in the tree.       The Cantor Set  Begin with a segment of length 1. To create each new stage, divide every remaining segment into thirds and remove its open middle third, retaining the endpoints.   A segment and the two outer thirds retained after its middle third is removed.   Stage 0 is a horizontal segment. Stage 1 contains its left third and right third, separated by a gap where the middle third was removed.       Draw Stage 2.    Draw Stage 3.    For Stages 1, 2, and 3, determine the number of remaining segments and the length of each segment.       The Sierpinski Carpet  Begin with a filled square. Divide it into a 3-by-3 grid of equal squares and remove the open central square. Repeat inside every remaining square.   A filled square and a 3-by-3 square grid with its center square removed.   Stage 0 is a filled square. Stage 1 is a 3-by-3 array of equal squares with its center square removed. Eight shaded squares remain.       Draw Stage 2.    Draw Stage 3.    How many small squares remain in Stages 1, 2, and 3? What fraction of the original side length is the side of one small square at each stage?       The Sierpinski Gasket  Begin with a filled equilateral triangle. Connect the midpoints of its sides and remove the open middle triangle. Repeat inside each remaining filled triangle.   A filled triangle and three corner triangles remaining after the middle triangle is removed.   Stage 0 is a filled equilateral triangle. Stage 1 has the three corner triangles remaining, with the central upside-down triangle removed.       Draw Stage 2.    Draw Stage 3.    Identify a smaller part of the construction that resembles the whole. Describe the change in size.        Fractal Dimension   Scaling and Dimension  Suppose a self-similar construction consists of smaller copies, each with all lengths scaled by the same factor .     Use the same logarithm base in the numerator and denominator. This formula applies to the self-similar examples here, whose copies overlap at most along boundaries. Count copies of the limiting fractal, and use a length scale rather than an area scale.    The Koch Curve  The Koch generator replaces a segment by four equal segments, each one third the old length. The two middle segments form the sides of an outward equilateral triangle.   A segment and four equal replacement segments forming an equilateral triangular bump.   One horizontal segment is replaced by four equal segments, making an equilateral triangular bump in the middle third.       Identify , the reduction factor , and the enlargement factor .    Find the dimension of the limiting Koch curve. Give an exact logarithmic expression and a decimal rounded to three places.    Between which two consecutive integers does the dimension lie? What does this suggest about the complexity of the curve?       Dimension of the Square-Bump Curve  Use the construction in .     Identify , , and .    Find the dimension of the limiting curve. Give an exact expression and a decimal rounded to three places.    Compare its dimension with the dimension of the Koch curve. What feature of the two generators accounts for the difference?       Dimension of the Sierpinski Carpet  Use the construction in .     Identify , , and .    Find the dimension of the limiting carpet. Give an exact expression and a decimal rounded to three places.    Why would using the area of a small square in place of its side-length scale give an incorrect setup?        Recursive Sequences   Reading a Recursive Rule  The initial value is . The symbol represents the current term, and represents the next term. Use the value just obtained when calculating the following term.  When asked for the next three terms after , calculate , , and .    Following a Recursive Rule  Consider with .     Calculate .    Calculate .    Calculate .       Complex Numbers Used in These Sequences     Write each calculated term in form, combining its real and imaginary parts. When squaring a complex number, square the entire expression:       A Sequence Involving Multiplication by i  Consider with . Write each answer in form.     Calculate .    Calculate .    Calculate .       A Second Complex Sequence  Consider with . Write each answer in form.     Calculate .    Calculate .    Calculate .        The Mandelbrot Sequence   Mandelbrot Iteration     Choose a complex number and keep it fixed throughout the calculation. The terms change as the rule is repeated.  In these notes, the first four calculated terms mean ; the supplied starting value is not counted among them.    A Real Parameter  Use in the Mandelbrot iteration. Keep exact values during the calculations.     Calculate .    Calculate .    Calculate .    Calculate .       A Complex Parameter  Use in the Mandelbrot iteration. Write each term in form.     Calculate .    Calculate .    Calculate .    Calculate .        Long-Term Behavior and the Mandelbrot Set   Bounded Sequence       Escaping Sequence       Attracted to a Fixed Value       Periodic Cycle       Exploring the Mandelbrot Set  Choose a starting point in the complex plane. The rule generates a sequence of points called the orbit of . The starting point belongs to the Mandelbrot set if its orbit stays within some fixed distance of the origin.  Open The Mandelbrot Set and use the first applet in Constructing the Mandelbrot set . Drag the starting point and watch how its orbit changes.    Investigating Four Parameters  For each parameter below, investigate the Mandelbrot sequence. State whether it appears to escape, approach a fixed value, or approach a periodic cycle. If periodic, give the apparent period. Support each classification with several later terms or an escape calculation.                            Comparing More Parameters  For each parameter below, investigate the Mandelbrot sequence. State whether it appears to escape, approach a fixed value, or approach a periodic cycle. If periodic, give the apparent period. Support each classification with several later terms or an escape calculation.                            Mandelbrot Set       A numerical Mandelbrot picture in the complex parameter plane, with the central cardioid and attached bulbs.   A numerical picture of the Mandelbrot set in the complex parameter plane. A large cardioid-shaped region is joined to a round region on its left, with smaller structures extending around the boundary. The horizontal axis is the real part of c and the vertical axis is the imaginary part of c.    Each point in this picture represents a choice of , rather than one of the successive terms . Dark points did not escape during 300 iterations; the surrounding shades indicate different escape times.   "
+},
+{
+  "id": "fr-def-fractal",
+  "level": "2",
+  "url": "fractals.html#fr-def-fractal",
+  "type": "Definition",
+  "number": "353",
+  "title": "Fractal.",
+  "body": " Fractal     "
+},
+{
+  "id": "fr-def-self-similarity",
+  "level": "2",
+  "url": "fractals.html#fr-def-self-similarity",
+  "type": "Definition",
+  "number": "354",
+  "title": "Self-Similarity.",
+  "body": " Self-Similarity     "
+},
+{
+  "id": "fr-def-recursion",
+  "level": "2",
+  "url": "fractals.html#fr-def-recursion",
+  "type": "Definition",
+  "number": "355",
+  "title": "Recursion.",
+  "body": " Recursion     "
+},
+{
+  "id": "fr-def-initiator",
+  "level": "2",
+  "url": "fractals.html#fr-def-initiator",
+  "type": "Definition",
+  "number": "356",
+  "title": "Initiator.",
+  "body": " Initiator     "
+},
+{
+  "id": "fr-def-generator",
+  "level": "2",
+  "url": "fractals.html#fr-def-generator",
+  "type": "Definition",
+  "number": "357",
+  "title": "Generator.",
+  "body": " Generator     "
+},
+{
+  "id": "fr-ex-square-bump",
+  "level": "2",
+  "url": "fractals.html#fr-ex-square-bump",
+  "type": "Example",
+  "number": "358",
+  "title": "A Square Bump.",
+  "body": " A Square Bump  Replace each directed segment by the five-segment generator shown. Each new segment has one third the length of the segment it replaces.   A segment and its replacement by five equal segments forming a square bump; endpoints show direction.   Stage 0 is one horizontal segment directed left to right. Stage 1 moves right one third, up one third, right one third, down one third, and right one third, making a square bump.       Draw Stage 2.    Draw Stage 3.    How many segments appear in Stages 1, 2, and 3? If the original segment has length 1, what is the length of one segment in each of those stages?     "
+},
+{
+  "id": "fr-ex-zigzag",
+  "level": "2",
+  "url": "fractals.html#fr-ex-zigzag",
+  "type": "Example",
+  "number": "359",
+  "title": "A Zigzag Replacement.",
+  "body": " A Zigzag Replacement  Replace every directed segment by a scaled and rotated copy of the entire zigzag below. Match the start and end of the replacement to the endpoints of the old segment. The first and last segments of the generator have equal lengths; the middle segment is shorter.   A segment and its replacement by a three-segment zigzag; endpoints show direction.   A horizontal initiator is replaced by three connected segments. The path runs diagonally upward to its midpoint, straight downward, then diagonally upward to an endpoint level with the starting point.       Draw Stage 2.    Draw Stage 3.     "
+},
+{
+  "id": "fr-ex-tree",
+  "level": "2",
+  "url": "fractals.html#fr-ex-tree",
+  "type": "Example",
+  "number": "360",
+  "title": "A Branching Tree.",
+  "body": " A Branching Tree  Begin with a vertical trunk. To create Stage 1, add two branches at its upper tip. Each branch has 65 percent of the trunk's length and forms a 35-degree angle with the upward continuation of the trunk. At each later stage, apply this same rule only at the terminal tips. Keep the trunk and all existing branches.   A vertical trunk and the same trunk with two shorter branches, leaning 35 degrees left and right.   Stage 0 is a vertical trunk. Stage 1 keeps the trunk and adds two shorter branches at its upper tip, leaning 35 degrees left and right of vertical.       Draw Stage 2.    Draw Stage 3.    How many new branches are added in each stage? Explain how that differs from the total number of segments already in the tree.     "
+},
+{
+  "id": "fr-ex-cantor",
+  "level": "2",
+  "url": "fractals.html#fr-ex-cantor",
+  "type": "Example",
+  "number": "361",
+  "title": "The Cantor Set.",
+  "body": " The Cantor Set  Begin with a segment of length 1. To create each new stage, divide every remaining segment into thirds and remove its open middle third, retaining the endpoints.   A segment and the two outer thirds retained after its middle third is removed.   Stage 0 is a horizontal segment. Stage 1 contains its left third and right third, separated by a gap where the middle third was removed.       Draw Stage 2.    Draw Stage 3.    For Stages 1, 2, and 3, determine the number of remaining segments and the length of each segment.     "
+},
+{
+  "id": "fr-ex-carpet",
+  "level": "2",
+  "url": "fractals.html#fr-ex-carpet",
+  "type": "Example",
+  "number": "362",
+  "title": "The Sierpinski Carpet.",
+  "body": " The Sierpinski Carpet  Begin with a filled square. Divide it into a 3-by-3 grid of equal squares and remove the open central square. Repeat inside every remaining square.   A filled square and a 3-by-3 square grid with its center square removed.   Stage 0 is a filled square. Stage 1 is a 3-by-3 array of equal squares with its center square removed. Eight shaded squares remain.       Draw Stage 2.    Draw Stage 3.    How many small squares remain in Stages 1, 2, and 3? What fraction of the original side length is the side of one small square at each stage?     "
+},
+{
+  "id": "fr-ex-gasket",
+  "level": "2",
+  "url": "fractals.html#fr-ex-gasket",
+  "type": "Example",
+  "number": "363",
+  "title": "The Sierpinski Gasket.",
+  "body": " The Sierpinski Gasket  Begin with a filled equilateral triangle. Connect the midpoints of its sides and remove the open middle triangle. Repeat inside each remaining filled triangle.   A filled triangle and three corner triangles remaining after the middle triangle is removed.   Stage 0 is a filled equilateral triangle. Stage 1 has the three corner triangles remaining, with the central upside-down triangle removed.       Draw Stage 2.    Draw Stage 3.    Identify a smaller part of the construction that resembles the whole. Describe the change in size.     "
+},
+{
+  "id": "fr-ex-koch-dimension",
+  "level": "2",
+  "url": "fractals.html#fr-ex-koch-dimension",
+  "type": "Example",
+  "number": "364",
+  "title": "The Koch Curve.",
+  "body": " The Koch Curve  The Koch generator replaces a segment by four equal segments, each one third the old length. The two middle segments form the sides of an outward equilateral triangle.   A segment and four equal replacement segments forming an equilateral triangular bump.   One horizontal segment is replaced by four equal segments, making an equilateral triangular bump in the middle third.       Identify , the reduction factor , and the enlargement factor .    Find the dimension of the limiting Koch curve. Give an exact logarithmic expression and a decimal rounded to three places.    Between which two consecutive integers does the dimension lie? What does this suggest about the complexity of the curve?     "
+},
+{
+  "id": "fr-ex-bump-dimension",
+  "level": "2",
+  "url": "fractals.html#fr-ex-bump-dimension",
+  "type": "Example",
+  "number": "365",
+  "title": "Dimension of the Square-Bump Curve.",
+  "body": " Dimension of the Square-Bump Curve  Use the construction in .     Identify , , and .    Find the dimension of the limiting curve. Give an exact expression and a decimal rounded to three places.    Compare its dimension with the dimension of the Koch curve. What feature of the two generators accounts for the difference?     "
+},
+{
+  "id": "fr-ex-carpet-dimension",
+  "level": "2",
+  "url": "fractals.html#fr-ex-carpet-dimension",
+  "type": "Example",
+  "number": "366",
+  "title": "Dimension of the Sierpinski Carpet.",
+  "body": " Dimension of the Sierpinski Carpet  Use the construction in .     Identify , , and .    Find the dimension of the limiting carpet. Give an exact expression and a decimal rounded to three places.    Why would using the area of a small square in place of its side-length scale give an incorrect setup?     "
+},
+{
+  "id": "fr-ex-real-recursion",
+  "level": "2",
+  "url": "fractals.html#fr-ex-real-recursion",
+  "type": "Example",
+  "number": "367",
+  "title": "Following a Recursive Rule.",
+  "body": " Following a Recursive Rule  Consider with .     Calculate .    Calculate .    Calculate .     "
+},
+{
+  "id": "fr-ex-complex-rotation",
+  "level": "2",
+  "url": "fractals.html#fr-ex-complex-rotation",
+  "type": "Example",
+  "number": "368",
+  "title": "A Sequence Involving Multiplication by i.",
+  "body": " A Sequence Involving Multiplication by i  Consider with . Write each answer in form.     Calculate .    Calculate .    Calculate .     "
+},
+{
+  "id": "fr-ex-complex-growth",
+  "level": "2",
+  "url": "fractals.html#fr-ex-complex-growth",
+  "type": "Example",
+  "number": "369",
+  "title": "A Second Complex Sequence.",
+  "body": " A Second Complex Sequence  Consider with . Write each answer in form.     Calculate .    Calculate .    Calculate .     "
+},
+{
+  "id": "fr-ex-mandelbrot-real",
+  "level": "2",
+  "url": "fractals.html#fr-ex-mandelbrot-real",
+  "type": "Example",
+  "number": "370",
+  "title": "A Real Parameter.",
+  "body": " A Real Parameter  Use in the Mandelbrot iteration. Keep exact values during the calculations.     Calculate .    Calculate .    Calculate .    Calculate .     "
+},
+{
+  "id": "fr-ex-mandelbrot-complex",
+  "level": "2",
+  "url": "fractals.html#fr-ex-mandelbrot-complex",
+  "type": "Example",
+  "number": "371",
+  "title": "A Complex Parameter.",
+  "body": " A Complex Parameter  Use in the Mandelbrot iteration. Write each term in form.     Calculate .    Calculate .    Calculate .    Calculate .     "
+},
+{
+  "id": "fr-def-bounded",
+  "level": "2",
+  "url": "fractals.html#fr-def-bounded",
+  "type": "Definition",
+  "number": "372",
+  "title": "Bounded Sequence.",
+  "body": " Bounded Sequence     "
+},
+{
+  "id": "fr-def-escaping",
+  "level": "2",
+  "url": "fractals.html#fr-def-escaping",
+  "type": "Definition",
+  "number": "373",
+  "title": "Escaping Sequence.",
+  "body": " Escaping Sequence     "
+},
+{
+  "id": "fr-def-attracted",
+  "level": "2",
+  "url": "fractals.html#fr-def-attracted",
+  "type": "Definition",
+  "number": "374",
+  "title": "Attracted to a Fixed Value.",
+  "body": " Attracted to a Fixed Value     "
+},
+{
+  "id": "fr-def-periodic",
+  "level": "2",
+  "url": "fractals.html#fr-def-periodic",
+  "type": "Definition",
+  "number": "375",
+  "title": "Periodic Cycle.",
+  "body": " Periodic Cycle     "
+},
+{
+  "id": "fr-ex-behavior-one",
+  "level": "2",
+  "url": "fractals.html#fr-ex-behavior-one",
+  "type": "Example",
+  "number": "376",
+  "title": "Investigating Four Parameters.",
+  "body": " Investigating Four Parameters  For each parameter below, investigate the Mandelbrot sequence. State whether it appears to escape, approach a fixed value, or approach a periodic cycle. If periodic, give the apparent period. Support each classification with several later terms or an escape calculation.                          "
+},
+{
+  "id": "fr-ex-behavior-two",
+  "level": "2",
+  "url": "fractals.html#fr-ex-behavior-two",
+  "type": "Example",
+  "number": "377",
+  "title": "Comparing More Parameters.",
+  "body": " Comparing More Parameters  For each parameter below, investigate the Mandelbrot sequence. State whether it appears to escape, approach a fixed value, or approach a periodic cycle. If periodic, give the apparent period. Support each classification with several later terms or an escape calculation.                          "
+},
+{
+  "id": "fr-def-mandelbrot-set",
+  "level": "2",
+  "url": "fractals.html#fr-def-mandelbrot-set",
+  "type": "Definition",
+  "number": "378",
+  "title": "Mandelbrot Set.",
+  "body": " Mandelbrot Set     "
 }
 ]
 
