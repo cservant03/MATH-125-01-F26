@@ -1109,3 +1109,165 @@ a.mathjax-link {
 #ex-without-replacement ol > li {
   padding-bottom: 0.4in;
 }
+
+/* Fractal */
+#fr-def-fractal {
+  padding-bottom: .9in;
+}
+
+/* Self-Similarity */
+#fr-def-self-similarity {
+  padding-bottom: .9in;
+}
+
+/* Recursion */
+#fr-def-recursion {
+  padding-bottom: .9in;
+}
+
+/* Initiator */
+#fr-def-initiator {
+  padding-bottom: .9in;
+}
+
+/* Generator */
+#fr-def-generator {
+  padding-bottom: .9in;
+}
+
+/* A Square Bump */
+#fr-ex-square-bump ol > li {
+  padding-bottom: 0.3in;
+}
+
+/* A Zigzag Replacement */
+#fr-ex-zigzag ol > li {
+  padding-bottom: 0.3in;
+}
+
+/* A Branching Tree */
+#fr-ex-tree ol > li {
+  padding-bottom: 0.5in;
+}
+
+/* The Cantor Set */
+#fr-ex-cantor ol > li {
+  padding-bottom: .5in;
+}
+
+/* The Sierpinski Carpet */
+#fr-ex-carpet ol > li {
+  padding-bottom: 0.6in;
+}
+
+/* The Sierpinski Gasket */
+#fr-ex-gasket ol > li {
+  padding-bottom: 0.6in;
+}
+
+/* Fractal Dimension */
+#fr-def-dimension {
+  padding-bottom: .7in;
+}
+
+/* The Koch Curve */
+#fr-ex-koch-dimension ol > li {
+  padding-bottom: .5in;
+
+}
+
+#fr-ex-koch-dimension {
+  break-before: page;
+  page-break-before: always;
+
+}
+
+/* Dimension of the Square-Bump Curve */
+#fr-ex-bump-dimension ol > li {
+  padding-bottom: .5in;
+}
+
+/* Dimension of the Sierpinski Carpet */
+#fr-ex-carpet-dimension ol > li {
+  padding-bottom: .5in;
+}
+
+/* Dimension of the Cantor Set */
+#fr-ex-cantor-dimension ol > li {
+  padding-bottom: .5in;
+}
+
+/* Recursive Sequence */
+#fr-def-recursive-sequence {
+  padding-bottom: .7in;
+}
+
+/* Initial Value */
+#fr-def-initial-value {
+  padding-bottom: .7in;
+}
+
+/* Following a Recursive Rule */
+#fr-ex-real-recursion ol > li {
+  padding-bottom: .55in;
+}
+
+/* A Sequence Involving Multiplication by i */
+#fr-ex-complex-rotation ol > li {
+  padding-bottom: .75in;
+}
+
+/* A Second Complex Sequence */
+#fr-ex-complex-growth ol > li {
+  padding-bottom: .75in;
+}
+
+/* A Real Parameter */
+#fr-ex-mandelbrot-real ol > li {
+  padding-bottom: .65in;
+}
+
+/* A Complex Parameter */
+#fr-ex-mandelbrot-complex ol > li {
+  padding-bottom: .75in;
+}
+
+/* Bounded Sequence */
+#fr-def-bounded {
+  padding-bottom: .7in;
+}
+
+/* Escaping Sequence */
+#fr-def-escaping {
+  padding-bottom: .7in;
+}
+
+/* Attracted to a Fixed Value */
+#fr-def-attracted {
+  padding-bottom: .7in;
+}
+
+/* Periodic Cycle */
+#fr-def-periodic {
+  padding-bottom: .7in;
+}
+
+/* Investigating Four Parameters */
+#fr-ex-behavior-one ol > li {
+  padding-bottom: .8in;
+}
+
+/* Comparing More Parameters */
+#fr-ex-behavior-two ol > li {
+  padding-bottom: .8in;
+}
+
+/* Mandelbrot Set */
+#fr-def-mandelbrot-set {
+  padding-bottom: .7in;
+}
+
+/* Connecting Sequences to the Set */
+#fr-ex-membership ol > li {
+  padding-bottom: .8in;
+}

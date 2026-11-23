@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<section xml:id="fractals">
+  <title>Fractals</title>
+  
+  <subsection xml:id="fr-iterated-fractals">
+    <title>Iterated Fractals</title>
+
+    <definition xml:id="fr-def-fractal">
+      <title>Fractal</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="fr-def-self-similarity">
+      <title>Self-Similarity</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="fr-def-recursion">
+      <title>Recursion</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="fr-def-initiator">
+      <title>Initiator</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="fr-def-generator">
+      <title>Generator</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <assemblage xml:id="fr-rule-construction">
+      <title>Building Successive Stages</title>
+      <p>Label the initiator Stage 0 and the generator Stage 1.</p>
+      <p>
+        <ol>
+          <li>
+            <p>Apply the stated replacement rule to every eligible piece of the current stage.</p>
+          </li>
+          <li>
+            <p>Resize and rotate the replacement to match the piece being replaced.</p>
+          </li>
+          <li>
+            <p>Complete all replacements before beginning the next stage.</p>
+          </li>
+        </ol>
+      </p>
+      <p>For the directed line examples, follow the path from Start to End. Each replacement follows the same direction as the segment it replaces.</p>
+    </assemblage>
+
+    <example xml:id="fr-ex-square-bump">
+      <title>A Square Bump</title>
+      <p>Replace each directed segment by the five-segment generator shown. Each new segment has one third the length of the segment it replaces.</p>
+      <image source="images/square-bump-generator.png" width="70%">
+        <shortdescription>A segment and its replacement by five equal segments forming a square bump; endpoints show direction.</shortdescription>
+        <description>
+          <p>Stage 0 is one horizontal segment directed left to right. Stage 1 moves right one third, up one third, right one third, down one third, and right one third, making a square bump.</p>
+        </description>
+      </image>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Draw Stage 2.</p>
+          </li>
+          <li>
+            <p>Draw Stage 3.</p>
+          </li>
+          <li>
+            <p>How many segments appear in Stages 1, 2, and 3? If the original segment has length 1, what is the length of one segment in each of those stages?</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-zigzag">
+      <title>A Zigzag Replacement</title>
+      <p>Replace every directed segment by a scaled and rotated copy of the entire zigzag below. Match the start and end of the replacement to the endpoints of the old segment. The first and last segments of the generator have equal lengths; the middle segment is shorter.</p>
+      <image source="images/zigzag-generator.png" width="70%">
+        <shortdescription>A segment and its replacement by a three-segment zigzag; endpoints show direction.</shortdescription>
+        <description>
+          <p>A horizontal initiator is replaced by three connected segments. The path runs diagonally upward to its midpoint, straight downward, then diagonally upward to an endpoint level with the starting point.</p>
+        </description>
+      </image>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Draw Stage 2.</p>
+          </li>
+          <li>
+            <p>Draw Stage 3.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-tree">
+      <title>A Branching Tree</title>
+      <p>Begin with a vertical trunk. To create Stage 1, add two branches at its upper tip. Each branch has 65 percent of the trunk's length and forms a 35-degree angle with the upward continuation of the trunk. At each later stage, apply this same rule only at the terminal tips. Keep the trunk and all existing branches.</p>
+      <image source="images/tree-generator.png" width="70%">
+        <shortdescription>A vertical trunk and the same trunk with two shorter branches, leaning 35 degrees left and right.</shortdescription>
+        <description>
+          <p>Stage 0 is a vertical trunk. Stage 1 keeps the trunk and adds two shorter branches at its upper tip, leaning 35 degrees left and right of vertical.</p>
+        </description>
+      </image>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Draw Stage 2.</p>
+          </li>
+          <li>
+            <p>Draw Stage 3.</p>
+          </li>
+          <li>
+            <p>How many new branches are added in each stage? Explain how that differs from the total number of segments already in the tree.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-cantor">
+      <title>The Cantor Set</title>
+      <p>Begin with a segment of length 1. To create each new stage, divide every remaining segment into thirds and remove its open middle third, retaining the endpoints.</p>
+      <image source="images/cantor-generator.png" width="70%">
+        <shortdescription>A segment and the two outer thirds retained after its middle third is removed.</shortdescription>
+        <description>
+          <p>Stage 0 is a horizontal segment. Stage 1 contains its left third and right third, separated by a gap where the middle third was removed.</p>
+        </description>
+      </image>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Draw Stage 2.</p>
+          </li>
+          <li>
+            <p>Draw Stage 3.</p>
+          </li>
+          <li>
+            <p>For Stages 1, 2, and 3, determine the number of remaining segments and the length of each segment.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-carpet">
+      <title>The Sierpinski Carpet</title>
+      <p>Begin with a filled square. Divide it into a 3-by-3 grid of equal squares and remove the open central square. Repeat inside every remaining square.</p>
+      <image source="images/carpet-generator.png" width="60%">
+        <shortdescription>A filled square and a 3-by-3 square grid with its center square removed.</shortdescription>
+        <description>
+          <p>Stage 0 is a filled square. Stage 1 is a 3-by-3 array of equal squares with its center square removed. Eight shaded squares remain.</p>
+        </description>
+      </image>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Draw Stage 2.</p>
+          </li>
+          <li>
+            <p>Draw Stage 3.</p>
+          </li>
+          <li>
+            <p>How many small squares remain in Stages 1, 2, and 3? What fraction of the original side length is the side of one small square at each stage?</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-gasket">
+      <title>The Sierpinski Gasket</title>
+      <p>Begin with a filled equilateral triangle. Connect the midpoints of its sides and remove the open middle triangle. Repeat inside each remaining filled triangle.</p>
+      <image source="images/gasket-generator.png" width="60%">
+        <shortdescription>A filled triangle and three corner triangles remaining after the middle triangle is removed.</shortdescription>
+        <description>
+          <p>Stage 0 is a filled equilateral triangle. Stage 1 has the three corner triangles remaining, with the central upside-down triangle removed.</p>
+        </description>
+      </image>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Draw Stage 2.</p>
+          </li>
+          <li>
+            <p>Draw Stage 3.</p>
+          </li>
+          <li>
+            <p>Identify a smaller part of the construction that resembles the whole. Describe the change in size.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="fr-dimension">
+    <title>Fractal Dimension</title>
+    
+    <assemblage xml:id="fr-formula-dimension">
+      <title>Scaling and Dimension</title>
+      <p>Suppose a self-similar construction consists of <m>C</m> smaller copies, each with all lengths scaled by the same factor <m>S</m>.</p>
+      <p>
+        <md>
+          <mrow>C=S^D \qquad\text{and}\qquad D=\dfrac{\ln C}{\ln S}.</mrow>
+        </md>
+      </p>
+      <p>Use the same logarithm base in the numerator and denominator. This formula applies to the self-similar examples here, whose copies overlap at most along boundaries. Count copies of the limiting fractal, and use a length scale rather than an area scale.</p>
+    </assemblage>
+
+    <example xml:id="fr-ex-koch-dimension">
+      <title>The Koch Curve</title>
+      <p>The Koch generator replaces a segment by four equal segments, each one third the old length. The two middle segments form the sides of an outward equilateral triangle.</p>
+      <image source="images/koch-generator.png" width="90%">
+        <shortdescription>A segment and four equal replacement segments forming an equilateral triangular bump.</shortdescription>
+        <description>
+          <p>One horizontal segment is replaced by four equal segments, making an equilateral triangular bump in the middle third.</p>
+        </description>
+      </image>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Identify <m>C</m>, the reduction factor <m>r</m>, and the enlargement factor <m>S</m>.</p>
+          </li>
+          <li>
+            <p>Find the dimension of the limiting Koch curve. Give an exact logarithmic expression and a decimal rounded to three places.</p>
+          </li>
+          <li>
+            <p>Between which two consecutive integers does the dimension lie? What does this suggest about the complexity of the curve?</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-bump-dimension">
+      <title>Dimension of the Square-Bump Curve</title>
+      <p>Use the construction in <xref ref="fr-ex-square-bump"/>.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Identify <m>C</m>, <m>r</m>, and <m>S</m>.</p>
+          </li>
+          <li>
+            <p>Find the dimension of the limiting curve. Give an exact expression and a decimal rounded to three places.</p>
+          </li>
+          <li>
+            <p>Compare its dimension with the dimension of the Koch curve. What feature of the two generators accounts for the difference?</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-carpet-dimension">
+      <title>Dimension of the Sierpinski Carpet</title>
+      <p>Use the construction in <xref ref="fr-ex-carpet"/>.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Identify <m>C</m>, <m>r</m>, and <m>S</m>.</p>
+          </li>
+          <li>
+            <p>Find the dimension of the limiting carpet. Give an exact expression and a decimal rounded to three places.</p>
+          </li>
+          <li>
+            <p>Why would using the area of a small square in place of its side-length scale give an incorrect setup?</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="fr-recursive-sequences">
+    <title>Recursive Sequences</title>
+    
+    <assemblage xml:id="fr-notation-recursion">
+      <title>Reading a Recursive Rule</title>
+      <p>The initial value is <m>z_0</m>. The symbol <m>z_n</m> represents the current term, and <m>z_{n+1}</m> represents the next term. Use the value just obtained when calculating the following term.</p>
+      <p>When asked for the next three terms after <m>z_0</m>, calculate <m>z_1</m>, <m>z_2</m>, and <m>z_3</m>.</p>
+    </assemblage>
+
+    <example xml:id="fr-ex-real-recursion">
+      <title>Following a Recursive Rule</title>
+      <p>Consider <m>z_{n+1}=2z_n-1</m> with <m>z_0=3</m>.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Calculate <m>z_1</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_2</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_3</m>.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <assemblage xml:id="fr-reference-complex">
+      <title>Complex Numbers Used in These Sequences</title>
+      <p>
+        <md>
+          <mrow>i^2=-1,\qquad z=a+bi.</mrow>
+        </md>
+      </p>
+      <p>Write each calculated term in <m>a+bi</m> form, combining its real and imaginary parts. When squaring a complex number, square the entire expression:</p>
+      <p>
+        <md>
+          <mrow>(a+bi)^2=a^2-b^2+2abi.</mrow>
+        </md>
+      </p>
+    </assemblage>
+
+    <example xml:id="fr-ex-complex-rotation">
+      <title>A Sequence Involving Multiplication by i</title>
+      <p>Consider <m>z_{n+1}=iz_n+2</m> with <m>z_0=3</m>. Write each answer in <m>a+bi</m> form.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Calculate <m>z_1</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_2</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_3</m>.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-complex-growth">
+      <title>A Second Complex Sequence</title>
+      <p>Consider <m>z_{n+1}=2z_n-i</m> with <m>z_0=1+2i</m>. Write each answer in <m>a+bi</m> form.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Calculate <m>z_1</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_2</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_3</m>.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="fr-mandelbrot-sequence">
+    <title>The Mandelbrot Sequence</title>
+
+    <assemblage xml:id="fr-formula-mandelbrot">
+      <title>Mandelbrot Iteration</title>
+      <p>
+        <md>
+          <mrow>z_0=0,\qquad z_{n+1}=z_n^2+c.</mrow>
+        </md>
+      </p>
+      <p>Choose a complex number <m>c</m> and keep it fixed throughout the calculation. The terms <m>z_0,z_1,z_2,\ldots</m> change as the rule is repeated.</p>
+      <p>In these notes, the first four calculated terms mean <m>z_1,z_2,z_3,z_4</m>; the supplied starting value <m>z_0=0</m> is not counted among them.</p>
+    </assemblage>
+
+    <example xml:id="fr-ex-mandelbrot-real">
+      <title>A Real Parameter</title>
+      <p>Use <m>c=-0.5</m> in the Mandelbrot iteration. Keep exact values during the calculations.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Calculate <m>z_1</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_2</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_3</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_4</m>.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-mandelbrot-complex">
+      <title>A Complex Parameter</title>
+      <p>Use <m>c=1+i</m> in the Mandelbrot iteration. Write each term in <m>a+bi</m> form.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>Calculate <m>z_1</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_2</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_3</m>.</p>
+          </li>
+          <li>
+            <p>Calculate <m>z_4</m>.</p>
+          </li>
+        </ol>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="fr-sequence-behavior">
+    <title>Long-Term Behavior and the Mandelbrot Set</title>
+
+    <definition xml:id="fr-def-bounded">
+      <title>Bounded Sequence</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="fr-def-escaping">
+      <title>Escaping Sequence</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="fr-def-attracted">
+      <title>Attracted to a Fixed Value</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <definition xml:id="fr-def-periodic">
+      <title>Periodic Cycle</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    <assemblage xml:id="fractals-mandelbrot-set">
+      <title>Exploring the Mandelbrot Set</title>
+
+      <p>
+        Choose a starting point <m>z_0</m> in the complex plane. The rule
+        <m>z_{n+1} = z_n^2 + z_0</m> generates a sequence of points called
+        the <em>orbit</em> of <m>z_0</m>. The starting point belongs to the
+        Mandelbrot set if its orbit stays within some fixed distance of the origin.
+      </p>
+
+      <p>
+        Open <url href="https://complex-analysis.com/content/mandelbrot_set.html#:~:text=Now%20explore%20the%20iteration%20orbits%20in%20the%20applet"
+                  visual="complex-analysis.com/content/mandelbrot_set.html">The Mandelbrot Set</url>
+        and use the first applet in <em>Constructing the Mandelbrot set</em>.
+        Drag the starting point and watch how its orbit changes. </p>
+    </assemblage>
+
+    <example xml:id="fr-ex-behavior-one">
+      <title>Investigating Four Parameters</title>
+      <p>For each parameter below, investigate the Mandelbrot sequence. State whether it appears to escape, approach a fixed value, or approach a periodic cycle. If periodic, give the apparent period. Support each classification with several later terms or an escape calculation.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>
+              <m>c=-0.5+0.25i</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c=-1.2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c=i</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c=0.5+0.25i</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example xml:id="fr-ex-behavior-two">
+      <title>Comparing More Parameters</title>
+      <p>For each parameter below, investigate the Mandelbrot sequence. State whether it appears to escape, approach a fixed value, or approach a periodic cycle. If periodic, give the apparent period. Support each classification with several later terms or an escape calculation.</p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>
+              <m>c=0.25+0.25i</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c=-0.5+0.5i</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c=-0.12+0.75i</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c=0.5+0.5i</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <definition xml:id="fr-def-mandelbrot-set">
+      <title>Mandelbrot Set</title>
+      <statement>
+        <p/>
+      </statement>
+    </definition>
+
+    
+    <image source="images/mandelbrot-set.png" width="80%">
+      <shortdescription>A numerical Mandelbrot picture in the complex parameter plane, with the central cardioid and attached bulbs.</shortdescription>
+      <description>
+        <p>A numerical picture of the Mandelbrot set in the complex parameter plane. A large cardioid-shaped region is joined to a round region on its left, with smaller structures extending around the boundary. The horizontal axis is the real part of c and the vertical axis is the imaginary part of c.</p>
+      </description>
+    </image>
+
+    <p>Each point in this picture represents a choice of <m>c</m>, rather than one of the successive terms <m>z_n</m>. Dark points did not escape during 300 iterations; the surrounding shades indicate different escape times.</p>
+    
+  </subsection>
+</section>
